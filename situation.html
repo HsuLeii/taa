@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SRM</title>
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/report.css">
+</head>
+
+<body>
+  <!-- page1 -->
+  <div class="page orange-border">
+    <div class="report-title">
+      <div class="logo">
+        <img src="image/logo/logo.png" alt="">
+      </div>
+      <div class="title-content page-one-title-content">
+        <div class="headline">
+          <h3>中教情境判斷測驗</h3>
+        </div>
+        <div class="subtitle">
+          <h4>全校綜合分析報表</h4>
+        </div>
+      </div>
+    </div>
+    <div class="material">
+      <div class="material-text">
+        <div class="school">
+          <p><span>測驗學校：</span><span>國立彰化師範大學</span></p>
+        </div>
+        <div class="date">
+          <p><span>測驗時程：</span><span>108.09.01 ~ 109.01.31</span></p>
+        </div>
+        <div class="people">
+          <p><span>測驗人數：</span><span>247人</span></p>
+        </div>
+      </div>
+      <div class="threepeople shadow">
+        <img src="image/threepeople.png" alt="">
+        <p>在全校圖表之後，有全國數據及圖表敘述提供參考</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-title">
+        <div class="number-mark">
+          <img src="image/svg/one.svg" alt="">
+        </div>
+        <div class="first-text bluebg">
+          <p class="white bold">測驗各項度綜合結果</p>
+        </div>
+      </div>
+      <div class="main">
+        <div class="data-page-scroll">
+          <div class="chart-control">
+            <canvas id="school-wide-average" style="width: 300px; height: 150px;"></canvas>
+          </div>
+        </div>
+        <div class="data-page-scroll">
+          <div class="chart-control">
+            <canvas id="pr-value" style="width: 300px; height: 150px;"></canvas>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="bottom-text">
+      <p>國立臺灣師範大學心測中心 版權所有‧翻印必究</p>
+    </div>
+  </div>
+  <!-- page1 -->
+  <!-- page2 -->
+  <div class="page orange-border">
+    <div class="report-title">
+      <div class="title-content">
+        <div class="headline">
+          <h3>中教情境判斷測驗</h3>
+        </div>
+        <div class="subtitle">
+          <h4>全校綜合分析報表</h4>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-title">
+        <div class="number-mark">
+          <img src="image/svg/two.svg" alt="">
+        </div>
+        <div class="first-text redbg">
+          <p class="white bold">測驗各向度與不同年級類別之分析結果</p>
+        </div>
+      </div>
+      <div class="main">
+        <div class="data-page-scroll">
+          <div class="chart-control">
+            <canvas id="grade-average" style="width: 300px; height: 150px;"></canvas>
+          </div>
+        </div>
+        <div class="data-page-scroll">
+          <div class="chart-control">
+            <canvas id="grade-average-pr-value" style="width: 300px; height: 150px;"></canvas>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="bottom-text">
+      <p>國立臺灣師範大學心測中心 版權所有‧翻印必究</p>
+    </div>
+  </div>
+  <!-- page2 -->
+  <script src="js/chart.min.js"></script>
+  <script src="js/chartjs-plugin-datalabels@2.0.0"></script>
+  <script>
+    // 全校平均得分
+    var ctx1 = document.getElementById("school-wide-average");
+    window.myBar = new Chart(ctx1, {
+      type: "bar",
+      data: {
+        labels: [
+          "班級經營",
+          "教學",
+          "同事相處",
+          "親師溝通",
+          "輔導"
+        ],
+        datasets: [{
+            label: '全國平均得分',
+            backgroundColor: "#f3bb19",
+            borderColor: "#f3bb19",
+            type: 'line',
+            fill: false,
+            data: [2.94, 3.07, 2.94, 3.14, 3.15],
+            datalabels: {
+            backgroundColor: function (context) {
+              return context.dataset.backgroundColor;
+            },
+          }
+          },
+          {
+            label: ["全校平均得分", ],
+            backgroundColor: "#2783BE",
+            data: [2.98, 3.09, 2.95, 3.08, 3.11],
+            datalabels: {
+              align: 'end',
+              anchor: 'start',
+            },
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: '全校平均得分',
+            color: '#2783be',
+            font: {
+              size: 30,
+            },
+            padding: {
+              top: 20,
+              bottom: 15
+            }
+          },
+          legend: {
+            position: 'bottom',
+            labels: {
+              color: '#595757',
+              padding: 30,
+              font: {
+                weight: 'bold',
+                size: 17
+              },
+            },
+          },
+          datalabels: {
+            // backgroundColor: function (context) {
+            //   return context.dataset.backgroundColor;
+            // },
+            borderRadius: 4,
+            color: 'white',
+            font: {
+              weight: 'bold',
+              size: 14,
+            },
+            padding: 6
+          }
+        },
+        scales: {
+          x: {
+            ticks: {
+              color: '#595757',
+              font: {
+                weight: 'bold',
+                size: 17,
+              },
+            }
+          },
+          y: {
+            // max: 5,
+            // min: 0,
+            ticks: {
+              // stepSize: 0.5,
+              color: '#595757',
+              font: {
+                weight: 'bold',
+                size: 17,
+              },
+            }
+          },
+        }
+      },
+      plugins: [ChartDataLabels],
+    });
+
+    // 全校平均PR值
+    var ctx2 = document.getElementById("pr-value");
+    window.myBar = new Chart(ctx2, {
+      type: "bar",
+      data: {
+        labels: [
+          "班級經營",
+          "教學",
+          "同事相處",
+          "親師溝通",
+          "輔導"
+        ],
+        datasets: [{
+            label: '全國平均PR值',
+            backgroundColor: "#f3bb19",
+            borderColor: "#f3bb19",
+            type: 'line',
+            fill: false,
+            data: [47, 44, 47, 51, 46],
+            datalabels: {
+            backgroundColor: function (context) {
+              return context.dataset.backgroundColor;
+            },
+          }
+          },
+          {
+            label: ["全體平均PR值", ],
+            backgroundColor: "#2783BE",
+            data: [47, 44, 47, 36, 46],
+            datalabels: {
+              align: 'end',
+              anchor: 'start',
+            },
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: '全校平均PR值',
+            color: '#2783be',
+            font: {
+              size: 30,
+            },
+            padding: {
+              top: 20,
+              bottom: 15
+            }
+          },
+          legend: {
+            position: 'bottom',
+            labels: {
+              color: '#595757',
+              padding: 30,
+              font: {
+                weight: 'bold',
+                size: 17
+              },
+            },
+          },
+          datalabels: {
+            // backgroundColor: function (context) {
+            //   return context.dataset.backgroundColor;
+            // },
+            borderRadius: 4,
+            color: 'white',
+            font: {
+              weight: 'bold',
+              size: 14,
+            },
+            padding: 6
+          }
+        },
+        scales: {
+          x: {
+            ticks: {
+              color: '#595757',
+              font: {
+                weight: 'bold',
+                size: 17,
+              },
+            }
+          },
+          y: {
+            max: 100,
+            min: 0,
+            ticks: {
+              stepSize: 10,
+              color: '#595757',
+              font: {
+                weight: 'bold',
+                size: 17,
+              },
+            }
+          },
+        }
+      },
+      plugins: [ChartDataLabels],
+    });
+
+    // 不同年級之平均得分
+    var ctx3 = document.getElementById("grade-average");
+    window.myBar = new Chart(ctx3, {
+      type: "bar",
+      data: {
+        labels: [
+          "班級經營",
+          "教學",
+          "同事相處",
+          "親師溝通",
+          "輔導"
+        ],
+        datasets: [{
+            label: '全國平均得分',
+            backgroundColor: "#f3bb19",
+            borderColor: "#f3bb19",
+            type: 'line',
+            fill: false,
+            data: [2.94, 3.07, 2.94, 3.14, 3.15],
+            datalabels: {
+            backgroundColor: function (context) {
+              return context.dataset.backgroundColor;
+            },
+          }
+          },
+          {
+            label: ["大學一二年級", ],
+            backgroundColor: "#5792c8",
+            data: [2.94, 3.04, 2.93, 2.98, 3.06],
+            datalabels: {
+              align: 'end',
+              anchor: 'start',
+            },
+          },
+          {
+            label: ["大學三四年級", ],
+            backgroundColor: "#e27933",
+            data: [3.00, 3.13, 2.90, 3.09, 3.09],
+            datalabels: {
+              align: 'end',
+              anchor: 'start',
+            },
+          },
+          {
+            label: ["碩博士班", ],
+            backgroundColor: "#a5a5a5",
+            data: [2.99, 3.10, 2.99, 3.13, 3.14],
+            datalabels: {
+              align: 'end',
+              anchor: 'start',
+            },
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: '不同年級之平均得分',
+            color: '#d4655c',
+            font: {
+              size: 30,
+            },
+            padding: {
+              top: 20,
+              bottom: 15
+            }
+          },
+          legend: {
+            position: 'bottom',
+            labels: {
+              color: '#595757',
+              padding: 30,
+              font: {
+                weight: 'bold',
+                size: 17
+              },
+            },
+          },
+          datalabels: {
+            // backgroundColor: function (context) {
+            //   return context.dataset.backgroundColor;
+            // },
+            borderRadius: 4,
+            color: 'white',
+            font: {
+              weight: 'bold',
+              size: 14,
+            },
+            padding: 6
+          }
+        },
+        scales: {
+          x: {
+            ticks: {
+              color: '#595757',
+              font: {
+                weight: 'bold',
+                size: 17,
+              },
+            }
+          },
+          y: {
+            // max: 100,
+            // min: 0,
+            ticks: {
+              // stepSize: 10,
+              color: '#595757',
+              font: {
+                weight: 'bold',
+                size: 17,
+              },
+            }
+          },
+        }
+      },
+      plugins: [ChartDataLabels],
+    });
+
+    // 不同年級之平均PR值
+    var ctx4 = document.getElementById("grade-average-pr-value");
+    window.myBar = new Chart(ctx4, {
+      type: "bar",
+      data: {
+        labels: [
+          "班級經營",
+          "教學",
+          "同事相處",
+          "親師溝通",
+          "輔導"
+        ],
+        datasets: [{
+            label: '全國平均得分',
+            backgroundColor: "#f3bb19",
+            borderColor: "#f3bb19",
+            type: 'line',
+            fill: false,
+            data: [47, 44, 47, 51, 46],
+            datalabels: {
+            backgroundColor: function (context) {
+              return context.dataset.backgroundColor;
+            },
+          }
+          },
+          {
+            label: ["大學一二年級", ],
+            backgroundColor: "#5792c8",
+            data: [47, 44, 47, 24, 33],
+            datalabels: {
+              align: 'end',
+              anchor: 'start',
+            },
+          },
+          {
+            label: ["大學三四年級", ],
+            backgroundColor: "#e27933",
+            data: [60, 59, 47, 36, 33],
+            datalabels: {
+              align: 'end',
+              anchor: 'start',
+            },
+          },
+          {
+            label: ["碩博士班", ],
+            backgroundColor: "#a5a5a5",
+            data: [47, 44, 47, 51, 46],
+            datalabels: {
+              align: 'end',
+              anchor: 'start',
+            },
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: '不同年級之平均PR值',
+            color: '#d4655c',
+            font: {
+              size: 30,
+            },
+            padding: {
+              top: 20,
+              bottom: 15
+            }
+          },
+          legend: {
+            position: 'bottom',
+            labels: {
+              color: '#595757',
+              padding: 30,
+              font: {
+                weight: 'bold',
+                size: 17
+              },
+            },
+          },
+          datalabels: {
+            // backgroundColor: function (context) {
+            //   return context.dataset.backgroundColor;
+            // },
+            borderRadius: 4,
+            color: 'white',
+            font: {
+              weight: 'bold',
+              size: 14,
+            },
+            padding: 6
+          }
+        },
+        scales: {
+          x: {
+            ticks: {
+              color: '#595757',
+              font: {
+                weight: 'bold',
+                size: 17,
+              },
+            }
+          },
+          y: {
+            max: 100,
+            min: 0,
+            ticks: {
+              stepSize: 10,
+              color: '#595757',
+              font: {
+                weight: 'bold',
+                size: 17,
+              },
+            }
+          },
+        }
+      },
+      plugins: [ChartDataLabels],
+    });
+
+  </script>
+
+</body>
+
+</html>
