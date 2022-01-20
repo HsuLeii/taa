@@ -63,74 +63,103 @@
     window.myBar = new Chart(ctx, {
       type: "bar",
       data: {
-    labels: [
-      "5月",
-      "6月",
-      "7月",
-      "8月",
-      "9月",
-      "10月",
-      "11月",
-      "12月"
-    ],
-    datasets: [
-      {
-        label: '処方箋枚数',
-        yAxisID: "line",
-        backgroundColor: "lightgreen",
-        borderColor: "green",
-        type: 'line',
-        fill: false,
-        data: [170, 175, 130, 115, 205,157],
-      },
-      {
-        label: "新患数(前年)",
-        yAxisID: 'bar-stack',
-        backgroundColor: "pink",
-        borderColor: "red",
-        borderWidth: 1,
-        stack: 'bef',
-        data: [30, 50, 60, 70,30, 50, 60, 70]
-      },
-      {
-        label: "Mastercard",
-        yAxisID: 'bar-stack',
-        backgroundColor: "lightblue",
-        borderColor: "blue",
-        borderWidth: 1,
-        stack: 'bef',
-        data: [40, 70, 30, 60, 100,70,40,60]
-      },
-    ]
+        labels: [
+          "班級經營",
+          "教學",
+          "同事相處",
+          "親師溝通",
+          "輔導"
+        ],
+        datasets: [{
+            label: '全國平均得分',
+            backgroundColor: "#f3bb19",
+            borderColor: "#f3bb19",
+            type: 'line',
+            fill: false,
+            data: [2.94, 3.07, 2.94, 3.14, 3.15],
+            datalabels: {
+            backgroundColor: function (context) {
+              return context.dataset.backgroundColor;
+            },
+          }
+          },
+          {
+            label: ["全校平均得分", ],
+            backgroundColor: "#2783BE",
+            data: [2.98, 3.09, 2.95, 3.08, 3.11],
+            datalabels: {
+              align: 'end',
+              anchor: 'start',
+            },
+          },
+        ],
       },
       options: {
         responsive: true,
-    scales: {
-      yAxes: [
-      {
-        id: "bar-stack",
-        position: "left",
-        stacked: true,
-        ticks: {
-          beginAtZero: true
+        plugins: {
+          title: {
+            display: true,
+            text: '全校平均得分',
+            color: '#2783be',
+            font: {
+              size: 30,
+            },
+            padding: {
+              top: 20,
+              bottom: 15
+            }
+          },
+          legend: {
+            position: 'bottom',
+            labels: {
+              color: '#595757',
+              padding: 30,
+              font: {
+                weight: 'bold',
+                size: 17
+              },
+            },
+          },
+          datalabels: {
+            // backgroundColor: function (context) {
+            //   return context.dataset.backgroundColor;
+            // },
+            borderRadius: 4,
+            color: 'white',
+            font: {
+              weight: 'bold',
+              size: 14,
+            },
+            padding: 6
+          }
+        },
+        scales: {
+          x: {
+            ticks: {
+              color: '#595757',
+              font: {
+                weight: 'bold',
+                size: 17,
+              },
+            }
+          },
+          y: {
+            // max: 5,
+            // min: 0,
+            ticks: {
+              // stepSize: 0.5,
+              color: '#595757',
+              font: {
+                weight: 'bold',
+                size: 17,
+              },
+            }
+          },
         }
       },
-      
-      {
-        id: "line",
-        position: "right",
-        stacked: false,
-        ticks: {
-          beginAtZero: true
-        },
-        gridLines: {
-          drawOnChartArea: false, 
-        },
-      }]
-    }
-      },
+      plugins: [ChartDataLabels],
     });
-  
+
   </script>
       <script>
         var srscorewidth = $(".srscore").width();
