@@ -353,8 +353,8 @@ box-shadow: 1px 1px 5px #5957576b;
 .data-page-scroll{
   padding: 10px 20px;
   margin: 30px auto;
-  box-shadow: 1px 1px 5px #5957577a;
   border-radius: 15px;
+  background-color: violet;
 }
 .chart-control{
   min-width: 800px;
@@ -371,11 +371,11 @@ box-shadow: 1px 1px 5px #5957576b;
   color: white;
   text-align: center;
 }
-@media screen and (max-width: 1024px){
+/* @media screen and (max-width: 1024px){
   .data-page-scroll{
     overflow-x: scroll;
   }
-}
+} */
 @page {
   /*size: portrait;  直向 */
   /*size: landscape;  橫向 */
@@ -636,8 +636,8 @@ box-shadow: 1px 1px 5px #5957576b;
   .data-page-scroll{
     padding: 10px 20px;
     margin: 30px auto;
-    box-shadow: 1px 1px 5px #5957577a;
     border-radius: 15px;
+    background-color: violet;
   }
   .chart-control{
     min-width: 800px;
