@@ -105,6 +105,7 @@
         </div>
       </div>
 
+      <canvas id="chart5" class="chartjs-render-monitor"></canvas>
     </div>
     <div class="bottom-text">
       <p>國立臺灣師範大學心測中心 版權所有‧翻印必究</p>
@@ -560,6 +561,69 @@
       plugins: [ChartDataLabels],
     });
 
+
+    var ctx5 = document.getElementById("chart5");
+    var chart5 = new Chart(ctx5, {
+            type: 'line',
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+                datasets: [{
+                    label: 'My First Dataset',
+                    data: [165, 259, 280, 381, 456, 590],
+                    fill: false,
+                    borderColor: '#10398C',
+                    tension: 0.5,
+                    pointBorderColor: "#10398C",
+                    pointBackgroundColor: "#fff",
+                    pointBorderWidth: 1,
+                    pointHoverRadius: 13,
+                    pointHoverBackgroundColor: "#10398C",
+                    pointHoverBorderColor: "#10398C",
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 5,
+                    pointHitRadius: 10,
+                }, ]
+            },
+
+            options: {
+                responsive: true,
+                legend: {
+                    display: false,
+                },
+                scales: {
+                    y: {
+                        suggestedMin: 300,
+                        suggestedMax: 500
+                    },
+                    yAxes: [{
+                        scaleLabel: {
+                            display: false,
+                            labelString: '閱讀數',
+                            fontSize: 16,
+                            fontColor: '#4B4B4B',
+                        },
+                        ticks: {
+                            min: 100,
+                            fontColor: '#4B4B4B',
+                            beginAtZero: true,
+                        },
+                    }],
+
+                },
+
+                chartArea: {
+                    backgroundColor: '#F7F7F7'
+                },
+            },
+            plugins: [{
+                beforeDraw: function (c) {
+                    var chartHeight = c.chart.width;
+                    c.scales['y-axis-0'].options.ticks.fontSize = chartHeight * 6 /
+                    100; //fontSize: 6% of canvas height
+                },
+
+            }]
+        });
   </script>
 
 </body>
