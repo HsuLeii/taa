@@ -60,6 +60,7 @@
       <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
     
   <script>
+    
     var ctx = document.getElementById("canvas-DACC-overall");
     window.myBar = new Chart(ctx, {
       type: "bar",
@@ -168,6 +169,7 @@
           },
         ],
       },
+      plugins: [ChartDataLabels],
       options: {
         responsive: true,
         plugins: {
@@ -231,7 +233,6 @@
           },
         }
       },
-      plugins: [ChartDataLabels],
     });
 
   </script>
