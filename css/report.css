@@ -371,7 +371,7 @@ box-shadow: 1px 1px 5px #5957576b;
   color: white;
   text-align: center;
 }
-@media (max-width: 1024px){
+@media screen and (max-width: 1024px){
   .data-page-scroll{
     overflow-x: scroll;
   }
@@ -444,79 +444,8 @@ box-shadow: 1px 1px 5px #5957576b;
     text-decoration: none;
   }
   
-  button {
-    background-color: transparent;
-    padding: 0px;
-    border-width: 0px;
-  }
-  
-  select {
-    color: #595757;
-    background-color: #FCFAF7;
-    border-color: #595757;
-    padding: 3px 8px;
-    border-radius: 5px;
-  }
-  
-  .selectbook * {
-    border-radius: 15px;
-    background-color: #FCFAF7;
-    border-color: #00a7e5;
-  
-  }
-  
-  option {
-    color: #00a7e5;
-    background-color: #FCFAF7;
-    border-color: #00a7e5;
-    border-radius: 10px;
-    padding: 3px 8px;
-  }
-  
-  input {
-    color: #595757;
-    background-color: #FCFAF7;
-    border: 1px solid #595757;
-    padding: 3px 8px;
-    font-size: 17px;
-    border-radius: 5px;
-  
-  }
-  
-  input[type=radio] {
-    width: 16px;
-    height: 16px;
-    display: inline;
-    vertical-align: top;
-    margin-top: 7px;
-  }
-  
-  select:focus,
-  input[type="text"]:focus,
-  input[type="password"]:focus {
-    outline: 0;
-    border: 1px solid #00a7e5;
-    color: #00a7e5;
-    -webkit-box-shadow: 1px 1px 5px #595757;
-    -moz-box-shadow: 1px 1px 5px #595757;
-    box-shadow: 1px 1px 5px #595757;
-    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-    -moz-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  }
-  
   img {
     width: 100%;
-  }
-  
-  rt {
-    -webkit-transform: translateY(-35%);
-    -moz-transform: translateY(-35%);
-    transform: translateY(-35%);
-  }
-  
-  .cursor {
-    cursor: pointer;
   }
   
   .bold {
@@ -570,36 +499,15 @@ box-shadow: 1px 1px 5px #5957576b;
     height: 100vh;
     page-break-after: always;
   }
-  .page {
-    page-break-inside: avoid;
-    position: relative;
-    width: 100%;
-  }
-
-  .page::after {
-    /* content: counter(page-number);
-      counter-increment: page-number 1; */
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    font-size: 30px;
-    text-align: center;
-  }
 
   .page {
     /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
     /* page-break-after: always;  碰到此元素會直接換頁 */
     page-break-inside: avoid;
     position: relative;
-    background: linear-gradient(90deg, #00a7e5 38%, #fff 0%);
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding-top: 15px;
     overflow: hidden;
   }
   
