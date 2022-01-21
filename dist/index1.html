@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Chart.js Responsive Line Chart Demo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<head>
+  
+
+
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.0/Chart.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    
+
+
+
+
+   
+    
+</head>
+<body>
+    <canvas id="myChart" width="562" height="281" ></canvas>
+
+
+    <script type="text/javascript">//<![CDATA[
+
+var config = {
+  type: 'bar',
+  data: {
+    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    
+    datasets: [{
+      label: "My First dataset",
+      data: [65, 0, 80, 81, 56, 85, 40],datalabels: {
+        align: 'center',
+        anchor: 'start' ,
+        labels: {
+          value: {
+            color: 'green'
+          }
+        }
+      },
+      fill: false,
+      
+    }]
+  },
+  options: {
+    legend: {
+    	display: false
+    },
+  	tooltips: {
+    	callbacks: {
+      	label: function(tooltipItem) {
+        console.log(tooltipItem)
+        	return tooltipItem.yLabel;
+        }
+      }
+    }
+  },
+
+  plugins: [ChartDataLabels],
+};
+
+var ctx = document.getElementById("myChart").getContext("2d");
+new Chart(ctx, config);
+
+
+
+  //]]></script>
+
+  
+
+ 
+</body>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/chart.js'></script>
+</body>
+</html>
