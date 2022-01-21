@@ -93,15 +93,10 @@
           <p class="white bold">測驗各向度與不同年級類別之分析結果</p>
         </div>
       </div>
-      <div id="container" style="width: 75%;">
-        <canvas id="canvas"></canvas>    
-      </div>
       <div class="main">
         <div class="data-page-scroll">
           <div class="chart-control">
             <canvas id="grade-average" style="width: 300px; height: 150px;"></canvas>
-            <canvas id="myChart1" height="300" width="500"></canvas>
-    <canvas id="myChart2" height="300" width="500"></canvas>
           </div>
         </div>
         <div class="data-page-scroll">
@@ -139,59 +134,35 @@
             type: 'line',
             fill: false,
             data: [2.94, 3.07, 2.94, 3.14, 3.15],
-            datalabels: {
-            backgroundColor: function (context) {
-              return context.dataset.backgroundColor;
-            },
-          }
           },
           {
             label: ["全校平均得分", ],
             backgroundColor: "#2783BE",
             data: [2.98, 3.09, 2.95, 3.08, 3.11],
-            datalabels: {
-              align: 'end',
-              anchor: 'start',
-            },
           },
         ],
       },
       options: {
         responsive: true,
-        
-        plugins: {
-          title: {
-        display: true,
-        text: 'Chart.js Line Chart'
-      },
-          legend: {
-            position: 'bottom',
-            labels: {
-              color: '#595757',
-              padding: 30,
-              font: {
-                weight: 'bold',
-                size: 17
-              },
-            },
-          },
-          datalabels: {
-            // backgroundColor: function (context) {
-            //   return context.dataset.backgroundColor;
-            // },
-            borderRadius: 4,
-            color: 'white',
-            font: {
-              weight: 'bold',
-              size: 14,
-            },
-            padding: 6
-          }
-        },
+        title: {
+      display: true,
+      text: '全校平均得分',
+      fontSize: 30,
+        padding:25,
+        fontStyle: "bold",
+        fontColor:"#2783be"
+    },
+        legend: {
+      display: true,
+      position: 'bottom',
+      labels: {
+        fontColor: "#595757",
+        fontSize: 17,
+        padding:40,
+        fontStyle: "bold",
+      }
+    },
         scales: {
-          title: {
-       text: "Bold Axis X labels"
-      },
           xAxes: [{
         position: 'bottom',
         ticks: {
@@ -200,6 +171,7 @@
           // stepSize: 20,
           fontColor: '#595757',
           fontSize: 17,
+          fontStyle: "bold",
           // callback: function(value, index, values) {
           //   return value + ' %';
           // }
@@ -213,7 +185,7 @@
           // stepSize: 20,
           fontColor: '#595757',
           fontSize: 17,
-          labelFontWeight: "bold"
+          fontStyle: "bold",
           // callback: function(value, index, values) {
           //   return value + ' %';
           // }
@@ -221,20 +193,19 @@
       }]
     },
         animation: {
-            duration: 1,
             onComplete: function () {
                 var chartInstance = this.chart,
                     ctx = chartInstance.ctx;
                     ctx.textAlign = 'center';
-                    ctx.fillStyle = "red";
-                    ctx.textBaseline = 'bottom';
-                    ctx.textBaseline = 'bottom';
+                    ctx.textBaseline = 'Hanging';
+                    ctx.font = "20px Arial";
+                    ctx.fillStyle = "black";
                     // Loop through each data in the datasets
                     this.data.datasets.forEach(function (dataset, i) {
                         var meta = chartInstance.controller.getDatasetMeta(i);
                         meta.data.forEach(function (bar, index) {
                             var data = dataset.data[index];
-                            ctx.fillText(data, bar._model.x, bar._model.y - 5);
+                            ctx.fillText(data, bar._model.x, bar._model.y - 10);
                             
                         });
                     });
@@ -262,87 +233,84 @@
             type: 'line',
             fill: false,
             data: [47, 44, 47, 51, 46],
-            datalabels: {
-            backgroundColor: function (context) {
-              return context.dataset.backgroundColor;
-            },
-          }
           },
           {
             label: ["全體平均PR值", ],
             backgroundColor: "#2783BE",
             data: [47, 44, 47, 36, 46],
-            datalabels: {
-              align: 'end',
-              anchor: 'start',
-            },
           },
         ],
       },
       options: {
         responsive: true,
-        plugins: {
-          title: {
-            display: true,
-            text: '全校平均PR值',
-            color: '#2783be',
-            font: {
-              size: 30,
-            },
-            padding: {
-              top: 20,
-              bottom: 15
-            }
-          },
-          legend: {
-            position: 'bottom',
-            labels: {
-              color: '#595757',
-              padding: 30,
-              font: {
-                weight: 'bold',
-                size: 17
-              },
-            },
-          },
-          datalabels: {
-            // backgroundColor: function (context) {
-            //   return context.dataset.backgroundColor;
-            // },
-            borderRadius: 4,
-            color: 'white',
-            font: {
-              weight: 'bold',
-              size: 14,
-            },
-            padding: 6
-          }
-        },
-        scales: {
-          x: {
-            ticks: {
-              color: '#595757',
-              font: {
-                weight: 'bold',
-                size: 17,
-              },
-            }
-          },
-          y: {
-            max: 100,
-            min: 0,
-            ticks: {
-              stepSize: 10,
-              color: '#595757',
-              font: {
-                weight: 'bold',
-                size: 17,
-              },
-            }
-          },
+        title: {
+      display: true,
+      text: '全校平均PR值',
+      fontSize: 30,
+        padding:25,
+        fontStyle: "bold",
+        fontColor:"#2783be"
+    },
+    legend: {
+      display: true,
+      position: 'bottom',
+      labels: {
+        fontColor: "#595757",
+        fontSize: 17,
+        padding:40,
+        fontStyle: "bold",
+      }
+    },
+    scales: {
+          xAxes: [{
+        position: 'bottom',
+        ticks: {
+          // min: 0,
+          // max: 100,
+          // stepSize: 20,
+          fontColor: '#595757',
+          fontSize: 17,
+          fontStyle: "bold",
+          // callback: function(value, index, values) {
+          //   return value + ' %';
+          // }
         }
+      }],
+          yAxes: [{
+        position: 'left',
+        ticks: {
+          min: 0,
+          max: 100,
+          // stepSize: 20,
+          fontColor: '#595757',
+          fontSize: 17,
+          fontStyle: "bold",
+          // callback: function(value, index, values) {
+          //   return value + ' %';
+          // }
+        }
+      }]
+    },
+    animation: {
+            onComplete: function () {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'Hanging';
+                    ctx.font = "20px Arial";
+                    ctx.fillStyle = "black";
+                    // Loop through each data in the datasets
+                    this.data.datasets.forEach(function (dataset, i) {
+                        var meta = chartInstance.controller.getDatasetMeta(i);
+                        meta.data.forEach(function (bar, index) {
+                            var data = dataset.data[index];
+                            ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                            
+                        });
+                    });
+                }
+            },
       },
-      plugins: [ChartDataLabels],
     });
 
     // 不同年級之平均得分
@@ -364,105 +332,95 @@
             type: 'line',
             fill: false,
             data: [2.94, 3.07, 2.94, 3.14, 3.15],
-            datalabels: {
-            backgroundColor: function (context) {
-              return context.dataset.backgroundColor;
-            },
-          }
           },
           {
             label: ["大學一二年級", ],
             backgroundColor: "#5792c8",
             data: [2.94, 3.04, 2.93, 2.98, 3.06],
-            datalabels: {
-              align: 'end',
-              anchor: 'start',
-            },
           },
           {
             label: ["大學三四年級", ],
             backgroundColor: "#e27933",
             data: [3.00, 3.13, 2.90, 3.09, 3.09],
-            datalabels: {
-              align: 'end',
-              anchor: 'start',
-            },
           },
           {
             label: ["碩博士班", ],
             backgroundColor: "#a5a5a5",
             data: [2.99, 3.10, 2.99, 3.13, 3.14],
-            datalabels: {
-              align: 'end',
-              anchor: 'start',
-            },
           },
         ],
       },
       options: {
         responsive: true,
-        plugins: {
-          title: {
-            display: true,
-            text: '不同年級之平均得分',
-            color: '#d4655c',
-            font: {
-              size: 30,
-            },
-            padding: {
-              top: 20,
-              bottom: 15
-            }
-          },
-          legend: {
-            position: 'bottom',
-            labels: {
-              color: '#595757',
-              padding: 30,
-              font: {
-                weight: 'bold',
-                size: 17
-              },
-            },
-          },
-          datalabels: {
-            // backgroundColor: function (context) {
-            //   return context.dataset.backgroundColor;
-            // },
-            borderRadius: 4,
-            color: 'white',
-            font: {
-              weight: 'bold',
-              size: 14,
-            },
-            padding: 6
-          }
-        },
-        scales: {
-          x: {
-            ticks: {
-              color: '#595757',
-              font: {
-                weight: 'bold',
-                size: 17,
-              },
-            }
-          },
-          y: {
-            // max: 100,
-            // min: 0,
-            ticks: {
-              // stepSize: 10,
-              color: '#595757',
-              font: {
-                weight: 'bold',
-                size: 17,
-              },
-            }
-          },
+        title: {
+      display: true,
+      text: '不同年級之平均得分',
+      fontSize: 30,
+        padding:25,
+        fontStyle: "bold",
+        fontColor:"#d4655c"
+    },
+        legend: {
+      display: true,
+      position: 'bottom',
+      labels: {
+        fontColor: "#595757",
+        fontSize: 17,
+        padding:40,
+        fontStyle: "bold",
+      }
+    },
+    scales: {
+          xAxes: [{
+        position: 'bottom',
+        ticks: {
+          // min: 0,
+          // max: 100,
+          // stepSize: 20,
+          fontColor: '#595757',
+          fontSize: 17,
+          fontStyle: "bold",
+          // callback: function(value, index, values) {
+          //   return value + ' %';
+          // }
         }
+      }],
+          yAxes: [{
+        position: 'left',
+        ticks: {
+          // min: 0,
+          // max: 100,
+          // stepSize: 20,
+          fontColor: '#595757',
+          fontSize: 17,
+          fontStyle: "bold",
+          // callback: function(value, index, values) {
+          //   return value + ' %';
+          // }
+        }
+      }]
+    },
+    animation: {
+            onComplete: function () {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'Hanging';
+                    ctx.font = "20px Arial";
+                    ctx.fillStyle = "black";
+                    // Loop through each data in the datasets
+                    this.data.datasets.forEach(function (dataset, i) {
+                        var meta = chartInstance.controller.getDatasetMeta(i);
+                        meta.data.forEach(function (bar, index) {
+                            var data = dataset.data[index];
+                            ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                            
+                        });
+                    });
+                }
+            },
+
       },
-      plugins: [ChartDataLabels],
     });
 
     // 不同年級之平均PR值
@@ -484,105 +442,95 @@
             type: 'line',
             fill: false,
             data: [47, 44, 47, 51, 46],
-            datalabels: {
-            backgroundColor: function (context) {
-              return context.dataset.backgroundColor;
-            },
-          }
           },
           {
             label: ["大學一二年級", ],
             backgroundColor: "#5792c8",
             data: [47, 44, 47, 24, 33],
-            datalabels: {
-              align: 'end',
-              anchor: 'start',
-            },
           },
           {
             label: ["大學三四年級", ],
             backgroundColor: "#e27933",
             data: [60, 59, 47, 36, 33],
-            datalabels: {
-              align: 'end',
-              anchor: 'start',
-            },
           },
           {
             label: ["碩博士班", ],
             backgroundColor: "#a5a5a5",
             data: [47, 44, 47, 51, 46],
-            datalabels: {
-              align: 'end',
-              anchor: 'start',
-            },
           },
         ],
       },
       options: {
         responsive: true,
-        plugins: {
-          title: {
-            display: true,
-            text: '不同年級之平均PR值',
-            color: '#d4655c',
-            font: {
-              size: 30,
-            },
-            padding: {
-              top: 20,
-              bottom: 15
-            }
-          },
-          legend: {
-            position: 'bottom',
-            labels: {
-              color: '#595757',
-              padding: 30,
-              font: {
-                weight: 'bold',
-                size: 17
-              },
-            },
-          },
-          datalabels: {
-            // backgroundColor: function (context) {
-            //   return context.dataset.backgroundColor;
-            // },
-            borderRadius: 4,
-            color: 'white',
-            font: {
-              weight: 'bold',
-              size: 14,
-            },
-            padding: 6
-          }
-        },
-        scales: {
-          x: {
-            ticks: {
-              color: '#595757',
-              font: {
-                weight: 'bold',
-                size: 17,
-              },
-            }
-          },
-          y: {
-            max: 100,
-            min: 0,
-            ticks: {
-              stepSize: 10,
-              color: '#595757',
-              font: {
-                weight: 'bold',
-                size: 17,
-              },
-            }
-          },
+        title: {
+      display: true,
+      text: '不同年級之平均PR值',
+      fontSize: 30,
+        padding:25,
+        fontStyle: "bold",
+        fontColor:"#d4655c"
+    },
+        legend: {
+      display: true,
+      position: 'bottom',
+      labels: {
+        fontColor: "#595757",
+        fontSize: 17,
+        padding:40,
+        fontStyle: "bold",
+      }
+    },
+    scales: {
+          xAxes: [{
+        position: 'bottom',
+        ticks: {
+          // min: 0,
+          // max: 100,
+          // stepSize: 20,
+          fontColor: '#595757',
+          fontSize: 17,
+          fontStyle: "bold",
+          // callback: function(value, index, values) {
+          //   return value + ' %';
+          // }
         }
+      }],
+          yAxes: [{
+        position: 'left',
+        ticks: {
+          min: 0,
+          max: 100,
+          // stepSize: 20,
+          fontColor: '#595757',
+          fontSize: 17,
+          fontStyle: "bold",
+          // callback: function(value, index, values) {
+          //   return value + ' %';
+          // }
+        }
+      }]
+    },
+    animation: {
+            onComplete: function () {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'Hanging';
+                    ctx.font = "20px Arial";
+                    ctx.fillStyle = "black";
+                    // Loop through each data in the datasets
+                    this.data.datasets.forEach(function (dataset, i) {
+                        var meta = chartInstance.controller.getDatasetMeta(i);
+                        meta.data.forEach(function (bar, index) {
+                            var data = dataset.data[index];
+                            ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                            
+                        });
+                    });
+                }
+            },
+
       },
-      plugins: [ChartDataLabels],
     });
 
 
