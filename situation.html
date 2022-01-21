@@ -12,7 +12,7 @@
 
 <body>
   <!-- page1 -->
-  <!-- <div class="page orange-border">
+  <div class="page orange-border">
     <div class="report-title">
       <div class="logo">
         <img src="image/logo/logo.png" alt="">
@@ -69,7 +69,8 @@
     <div class="bottom-text">
       <p>國立臺灣師範大學心測中心 版權所有‧翻印必究</p>
     </div>
-  </div> -->
+  </div>
+  
   <!-- page1 -->
   <!-- page2 -->
   <div class="page orange-border">
@@ -115,172 +116,10 @@
     </div>
   </div>
   <!-- page2 -->
+  <!-- <script src="js/chart.min.js"></script>       -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 
-
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js'></script>
-    <script src='https://rawgit.com/nnnick/Chart.js/v1.0.2/Chart.min.js'></script><script  src="./script.js"></script>
-  
 <script>
-  var barChartData = {
-  labels: [
-    "5月",
-    "6月",
-    "7月",
-    "8月",
-    "9月",
-    "10月",
-    "11月",
-    "12月"
-  ],
-  datasets: [
-    {
-      label: '処方箋枚数(前年)',
-      yAxisID: "line",
-      backgroundColor: "pink",
-      borderColor: "red",
-      type: 'line',
-      fill: false,
-      data: [80, 130, 100, 140, 138, 125,110, 145],
-    },
-    {
-      label: '処方箋枚数',
-      yAxisID: "line",
-      backgroundColor: "lightgreen",
-      borderColor: "green",
-      type: 'line',
-      fill: false,
-      data: [170, 175, 130, 115, 205,157],
-    },
-    {
-      label: "新患数(前年)",
-      yAxisID: 'bar-stack',
-      backgroundColor: "pink",
-      borderColor: "red",
-      borderWidth: 1,
-      stack: 'bef',
-      data: [30, 50, 60, 70,30, 50, 60, 70]
-    },
-    {
-      label: "Mastercard",
-      yAxisID: 'bar-stack',
-      backgroundColor: "lightblue",
-      borderColor: "blue",
-      borderWidth: 1,
-      stack: 'bef',
-      data: [40, 70, 30, 60, 100,70,40,60]
-    },
-    {
-      label: "Paypal",
-      yAxisID: 'bar-stack',
-      backgroundColor: "lightgreen",
-      borderColor: "green",
-      borderWidth: 1,
-      stack: 'now',
-      data: [100,70,40,60,90,70]
-    },
-    {
-      label: "Visa",
-      yAxisID: "bar-stack",
-      backgroundColor: "yellow",
-      borderColor: "orange",
-      borderWidth: 1,
-      stack: 'now',
-      data: [60,90,70,30,100,70]
-    }
-  ]
-};
-
-var chartOptions = {
-  responsive: true,
-  scales: {
-    yAxes: [
-    {
-      id: "bar-stack",
-      position: "left",
-      stacked: true,
-      ticks: {
-        beginAtZero: true
-      }
-    },
-    
-    {
-      id: "line",
-      position: "right",
-      stacked: false,
-      ticks: {
-        beginAtZero: true
-      },
-      gridLines: {
-        drawOnChartArea: false, 
-      },
-    }]
-  }
-}
-
-window.onload = function() {
-  var ctx = document.getElementById("canvas").getContext("2d");
-  window.myBar = new Chart(ctx, {
-    type: "bar",
-    data: barChartData,
-    options: chartOptions
-  });
-};
-
-</script>
-<script>
-var chartData = {
-    labels: ["January", "February", "March", "April", "May", "June"],
-    datasets: [
-        {
-            fillColor: "#79D1CF",
-            strokeColor: "#79D1CF",
-            data: [60, 80, 81, 56, 55, 40]
-        }
-    ]
-};
-
-var ctx = document.getElementById("myChart1").getContext("2d");
-var myLine = new Chart(ctx).Line(chartData, {
-    showTooltips: false,
-    onAnimationComplete: function () {
-
-        var ctx = this.chart.ctx;
-        ctx.font = this.scale.font;
-        ctx.fillStyle = this.scale.textColor
-        ctx.textAlign = "center";
-        ctx.textBaseline = "bottom";
-
-        this.datasets.forEach(function (dataset) {
-            dataset.points.forEach(function (points) {
-                ctx.fillText(points.value, points.x, points.y - 10);
-            });
-        })
-    }
-});
-
-var ctx = document.getElementById("myChart2").getContext("2d");
-var myBar = new Chart(ctx).Bar(chartData, {
-    showTooltips: false,
-    onAnimationComplete: function () {
-
-        var ctx = this.chart.ctx;
-        ctx.font = this.scale.font;
-        ctx.fillStyle = this.scale.textColor
-        ctx.textAlign = "center";
-        ctx.textBaseline = "bottom";
-
-        this.datasets.forEach(function (dataset) {
-            dataset.bars.forEach(function (bar) {
-                ctx.fillText(bar.value, bar.x, bar.y - 5);
-            });
-        })
-    }
-});
-</script>
-
-
-
-  <!-- <script>
     // 全校平均得分
     var ctx1 = document.getElementById("school-wide-average");
     window.myBar = new Chart(ctx1, {
@@ -319,6 +158,24 @@ var myBar = new Chart(ctx).Bar(chartData, {
       },
       options: {
         responsive: true,
+        animation: {
+            duration: 1,
+            onComplete: function () {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+                    ctx.textAlign = 'center';
+                    ctx.fillStyle = "rgba(0, 0, 0, 1)";
+                    ctx.textBaseline = 'bottom';
+                    // Loop through each data in the datasets
+                    this.data.datasets.forEach(function (dataset, i) {
+                        var meta = chartInstance.controller.getDatasetMeta(i);
+                        meta.data.forEach(function (bar, index) {
+                            var data = dataset.data[index];
+                            ctx.fillText(data, bar._model.x, bar._model.y - 5);
+                        });
+                    });
+                }
+            },
         plugins: {
           title: {
             display: true,
@@ -380,7 +237,6 @@ var myBar = new Chart(ctx).Bar(chartData, {
           },
         }
       },
-      plugins: [ChartDataLabels],
     });
 
     // 全校平均PR值
@@ -726,7 +582,7 @@ var myBar = new Chart(ctx).Bar(chartData, {
     });
 
 
-  </script> -->
+  </script>
   
 </body>
 
