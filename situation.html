@@ -73,7 +73,7 @@
   
   <!-- page1 -->
   <!-- page2 -->
-  <div class="page orange-border">
+  <div class="page red-border">
     <div class="report-title">
       <div class="title-content">
         <div class="headline">
@@ -111,6 +111,45 @@
     </div>
   </div>
   <!-- page2 -->
+  <!-- page3 -->
+  <div class="page yellow-border">
+    <div class="report-title">
+      <div class="title-content">
+        <div class="headline">
+          <h3>中教情境判斷測驗</h3>
+        </div>
+        <div class="subtitle">
+          <h4>全校綜合分析報表</h4>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-title">
+        <div class="number-mark">
+          <img src="image/svg/three.svg" alt="">
+        </div>
+        <div class="first-text yellowbg">
+          <p class="white bold">測驗各向度與不同年級類別之分析結果</p>
+        </div>
+      </div>
+      <div class="main">
+        <div class="data-page-scroll">
+          <div class="chart-control">
+            <canvas id="average-score-with-or-without-practice" style="width: 300px; height: 150px;"></canvas>
+          </div>
+        </div>
+        <div class="data-page-scroll">
+          <div class="chart-control">
+            <canvas id="average-pr-with-or-without-practice" style="width: 300px; height: 150px;"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-text">
+      <p>國立臺灣師範大學心測中心 版權所有‧翻印必究</p>
+    </div>
+  </div>
+  <!-- page3 -->
   <!-- <script src="js/chart.min.js"></script>       -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 
@@ -166,7 +205,7 @@
           xAxes: [{
         position: 'bottom',
         ticks: {
-          // min: 0,
+          min: 0,
           // max: 100,
           // stepSize: 20,
           fontColor: '#595757',
@@ -180,7 +219,7 @@
           yAxes: [{
         position: 'left',
         ticks: {
-          // min: 0,
+          min: 0,
           // max: 100,
           // stepSize: 20,
           fontColor: '#595757',
@@ -388,7 +427,7 @@
           yAxes: [{
         position: 'left',
         ticks: {
-          // min: 0,
+          min: 0,
           // max: 100,
           // stepSize: 20,
           fontColor: '#595757',
@@ -534,6 +573,216 @@
     });
 
 
+        // 有無修習教程之平均得分
+        var ctx3 = document.getElementById("average-score-with-or-without-practice");
+    window.myBar = new Chart(ctx3, {
+      type: "bar",
+      data: {
+        labels: [
+          "班級經營",
+          "教學",
+          "同事相處",
+          "親師溝通",
+          "輔導"
+        ],
+        datasets: [{
+            label: '全國平均得分',
+            backgroundColor: "#f3bb19",
+            borderColor: "#f3bb19",
+            type: 'line',
+            fill: false,
+            data: [2.94, 3.07, 2.94, 3.14, 3.15],
+          },
+          {
+            label: ["大學一二年級", ],
+            backgroundColor: "#5792c8",
+            data: [2.94, 3.04, 2.93, 2.98, 3.06],
+          },
+          {
+            label: ["大學三四年級", ],
+            backgroundColor: "#e27933",
+            data: [3.00, 3.13, 2.90, 3.09, 3.09],
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        title: {
+      display: true,
+      text: '有無修習教程之平均得分',
+      fontSize: 30,
+        padding:25,
+        fontStyle: "bold",
+        fontColor:"#e1b538"
+    },
+        legend: {
+      display: true,
+      position: 'bottom',
+      labels: {
+        fontColor: "#595757",
+        fontSize: 17,
+        padding:40,
+        fontStyle: "bold",
+      }
+    },
+    scales: {
+          xAxes: [{
+        position: 'bottom',
+        ticks: {
+          // min: 0,
+          // max: 100,
+          // stepSize: 20,
+          fontColor: '#595757',
+          fontSize: 17,
+          fontStyle: "bold",
+          // callback: function(value, index, values) {
+          //   return value + ' %';
+          // }
+        }
+      }],
+          yAxes: [{
+        position: 'left',
+        ticks: {
+          min: 0,
+          // max: 100,
+          // stepSize: 20,
+          fontColor: '#595757',
+          fontSize: 17,
+          fontStyle: "bold",
+          // callback: function(value, index, values) {
+          //   return value + ' %';
+          // }
+        }
+      }]
+    },
+    animation: {
+            onComplete: function () {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'Hanging';
+                    ctx.font = "20px Arial";
+                    ctx.fillStyle = "black";
+                    // Loop through each data in the datasets
+                    this.data.datasets.forEach(function (dataset, i) {
+                        var meta = chartInstance.controller.getDatasetMeta(i);
+                        meta.data.forEach(function (bar, index) {
+                            var data = dataset.data[index];
+                            ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                            
+                        });
+                    });
+                }
+            },
+
+      },
+    });
+
+
+    // 有無修習教程之平均PR
+    var ctx3 = document.getElementById("average-pr-with-or-without-practice");
+    window.myBar = new Chart(ctx3, {
+      type: "bar",
+      data: {
+        labels: [
+          "班級經營",
+          "教學",
+          "同事相處",
+          "親師溝通",
+          "輔導"
+        ],
+        datasets: [{
+            label: '全國平均得分',
+            backgroundColor: "#f3bb19",
+            borderColor: "#f3bb19",
+            type: 'line',
+            fill: false,
+            data: [2.94, 3.07, 2.94, 3.14, 3.15],
+          },
+          {
+            label: ["大學一二年級", ],
+            backgroundColor: "#5792c8",
+            data: [2.94, 3.04, 2.93, 2.98, 3.06],
+          },
+          {
+            label: ["大學三四年級", ],
+            backgroundColor: "#e27933",
+            data: [3.00, 3.13, 2.90, 3.09, 3.09],
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        title: {
+      display: true,
+      text: '有無修習教程之平均PR值',
+      fontSize: 30,
+        padding:25,
+        fontStyle: "bold",
+        fontColor:"#e1b538"
+    },
+        legend: {
+      display: true,
+      position: 'bottom',
+      labels: {
+        fontColor: "#595757",
+        fontSize: 17,
+        padding:40,
+        fontStyle: "bold",
+      }
+    },
+    scales: {
+          xAxes: [{
+        position: 'bottom',
+        ticks: {
+          // min: 0,
+          // max: 100,
+          // stepSize: 20,
+          fontColor: '#595757',
+          fontSize: 17,
+          fontStyle: "bold",
+          // callback: function(value, index, values) {
+          //   return value + ' %';
+          // }
+        }
+      }],
+          yAxes: [{
+        position: 'left',
+        ticks: {
+          min: 0,
+          // max: 100,
+          // stepSize: 20,
+          fontColor: '#595757',
+          fontSize: 17,
+          fontStyle: "bold",
+          // callback: function(value, index, values) {
+          //   return value + ' %';
+          // }
+        }
+      }]
+    },
+    animation: {
+            onComplete: function () {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'Hanging';
+                    ctx.font = "20px Arial";
+                    ctx.fillStyle = "black";
+                    // Loop through each data in the datasets
+                    this.data.datasets.forEach(function (dataset, i) {
+                        var meta = chartInstance.controller.getDatasetMeta(i);
+                        meta.data.forEach(function (bar, index) {
+                            var data = dataset.data[index];
+                            ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                            
+                        });
+                    });
+                }
+            },
+
+      },
+    });
   </script>
   
 </body>
