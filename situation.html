@@ -158,37 +158,12 @@
       },
       options: {
         responsive: true,
-        animation: {
-            duration: 1,
-            onComplete: function () {
-                var chartInstance = this.chart,
-                    ctx = chartInstance.ctx;
-                    ctx.textAlign = 'center';
-                    ctx.fillStyle = "rgba(0, 0, 0, 1)";
-                    ctx.textBaseline = 'bottom';
-                    // Loop through each data in the datasets
-                    this.data.datasets.forEach(function (dataset, i) {
-                        var meta = chartInstance.controller.getDatasetMeta(i);
-                        meta.data.forEach(function (bar, index) {
-                            var data = dataset.data[index];
-                            ctx.fillText(data, bar._model.x, bar._model.y - 5);
-                        });
-                    });
-                }
-            },
+        
         plugins: {
           title: {
-            display: true,
-            text: '全校平均得分',
-            color: '#2783be',
-            font: {
-              size: 30,
-            },
-            padding: {
-              top: 20,
-              bottom: 15
-            }
-          },
+        display: true,
+        text: 'Chart.js Line Chart'
+      },
           legend: {
             position: 'bottom',
             labels: {
@@ -214,28 +189,57 @@
           }
         },
         scales: {
-          x: {
-            ticks: {
-              color: '#595757',
-              font: {
-                weight: 'bold',
-                size: 17,
-              },
-            }
-          },
-          y: {
-            // max: 5,
-            // min: 0,
-            ticks: {
-              // stepSize: 0.5,
-              color: '#595757',
-              font: {
-                weight: 'bold',
-                size: 17,
-              },
-            }
-          },
+          title: {
+       text: "Bold Axis X labels"
+      },
+          xAxes: [{
+        position: 'bottom',
+        ticks: {
+          // min: 0,
+          // max: 100,
+          // stepSize: 20,
+          fontColor: '#595757',
+          fontSize: 17,
+          // callback: function(value, index, values) {
+          //   return value + ' %';
+          // }
         }
+      }],
+          yAxes: [{
+        position: 'left',
+        ticks: {
+          // min: 0,
+          // max: 100,
+          // stepSize: 20,
+          fontColor: '#595757',
+          fontSize: 17,
+          labelFontWeight: "bold"
+          // callback: function(value, index, values) {
+          //   return value + ' %';
+          // }
+        }
+      }]
+    },
+        animation: {
+            duration: 1,
+            onComplete: function () {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+                    ctx.textAlign = 'center';
+                    ctx.fillStyle = "red";
+                    ctx.textBaseline = 'bottom';
+                    ctx.textBaseline = 'bottom';
+                    // Loop through each data in the datasets
+                    this.data.datasets.forEach(function (dataset, i) {
+                        var meta = chartInstance.controller.getDatasetMeta(i);
+                        meta.data.forEach(function (bar, index) {
+                            var data = dataset.data[index];
+                            ctx.fillText(data, bar._model.x, bar._model.y - 5);
+                            
+                        });
+                    });
+                }
+            },
       },
     });
 
