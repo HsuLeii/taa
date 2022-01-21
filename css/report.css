@@ -354,7 +354,7 @@ box-shadow: 1px 1px 5px #5957576b;
   padding: 10px 20px;
   margin: 30px auto;
   border-radius: 15px;
-  background-color: violet;
+  box-shadow: 1px 1px 5px #5957577a;
 }
 .chart-control{
   min-width: 800px;
@@ -637,8 +637,8 @@ box-shadow: 1px 1px 5px #5957576b;
     padding: 10px 20px;
     margin: 30px auto;
     border-radius: 15px;
-    background-color: violet;
-  }
+    box-shadow: 1px 1px 5px #5957577a;
+    }
   .chart-control{
     min-width: 800px;
   }
