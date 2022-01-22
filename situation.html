@@ -214,12 +214,12 @@
         <div class="two-chart">
           <div class="data-page-scroll">
             <div class="chart-control">
-              <canvas id="national-average-score" style="width: 300px; height: 200px;"></canvas>
+              <canvas id="national-average-score" class="two-chart-height" style="width: 300px;"></canvas>
             </div>
           </div>
           <div class="data-page-scroll">
             <div class="chart-control">
-              <canvas id="national-average-score-pr" style="width: 300px; height: 200px;"></canvas>
+              <canvas id="national-average-score-pr" class="two-chart-height" style="width: 300px;"></canvas>
             </div>
           </div>
         </div>
@@ -258,6 +258,9 @@
             type: 'line',
             fill: false,
             data: [2.94, 3.07, 2.94, 3.14, 3.15],
+            pointRadius: 6,
+    pointHoverRadius: 6,
+            tension: 0.5
           },
           {
             label: ["全校平均得分", ],
@@ -367,7 +370,9 @@
             type: 'line',
             fill: false,
             data: [47, 44, 47, 51, 46],
-            pointRadius: 10,
+            pointRadius: 6,
+    pointHoverRadius: 6,
+            tension: 0.5
           },
           {
             label: ["全體平均PR值", ],
@@ -477,6 +482,9 @@
             type: 'line',
             fill: false,
             data: [2.94, 3.07, 2.94, 3.14, 3.15],
+            pointRadius: 6,
+    pointHoverRadius: 6,
+            tension: 0.5
           },
           {
             label: ["大學一二年級", ],
@@ -596,6 +604,9 @@
             type: 'line',
             fill: false,
             data: [47, 44, 47, 51, 46],
+            pointRadius: 6,
+    pointHoverRadius: 6,
+            tension: 0.5
           },
           {
             label: ["大學一二年級", ],
@@ -716,6 +727,9 @@
             type: 'line',
             fill: false,
             data: [2.94, 3.07, 2.94, 3.14, 3.15],
+            pointRadius: 6,
+    pointHoverRadius: 6,
+            tension: 0.5
           },
           {
             label: ["未修教程", ],
@@ -831,6 +845,9 @@
             type: 'line',
             fill: false,
             data: [47, 44, 47, 51, 46],
+            pointRadius: 6,
+    pointHoverRadius: 6,
+            tension: 0.5
           },
           {
             label: ["未修教程", ],
@@ -945,6 +962,9 @@
             type: 'line',
             fill: false,
             data: [2.94, 3.07, 2.94, 3.14, 3.15],
+            pointRadius: 6,
+    pointHoverRadius: 6,
+            tension: 0.5
           },
           {
             label: ["第一年", ],
@@ -1069,6 +1089,9 @@
             type: 'line',
             fill: false,
             data: [47, 44, 47, 51, 46],
+            pointRadius: 6,
+    pointHoverRadius: 6,
+            tension: 0.5
           },
           {
             label: ["第一年", ],
@@ -1397,6 +1420,9 @@
             borderColor: "#5792c8",
             fill: false,
             data: [3.22, 3.33, 3.2, 3.33, 3.33],
+            pointRadius: 6,
+    pointHoverRadius: 6,
+            tension: 0.5
           },
           {
             label: ["PR50", ],
@@ -1404,6 +1430,9 @@
             borderColor: "#e27933",
             fill: false,
             data: [3, 3.11, 3, 3.15, 3.22],
+            pointRadius: 6,
+    pointHoverRadius: 6,
+            tension: 0.5
           },
           {
             label: ["PR25", ],
@@ -1411,6 +1440,9 @@
             borderColor: "#a5a5a5",
             fill: false,
             data: [2.67, 2.89, 2.78, 3, 3],
+            pointRadius: 6,
+    pointHoverRadius: 6,
+            tension: 0.5
           },
         ],
       },
