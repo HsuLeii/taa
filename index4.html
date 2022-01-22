@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Chart.js - Bar &amp; Line ( Mixed Chart Types )</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- Chart.js v2.9.3 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+
+<body>
+   <div class="chart-container" style="position: relative; width:80vw">
+        <canvas id="my_Chart"></canvas>
+    </div>
+    <script>
+
+        // Options define for display value on top of bars
+        var myoption = {
+            
+            animation: {
+            duration: 1,
+            onComplete: function () {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+                    ctx.textAlign = 'center';
+                    ctx.fillStyle = "rgba(0, 0, 0, 1)";
+                    ctx.textBaseline = 'bottom';
+                    // Loop through each data in the datasets
+                    this.data.datasets.forEach(function (dataset, i) {
+                        var meta = chartInstance.controller.getDatasetMeta(i);
+                        meta.data.forEach(function (bar, index) {
+                            var data = dataset.data[index];
+                            ctx.fillText(data, bar._model.x, bar._model.y - 5);
+                        });
+                    });
+                }
+            }
+        };
+        // Code to draw Chart
+        var ctx = document.getElementById('my_Chart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',        // Define chart type
+            data: {
+        labels: [
+          "班級經營",
+          "教學",
+          "同事相處",
+          "親師溝通",
+          "輔導"
+        ],
+        datasets: [{
+            label: '全國平均得分',
+            backgroundColor: "#f3bb19",
+            borderColor: "#f3bb19",
+            type: 'line',
+            fill: false,
+            data: [2.94, 3.07, 2.94, 3.14, 3.15],
+            datalabels: {
+            backgroundColor: function (context) {
+              return context.dataset.backgroundColor;
+            },
+          }
+          },
+          {
+            label: ["全校平均得分", ],
+            backgroundColor: "#2783BE",
+            data: [2.98, 3.09, 2.95, 3.08, 3.11],
+            datalabels: {
+              align: 'end',
+              anchor: 'start',
+            },
+          },
+        ],
+      },    	// Chart data
+            options: {
+                animation: {
+            duration: 1,
+            onComplete: function () {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+                    ctx.textAlign = 'center';
+                    ctx.fillStyle = "rgba(0, 0, 0, 1)";
+                    ctx.textBaseline = 'bottom';
+                    // Loop through each data in the datasets
+                    this.data.datasets.forEach(function (dataset, i) {
+                        var meta = chartInstance.controller.getDatasetMeta(i);
+                        meta.data.forEach(function (bar, index) {
+                            var data = dataset.data[index];
+                            ctx.fillText(data, bar._model.x, bar._model.y - 5);
+                        });
+                    });
+                }
+            }
+            } 	// Chart Options [This is optional paramenter use to add some extra things in the chart].
+        });
+    </script>
+    <!-- <script>
+        // data define for bar chart
+        var myData = {
+            labels: [
+          "班級經營",
+          "教學",
+          "同事相處",
+          "親師溝通",
+          "輔導"
+        ],
+        datasets: [{
+            label: '全國平均得分',
+            backgroundColor: "#f3bb19",
+            borderColor: "#f3bb19",
+            type: 'line',
+            fill: false,
+            data: [2.94, 3.07, 2.94, 3.14, 3.15],
+            datalabels: {
+            backgroundColor: function (context) {
+              return context.dataset.backgroundColor;
+            },
+          }
+          },
+          {
+            label: ["全校平均得分", ],
+            backgroundColor: "#2783BE",
+            data: [2.98, 3.09, 2.95, 3.08, 3.11],
+            datalabels: {
+              align: 'end',
+              anchor: 'start',
+            },
+          },
+        ],
+        };
+        // Options define for display value on top of bars
+        var myoption = {
+            tooltips: {
+                enabled: true
+            },
+            hover: {
+                animationDuration: 1
+            },
+            animation: {
+            duration: 1,
+            onComplete: function () {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+                    ctx.textAlign = 'center';
+                    ctx.fillStyle = "rgba(0, 0, 0, 1)";
+                    ctx.textBaseline = 'bottom';
+                    // Loop through each data in the datasets
+                    this.data.datasets.forEach(function (dataset, i) {
+                        var meta = chartInstance.controller.getDatasetMeta(i);
+                        meta.data.forEach(function (bar, index) {
+                            var data = dataset.data[index];
+                            ctx.fillText(data, bar._model.x, bar._model.y - 5);
+                        });
+                    });
+                }
+            }
+        };
+        // Code to draw Chart
+        var ctx = document.getElementById('my_Chart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: "bar",
+      data: {
+        labels: [
+          "班級經營",
+          "教學",
+          "同事相處",
+          "親師溝通",
+          "輔導"
+        ],
+        datasets: [{
+            label: '全國平均得分',
+            backgroundColor: "#f3bb19",
+            borderColor: "#f3bb19",
+            type: 'line',
+            fill: false,
+            data: [2.94, 3.07, 2.94, 3.14, 3.15],
+            datalabels: {
+            backgroundColor: function (context) {
+              return context.dataset.backgroundColor;
+            },
+          }
+          },
+          {
+            label: ["全校平均得分", ],
+            backgroundColor: "#2783BE",
+            data: [2.98, 3.09, 2.95, 3.08, 3.11],
+            datalabels: {
+              align: 'end',
+              anchor: 'start',
+            },
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: '全校平均得分',
+            color: '#2783be',
+            font: {
+              size: 30,
+            },
+            padding: {
+              top: 20,
+              bottom: 15
+            }
+          },
+          legend: {
+            position: 'bottom',
+            labels: {
+              color: '#595757',
+              padding: 30,
+              font: {
+                weight: 'bold',
+                size: 17
+              },
+            },
+          },
+          datalabels: {
+            // backgroundColor: function (context) {
+            //   return context.dataset.backgroundColor;
+            // },
+            borderRadius: 4,
+            color: 'white',
+            font: {
+              weight: 'bold',
+              size: 14,
+            },
+            padding: 6
+          }
+        },
+        scales: {
+          x: {
+            ticks: {
+              color: '#595757',
+              font: {
+                weight: 'bold',
+                size: 17,
+              },
+            }
+          },
+          y: {
+            // max: 5,
+            // min: 0,
+            ticks: {
+              // stepSize: 0.5,
+              color: '#595757',
+              font: {
+                weight: 'bold',
+                size: 17,
+              },
+            }
+          },
+        }
+      },
+    });
+    </script> -->
+</body>
+<!-- partial -->
+  
+</body>
+</html>
