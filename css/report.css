@@ -190,8 +190,12 @@ rt {
   background-color: #e1b538;
 }
 
+.greenbg{
+  background-color: #3e9979;
+}
+
 .purplebg{
-  background-color: #964c99;
+  background-color: #675e92;
 }
 
 .orange-border{
@@ -206,8 +210,12 @@ rt {
   border: 1px solid#e1b538;
 }
 
+.green-border{
+  border: 1px solid#3e9979;
+}
+
 .purple-border{
-  border: 1px solid#964c99;
+  border: 1px solid#675e92;
 }
 
 .shadow{
