@@ -379,7 +379,8 @@ box-shadow: 1px 1px 5px #5957576b;
   min-width: auto;
 }
 .two-chart-height{
-  height: 200px;
+  width: 300px;
+  height: 250px;
 }
 .bottom-text{
   position: relative;
@@ -640,6 +641,7 @@ p, label, tr, td {
     position: relative;
     max-width: 1024px;
     width: 100%;
+    height: 1448px;
     margin: 0 auto;
     overflow: hidden;
   }
