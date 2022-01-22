@@ -457,243 +457,243 @@
       },
     });
 
-    // // 不同年級之平均得分pg2
-    // var ctx3 = document.getElementById('grade-average').getContext('2d');
-    //     var myChart = new Chart(ctx3, {
-    //   type: "bar",
-    //   data: {
-    //     labels: [
-    //       "班級經營",
-    //       "教學",
-    //       "同事相處",
-    //       "親師溝通",
-    //       "輔導"
-    //     ],
-    //     datasets: [{
-    //         label: '全國平均得分',
-    //         backgroundColor: "#f3bb19",
-    //         borderColor: "#f3bb19",
-    //         type: 'line',
-    //         fill: false,
-    //         data: [2.94, 3.07, 2.94, 3.14, 3.15],
-    //       },
-    //       {
-    //         label: ["大學一二年級", ],
-    //         backgroundColor: "#5792c8",
-    //         data: [2.94, 3.04, 2.93, 2.98, 3.06],
-    //       },
-    //       {
-    //         label: ["大學三四年級", ],
-    //         backgroundColor: "#e27933",
-    //         data: [3.00, 3.13, 2.90, 3.09, 3.09],
-    //       },
-    //       {
-    //         label: ["碩博士班", ],
-    //         backgroundColor: "#a5a5a5",
-    //         data: [2.99, 3.10, 2.99, 3.13, 3.14],
-    //       },
-    //     ],
-    //   },
-    //   options: {
-    //     responsive: true,
-    //     animation: {
-    //         duration: 1,
-    //         onComplete: function () {
-    //             var chartInstance = this.chart,
-    //                 ctx = chartInstance.ctx;
-    //                 ctx.textAlign = 'center';
-    //                 ctx.fillStyle = "rgba(0, 0, 0, 1)";
-    //                 ctx.textBaseline = 'bottom';
-    //                 ctx.font = "15px Arial";
-    //                 // Loop through each data in the datasets
-    //                 this.data.datasets.forEach(function (dataset, i) {
-    //                     var meta = chartInstance.controller.getDatasetMeta(i);
-    //                     meta.data.forEach(function (bar, index) {
-    //                         var data = dataset.data[index];
-    //                         ctx.fillText(data, bar._model.x, bar._model.y - 5);
-    //                     });
-    //                 });
-    //             }
-    //         },
-    //     title: {
-    //       display: true,
-    //       text: '不同年級之平均得分',
-    //       fontSize: 30,
-    //       padding: 25,
-    //       fontStyle: "bold",
-    //       fontColor: "#d4655c"
-    //     },
-    //     tooltips: {
-    //       // Disable the on-canvas tooltip
-    //       enabled: false,
-    //     },
-    //     legend: {
-    //       display: true,
-    //       // onClick: (event, legendItem) => {
-    //       //   if (isFilterView) {
-    //       //     myChart.getDatasetMeta(legendItem.datasetIndex).hidden = !legendItem.hidden;
-    //       //     myChart.update();
-    //       //   }
-    //       // },
-    //       position: 'bottom',
-    //       labels: {
-    //         fontColor: "#595757",
-    //         fontSize: 17,
-    //         padding: 40,
-    //         fontStyle: "bold",
-    //       }
-    //     },
-    //     scales: {
-    //       xAxes: [{
-    //         position: 'bottom',
-    //         ticks: {
-    //           // min: 0,
-    //           // max: 100,
-    //           // stepSize: 20,
-    //           fontColor: '#595757',
-    //           fontSize: 17,
-    //           fontStyle: "bold",
-    //           // callback: function(value, index, values) {
-    //           //   return value + ' %';
-    //           // }
-    //         }
-    //       }],
-    //       yAxes: [{
-    //         position: 'left',
-    //         ticks: {
-    //           min: 0,
-    //           // max: 100,
-    //           // stepSize: 20,
-    //           fontColor: '#595757',
-    //           fontSize: 17,
-    //           fontStyle: "bold",
-    //           // callback: function(value, index, values) {
-    //           //   return value + ' %';
-    //           // }
-    //         }
-    //       }]
-    //     },
-    //   },
-    // });
+    // 不同年級之平均得分pg2
+    var ctx3 = document.getElementById('grade-average').getContext('2d');
+        var myChart = new Chart(ctx3, {
+      type: "bar",
+      data: {
+        labels: [
+          "班級經營",
+          "教學",
+          "同事相處",
+          "親師溝通",
+          "輔導"
+        ],
+        datasets: [{
+            label: '全國平均得分',
+            backgroundColor: "#f3bb19",
+            borderColor: "#f3bb19",
+            type: 'line',
+            fill: false,
+            data: [2.94, 3.07, 2.94, 3.14, 3.15],
+          },
+          {
+            label: ["大學一二年級", ],
+            backgroundColor: "#5792c8",
+            data: [2.94, 3.04, 2.93, 2.98, 3.06],
+          },
+          {
+            label: ["大學三四年級", ],
+            backgroundColor: "#e27933",
+            data: [3.00, 3.13, 2.90, 3.09, 3.09],
+          },
+          {
+            label: ["碩博士班", ],
+            backgroundColor: "#a5a5a5",
+            data: [2.99, 3.10, 2.99, 3.13, 3.14],
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        animation: {
+            duration: 1,
+            onComplete: function () {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+                    ctx.textAlign = 'center';
+                    ctx.fillStyle = "rgba(0, 0, 0, 1)";
+                    ctx.textBaseline = 'bottom';
+                    ctx.font = "15px Arial";
+                    // Loop through each data in the datasets
+                    this.data.datasets.forEach(function (dataset, i) {
+                        var meta = chartInstance.controller.getDatasetMeta(i);
+                        meta.data.forEach(function (bar, index) {
+                            var data = dataset.data[index];
+                            ctx.fillText(data, bar._model.x, bar._model.y - 5);
+                        });
+                    });
+                }
+            },
+        title: {
+          display: true,
+          text: '不同年級之平均得分',
+          fontSize: 30,
+          padding: 25,
+          fontStyle: "bold",
+          fontColor: "#d4655c"
+        },
+        tooltips: {
+          // Disable the on-canvas tooltip
+          enabled: false,
+        },
+        legend: {
+          display: true,
+          // onClick: (event, legendItem) => {
+          //   if (isFilterView) {
+          //     myChart.getDatasetMeta(legendItem.datasetIndex).hidden = !legendItem.hidden;
+          //     myChart.update();
+          //   }
+          // },
+          position: 'bottom',
+          labels: {
+            fontColor: "#595757",
+            fontSize: 17,
+            padding: 40,
+            fontStyle: "bold",
+          }
+        },
+        scales: {
+          xAxes: [{
+            position: 'bottom',
+            ticks: {
+              // min: 0,
+              // max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 17,
+              fontStyle: "bold",
+              // callback: function(value, index, values) {
+              //   return value + ' %';
+              // }
+            }
+          }],
+          yAxes: [{
+            position: 'left',
+            ticks: {
+              min: 0,
+              // max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 17,
+              fontStyle: "bold",
+              // callback: function(value, index, values) {
+              //   return value + ' %';
+              // }
+            }
+          }]
+        },
+      },
+    });
 
-    // // 不同年級之平均PR值pg2
-    // var ctx4 = document.getElementById('grade-average-pr-value').getContext('2d');
-    //     var myChart = new Chart(ctx4, {
-    //   type: "bar",
-    //   data: {
-    //     labels: [
-    //       "班級經營",
-    //       "教學",
-    //       "同事相處",
-    //       "親師溝通",
-    //       "輔導"
-    //     ],
-    //     datasets: [{
-    //         label: '全國平均得分',
-    //         backgroundColor: "#f3bb19",
-    //         borderColor: "#f3bb19",
-    //         type: 'line',
-    //         fill: false,
-    //         data: [47, 44, 47, 51, 46],
-    //       },
-    //       {
-    //         label: ["大學一二年級", ],
-    //         backgroundColor: "#5792c8",
-    //         data: [47, 44, 47, 24, 33],
-    //       },
-    //       {
-    //         label: ["大學三四年級", ],
-    //         backgroundColor: "#e27933",
-    //         data: [60, 59, 47, 36, 33],
-    //       },
-    //       {
-    //         label: ["碩博士班", ],
-    //         backgroundColor: "#a5a5a5",
-    //         data: [47, 44, 47, 51, 46],
-    //       },
-    //     ],
-    //   },
-    //   options: {
-    //     responsive: true,
-    //     animation: {
-    //         duration: 1,
-    //         onComplete: function () {
-    //             var chartInstance = this.chart,
-    //                 ctx = chartInstance.ctx;
-    //                 ctx.textAlign = 'center';
-    //                 ctx.fillStyle = "rgba(0, 0, 0, 1)";
-    //                 ctx.textBaseline = 'bottom';
-    //                 ctx.font = "15px Arial";
-    //                 // Loop through each data in the datasets
-    //                 this.data.datasets.forEach(function (dataset, i) {
-    //                     var meta = chartInstance.controller.getDatasetMeta(i);
-    //                     meta.data.forEach(function (bar, index) {
-    //                         var data = dataset.data[index];
-    //                         ctx.fillText(data, bar._model.x, bar._model.y - 5);
-    //                     });
-    //                 });
-    //             }
-    //         },
-    //     title: {
-    //       display: true,
-    //       text: '不同年級之平均PR值',
-    //       fontSize: 30,
-    //       padding: 25,
-    //       fontStyle: "bold",
-    //       fontColor: "#d4655c"
-    //     },
-    //     tooltips: {
-    //       // Disable the on-canvas tooltip
-    //       enabled: false,
-    //     },
-    //     legend: {
-    //       display: true,
-    //       onClick: (event, legendItem) => {
-    //         if (isFilterView) {
-    //           myChart.getDatasetMeta(legendItem.datasetIndex).hidden = !legendItem.hidden;
-    //           myChart.update();
-    //         }
-    //       },
-    //       position: 'bottom',
-    //       labels: {
-    //         fontColor: "#595757",
-    //         fontSize: 17,
-    //         padding: 40,
-    //         fontStyle: "bold",
-    //       }
-    //     },
-    //     scales: {
-    //       xAxes: [{
-    //         position: 'bottom',
-    //         ticks: {
-    //           // min: 0,
-    //           // max: 100,
-    //           // stepSize: 20,
-    //           fontColor: '#595757',
-    //           fontSize: 17,
-    //           fontStyle: "bold",
-    //           // callback: function(value, index, values) {
-    //           //   return value + ' %';
-    //           // }
-    //         }
-    //       }],
-    //       yAxes: [{
-    //         position: 'left',
-    //         ticks: {
-    //           min: 0,
-    //           max: 100,
-    //           // stepSize: 20,
-    //           fontColor: '#595757',
-    //           fontSize: 17,
-    //           fontStyle: "bold",
-    //           // callback: function(value, index, values) {
-    //           //   return value + ' %';
-    //           // }
-    //         }
-    //       }]
-    //     },
-    //   },
-    // });
+    // 不同年級之平均PR值pg2
+    var ctx4 = document.getElementById('grade-average-pr-value').getContext('2d');
+        var myChart = new Chart(ctx4, {
+      type: "bar",
+      data: {
+        labels: [
+          "班級經營",
+          "教學",
+          "同事相處",
+          "親師溝通",
+          "輔導"
+        ],
+        datasets: [{
+            label: '全國平均得分',
+            backgroundColor: "#f3bb19",
+            borderColor: "#f3bb19",
+            type: 'line',
+            fill: false,
+            data: [47, 44, 47, 51, 46],
+          },
+          {
+            label: ["大學一二年級", ],
+            backgroundColor: "#5792c8",
+            data: [47, 44, 47, 24, 33],
+          },
+          {
+            label: ["大學三四年級", ],
+            backgroundColor: "#e27933",
+            data: [60, 59, 47, 36, 33],
+          },
+          {
+            label: ["碩博士班", ],
+            backgroundColor: "#a5a5a5",
+            data: [47, 44, 47, 51, 46],
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        animation: {
+            duration: 1,
+            onComplete: function () {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+                    ctx.textAlign = 'center';
+                    ctx.fillStyle = "rgba(0, 0, 0, 1)";
+                    ctx.textBaseline = 'bottom';
+                    ctx.font = "15px Arial";
+                    // Loop through each data in the datasets
+                    this.data.datasets.forEach(function (dataset, i) {
+                        var meta = chartInstance.controller.getDatasetMeta(i);
+                        meta.data.forEach(function (bar, index) {
+                            var data = dataset.data[index];
+                            ctx.fillText(data, bar._model.x, bar._model.y - 5);
+                        });
+                    });
+                }
+            },
+        title: {
+          display: true,
+          text: '不同年級之平均PR值',
+          fontSize: 30,
+          padding: 25,
+          fontStyle: "bold",
+          fontColor: "#d4655c"
+        },
+        tooltips: {
+          // Disable the on-canvas tooltip
+          enabled: false,
+        },
+        legend: {
+          display: true,
+          onClick: (event, legendItem) => {
+            if (isFilterView) {
+              myChart.getDatasetMeta(legendItem.datasetIndex).hidden = !legendItem.hidden;
+              myChart.update();
+            }
+          },
+          position: 'bottom',
+          labels: {
+            fontColor: "#595757",
+            fontSize: 17,
+            padding: 40,
+            fontStyle: "bold",
+          }
+        },
+        scales: {
+          xAxes: [{
+            position: 'bottom',
+            ticks: {
+              // min: 0,
+              // max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 17,
+              fontStyle: "bold",
+              // callback: function(value, index, values) {
+              //   return value + ' %';
+              // }
+            }
+          }],
+          yAxes: [{
+            position: 'left',
+            ticks: {
+              min: 0,
+              max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 17,
+              fontStyle: "bold",
+              // callback: function(value, index, values) {
+              //   return value + ' %';
+              // }
+            }
+          }]
+        },
+      },
+    });
 
 
     // // 有無修習教程之平均得分pg3
