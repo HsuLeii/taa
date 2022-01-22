@@ -367,6 +367,15 @@ box-shadow: 1px 1px 5px #5957576b;
 .chart-control{
   min-width: 800px;
 }
+.two-chart{
+  display: flex;
+}
+.two-chart > .data-page-scroll{
+  width: 50%;
+}
+.two-chart > .data-page-scroll > .chart-control{
+  min-width: auto;
+}
 .bottom-text{
   position: absolute;
   bottom: 0px;
