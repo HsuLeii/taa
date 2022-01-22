@@ -286,6 +286,64 @@
                     });
                 }
             },
+            title: {
+          display: true,
+          text: '全校平均得分',
+          fontSize: 30,
+          padding: 25,
+          fontStyle: "bold",
+          fontColor: "#2783be"
+        },
+        tooltips: {
+          // Disable the on-canvas tooltip
+          enabled: false,
+        },
+        legend: {
+          display: true,
+          onClick: (event, legendItem) => {
+            if (isFilterView) {
+              myChart.getDatasetMeta(legendItem.datasetIndex).hidden = !legendItem.hidden;
+              myChart.update();
+            }
+          },
+          position: 'bottom',
+          labels: {
+            fontColor: "#595757",
+            fontSize: 17,
+            padding: 40,
+            fontStyle: "bold",
+          }
+        },
+        scales: {
+          xAxes: [{
+            position: 'bottom',
+            ticks: {
+              min: 0,
+              // max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 17,
+              fontStyle: "bold",
+              // callback: function(value, index, values) {
+              //   return value + ' %';
+              // }
+            }
+          }],
+          yAxes: [{
+            position: 'left',
+            ticks: {
+              min: 0,
+              // max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 17,
+              fontStyle: "bold",
+              // callback: function(value, index, values) {
+              //   return value + ' %';
+              // }
+            }
+          }]
+        },
         
       },
     });
