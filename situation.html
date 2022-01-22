@@ -348,114 +348,114 @@
       },
     });
 
-    // // 全校平均PR值pg1
-    // var ctx2 = document.getElementById('pr-value').getContext('2d');
-    //     var myChart = new Chart(ctx2, {
-    //   type: "bar",
-    //   data: {
-    //     labels: [
-    //       "班級經營",
-    //       "教學",
-    //       "同事相處",
-    //       "親師溝通",
-    //       "輔導"
-    //     ],
-    //     datasets: [{
-    //         label: '全國平均PR值',
-    //         backgroundColor: "#f3bb19",
-    //         borderColor: "#f3bb19",
-    //         type: 'line',
-    //         fill: false,
-    //         data: [47, 44, 47, 51, 46],
-    //       },
-    //       {
-    //         label: ["全體平均PR值", ],
-    //         backgroundColor: "#2783BE",
-    //         data: [47, 44, 47, 36, 46],
-    //       },
-    //     ],
-    //   },
-    //   options: {
-    //     responsive: true,
-    //     animation: {
-    //         duration: 1,
-    //         onComplete: function () {
-    //             var chartInstance = this.chart,
-    //                 ctx = chartInstance.ctx;
-    //                 ctx.textAlign = 'center';
-    //                 ctx.fillStyle = "rgba(0, 0, 0, 1)";
-    //                 ctx.textBaseline = 'bottom';
-    //                 ctx.font = "15px Arial";
-    //                 // Loop through each data in the datasets
-    //                 this.data.datasets.forEach(function (dataset, i) {
-    //                     var meta = chartInstance.controller.getDatasetMeta(i);
-    //                     meta.data.forEach(function (bar, index) {
-    //                         var data = dataset.data[index];
-    //                         ctx.fillText(data, bar._model.x, bar._model.y - 5);
-    //                     });
-    //                 });
-    //             }
-    //         },
-    //     title: {
-    //       display: true,
-    //       text: '全校平均PR值',
-    //       fontSize: 30,
-    //       padding: 25,
-    //       fontStyle: "bold",
-    //       fontColor: "#2783be"
-    //     },
-    //     tooltips: {
-    //       // Disable the on-canvas tooltip
-    //       enabled: false,
-    //     },
-    //     legend: {
-    //       display: true,
-    //       // onClick: (event, legendItem) => {
-    //       //   if (isFilterView) {
-    //       //     myChart.getDatasetMeta(legendItem.datasetIndex).hidden = !legendItem.hidden;
-    //       //     myChart.update();
-    //       //   }
-    //       // },
-    //       position: 'bottom',
-    //       labels: {
-    //         fontColor: "#595757",
-    //         fontSize: 17,
-    //         padding: 40,
-    //         fontStyle: "bold",
-    //       }
-    //     },
-    //     scales: {
-    //       xAxes: [{
-    //         position: 'bottom',
-    //         ticks: {
-    //           // min: 0,
-    //           // max: 100,
-    //           // stepSize: 20,
-    //           fontColor: '#595757',
-    //           fontSize: 17,
-    //           fontStyle: "bold",
-    //           // callback: function(value, index, values) {
-    //           //   return value + ' %';
-    //           // }
-    //         }
-    //       }],
-    //       yAxes: [{
-    //         position: 'left',
-    //         ticks: {
-    //           min: 0,
-    //           max: 100,
-    //           // stepSize: 20,
-    //           fontColor: '#595757',
-    //           fontSize: 17,
-    //           fontStyle: "bold",
-    //           // callback: function(value, index, values) {
-    //           //   return value + ' %';
-    //           // }
-    //         }
-    //       }]
-    //     },
-    //   },
-    // });
+    // 全校平均PR值pg1
+    var ctx2 = document.getElementById('pr-value').getContext('2d');
+        var myChart = new Chart(ctx2, {
+      type: "bar",
+      data: {
+        labels: [
+          "班級經營",
+          "教學",
+          "同事相處",
+          "親師溝通",
+          "輔導"
+        ],
+        datasets: [{
+            label: '全國平均PR值',
+            backgroundColor: "#f3bb19",
+            borderColor: "#f3bb19",
+            type: 'line',
+            fill: false,
+            data: [47, 44, 47, 51, 46],
+          },
+          {
+            label: ["全體平均PR值", ],
+            backgroundColor: "#2783BE",
+            data: [47, 44, 47, 36, 46],
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        animation: {
+            duration: 1,
+            onComplete: function () {
+                var chartInstance = this.chart,
+                    ctx = chartInstance.ctx;
+                    ctx.textAlign = 'center';
+                    ctx.fillStyle = "rgba(0, 0, 0, 1)";
+                    ctx.textBaseline = 'bottom';
+                    ctx.font = "15px Arial";
+                    // Loop through each data in the datasets
+                    this.data.datasets.forEach(function (dataset, i) {
+                        var meta = chartInstance.controller.getDatasetMeta(i);
+                        meta.data.forEach(function (bar, index) {
+                            var data = dataset.data[index];
+                            ctx.fillText(data, bar._model.x, bar._model.y - 5);
+                        });
+                    });
+                }
+            },
+        title: {
+          display: true,
+          text: '全校平均PR值',
+          fontSize: 30,
+          padding: 25,
+          fontStyle: "bold",
+          fontColor: "#2783be"
+        },
+        tooltips: {
+          // Disable the on-canvas tooltip
+          enabled: false,
+        },
+        legend: {
+          display: true,
+          // onClick: (event, legendItem) => {
+          //   if (isFilterView) {
+          //     myChart.getDatasetMeta(legendItem.datasetIndex).hidden = !legendItem.hidden;
+          //     myChart.update();
+          //   }
+          // },
+          position: 'bottom',
+          labels: {
+            fontColor: "#595757",
+            fontSize: 17,
+            padding: 40,
+            fontStyle: "bold",
+          }
+        },
+        scales: {
+          xAxes: [{
+            position: 'bottom',
+            ticks: {
+              // min: 0,
+              // max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 17,
+              fontStyle: "bold",
+              // callback: function(value, index, values) {
+              //   return value + ' %';
+              // }
+            }
+          }],
+          yAxes: [{
+            position: 'left',
+            ticks: {
+              min: 0,
+              max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 17,
+              fontStyle: "bold",
+              // callback: function(value, index, values) {
+              //   return value + ' %';
+              // }
+            }
+          }]
+        },
+      },
+    });
 
     // // 不同年級之平均得分pg2
     // var ctx3 = document.getElementById('grade-average').getContext('2d');
