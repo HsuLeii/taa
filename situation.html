@@ -1511,28 +1511,42 @@
           },
         ],
       },
+      plugins: [
+    {
+      id: "label",
+      afterDraw: function (chartInstance) {
+        const { ctx } = chartInstance;
+
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        // console.log(ctx);
+        // ctx.fillStyle = 'rgba(255, 255, 255, 1)';
+        chartInstance.data.datasets.forEach((dataset, i) => {
+          const meta = chartInstance.controller.getDatasetMeta(i);
+
+          meta.data.forEach((bar, index) => {
+            const value = dataset.data[index];
+            const height = bar.height();
+            // console.log(bar.height());
+            //const { boxes } = bar._chart;
+
+            const { x, y } = bar._view;
+
+            const _y = y + height / 2;
+
+            if (!value) return;
+
+            ctx.fillText(value, x, _y);
+          });
+        });
+      }
+    }
+  ],
       options: {
         responsive: true,
         animation: {
           duration: 0,
-          onComplete: function () {
-            var chartInstance = this.chart,
-                ctx = chartInstance.ctx;
-            ctx.textAlign = 'center';
-            ctx.font = "bold 15px 'Arial'"; 
-            ctx.textBaseline = 'bottom';
-            ctx.fillStyle = "black";
-            this.data.datasets.forEach(function (dataset, i) {
-              var meta = chartInstance.controller.getDatasetMeta(i);
-              if(i==0){
-                  meta.data.forEach(function (bar, index) { 
-                    var data = dataset.data[index];
-                    ctx.fillStyle = '#000000';
-                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
-                  });
-              }
-            });
-          }
+          
         },
         title: {
           display: true,
@@ -1704,8 +1718,15 @@
             padding: 20,
             fontStyle: "bold",
           },
-          onClick: null
+          onClick: null,
+          onHover : function (e) {
+            var data = dataset.data[index];
+        ctx.display = false
+            this.chart.update();
+      }
         },
+
+        
         
         scales: {
           xAxes: [{
@@ -1737,6 +1758,7 @@
             }
           }]
         },
+      
       },
     });
 
