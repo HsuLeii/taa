@@ -73,7 +73,7 @@
 
   <!-- page1 -->
   <!-- page2 -->
-  <div class="page red-border">
+  <div class="page orange-border">
     <div class="report-title">
       <div class="title-content">
         <div class="headline">
@@ -112,7 +112,7 @@
   </div>
   <!-- page2 -->
   <!-- page3 -->
-  <div class="page yellow-border">
+  <div class="page orange-border">
     <div class="report-title">
       <div class="title-content">
         <div class="headline">
@@ -151,7 +151,7 @@
   </div>
   <!-- page3 -->
   <!-- page4 -->
-  <div class="page green-border">
+  <div class="page orange-border">
     <div class="report-title">
       <div class="title-content">
         <div class="headline">
@@ -190,7 +190,7 @@
   </div>
   <!-- page4 -->
   <!-- page5 -->
-  <div class="page purple-border">
+  <div class="page orange-border">
     <div class="report-title">
       <div class="title-content">
         <div class="headline">
@@ -211,18 +211,18 @@
         </div>
       </div>
       <div class="main">
-        <div class="two-chart">
+        
           <div class="data-page-scroll">
             <div class="chart-control">
-              <canvas id="national-average-score" style="width: 300px; height: 200px;"></canvas>
+              <canvas id="national-average-score" style="width: 300px; height: 150px;"></canvas>
             </div>
           </div>
           <div class="data-page-scroll">
             <div class="chart-control">
-              <canvas id="national-average-score-pr" style="width: 300px; height: 200px;"></canvas>
+              <canvas id="national-average-score-pr" style="width: 300px; height: 150px;"></canvas>
             </div>
           </div>
-        </div>
+        
         <div class="data-page-scroll">
           <div class="chart-control">
             <canvas id="anisotropic-pr-value" style="width: 300px; height: 150px;"></canvas>
@@ -334,7 +334,7 @@
             title: {
           display: true,
           text: '全校平均得分',
-          fontSize: 30,
+          fontSize: 25,
           padding: 25,
           fontStyle: "bold",
           fontColor: "#2783be"
@@ -455,7 +455,7 @@
         title: {
           display: true,
           text: '全校平均PR值',
-          fontSize: 30,
+          fontSize: 25,
           padding: 25,
           fontStyle: "bold",
           fontColor: "#2783be"
@@ -600,7 +600,7 @@
         title: {
           display: true,
           text: '不同年級之平均得分',
-          fontSize: 30,
+          fontSize: 25,
           padding: 25,
           fontStyle: "bold",
           fontColor: "#d4655c"
@@ -745,7 +745,7 @@
         title: {
           display: true,
           text: '不同年級之平均PR值',
-          fontSize: 30,
+          fontSize: 25,
           padding: 25,
           fontStyle: "bold",
           fontColor: "#d4655c"
@@ -879,7 +879,7 @@
         title: {
           display: true,
           text: '有無修習教程之平均得分',
-          fontSize: 30,
+          fontSize: 25,
           padding: 25,
           fontStyle: "bold",
           fontColor: "#e1b538"
@@ -1013,7 +1013,7 @@
         title: {
           display: true,
           text: '有無修習教程之平均PR值',
-          fontSize: 30,
+          fontSize: 25,
           padding: 25,
           fontStyle: "bold",
           fontColor: "#e1b538"
@@ -1170,7 +1170,7 @@
         title: {
           display: true,
           text: '有無修習教程之平均PR值',
-          fontSize: 30,
+          fontSize: 25,
           padding: 25,
           fontStyle: "bold",
           fontColor: "#3e9979"
@@ -1327,7 +1327,7 @@
         title: {
           display: true,
           text: '有無修習教程之平均PR值',
-          fontSize: 30,
+          fontSize: 25,
           padding: 25,
           fontStyle: "bold",
           fontColor: "#3e9979"
@@ -1432,7 +1432,7 @@
         title: {
           display: true,
           text: '全國平均得分',
-          fontSize: 30,
+          fontSize: 25,
           padding: 25,
           fontStyle: "bold",
           fontColor: "#675e92"
@@ -1537,7 +1537,7 @@
         title: {
           display: true,
           text: '全國平均得分PR值',
-          fontSize: 30,
+          fontSize: 25,
           padding: 25,
           fontStyle: "bold",
           fontColor: "#675e92"
@@ -1680,14 +1680,14 @@
         title: {
           display: true,
           text: '各向度PR值對應得分',
-          fontSize: 30,
+          fontSize: 25,
           padding: 25,
           fontStyle: "bold",
           fontColor: "#675e92"
         },
         tooltips: {
           // Disable the on-canvas tooltip
-          enabled: false,
+          enabled: true,
         },
         legend: {
           display: true,
@@ -1703,7 +1703,6 @@
             fontSize: 17,
             padding: 20,
             fontStyle: "bold",
-            disabled : true
           },
           onClick: null
         },
