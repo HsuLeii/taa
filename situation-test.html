@@ -1589,9 +1589,10 @@
               var meta = chartInstance.controller.getDatasetMeta(i);
                   meta.data.forEach(function (bar, index) { 
                     var data = dataset.data[index];
-                    ctx.fillStyle = '#000000';
+                    ctx.fillStyle = 'red';
                     var height = bar.height();
-                    var { x, y } = bar._view;
+                    var y  = bar._view.y;
+                    console.log(y)
                     var _y = y + height / 2;
                         ctx.fillText(data, bar._model.x, _y);
                   });
