@@ -1511,36 +1511,7 @@
           },
         ],
       },
-      plugins: [
-    {
-      afterDraw: function (chartInstance) {
-        ctx = chartInstance.ctx;
-
-        ctx.textAlign = "center";
-        ctx.textBaseline = "middle";
-        // console.log(ctx);
-        // ctx.fillStyle = 'rgba(255, 255, 255, 1)';
-        chartInstance.data.datasets.forEach((dataset, i) => {
-          var meta = chartInstance.controller.getDatasetMeta(i);
-
-          meta.data.forEach((bar, index) => {
-             var value = dataset.data[index];
-            // var height = bar.height();
-            // // console.log(bar.height());
-            // //var { boxes } = bar._chart;
-
-            // var { x, y } = bar._view;
-
-            // var _y = y + height / 2;
-
-            // if (!value) return;
-
-            ctx.fillText(value, bar._model.x, bar._model.y + 10);
-          });
-        });
-      }
-    }
-  ],
+      
       options: {
         responsive: true,
         animation: {
@@ -1607,6 +1578,61 @@
           }]
         },
       },
+      plugins: [{
+      afterDraw: function (chartInstance) {
+        ctx = chartInstance.ctx;
+
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+
+        chartInstance.data.datasets.forEach(function (dataset, i) {
+              var meta = chartInstance.controller.getDatasetMeta(i);
+              if(i==0){
+                  meta.data.forEach(function (bar, index) { 
+                    var data = dataset.data[index];
+                    ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                  });
+              }else if(i==1){
+                  meta.data.forEach(function (bar, index) {
+                      var data = dataset.data[index];
+                      ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 0);
+                  });    
+              }else if(i==2){
+                  meta.data.forEach(function (bar, index) {
+                      var data = dataset.data[index];
+                      ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y + 10);
+                        
+                  });    
+              }
+            });
+
+
+        // console.log(ctx);
+        // ctx.fillStyle = 'rgba(255, 255, 255, 1)';
+        // chartInstance.data.datasets.forEach((dataset, i) => {
+        //   var meta = chartInstance.controller.getDatasetMeta(i);
+
+        //   meta.data.forEach((bar, index) => {
+        //      var value = dataset.data[index];
+        //     // var height = bar.height();
+        //     // // console.log(bar.height());
+        //     // //var { boxes } = bar._chart;
+
+        //     // var { x, y } = bar._view;
+
+        //     // var _y = y + height / 2;
+
+        //     // if (!value) return;
+
+        //     ctx.fillText(value, bar._model.x, bar._model.y + 10);
+        //   });
+        // });
+      }
+    }
+  ],
     });
 
     // 各向度PR值對應得分pg5
