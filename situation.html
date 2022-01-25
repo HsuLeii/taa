@@ -298,29 +298,34 @@
       options: {
         responsive: true,
         animation: {
-          duration: 1,
+          duration: 0,
           onComplete: function () {
             var chartInstance = this.chart,
                 ctx = chartInstance.ctx;
             ctx.textAlign = 'center';
-            ctx.font = "400 14px 'Noto Sans SC'"; 
-            ctx.fillStyle = "#495057";
+            ctx.font = "bold 15px 'Arial'"; 
             ctx.textBaseline = 'bottom';
+            ctx.fillStyle = "black";
             this.data.datasets.forEach(function (dataset, i) {
               var meta = chartInstance.controller.getDatasetMeta(i);
               if(i==0){
                   meta.data.forEach(function (bar, index) { 
-                      var data = dataset.data[index];
-                    if (data > 0) {
-                        ctx.fillText(data, bar._model.x, bar._model.y - 5);
-                    }  
+                    var data = dataset.data[index];
+                    ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y + 25);
                   });
-              }else if(i!==0){
+              }else if(i==1){
                   meta.data.forEach(function (bar, index) {
                       var data = dataset.data[index];
-                      if (data > 0) {
-                        ctx.fillText(data, bar._model.x, bar._model.y - 50);
-                    } 
+                      ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                  });    
+              }else if(i==2){
+                  meta.data.forEach(function (bar, index) {
+                      var data = dataset.data[index];
+                      ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                        
                   });    
               }
             });
@@ -350,9 +355,10 @@
           labels: {
             fontColor: "#595757",
             fontSize: 17,
-            padding: 40,
+            padding: 20,
             fontStyle: "bold",
-          }
+          },
+          onClick: null
         },
         scales: {
           xAxes: [{
@@ -420,24 +426,32 @@
       options: {
         responsive: true,
         animation: {
-            duration: 1,
-            onComplete: function () {
-                var chartInstance = this.chart,
-                    ctx = chartInstance.ctx;
-                    ctx.textAlign = 'center';
-                    ctx.fillStyle = "rgba(0, 0, 0, 1)";
-                    ctx.textBaseline = 'bottom';
-                    ctx.font = "15px Arial";
-                    // Loop through each data in the datasets
-                    this.data.datasets.forEach(function (dataset, i) {
-                        var meta = chartInstance.controller.getDatasetMeta(i);
-                        meta.data.forEach(function (bar, index) {
-                            var data = dataset.data[index];
-                            ctx.fillText(data, bar._model.x, bar._model.y - 5);
-                        });
-                    });
-                }
-            },
+          duration: 0,
+          onComplete: function () {
+            var chartInstance = this.chart,
+                ctx = chartInstance.ctx;
+            ctx.textAlign = 'center';
+            ctx.font = "bold 15px 'Arial'"; 
+            ctx.textBaseline = 'bottom';
+            ctx.fillStyle = "black";
+            this.data.datasets.forEach(function (dataset, i) {
+              var meta = chartInstance.controller.getDatasetMeta(i);
+              if(i==0){
+                  meta.data.forEach(function (bar, index) { 
+                    var data = dataset.data[index];
+                    ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y + 25);
+                  });
+              }else if(i==1){
+                  meta.data.forEach(function (bar, index) {
+                      var data = dataset.data[index];
+                      ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                  });    
+              }
+            });
+          }
+        },
         title: {
           display: true,
           text: '全校平均PR值',
@@ -462,9 +476,10 @@
           labels: {
             fontColor: "#595757",
             fontSize: 17,
-            padding: 40,
+            padding: 20,
             fontStyle: "bold",
-          }
+          },
+          onClick: null
         },
         scales: {
           xAxes: [{
@@ -485,7 +500,7 @@
             position: 'left',
             ticks: {
               min: 0,
-              max: 100,
+              // max: 100,
               // stepSize: 20,
               fontColor: '#595757',
               fontSize: 17,
@@ -542,24 +557,46 @@
       options: {
         responsive: true,
         animation: {
-            duration: 1,
-            onComplete: function () {
-                var chartInstance = this.chart,
-                    ctx = chartInstance.ctx;
-                    ctx.textAlign = 'center';
-                    ctx.fillStyle = "rgba(0, 0, 0, 1)";
-                    ctx.textBaseline = 'bottom';
-                    ctx.font = "15px Arial";
-                    // Loop through each data in the datasets
-                    this.data.datasets.forEach(function (dataset, i) {
-                        var meta = chartInstance.controller.getDatasetMeta(i);
-                        meta.data.forEach(function (bar, index) {
-                            var data = dataset.data[index];
-                            ctx.fillText(data, bar._model.x, bar._model.y - 5);
-                        });
-                    });
-                }
-            },
+          duration: 0,
+          onComplete: function () {
+            var chartInstance = this.chart,
+                ctx = chartInstance.ctx;
+            ctx.textAlign = 'center';
+            ctx.font = "bold 15px 'Arial'"; 
+            ctx.textBaseline = 'bottom';
+            ctx.fillStyle = "black";
+            this.data.datasets.forEach(function (dataset, i) {
+              var meta = chartInstance.controller.getDatasetMeta(i);
+              if(i==0){
+                  meta.data.forEach(function (bar, index) { 
+                    var data = dataset.data[index];
+                    ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y + 25);
+                  });
+              }else if(i==1){
+                  meta.data.forEach(function (bar, index) {
+                      var data = dataset.data[index];
+                      ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                  });    
+              }else if(i==2){
+                  meta.data.forEach(function (bar, index) {
+                      var data = dataset.data[index];
+                      ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                        
+                  });    
+              }else if(i==3){
+                  meta.data.forEach(function (bar, index) {
+                      var data = dataset.data[index];
+                      ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                        
+                  });    
+              }
+            });
+          }
+        },
         title: {
           display: true,
           text: '不同年級之平均得分',
@@ -584,9 +621,10 @@
           labels: {
             fontColor: "#595757",
             fontSize: 17,
-            padding: 40,
+            padding: 20,
             fontStyle: "bold",
-          }
+          },
+          onClick: null
         },
         scales: {
           xAxes: [{
@@ -664,24 +702,46 @@
       options: {
         responsive: true,
         animation: {
-            duration: 1,
-            onComplete: function () {
-                var chartInstance = this.chart,
-                    ctx = chartInstance.ctx;
-                    ctx.textAlign = 'center';
-                    ctx.fillStyle = "rgba(0, 0, 0, 1)";
-                    ctx.textBaseline = 'bottom';
-                    ctx.font = "15px Arial";
-                    // Loop through each data in the datasets
-                    this.data.datasets.forEach(function (dataset, i) {
-                        var meta = chartInstance.controller.getDatasetMeta(i);
-                        meta.data.forEach(function (bar, index) {
-                            var data = dataset.data[index];
-                            ctx.fillText(data, bar._model.x, bar._model.y - 5);
-                        });
-                    });
-                }
-            },
+          duration: 0,
+          onComplete: function () {
+            var chartInstance = this.chart,
+                ctx = chartInstance.ctx;
+            ctx.textAlign = 'center';
+            ctx.font = "bold 15px 'Arial'"; 
+            ctx.textBaseline = 'bottom';
+            ctx.fillStyle = "black";
+            this.data.datasets.forEach(function (dataset, i) {
+              var meta = chartInstance.controller.getDatasetMeta(i);
+              if(i==0){
+                  meta.data.forEach(function (bar, index) { 
+                    var data = dataset.data[index];
+                    ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y + 25);
+                  });
+              }else if(i==1){
+                  meta.data.forEach(function (bar, index) {
+                      var data = dataset.data[index];
+                      ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                  });    
+              }else if(i==2){
+                  meta.data.forEach(function (bar, index) {
+                      var data = dataset.data[index];
+                      ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                        
+                  });    
+              }else if(i==3){
+                  meta.data.forEach(function (bar, index) {
+                      var data = dataset.data[index];
+                      ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                        
+                  });    
+              }
+            });
+          }
+        },
         title: {
           display: true,
           text: '不同年級之平均PR值',
@@ -706,9 +766,10 @@
           labels: {
             fontColor: "#595757",
             fontSize: 17,
-            padding: 40,
+            padding: 20,
             fontStyle: "bold",
-          }
+          },
+          onClick: null
         },
         scales: {
           xAxes: [{
@@ -782,24 +843,39 @@
       options: {
         responsive: true,
         animation: {
-            duration: 1,
-            onComplete: function () {
-                var chartInstance = this.chart,
-                    ctx = chartInstance.ctx;
-                    ctx.textAlign = 'center';
-                    ctx.fillStyle = "rgba(0, 0, 0, 1)";
-                    ctx.textBaseline = 'bottom';
-                    ctx.font = "15px Arial";
-                    // Loop through each data in the datasets
-                    this.data.datasets.forEach(function (dataset, i) {
-                        var meta = chartInstance.controller.getDatasetMeta(i);
-                        meta.data.forEach(function (bar, index) {
-                            var data = dataset.data[index];
-                            ctx.fillText(data, bar._model.x, bar._model.y - 5);
-                        });
-                    });
-                }
-            },
+          duration: 0,
+          onComplete: function () {
+            var chartInstance = this.chart,
+                ctx = chartInstance.ctx;
+            ctx.textAlign = 'center';
+            ctx.font = "bold 15px 'Arial'"; 
+            ctx.textBaseline = 'bottom';
+            ctx.fillStyle = "black";
+            this.data.datasets.forEach(function (dataset, i) {
+              var meta = chartInstance.controller.getDatasetMeta(i);
+              if(i==0){
+                  meta.data.forEach(function (bar, index) { 
+                    var data = dataset.data[index];
+                    ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y + 25);
+                  });
+              }else if(i==1){
+                  meta.data.forEach(function (bar, index) {
+                      var data = dataset.data[index];
+                      ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                  });    
+              }else if(i==2){
+                  meta.data.forEach(function (bar, index) {
+                      var data = dataset.data[index];
+                      ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                        
+                  });    
+              }
+            });
+          }
+        },
         title: {
           display: true,
           text: '有無修習教程之平均得分',
@@ -824,9 +900,10 @@
           labels: {
             fontColor: "#595757",
             fontSize: 17,
-            padding: 40,
+            padding: 20,
             fontStyle: "bold",
-          }
+          },
+          onClick: null
         },
         scales: {
           xAxes: [{
@@ -900,24 +977,39 @@
       options: {
         responsive: true,
         animation: {
-            duration: 1,
-            onComplete: function () {
-                var chartInstance = this.chart,
-                    ctx = chartInstance.ctx;
-                    ctx.textAlign = 'center';
-                    ctx.fillStyle = "rgba(0, 0, 0, 1)";
-                    ctx.textBaseline = 'bottom';
-                    ctx.font = "15px Arial";
-                    // Loop through each data in the datasets
-                    this.data.datasets.forEach(function (dataset, i) {
-                        var meta = chartInstance.controller.getDatasetMeta(i);
-                        meta.data.forEach(function (bar, index) {
-                            var data = dataset.data[index];
-                            ctx.fillText(data, bar._model.x, bar._model.y - 5);
-                        });
-                    });
-                }
-            },
+          duration: 0,
+          onComplete: function () {
+            var chartInstance = this.chart,
+                ctx = chartInstance.ctx;
+            ctx.textAlign = 'center';
+            ctx.font = "bold 15px 'Arial'"; 
+            ctx.textBaseline = 'bottom';
+            ctx.fillStyle = "black";
+            this.data.datasets.forEach(function (dataset, i) {
+              var meta = chartInstance.controller.getDatasetMeta(i);
+              if(i==0){
+                  meta.data.forEach(function (bar, index) { 
+                    var data = dataset.data[index];
+                    ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y + 25);
+                  });
+              }else if(i==1){
+                  meta.data.forEach(function (bar, index) {
+                      var data = dataset.data[index];
+                      ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                  });    
+              }else if(i==2){
+                  meta.data.forEach(function (bar, index) {
+                      var data = dataset.data[index];
+                      ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                        
+                  });    
+              }
+            });
+          }
+        },
         title: {
           display: true,
           text: '有無修習教程之平均PR值',
@@ -942,9 +1034,10 @@
           labels: {
             fontColor: "#595757",
             fontSize: 17,
-            padding: 40,
+            padding: 20,
             fontStyle: "bold",
-          }
+          },
+          onClick: null
         },
         scales: {
           xAxes: [{
@@ -1027,24 +1120,53 @@
       options: {
         responsive: true,
         animation: {
-            duration: 1,
-            onComplete: function () {
-                var chartInstance = this.chart,
-                    ctx = chartInstance.ctx;
-                    ctx.textAlign = 'center';
-                    ctx.fillStyle = "rgba(0, 0, 0, 1)";
-                    ctx.textBaseline = 'bottom';
-                    ctx.font = "15px Arial";
-                    // Loop through each data in the datasets
-                    this.data.datasets.forEach(function (dataset, i) {
-                        var meta = chartInstance.controller.getDatasetMeta(i);
-                        meta.data.forEach(function (bar, index) {
-                            var data = dataset.data[index];
-                            ctx.fillText(data, bar._model.x, bar._model.y - 5);
-                        });
-                    });
-                }
-            },
+          duration: 0,
+          onComplete: function () {
+            var chartInstance = this.chart,
+                ctx = chartInstance.ctx;
+            ctx.textAlign = 'center';
+            ctx.font = "bold 15px 'Arial'"; 
+            ctx.textBaseline = 'bottom';
+            ctx.fillStyle = "black";
+            this.data.datasets.forEach(function (dataset, i) {
+              var meta = chartInstance.controller.getDatasetMeta(i);
+              if(i==0){
+                  meta.data.forEach(function (bar, index) { 
+                    var data = dataset.data[index];
+                    ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y + 25);
+                  });
+              }else if(i==1){
+                  meta.data.forEach(function (bar, index) {
+                      var data = dataset.data[index];
+                      ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                  });    
+              }else if(i==2){
+                  meta.data.forEach(function (bar, index) {
+                      var data = dataset.data[index];
+                      ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                        
+                  });    
+              }else if(i==3){
+                  meta.data.forEach(function (bar, index) {
+                      var data = dataset.data[index];
+                      ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                        
+                  });    
+              }else if(i==4){
+                  meta.data.forEach(function (bar, index) {
+                      var data = dataset.data[index];
+                      ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                        
+                  });    
+              }
+            });
+          }
+        },
         title: {
           display: true,
           text: '有無修習教程之平均PR值',
@@ -1069,9 +1191,10 @@
           labels: {
             fontColor: "#595757",
             fontSize: 17,
-            padding: 40,
+            padding: 20,
             fontStyle: "bold",
-          }
+          },
+          onClick: null
         },
         scales: {
           xAxes: [{
@@ -1154,24 +1277,53 @@
       options: {
         responsive: true,
         animation: {
-            duration: 1,
-            onComplete: function () {
-                var chartInstance = this.chart,
-                    ctx = chartInstance.ctx;
-                    ctx.textAlign = 'center';
-                    ctx.fillStyle = "rgba(0, 0, 0, 1)";
-                    ctx.textBaseline = 'bottom';
-                    ctx.font = "15px Arial";
-                    // Loop through each data in the datasets
-                    this.data.datasets.forEach(function (dataset, i) {
-                        var meta = chartInstance.controller.getDatasetMeta(i);
-                        meta.data.forEach(function (bar, index) {
-                            var data = dataset.data[index];
-                            ctx.fillText(data, bar._model.x, bar._model.y - 5);
-                        });
-                    });
-                }
-            },
+          duration: 0,
+          onComplete: function () {
+            var chartInstance = this.chart,
+                ctx = chartInstance.ctx;
+            ctx.textAlign = 'center';
+            ctx.font = "bold 15px 'Arial'"; 
+            ctx.textBaseline = 'bottom';
+            ctx.fillStyle = "black";
+            this.data.datasets.forEach(function (dataset, i) {
+              var meta = chartInstance.controller.getDatasetMeta(i);
+              if(i==0){
+                  meta.data.forEach(function (bar, index) { 
+                    var data = dataset.data[index];
+                    ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y + 25);
+                  });
+              }else if(i==1){
+                  meta.data.forEach(function (bar, index) {
+                      var data = dataset.data[index];
+                      ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                  });    
+              }else if(i==2){
+                  meta.data.forEach(function (bar, index) {
+                      var data = dataset.data[index];
+                      ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                        
+                  });    
+              }else if(i==3){
+                  meta.data.forEach(function (bar, index) {
+                      var data = dataset.data[index];
+                      ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                        
+                  });    
+              }else if(i==4){
+                  meta.data.forEach(function (bar, index) {
+                      var data = dataset.data[index];
+                      ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                        
+                  });    
+              }
+            });
+          }
+        },
         title: {
           display: true,
           text: '有無修習教程之平均PR值',
@@ -1196,9 +1348,10 @@
           labels: {
             fontColor: "#595757",
             fontSize: 17,
-            padding: 40,
+            padding: 20,
             fontStyle: "bold",
-          }
+          },
+          onClick: null
         },
         scales: {
           xAxes: [{
@@ -1256,24 +1409,26 @@
       options: {
         responsive: true,
         animation: {
-            duration: 1,
-            onComplete: function () {
-                var chartInstance = this.chart,
-                    ctx = chartInstance.ctx;
-                    ctx.textAlign = 'center';
-                    ctx.fillStyle = "rgba(0, 0, 0, 1)";
-                    ctx.textBaseline = 'bottom';
-                    ctx.font = "15px Arial";
-                    // Loop through each data in the datasets
-                    this.data.datasets.forEach(function (dataset, i) {
-                        var meta = chartInstance.controller.getDatasetMeta(i);
-                        meta.data.forEach(function (bar, index) {
-                            var data = dataset.data[index];
-                            ctx.fillText(data, bar._model.x, bar._model.y - 5);
-                        });
-                    });
-                }
-            },
+          duration: 0,
+          onComplete: function () {
+            var chartInstance = this.chart,
+                ctx = chartInstance.ctx;
+            ctx.textAlign = 'center';
+            ctx.font = "bold 15px 'Arial'"; 
+            ctx.textBaseline = 'bottom';
+            ctx.fillStyle = "black";
+            this.data.datasets.forEach(function (dataset, i) {
+              var meta = chartInstance.controller.getDatasetMeta(i);
+              if(i==0){
+                  meta.data.forEach(function (bar, index) { 
+                    var data = dataset.data[index];
+                    ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                  });
+              }
+            });
+          }
+        },
         title: {
           display: true,
           text: '全國平均得分',
@@ -1298,9 +1453,10 @@
           labels: {
             fontColor: "#595757",
             fontSize: 17,
-            padding: 40,
+            padding: 20,
             fontStyle: "bold",
-          }
+          },
+          onClick: null
         },
         scales: {
           xAxes: [{
@@ -1358,24 +1514,26 @@
       options: {
         responsive: true,
         animation: {
-            duration: 1,
-            onComplete: function () {
-                var chartInstance = this.chart,
-                    ctx = chartInstance.ctx;
-                    ctx.textAlign = 'center';
-                    ctx.fillStyle = "rgba(0, 0, 0, 1)";
-                    ctx.textBaseline = 'bottom';
-                    ctx.font = "15px Arial";
-                    // Loop through each data in the datasets
-                    this.data.datasets.forEach(function (dataset, i) {
-                        var meta = chartInstance.controller.getDatasetMeta(i);
-                        meta.data.forEach(function (bar, index) {
-                            var data = dataset.data[index];
-                            ctx.fillText(data, bar._model.x, bar._model.y - 5);
-                        });
-                    });
-                }
-            },
+          duration: 0,
+          onComplete: function () {
+            var chartInstance = this.chart,
+                ctx = chartInstance.ctx;
+            ctx.textAlign = 'center';
+            ctx.font = "bold 15px 'Arial'"; 
+            ctx.textBaseline = 'bottom';
+            ctx.fillStyle = "black";
+            this.data.datasets.forEach(function (dataset, i) {
+              var meta = chartInstance.controller.getDatasetMeta(i);
+              if(i==0){
+                  meta.data.forEach(function (bar, index) { 
+                    var data = dataset.data[index];
+                    ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                  });
+              }
+            });
+          }
+        },
         title: {
           display: true,
           text: '全國平均得分PR值',
@@ -1400,9 +1558,10 @@
           labels: {
             fontColor: "#595757",
             fontSize: 17,
-            padding: 40,
+            padding: 20,
             fontStyle: "bold",
-          }
+          },
+          onClick: null
         },
         scales: {
           xAxes: [{
@@ -1485,24 +1644,39 @@
       options: {
         responsive: true,
         animation: {
-            duration: 1,
-            onComplete: function () {
-                var chartInstance = this.chart,
-                    ctx = chartInstance.ctx;
-                    ctx.textAlign = 'center';
-                    ctx.fillStyle = "rgba(0, 0, 0, 1)";
-                    ctx.textBaseline = 'bottom';
-                    ctx.font = "15px Arial";
-                    // Loop through each data in the datasets
-                    this.data.datasets.forEach(function (dataset, i) {
-                        var meta = chartInstance.controller.getDatasetMeta(i);
-                        meta.data.forEach(function (bar, index) {
-                            var data = dataset.data[index];
-                            ctx.fillText(data, bar._model.x, bar._model.y - 5);
-                        });
-                    });
-                }
-            },
+          duration: 0,
+          onComplete: function () {
+            var chartInstance = this.chart,
+                ctx = chartInstance.ctx;
+            ctx.textAlign = 'center';
+            ctx.font = "bold 15px 'Arial'"; 
+            ctx.textBaseline = 'bottom';
+            ctx.fillStyle = "black";
+            this.data.datasets.forEach(function (dataset, i) {
+              var meta = chartInstance.controller.getDatasetMeta(i);
+              if(i==0){
+                  meta.data.forEach(function (bar, index) { 
+                    var data = dataset.data[index];
+                    ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 10);
+                  });
+              }else if(i==1){
+                  meta.data.forEach(function (bar, index) {
+                      var data = dataset.data[index];
+                      ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y - 0);
+                  });    
+              }else if(i==2){
+                  meta.data.forEach(function (bar, index) {
+                      var data = dataset.data[index];
+                      ctx.fillStyle = '#000000';
+                        ctx.fillText(data, bar._model.x, bar._model.y + 10);
+                        
+                  });    
+              }
+            });
+          }
+        },
         title: {
           display: true,
           text: '各向度PR值對應得分',
@@ -1527,10 +1701,13 @@
           labels: {
             fontColor: "#595757",
             fontSize: 17,
-            padding: 40,
+            padding: 20,
             fontStyle: "bold",
-          }
+            disabled : true
+          },
+          onClick: null
         },
+        
         scales: {
           xAxes: [{
             position: 'bottom',
@@ -1550,8 +1727,8 @@
             position: 'left',
             ticks: {
               min: 0,
-              // max: 100,
-              // stepSize: 20,
+              max: 4,
+              stepSize: 0.5,
               fontColor: '#595757',
               fontSize: 17,
               fontStyle: "bold",
@@ -1563,6 +1740,10 @@
         },
       },
     });
+
+   
+
+    
   </script>
 
 </body>
