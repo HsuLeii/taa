@@ -1514,28 +1514,28 @@
       plugins: [
     {
       afterDraw: function (chartInstance) {
-        const { ctx } = chartInstance;
+        ctx = chartInstance.ctx;
 
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
         // console.log(ctx);
         // ctx.fillStyle = 'rgba(255, 255, 255, 1)';
         chartInstance.data.datasets.forEach((dataset, i) => {
-          const meta = chartInstance.controller.getDatasetMeta(i);
+          var meta = chartInstance.controller.getDatasetMeta(i);
 
           meta.data.forEach((bar, index) => {
-            const value = dataset.data[index];
-            const height = bar.height();
-            // console.log(bar.height());
-            //const { boxes } = bar._chart;
+             var value = dataset.data[index];
+            // var height = bar.height();
+            // // console.log(bar.height());
+            // //var { boxes } = bar._chart;
 
-            const { x, y } = bar._view;
+            // var { x, y } = bar._view;
 
-            const _y = y + height / 2;
+            // var _y = y + height / 2;
 
-            if (!value) return;
+            // if (!value) return;
 
-            ctx.fillText(value, x, _y);
+            ctx.fillText(value, bar._model.x, bar._model.y + 10);
           });
         });
       }
