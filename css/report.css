@@ -178,6 +178,10 @@ rt {
   color: #FFF;
 }
 
+.blue{
+  color: #2783be;
+}
+
 .bluebg{
   background-color: #2783be;
 }
@@ -279,11 +283,31 @@ box-shadow: 1px 1px 5px #5957576b;
   text-align: center;
   background: #d26512;
 }
+.headline h3{
+  margin-left: 35px;
+}
+.headline h3 > img{
+  width: 35px;
+}
 .subtitle{
   padding: 10px 0px;
   text-align: center;
   background: #fff468;
+  position: relative;
 }
+.subtitle::before{
+position: absolute;
+content: "";
+background-image: url(../image/board-eraser.png);
+width: 60px;
+height: 100%;
+left: 15%;
+top: -50%;
+background-position: center;
+background-size: contain;
+background-repeat: no-repeat;
+}
+
 .test-content {
   width: 60%;
   z-index: 2;
@@ -350,22 +374,25 @@ box-shadow: 1px 1px 5px #5957576b;
   background-color: #efefef;
 }
 .chart-control{
-  min-width: 700px;
+  min-width: 768px;
 }
-.two-chart{
+.text-area{
+  margin: 40px auto;
+}
+.text-area > .title{
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
-.two-chart > .data-page-scroll{
-  width: 47.5%;
-  padding: 10px 15px;
+.text-area > .title > img{
+  width: 7%;
+  margin-right: 20px;
 }
-.two-chart > .data-page-scroll > .chart-control{
-  min-width: auto;
-}
-#national-average-score , #national-average-score-pr{
-  width: 300px;
-  height: 250px;
+.text-content{
+  padding: 10px 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px #5957577a;
+    background-color: #efefef;
 }
 .bottom-text{
   position: relative;
@@ -396,19 +423,6 @@ box-shadow: 1px 1px 5px #5957576b;
 .threepeople.shadow {
   margin: 30px 25px 0px 0px;
 }
-.two-chart {
-  flex-direction: column;
-}
-.two-chart > .data-page-scroll {
-  width: auto;
-}
-.two-chart > .data-page-scroll > .chart-control {
-  min-width: 768px;
-}
-#national-average-score , #national-average-score-pr{
-  width: 300px;
-  height: 150px;
-}
 }
 @media screen and (max-width: 768px){
   h3{
@@ -435,6 +449,12 @@ box-shadow: 1px 1px 5px #5957576b;
 .headline {
   padding: 10px 0px;
 }
+.headline h3{
+  margin-left: 25px;
+}
+.headline h3 > img{
+  width: 25px;
+}
 .subtitle {
   padding: 5px 0px;
 }
@@ -445,7 +465,7 @@ box-shadow: 1px 1px 5px #5957576b;
   margin-top: 30px;
 }
 .number-mark{
-  width: 12%;
+  width: 15%;
 }
   .data-page-scroll{
     overflow-x: scroll;
@@ -473,6 +493,12 @@ p, label, tr, td {
 .logo::after {
   width: 150px;
   height: 150px;
+}
+.headline h3{
+  margin-left: 15px;
+}
+.headline h3 > img{
+  width: 15px;
 }
 .material {
   margin: 0 auto;
@@ -568,6 +594,10 @@ p, label, tr, td {
     color: #FFF;
   }
   
+  .blue{
+    color: #2783be;
+  }
+  
   .bluebg{
     background-color: #2783be;
   }
@@ -591,7 +621,7 @@ p, label, tr, td {
   .orange-border{
     border: 1px solid #d26512;
   }
-
+  
   .shadow{
   -webkit-box-shadow: 1px 1px 5px #5957576b;
   -moz-box-shadow: 1px 1px 5px #5957576b;
@@ -626,7 +656,7 @@ p, label, tr, td {
     font-size: 30px;
     text-align: center;
   }
-  
+
   .report-title {
     width: 100%;
     display: flex;
@@ -675,11 +705,31 @@ p, label, tr, td {
     text-align: center;
     background: #d26512;
   }
+  .headline h3{
+    margin-left: 35px;
+  }
+  .headline h3 > img{
+    width: 35px;
+  }
   .subtitle{
     padding: 10px 0px;
     text-align: center;
     background: #fff468;
+    position: relative;
   }
+  .subtitle::before{
+  position: absolute;
+  content: "";
+  background-image: url(../image/board-eraser.png);
+  width: 60px;
+  height: 100%;
+  left: 15%;
+  top: -50%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  }
+  
   .test-content {
     width: 60%;
     z-index: 2;
@@ -743,23 +793,30 @@ p, label, tr, td {
     margin: 30px auto;
     border-radius: 15px;
     box-shadow: 1px 1px 5px #5957577a;
+    background-color: #efefef;
   }
   .chart-control{
     min-width: 768px;
   }
-  .two-chart{
+  .text-area{
+    margin: 40px auto;
+  }
+  .text-area > .title{
     display: flex;
-    justify-content: space-between;
+    align-items: center;
   }
-  .two-chart > .data-page-scroll{
-    width: 47.5%;
+  .text-area > .title > img{
+    width: 7%;
+    margin-right: 20px;
   }
-  .two-chart > .data-page-scroll > .chart-control{
-    min-width: auto;
+  .text-content{
+    padding: 10px 20px;
+      margin: 20px auto;
+      border-radius: 15px;
+      box-shadow: 1px 1px 5px #5957577a;
+      background-color: #efefef;
   }
-  .two-chart-height{
-    height: 200px;
-  }
+
   .bottom-text{
     position: absolute;
     bottom: 0px;
