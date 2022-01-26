@@ -310,7 +310,7 @@
         },
         tooltips: {
           // Disable the on-canvas tooltip
-          enabled: false,
+          enabled: true,
         },
         legend: {
           display: true,
@@ -431,7 +431,7 @@
         },
         tooltips: {
           // Disable the on-canvas tooltip
-          enabled: false,
+          enabled: true,
         },
         legend: {
           display: true,
@@ -562,7 +562,7 @@
         },
         tooltips: {
           // Disable the on-canvas tooltip
-          enabled: false,
+          enabled: true,
         },
         legend: {
           display: true,
@@ -693,7 +693,7 @@
         },
         tooltips: {
           // Disable the on-canvas tooltip
-          enabled: false,
+          enabled: true,
         },
         legend: {
           display: true,
@@ -819,7 +819,7 @@
         },
         tooltips: {
           // Disable the on-canvas tooltip
-          enabled: false,
+          enabled: true,
         },
         legend: {
           display: true,
@@ -946,7 +946,7 @@
         },
         tooltips: {
           // Disable the on-canvas tooltip
-          enabled: false,
+          enabled: true,
         },
         legend: {
           display: true,
@@ -1082,7 +1082,7 @@
         },
         tooltips: {
           // Disable the on-canvas tooltip
-          enabled: false,
+          enabled: true,
         },
         legend: {
           display: true,
@@ -1606,7 +1606,7 @@
           ctx = chartInstance.ctx;
           ctx.textAlign = "center";
           ctx.textBaseline = "middle";
-          ctx.fillStyle = 'red';
+          ctx.fillStyle = '#000';
           ctx.font = "bold 15px 'Arial'";
           chartInstance.data.datasets.forEach(function (dataset, i) {
             var meta = chartInstance.controller.getDatasetMeta(i);
