@@ -214,12 +214,12 @@
 
         <div class="data-page-scroll">
           <div class="chart-control">
-            <canvas id="national-average-score" style="width: 300px; height: 150px;"></canvas>
+            <canvas id="national-average-score" style="width: 300px; height: 90px;"></canvas>
           </div>
         </div>
         <div class="data-page-scroll">
           <div class="chart-control">
-            <canvas id="national-average-score-pr" style="width: 300px; height: 150px;"></canvas>
+            <canvas id="national-average-score-pr" style="width: 300px; height: 90px;"></canvas>
           </div>
         </div>
 
@@ -1610,25 +1610,25 @@
           ctx.font = "bold 15px 'Arial'";
           chartInstance.data.datasets.forEach(function (dataset, i) {
             var meta = chartInstance.controller.getDatasetMeta(i);
-//             if (i == 0) {
-//     meta.data.forEach(function (bar, index) {
-//       var data = dataset.data[index];
-//       ctx.fillStyle = '#000000';
-//       ctx.fillText(data, bar._model.x, bar._model.y - 10);
-//     });
-//   } else if (i == 1) {
-//     meta.data.forEach(function (bar, index) {
-//       var data = dataset.data[index];
-//       ctx.fillStyle = '#000000';
-//       ctx.fillText(data, bar._model.x, bar._model.y - 0 , );
-//     });
-//   } else if (i == 2) {
-//     meta.data.forEach(function (bar, index) {
-//       var data = dataset.data[index];
-//       ctx.fillStyle = '#000000';
-//       ctx.fillText(data, bar._model.x, bar._model.y + 10);
-//     });
-//   }
+            if (i == 0) {
+    meta.data.forEach(function (line, index) {
+      var data = dataset.data[index];
+      ctx.fillStyle = '#000000';
+      ctx.fillText(data, line._model.x, line._model.y - 10);
+    });
+  } else if (i == 1) {
+    meta.data.forEach(function (line, index) {
+      var data = dataset.data[index];
+      ctx.fillStyle = '#000000';
+      ctx.fillText(data, line._model.x, line._model.y - 0 , );
+    });
+  } else if (i == 2) {
+    meta.data.forEach(function (line, index) {
+      var data = dataset.data[index];
+      ctx.fillStyle = '#000000';
+      ctx.fillText(data, line._model.x, line._model.y + 10);
+    });
+  }
           });
         }
       }],
