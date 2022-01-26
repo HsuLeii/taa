@@ -798,6 +798,7 @@ p, label, tr, td {
   .chart-control{
     min-width: 768px;
   }
+
   .text-area{
     margin: 40px auto;
   }
@@ -816,7 +817,6 @@ p, label, tr, td {
       box-shadow: 1px 1px 5px #5957577a;
       background-color: #efefef;
   }
-
   .bottom-text{
     position: absolute;
     bottom: 0px;
