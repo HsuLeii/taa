@@ -485,22 +485,22 @@
           ctx.font = "bold 15px 'Arial'";
           chartInstance.data.datasets.forEach(function (dataset, i) {
             var meta = chartInstance.controller.getDatasetMeta(i);
-            // if (i == 0) {
-            //     meta.data.forEach(function (bar, index) {
-            //       var data = dataset.data[index];
-            //       ctx.fillStyle = '#000000';
-            //       ctx.fillText(data, bar._model.x, bar._model.y - 25);
-            //     });
-            //   }else if (i !== 0) {
-            //     meta.data.forEach(function (bar, index) {
-            //   var data = dataset.data[index];
-            //   var height = bar.height();
-            //   var y = bar._view.y;
-            //   var _y = y + height / 2;
-            //   ctx.fillStyle = '#fff';
-            //   ctx.fillText(data, bar._model.x, _y);
-            // });
-            //   }
+            if (i == 0) {
+                meta.data.forEach(function (line, index) {
+                  var data = dataset.data[index];
+                  ctx.fillStyle = '#000000';
+                  ctx.fillText(data, line._model.x, line._model.y - 25);
+                });
+              }else if (i !== 0) {
+                meta.data.forEach(function (bar, index) {
+              var data = dataset.data[index];
+              var height = bar.height();
+              var y = bar._view.y;
+              var _y = y + height / 2;
+              ctx.fillStyle = '#fff';
+              ctx.fillText(data, bar._model.x, _y);
+            });
+              }
           });
         }
       }],
@@ -616,22 +616,22 @@
           ctx.font = "bold 15px 'Arial'";
           chartInstance.data.datasets.forEach(function (dataset, i) {
             var meta = chartInstance.controller.getDatasetMeta(i);
-            // if (i == 0) {
-            //     meta.data.forEach(function (bar, index) {
-            //       var data = dataset.data[index];
-            //       ctx.fillStyle = '#000000';
-            //       ctx.fillText(data, bar._model.x, bar._model.y - 25);
-            //     });
-            //   }else if (i !== 0) {
-            //     meta.data.forEach(function (bar, index) {
-            //   var data = dataset.data[index];
-            //   var height = bar.height();
-            //   var y = bar._view.y;
-            //   var _y = y + height / 2;
-            //   ctx.fillStyle = '#fff';
-            //   ctx.fillText(data, bar._model.x, _y);
-            // });
-            //   }
+            if (i == 0) {
+                meta.data.forEach(function (line, index) {
+                  var data = dataset.data[index];
+                  ctx.fillStyle = '#000000';
+                  ctx.fillText(data, line._model.x, line._model.y - 25);
+                });
+              }else if (i !== 0) {
+                meta.data.forEach(function (bar, index) {
+              var data = dataset.data[index];
+              var height = bar.height();
+              var y = bar._view.y;
+              var _y = y + height / 2;
+              ctx.fillStyle = '#fff';
+              ctx.fillText(data, bar._model.x, _y);
+            });
+              }
           });
         }
       }],
@@ -746,22 +746,22 @@
           ctx.font = "bold 15px 'Arial'";
           chartInstance.data.datasets.forEach(function (dataset, i) {
             var meta = chartInstance.controller.getDatasetMeta(i);
-            // if (i == 0) {
-            //     meta.data.forEach(function (bar, index) {
-            //       var data = dataset.data[index];
-            //       ctx.fillStyle = '#000000';
-            //       ctx.fillText(data, bar._model.x, bar._model.y - 25);
-            //     });
-            //   }else if (i !== 0) {
-            //     meta.data.forEach(function (bar, index) {
-            //   var data = dataset.data[index];
-            //   var height = bar.height();
-            //   var y = bar._view.y;
-            //   var _y = y + height / 2;
-            //   ctx.fillStyle = '#fff';
-            //   ctx.fillText(data, bar._model.x, _y);
-            // });
-            //   }
+            if (i == 0) {
+                meta.data.forEach(function (line, index) {
+                  var data = dataset.data[index];
+                  ctx.fillStyle = '#000000';
+                  ctx.fillText(data, line._model.x, line._model.y - 25);
+                });
+              }else if (i !== 0) {
+                meta.data.forEach(function (bar, index) {
+              var data = dataset.data[index];
+              var height = bar.height();
+              var y = bar._view.y;
+              var _y = y + height / 2;
+              ctx.fillStyle = '#fff';
+              ctx.fillText(data, bar._model.x, _y);
+            });
+              }
           });
         }
       }],
@@ -873,22 +873,22 @@
           ctx.font = "bold 15px 'Arial'";
           chartInstance.data.datasets.forEach(function (dataset, i) {
             var meta = chartInstance.controller.getDatasetMeta(i);
-            // if (i == 0) {
-            //     meta.data.forEach(function (bar, index) {
-            //       var data = dataset.data[index];
-            //       ctx.fillStyle = '#000000';
-            //       ctx.fillText(data, bar._model.x, bar._model.y - 25);
-            //     });
-            //   }else if (i !== 0) {
-            //     meta.data.forEach(function (bar, index) {
-            //   var data = dataset.data[index];
-            //   var height = bar.height();
-            //   var y = bar._view.y;
-            //   var _y = y + height / 2;
-            //   ctx.fillStyle = '#fff';
-            //   ctx.fillText(data, bar._model.x, _y);
-            // });
-            //   }
+            if (i == 0) {
+                meta.data.forEach(function (line, index) {
+                  var data = dataset.data[index];
+                  ctx.fillStyle = '#000000';
+                  ctx.fillText(data, line._model.x, line._model.y - 25);
+                });
+              }else if (i !== 0) {
+                meta.data.forEach(function (bar, index) {
+              var data = dataset.data[index];
+              var height = bar.height();
+              var y = bar._view.y;
+              var _y = y + height / 2;
+              ctx.fillStyle = '#fff';
+              ctx.fillText(data, bar._model.x, _y);
+            });
+              }
           });
         }
       }],
@@ -1000,22 +1000,22 @@
           ctx.font = "bold 15px 'Arial'";
           chartInstance.data.datasets.forEach(function (dataset, i) {
             var meta = chartInstance.controller.getDatasetMeta(i);
-            // if (i == 0) {
-            //     meta.data.forEach(function (bar, index) {
-            //       var data = dataset.data[index];
-            //       ctx.fillStyle = '#000000';
-            //       ctx.fillText(data, bar._model.x, bar._model.y - 25);
-            //     });
-            //   }else if (i !== 0) {
-            //     meta.data.forEach(function (bar, index) {
-            //   var data = dataset.data[index];
-            //   var height = bar.height();
-            //   var y = bar._view.y;
-            //   var _y = y + height / 2;
-            //   ctx.fillStyle = '#fff';
-            //   ctx.fillText(data, bar._model.x, _y);
-            // });
-            //   }
+            if (i == 0) {
+                meta.data.forEach(function (line, index) {
+                  var data = dataset.data[index];
+                  ctx.fillStyle = '#000000';
+                  ctx.fillText(data, line._model.x, line._model.y - 25);
+                });
+              }else if (i !== 0) {
+                meta.data.forEach(function (bar, index) {
+              var data = dataset.data[index];
+              var height = bar.height();
+              var y = bar._view.y;
+              var _y = y + height / 2;
+              ctx.fillStyle = '#fff';
+              ctx.fillText(data, bar._model.x, _y);
+            });
+              }
           });
         }
       }],
@@ -1136,22 +1136,22 @@
           ctx.font = "bold 15px 'Arial'";
           chartInstance.data.datasets.forEach(function (dataset, i) {
             var meta = chartInstance.controller.getDatasetMeta(i);
-            // if (i == 0) {
-            //     meta.data.forEach(function (bar, index) {
-            //       var data = dataset.data[index];
-            //       ctx.fillStyle = '#000000';
-            //       ctx.fillText(data, bar._model.x, bar._model.y - 25);
-            //     });
-            //   }else if (i !== 0) {
-            //     meta.data.forEach(function (bar, index) {
-            //   var data = dataset.data[index];
-            //   var height = bar.height();
-            //   var y = bar._view.y;
-            //   var _y = y + height / 2;
-            //   ctx.fillStyle = '#fff';
-            //   ctx.fillText(data, bar._model.x, _y);
-            // });
-            //   }
+            if (i == 0) {
+                meta.data.forEach(function (line, index) {
+                  var data = dataset.data[index];
+                  ctx.fillStyle = '#000000';
+                  ctx.fillText(data, line._model.x, line._model.y - 25);
+                });
+              }else if (i !== 0) {
+                meta.data.forEach(function (bar, index) {
+              var data = dataset.data[index];
+              var height = bar.height();
+              var y = bar._view.y;
+              var _y = y + height / 2;
+              ctx.fillStyle = '#fff';
+              ctx.fillText(data, bar._model.x, _y);
+            });
+              }
           });
         }
       }],
@@ -1271,22 +1271,22 @@
           ctx.font = "bold 15px 'Arial'";
           chartInstance.data.datasets.forEach(function (dataset, i) {
             var meta = chartInstance.controller.getDatasetMeta(i);
-            // if (i == 0) {
-            //     meta.data.forEach(function (bar, index) {
-            //       var data = dataset.data[index];
-            //       ctx.fillStyle = '#000000';
-            //       ctx.fillText(data, bar._model.x, bar._model.y - 25);
-            //     });
-            //   }else if (i !== 0) {
-            //     meta.data.forEach(function (bar, index) {
-            //   var data = dataset.data[index];
-            //   var height = bar.height();
-            //   var y = bar._view.y;
-            //   var _y = y + height / 2;
-            //   ctx.fillStyle = '#fff';
-            //   ctx.fillText(data, bar._model.x, _y);
-            // });
-            //   }
+            if (i == 0) {
+                meta.data.forEach(function (line, index) {
+                  var data = dataset.data[index];
+                  ctx.fillStyle = '#000000';
+                  ctx.fillText(data, line._model.x, line._model.y - 25);
+                });
+              }else if (i !== 0) {
+                meta.data.forEach(function (bar, index) {
+              var data = dataset.data[index];
+              var height = bar.height();
+              var y = bar._view.y;
+              var _y = y + height / 2;
+              ctx.fillStyle = '#fff';
+              ctx.fillText(data, bar._model.x, _y);
+            });
+              }
           });
         }
       }],
