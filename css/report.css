@@ -406,6 +406,31 @@ background-repeat: no-repeat;
   color: white;
   text-align: center;
 }
+
+/* values開始 */
+.value.logo::before{
+  background: #3e9979;
+}
+.value.headline{
+  background: #d0e8d7;
+}
+.value.headline h3{
+  color: #595757;
+}
+.value.material{
+  justify-content: flex-start;
+}
+.two-chart{
+  display: flex;
+  justify-content: space-between;
+}
+.two-chart-control {
+  min-width: auto;
+  width: 400px;
+}
+.two-chart > .data-page-scroll{
+    margin: 28px auto;
+}
 @media screen and (max-width: 1024px){
   .data-page-scroll{
     overflow-x: scroll;
