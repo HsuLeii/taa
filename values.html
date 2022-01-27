@@ -110,18 +110,11 @@
         </div>
       </div>
       <div class="main">
-        <div class="two-chart">
           <div class="data-page-scroll">
-            <div class="chart-control two-chart-control">
-              <canvas id="different-grade-school" style="width: 150px; height: 90px;"></canvas>
+            <div class="chart-control ">
+              <canvas id="different-grade-school" style="width: 300px; height: 150px;"></canvas>
             </div>
           </div>
-          <div class="data-page-scroll">
-            <div class="chart-control two-chart-control">
-              <canvas id="different-grade-national" style="width: 150px; height: 90px;"></canvas>
-            </div>
-          </div>
-        </div>
       </div>
       <div class="item-title">
         <div class="number-mark">
@@ -332,7 +325,6 @@
     </div>
   </div>
   <!-- page6 -->
-  <script src="js/chart.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 
   <script>
@@ -672,6 +664,7 @@
 
     // 不同年級之適配度比例圖示-全校pg2
     var ctx4 = document.getElementById('different-grade-school').getContext('2d');
+    
     var myChart = new Chart(ctx4, {
       type: "bar",
       data: {
@@ -679,25 +672,30 @@
           ["全校大學", "一二年級"],
           ["全校大學", "三四年級", "(含以上)"],
           ["全校大學", "碩博士班"],
+          ["全國大學", "一二年級"],
+          ["全國大學", "三四年級", "(含以上)"],
+          ["全國大學", "碩博士班"],
         ],
         datasets: [{
           label: '需考量',
           backgroundColor: "#aad49b",
-          data: [7, 7, 7],
+          data: [7, 7, 7, 7, 7, 7],
         }, {
           label: '中',
           backgroundColor: "#64c2bf",
-          data: [21, 21, 21],
+          data: [21, 21, 21, 21, 21, 21],
         }, {
           label: '高',
           backgroundColor: "#6bba54",
-          data: [35, 35, 35],
+          data: [35, 35, 35, 35, 35, 35],
         }, {
           label: '非常高',
           backgroundColor: "#1f7e79",
-          data: [37, 37, 37],
-        }, ],
+          data: [37, 37, 37, 37, 37, 37],
+        },
+       ],
       },
+      
       options: {
         responsive: true,
         animation: {
@@ -705,7 +703,7 @@
         },
         title: {
           display: true,
-          text: '全校',
+          text: '全校/全國不同年級之適配度比例圖示',
           fontSize: 25,
           padding: 15,
           fontStyle: "bold",
@@ -738,7 +736,7 @@
               min: 0,
               // max: 100,
               // stepSize: 20,
-              fontColor: '#595757',
+              // fontColor: '#595757',
               fontSize: 15,
               fontStyle: "bold",
             }
@@ -773,12 +771,13 @@
               var data = dataset.data[index];
               var height = bar.height(); //bar數值垂直置中
               var y = bar._view.y; //bar數值垂直置中
-              var _y = y + height / 2; //bar數值垂直置中
-              ctx.fillStyle = '#fff';
+              var _y = y + height / 2; //bar數值垂直置中              
               ctx.fillText(data + "%", bar._model.x, _y); //bar數值垂直置中
             });
           });
-        }
+        },
+        
+        
       }],
 
     });
