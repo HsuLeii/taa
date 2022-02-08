@@ -872,6 +872,12 @@
   <script src="js/chart.min.js"></script>
 
   <script>
+    Chart.Tooltip.positioners.custom = function(elements, position) {
+    return {
+      x: 10 ,
+      y: 30
+    }
+  }
     // 全校與全國配適度比例pg1
     var ctx1 = document.getElementById('school-and-national-matching-ratio').getContext('2d');
     var myChart = new Chart(ctx1, {
@@ -900,6 +906,7 @@
           data: [39, 39],
         }, ],
       },
+      
       options: {
         responsive: true,
         animation: {
@@ -916,7 +923,11 @@
         tooltips: {
           // Disable the on-canvas tooltip
           enabled: true,
+          yAlign: 'none',
+            // backgroundColor: '#227799',
+            position: 'custom',
         },
+        
         legend: {
           display: true,
           reverse: true,
