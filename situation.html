@@ -301,6 +301,12 @@
   <!-- page6 -->
   <script src="js/chart.min.js"></script>
   <script>
+    Chart.Tooltip.positioners.custom = function(elements, position) {
+    return {
+      x: 10 ,
+      y: 30
+    }
+  }
     // 全校平均得分pg1
     var ctx1 = document.getElementById('school-wide-average').getContext('2d');
     var myChart = new Chart(ctx1, {
@@ -347,6 +353,9 @@
         tooltips: {
           // Disable the on-canvas tooltip
           enabled: true,
+          yAlign: 'none',
+            // backgroundColor: '#227799',
+            position: 'custom',
         },
         legend: {
           display: true,
@@ -463,6 +472,9 @@
         tooltips: {
           // Disable the on-canvas tooltip
           enabled: true,
+          yAlign: 'none',
+            // backgroundColor: '#227799',
+            position: 'custom',
         },
         legend: {
           display: true,
@@ -589,6 +601,9 @@
         tooltips: {
           // Disable the on-canvas tooltip
           enabled: true,
+          yAlign: 'none',
+            // backgroundColor: '#227799',
+            position: 'custom',
         },
         legend: {
           display: true,
@@ -715,6 +730,9 @@
         tooltips: {
           // Disable the on-canvas tooltip
           enabled: true,
+          yAlign: 'none',
+            // backgroundColor: '#227799',
+            position: 'custom',
         },
         legend: {
           display: true,
@@ -837,6 +855,9 @@
         tooltips: {
           // Disable the on-canvas tooltip
           enabled: true,
+          yAlign: 'none',
+            // backgroundColor: '#227799',
+            position: 'custom',
         },
         legend: {
           display: true,
@@ -959,6 +980,9 @@
         tooltips: {
           // Disable the on-canvas tooltip
           enabled: true,
+          yAlign: 'none',
+            // backgroundColor: '#227799',
+            position: 'custom',
         },
         legend: {
           display: true,
@@ -1090,6 +1114,9 @@
         tooltips: {
           // Disable the on-canvas tooltip
           enabled: true,
+          yAlign: 'none',
+            // backgroundColor: '#227799',
+            position: 'custom',
         },
         legend: {
           display: true,
@@ -1221,6 +1248,9 @@
         tooltips: {
           // Disable the on-canvas tooltip
           enabled: true,
+          yAlign: 'none',
+            // backgroundColor: '#227799',
+            position: 'custom',
         },
         legend: {
           display: true,
@@ -1324,6 +1354,9 @@
         tooltips: {
           // Disable the on-canvas tooltip
           enabled: true,
+          yAlign: 'none',
+            // backgroundColor: '#227799',
+            position: 'custom',
         },
         legend: {
           display: false,
@@ -1420,6 +1453,9 @@
         tooltips: {
           // Disable the on-canvas tooltip
           enabled: true,
+          yAlign: 'none',
+            // backgroundColor: '#227799',
+            position: 'custom',
         },
         legend: {
           display: false,
@@ -1541,6 +1577,9 @@
         tooltips: {
           // Disable the on-canvas tooltip
           enabled: true,
+          yAlign: 'none',
+            // backgroundColor: '#227799',
+            position: 'custom',
         },
         legend: {
           display: true,
