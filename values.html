@@ -15,24 +15,6 @@
 </head>
 
 <body>
-  <style>
-
-    #chartjs-tooltip {
-      opacity: 1;
-      position: absolute;
-      background: orange;
-      color: white;
-      border: 8px solid black;
-      -webkit-transition: all .1s ease;
-      transition: all .1s ease;
-      pointer-events: none;
-      -webkit-transform: translate(-50%, 0);
-      transform: translate(-50%, 0);
-      min-width: 200px;
-      max-width: 400px;
-    }
-
-    </style>
   <!-- page1 -->
   <div class="page green-border">
     <div class="report-title">
@@ -77,7 +59,6 @@
         <div class="data-page-scroll">
           <div class="chart-control">
             <canvas id="school-and-national-matching-ratio" style="width: 300px; height: 150px;"></canvas>
-            <div class="tooltip-box" id="chartjs-tooltip">
           </div>
         </div>
       </div>
@@ -895,12 +876,20 @@
   <script src="js/chart.min.js"></script>
 
   <script>
-    Chart.Tooltip.positioners.custom = function(elements, position) {
-    return {
-      x:  position.x ,
-      y: 30
-    }
-  }
+  //   Chart.Tooltip.positioners.custom = function(elements, position) {
+  //   return {
+  //     x:  position.x,
+  //     y: 30
+  //   }
+  // }
+
+  Chart.Tooltip.positioners.custom = function (elements) {
+    const { x, y, base } = elements[0]._model;
+    const height = base - y;
+    return { x, y: 30 };
+  };
+
+  
 
 
 
@@ -908,34 +897,7 @@
 
 
     var ctx1 = document.getElementById('school-and-national-matching-ratio').getContext('2d');
-    var customTooltips = function (tooltip) {
-  var tooltipEl = document.getElementById('chartjs-tooltip');
-  if (tooltip.opacity === 0) {
-    tooltipEl.style.opacity = 0;
-    return;
-  }
-  tooltipEl.classList.remove('above', 'below', 'no-transform');
-  if (tooltip.yAlign) {
-    tooltipEl.classList.add(tooltip.yAlign);
-  } else {
-    tooltipEl.classList.add('no-transform');
-  }
-  if (tooltip.dataPoints.length) {
-    var ind = tooltip.dataPoints[0].index;
-    $("#spn-price").text(defaultData[ind]);
-    $("#spn-more-info").text(more_info[ind]);
-  }
-  var positionY = this._chart.canvas.offsetTop;
-  var positionX = this._chart.canvas.offsetLeft;
-  tooltipEl.style.opacity = 0.8;
-  tooltipEl.style.xPadding = 10;
-  tooltipEl.style.left = positionX + tooltip.caretX + 'px';
-  tooltipEl.style.top = positionY + 'px';
-  tooltipEl.style.fontFamily = tooltip._fontFamily;
-  tooltipEl.style.fontSize = tooltip.fontSize;
-  tooltipEl.style.fontStyle = tooltip._fontStyle;
-  tooltipEl.style.padding = tooltip.yPadding + 'px ' + tooltip.xPadding + 'px';
-};
+
     var myChart = new Chart(ctx1, {
       type: "bar",
       data: {
@@ -975,11 +937,14 @@
           fontStyle: "bold",
           fontColor: "#3e9979"
         },
+
         tooltips: {
-      enabled: false,
-      mode: 'index',
-      position: 'nearest',
-      custom: customTooltips },
+          // Disable the on-canvas tooltip
+          enabled: true,
+          yAlign: 'none',
+            // backgroundColor: '#227799',
+            position: 'custom',
+        },
         
         legend: {
           display: true,
@@ -1051,6 +1016,7 @@
     // 不同性別之適配度比例圖示-pg2
     var ctx2 = document.getElementById('different-gender').getContext('2d');
     var myChart = new Chart(ctx2, {
+      
       type: "bar",
       data: {
         labels: [
