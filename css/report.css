@@ -207,8 +207,10 @@ rt {
 }
 
 .orange-border{
-  border: 1px solid #d26512;
+  border-left: 1px solid #d26512;
+  border-right: 1px solid #d26512;
 }
+
 
 .blue-border{
   border: 1px solid #2783be;
