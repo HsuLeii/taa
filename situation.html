@@ -303,10 +303,17 @@
   <script>
     Chart.Tooltip.positioners.custom = function(elements, position) {
     return {
-      x: 10 ,
+      x: elements[0]._model.x,
       y: 30
     }
   }
+
+  // Chart.Tooltip.positioners.center = function (elements) {
+  //   const { x, y, base } = elements[0]._model;
+  //   const height = base - y;
+  //   return { x, y: y + (height / 2) };
+  // };
+
     // 全校平均得分pg1
     var ctx1 = document.getElementById('school-wide-average').getContext('2d');
     var myChart = new Chart(ctx1, {

@@ -876,24 +876,19 @@
   <script src="js/chart.min.js"></script>
 
   <script>
-    Chart.Tooltip.positioners.custom = function(elements) {
-      var { x, y} = elements[0]._model;
+    Chart.Tooltip.positioners.custom = function(elements, position) {
     return {
-      x:  x,
+      x: elements[0]._model.x,
       y: 30
     }
   }
 
-  // Chart.Tooltip.positioners.custom = function (elements) {
+  // Chart.Tooltip.positioners.center = function (elements) {
   //   const { x, y, base } = elements[0]._model;
   //   const height = base - y;
-  //   return { x, y: 30 };
+  //   return { x, y: y + (height / 2) };
   // };
-
   
-
-
-
     // 全校與全國配適度比例pg1
 
 
