@@ -877,7 +877,7 @@
 
   <script>
     Chart.Tooltip.positioners.custom = function(elements) {
-      const { x, y, base } = elements[0]._model;
+      var { x, y} = elements[0]._model;
     return {
       x:  x,
       y: 30
