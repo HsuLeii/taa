@@ -596,7 +596,7 @@ rt {
 }
 
 .stay-left {
-  justify-content: left;
+  justify-content: flex-start;
 }
 
 @media screen and (max-width: 1024px) {
@@ -1276,7 +1276,7 @@ rt {
 }
 
 .stay-left {
-  justify-content: left;
+  justify-content: flex-start;
 }
 
 }
