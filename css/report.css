@@ -826,6 +826,7 @@ rt {
   td {
     font-size: 20px;
     color: #595757;
+    line-height: 2;
   }
 
   table {
