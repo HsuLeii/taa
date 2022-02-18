@@ -471,11 +471,11 @@ rt {
   color: #043789;
 }
 
-.value.logo::before {
+.value-logo::before {
   background: #3e9979;
 }
 
-.value.headline {
+.valuebg {
   background: #d0e8d7;
 }
 
@@ -542,7 +542,7 @@ rt {
   margin: 20px auto;
 }
 
-.value.bottom-text {
+.valuebg.bottom-text {
   background-color: #3e9979;
 }
 
@@ -598,6 +598,23 @@ rt {
 
 .stay-left {
   justify-content: flex-start;
+}
+
+/*教師人格測驗*/
+.personality-logo::before {
+  background-color: #df7b5a;
+}
+.personalitybg {
+  background-color: #fbd9ac;
+}
+.personality-border {
+  border: 1px solid #fbd9ac;
+}
+.personalitybg.bottom-text {
+  background-color: #df7b5a;
+}
+.pinkorange{
+  color: #df7b5a;
 }
 
 @media screen and (max-width: 1024px) {
@@ -1280,5 +1297,20 @@ rt {
 .stay-left {
   justify-content: flex-start;
 }
-
+/*教師人格測驗*/
+.personality-logo::before {
+  background-color: #df7b5a;
+}
+.personalitybg {
+  background-color: #fbd9ac;
+}
+.personality-border {
+  border: 1px solid #fbd9ac;
+}
+.personalitybg.bottom-text {
+  background-color: #df7b5a;
+}
+.pinkorange{
+  color: #df7b5a;
+}
 }
