@@ -1200,7 +1200,7 @@ rt {
   justify-content: space-between;
   align-items: flex-end;
   flex-wrap: wrap;
-  margin: 0px auto 20px;
+  margin: 0px auto 10px;
 }
 
 .compare-title {
@@ -1237,7 +1237,7 @@ rt {
 }
 
 .compare-classification {
-  margin: 20px auto;
+  margin: 15px auto;
 }
 
 .valuebg.bottom-text {
