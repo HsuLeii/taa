@@ -1153,96 +1153,96 @@ rt {
   }
 
   /* values開始 */
-  .green {
-    color: #3e9979;
-  }
+.green {
+  color: #3e9979;
+}
 
-  .green-border {
-    border: 1px solid #3e9979;
-  }
+.green-border {
+  border: 1px solid #3e9979;
+}
 
-  .school-text {
-    color: #c73a3a;
-  }
+.school-text {
+  color: #c73a3a;
+}
 
-  .national-text {
-    color: #043789;
-  }
+.national-text {
+  color: #043789;
+}
 
-  .value.logo::before {
-    background: #3e9979;
-  }
+.value-logo::before {
+  background: #3e9979;
+}
 
-  .value.headline {
-    background: #d0e8d7;
-  }
+.valuebg {
+  background: #d0e8d7;
+}
 
-  .value.headline h3 {
-    color: #595757;
-  }
+.value.headline h3 {
+  color: #595757;
+}
 
-  .values-title-bg {
-    width: 40%;
-    margin: 0 auto;
-  }
+.values-title-bg {
+  width: 40%;
+  margin: 0 auto;
+}
 
-  .value.material {
-    justify-content: flex-start;
-  }
+.value.material {
+  justify-content: flex-start;
+}
 
-  .three-chart>.data-page-scroll {
-    margin: 28px auto;
-    padding: 5px 20px;
-  }
+.three-chart>.data-page-scroll {
+  margin: 28px auto;
+  padding: 5px 20px;
+}
 
-  .compare-area {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    margin: 0px auto 20px;
-  }
+.compare-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin: 0px auto 20px;
+}
 
-  .compare-title {
-    border-radius: 15px;
-    padding: 5px 10px;
-  }
+.compare-title {
+  border-radius: 15px;
+  padding: 5px 10px;
+}
 
-  .compare-content {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
-    margin: 15px auto;
-  }
+.compare-content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  margin: 15px auto;
+}
 
-  .compare-value p {
-    border-radius: 15px;
-    padding: 5px 10px;
-    margin-top: 10px;
-  }
+.compare-value p {
+  border-radius: 15px;
+  padding: 5px 10px;
+  margin-top: 10px;
+}
 
-  .left-block,
-  .right-block {
-    width: 47.5%;
-  }
+.left-block,
+.right-block {
+  width: 47.5%;
+}
 
-  .sort {
-    display: flex;
-    flex-direction: column;
-    margin: 15px auto;
-  }
+.sort {
+  display: flex;
+  flex-direction: column;
+  margin: 15px auto;
+}
 
-  .one-value {
-    width: 100%;
-  }
+.one-value {
+  width: 100%;
+}
 
-  .compare-classification {
-    margin: 20px auto;
-  }
+.compare-classification {
+  margin: 20px auto;
+}
 
-  .value.bottom-text {
-    background-color: #3e9979;
-  }
+.valuebg.bottom-text {
+  background-color: #3e9979;
+}
 
   /*情境測驗 幼教 小教 中教 特教*/
 
