@@ -78,6 +78,7 @@ tr,
 td {
   font-size: 20px;
   color: #595757;
+  line-height: 1.5;
 }
 
 table {
@@ -826,7 +827,7 @@ rt {
   td {
     font-size: 20px;
     color: #595757;
-    line-height: 2;
+    line-height: 1.5;
   }
 
   table {
