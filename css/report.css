@@ -1224,4 +1224,59 @@ rt {
   .value.bottom-text {
     background-color: #3e9979;
   }
+
+  /*情境測驗 幼教 小教 中教 特教*/
+
+.smallbg {
+  background-color: #628332;
+}
+
+.small-border {
+  border: 1px solid #628332;
+}
+
+.small-logo::before {
+  background-color: #628332;
+}
+
+.youngbg {
+  background-color: #0f9b66;
+}
+
+.young-border {
+  border: 1px solid #0f9b66;
+}
+
+.young-logo::before {
+  background-color: #0f9b66;
+}
+
+.mediumbg {
+  background-color: #d26512;
+}
+
+.medium-border {
+  border: 1px solid #d26512;
+}
+
+.medium-logo::before {
+  background-color: #d26512;
+}
+
+.specialbg {
+  background-color: #3d5ba3;
+}
+
+.special-border {
+  border: 1px solid #3d5ba3;
+}
+
+.special-logo::before {
+  background-color: #3d5ba3;
+}
+
+.stay-left {
+  justify-content: left;
+}
+
 }
