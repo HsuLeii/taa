@@ -1211,7 +1211,7 @@ rt {
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
-  margin: 15px auto;
+  margin: 12px auto;
 }
 
 .compare-value p {
@@ -1228,7 +1228,7 @@ rt {
 .sort {
   display: flex;
   flex-direction: column;
-  margin: 15px auto;
+  margin: 12px auto;
 }
 
 .one-value {
