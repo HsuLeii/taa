@@ -844,6 +844,7 @@ rt {
   td {
     font-size: 20px;
     color: #595757;
+    line-height: 1.5;
   }
 
   table {
@@ -1236,7 +1237,7 @@ rt {
 }
 
 .compare-classification {
-  margin: 15px auto;
+  margin: 12px auto;
 }
 
 .valuebg.bottom-text {
