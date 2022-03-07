@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>教師情境判斷測驗-幼教版</title>
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/report.css">
+</head>
+
+<body>
+  <!-- page1 -->
+  <div class="page young-border">
+    <div class="report-title">
+      <div class="logo young-logo">
+        <img src="image/logo/logo.png" alt="">
+      </div>
+      <div class="title-content page-one-title-content">
+        <div class="headline youngbg">
+          <h3>教師情境判斷測驗-幼教版 <img src="image/chalk.png" alt=""> </h3>
+        </div>
+        <div class="subtitle">
+          <h4>全校綜合分析報表</h4>
+        </div>
+      </div>
+    </div>
+    <div class="material">
+      <div class="material-text">
+        <div class="school">
+          <p><span>測驗學校：</span><span>國立彰化師範大學</span></p>
+        </div>
+        <div class="date">
+          <p><span>測驗時程：</span><span>108.09.01 ~ 109.01.31</span></p>
+        </div>
+        <div class="people">
+          <p><span>測驗人數：</span><span>247人</span></p>
+        </div>
+      </div>
+      <div class="threepeople shadow">
+        <img src="image/threepeople.png" alt="">
+        <p>在全校圖表之後，有全國數據及圖表敘述提供參考</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-title">
+        <div class="number-mark">
+          <img src="image/svg/one.svg" alt="">
+        </div>
+        <div class="first-text bluebg">
+          <p class="white bold">測驗各項度綜合結果</p>
+        </div>
+      </div>
+      <div class="main">
+        <div class="data-page-scroll">
+          <div class="chart-control">
+            <canvas id="school-wide-average" style="width: 300px; height: 150px;"></canvas>
+          </div>
+        </div>
+        <div class="data-page-scroll">
+          <div class="chart-control">
+            <canvas id="pr-value" style="width: 300px; height: 150px;"></canvas>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="bottom-text youngbg">
+      <p>國立臺灣師範大學心測中心 版權所有‧翻印必究</p>
+    </div>
+  </div>
+  <!-- page1 -->
+
+  <!-- page2 -->
+  <div class="page  young-border">
+    <div class="report-title">
+      <div class="title-content">
+        <div class="headline youngbg">
+          <h3>教師情境判斷測驗-幼教版 <img src="image/chalk.png" alt=""> </h3>
+        </div>
+        <div class="subtitle">
+          <h4>全校綜合分析報表</h4>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-title">
+        <div class="number-mark">
+          <img src="image/svg/two.svg" alt="">
+        </div>
+        <div class="first-text redbg">
+          <p class="white bold">測驗各向度與不同年級類別之分析結果</p>
+        </div>
+      </div>
+      <div class="main">
+        <div class="data-page-scroll">
+          <div class="chart-control">
+            <canvas id="grade-average" style="width: 300px; height: 150px;"></canvas>
+          </div>
+        </div>
+        <div class="data-page-scroll">
+          <div class="chart-control">
+            <canvas id="grade-average-pr-value" style="width: 300px; height: 150px;"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-text youngbg">
+      <p>國立臺灣師範大學心測中心 版權所有‧翻印必究</p>
+    </div>
+  </div>
+  <!-- page2 -->
+
+  <!-- page3 -->
+  <div class="page  young-border">
+    <div class="report-title">
+      <div class="title-content">
+        <div class="headline youngbg">
+          <h3>教師情境判斷測驗-幼教版 <img src="image/chalk.png" alt=""> </h3>
+        </div>
+        <div class="subtitle">
+          <h4>全校綜合分析報表</h4>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-title">
+        <div class="number-mark">
+          <img src="image/svg/three.svg" alt="">
+        </div>
+        <div class="first-text yellowbg">
+          <p class="white bold">測驗各向度與不同年級類別之分析結果</p>
+        </div>
+      </div>
+      <div class="main">
+        <div class="data-page-scroll">
+          <div class="chart-control">
+            <canvas id="average-score-with-or-without-practice" style="width: 300px; height: 150px;"></canvas>
+          </div>
+        </div>
+        <div class="data-page-scroll">
+          <div class="chart-control">
+            <canvas id="average-pr-with-or-without-practice" style="width: 300px; height: 150px;"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-text youngbg">
+      <p>國立臺灣師範大學心測中心 版權所有‧翻印必究</p>
+    </div>
+  </div>
+  <!-- page3 -->
+
+  <!-- page4 -->
+  <div class="page  young-border">
+    <div class="report-title">
+      <div class="title-content">
+        <div class="headline youngbg">
+          <h3>教師情境判斷測驗-幼教版 <img src="image/chalk.png" alt=""> </h3>
+        </div>
+        <div class="subtitle">
+          <h4>全校綜合分析報表</h4>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-title">
+        <div class="number-mark">
+          <img src="image/svg/four.svg" alt="">
+        </div>
+        <div class="first-text greenbg">
+          <p class="white bold">測驗各向度與不同教程修習年數類別之分析結果</p>
+        </div>
+      </div>
+      <div class="main">
+        <div class="data-page-scroll">
+          <div class="chart-control">
+            <canvas id="average-score-for-different-tutorials" style="width: 300px; height: 150px;"></canvas>
+          </div>
+        </div>
+        <div class="data-page-scroll">
+          <div class="chart-control">
+            <canvas id="average-pr-for-different-tutorials" style="width: 300px; height: 150px;"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-text youngbg">
+      <p>國立臺灣師範大學心測中心 版權所有‧翻印必究</p>
+    </div>
+  </div>
+  <!-- page4 -->
+
+  <!-- page5 -->
+  <div class="page  young-border">
+    <div class="report-title">
+      <div class="title-content">
+        <div class="headline youngbg">
+          <h3>教師情境判斷測驗-幼教版 <img src="image/chalk.png" alt=""> </h3>
+        </div>
+        <div class="subtitle">
+          <h4>全校綜合分析報表</h4>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-title">
+        <div class="number-mark">
+          <img src="image/svg/five.svg" alt="">
+        </div>
+        <div class="first-text purplebg">
+          <p class="white bold">全國之測驗各向度綜合結果</p>
+        </div>
+      </div>
+      <div class="main">
+
+        <div class="data-page-scroll">
+          <div class="chart-control">
+            <canvas id="national-average-score" style="width: 300px; height: 90px;"></canvas>
+          </div>
+        </div>
+        <div class="data-page-scroll">
+          <div class="chart-control">
+            <canvas id="national-average-score-pr" style="width: 300px; height: 120px;"></canvas>
+          </div>
+        </div>
+
+        <div class="data-page-scroll">
+          <div class="chart-control">
+            <canvas id="anisotropic-pr-value" style="width: 300px; height: 120px;"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-text youngbg">
+      <p>國立臺灣師範大學心測中心 版權所有‧翻印必究</p>
+    </div>
+  </div>
+  <!-- page5 -->
+
+  
+
+  <script src="js/chart.min.js"></script>
+  <script>
+    Chart.Tooltip.positioners.custom = function (elements, position) {
+      return {
+        x: elements[0]._model.x,
+        y: 30
+      }
+    }
+
+    // Chart.Tooltip.positioners.center = function (elements) {
+    //   const { x, y, base } = elements[0]._model;
+    //   const height = base - y;
+    //   return { x, y: y + (height / 2) };
+    // };
+
+    // 全校平均得分pg1
+    var ctx1 = document.getElementById('school-wide-average').getContext('2d');
+    var myChart = new Chart(ctx1, {
+      type: "bar",
+      data: {
+        labels: [
+          "課室經營",
+          "突發狀況",
+          "親師溝通",
+          "人際互動"
+        ],
+        datasets: [{
+            label: '全國平均得分',
+            backgroundColor: "#f3bb19",
+            borderColor: "#f3bb19",
+            type: 'line',
+            fill: false,
+            data: [2.94, 3.07, 2.94, 3.14],
+            pointRadius: 6,
+            pointHoverRadius: 6,
+            tension: 0.5
+          },
+          {
+            label: ["全校平均得分", ],
+            backgroundColor: "#2783BE",
+            data: [2.98, 3.09, 2.95, 3.08],
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        animation: {
+          duration: 0,
+        },
+        title: {
+          display: true,
+          text: '全校平均得分',
+          fontSize: 25,
+          padding: 25,
+          fontStyle: "bold",
+          fontColor: "#2783be"
+        },
+        tooltips: {
+          // Disable the on-canvas tooltip
+          enabled: true,
+          yAlign: 'none',
+          // backgroundColor: '#227799',
+          position: 'custom',
+        },
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: {
+            fontColor: "#595757",
+            fontSize: 17,
+            padding: 20,
+            fontStyle: "bold",
+            boxWidth: 17,
+            boxHeight: 17,
+          },
+          onClick: null
+        },
+        scales: {
+          xAxes: [{
+            position: 'bottom',
+            ticks: {
+              min: 0,
+              // max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 15,
+              fontStyle: "bold",
+            }
+          }],
+          yAxes: [{
+            position: 'left',
+            ticks: {
+              min: 0,
+              max: 4,
+              stepSize: 1,
+              fontColor: '#595757',
+              fontSize: 17,
+              fontStyle: "bold",
+            }
+          }]
+        },
+      },
+      plugins: [{
+        afterDraw: function (chartInstance) {
+          ctx = chartInstance.ctx;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillStyle = '#fff';
+          ctx.font = "bold 15px 'Arial'";
+          chartInstance.data.datasets.forEach(function (dataset, i) {
+            var meta = chartInstance.controller.getDatasetMeta(i);
+            if (i == 0) {
+              meta.data.forEach(function (line, index) {
+                var data = dataset.data[index];
+                ctx.fillStyle = '#000000';
+                ctx.fillText(data, line._model.x, line._model.y - 25); //bar數值y軸-25
+              });
+            } else if (i !== 0) {
+              meta.data.forEach(function (bar, index) {
+                var data = dataset.data[index];
+                var height = bar.height(); //bar數值垂直置中
+                var y = bar._view.y; //bar數值垂直置中
+                var _y = y + height / 2; //bar數值垂直置中
+                ctx.fillStyle = '#fff';
+                ctx.fillText(data, bar._model.x, _y); //bar數值垂直置中
+              });
+            }
+          });
+        }
+      }],
+
+    });
+
+    // 全校平均得分PR值pg1
+    var ctx2 = document.getElementById('pr-value').getContext('2d');
+    var myChart = new Chart(ctx2, {
+      type: "bar",
+      data: {
+        labels: [
+          "課室經營",
+          "突發狀況",
+          "親師溝通",
+          "人際互動"
+        ],
+        datasets: [{
+            label: '全國平均得分PR值',
+            backgroundColor: "#f3bb19",
+            borderColor: "#f3bb19",
+            type: 'line',
+            fill: false,
+            data: [47, 44, 47, 51],
+            pointRadius: 6,
+            pointHoverRadius: 6,
+            tension: 0.5
+          },
+          {
+            label: ["全體平均得分PR值", ],
+            backgroundColor: "#2783BE",
+            data: [47, 44, 47, 36],
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        animation: {
+          duration: 0,
+        },
+        title: {
+          display: true,
+          text: '全體平均得分PR值',
+          fontSize: 25,
+          padding: 25,
+          fontStyle: "bold",
+          fontColor: "#2783be"
+        },
+        tooltips: {
+          // Disable the on-canvas tooltip
+          enabled: true,
+          yAlign: 'none',
+          // backgroundColor: '#227799',
+          position: 'custom',
+        },
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: {
+            fontColor: "#595757",
+            fontSize: 17,
+            padding: 20,
+            fontStyle: "bold",
+            boxWidth: 17,
+            boxHeight: 17,
+          },
+          onClick: null
+        },
+        scales: {
+          xAxes: [{
+            position: 'bottom',
+            ticks: {
+              // min: 0,
+              // max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 15,
+              fontStyle: "bold",
+            }
+          }],
+          yAxes: [{
+            position: 'left',
+            ticks: {
+              min: 0,
+              max: 100,
+              stepSize: 10,
+              fontColor: '#595757',
+              fontSize: 17,
+              fontStyle: "bold",
+            }
+          }]
+        },
+      },
+      plugins: [{
+        afterDraw: function (chartInstance) {
+          ctx = chartInstance.ctx;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillStyle = '#fff';
+          ctx.font = "bold 15px 'Arial'";
+          chartInstance.data.datasets.forEach(function (dataset, i) {
+            var meta = chartInstance.controller.getDatasetMeta(i);
+            if (i == 0) {
+              meta.data.forEach(function (line, index) {
+                var data = dataset.data[index];
+                ctx.fillStyle = '#000000';
+                ctx.fillText(data, line._model.x, line._model.y - 25); //bar數值y軸-25
+              });
+            } else if (i !== 0) {
+              meta.data.forEach(function (bar, index) {
+                var data = dataset.data[index];
+                var height = bar.height(); //bar數值垂直置中
+                var y = bar._view.y; //bar數值垂直置中
+                var _y = y + height / 2; //bar數值垂直置中
+                ctx.fillStyle = '#fff';
+                ctx.fillText(data, bar._model.x, _y); //bar數值垂直置中
+              });
+            }
+          });
+        }
+      }],
+
+    });
+
+    // 不同年級之平均得分pg2
+    var ctx3 = document.getElementById('grade-average').getContext('2d');
+    var myChart = new Chart(ctx3, {
+      type: "bar",
+      data: {
+        labels: [
+          "課室經營",
+          "突發狀況",
+          "親師溝通",
+          "人際互動"
+        ],
+        datasets: [{
+            label: '全國平均得分',
+            backgroundColor: "#f3bb19",
+            borderColor: "#f3bb19",
+            type: 'line',
+            fill: false,
+            data: [2.94, 3.07, 2.94, 3.14],
+            pointRadius: 6,
+            pointHoverRadius: 6,
+            tension: 0.5
+          },
+          {
+            label: ["大學一二年級", ],
+            backgroundColor: "#5792c8",
+            data: [2.94, 3.04, 2.93, 2.98],
+          },
+          {
+            label: ["大學三四年級", ],
+            backgroundColor: "#e27933",
+            data: [3.00, 3.13, 2.90, 3.09],
+          },
+          {
+            label: ["碩博士班", ],
+            backgroundColor: "#a5a5a5",
+            data: [2.99, 3.10, 2.99, 3.13],
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        animation: {
+          duration: 0,
+        },
+        title: {
+          display: true,
+          text: '不同年級之平均得分',
+          fontSize: 25,
+          padding: 25,
+          fontStyle: "bold",
+          fontColor: "#d4655c"
+        },
+        tooltips: {
+          // Disable the on-canvas tooltip
+          enabled: true,
+          yAlign: 'none',
+          // backgroundColor: '#227799',
+          position: 'custom',
+        },
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: {
+            fontColor: "#595757",
+            fontSize: 17,
+            padding: 20,
+            fontStyle: "bold",
+            boxWidth: 17,
+            boxHeight: 17,
+          },
+          onClick: null
+        },
+        scales: {
+          xAxes: [{
+            position: 'bottom',
+            ticks: {
+              // min: 0,
+              // max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 15,
+              fontStyle: "bold",
+            }
+          }],
+          yAxes: [{
+            position: 'left',
+            ticks: {
+              min: 0,
+              max: 4,
+              stepSize: 1,
+              fontColor: '#595757',
+              fontSize: 17,
+              fontStyle: "bold",
+            }
+          }]
+        },
+      },
+      plugins: [{
+        afterDraw: function (chartInstance) {
+          ctx = chartInstance.ctx;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillStyle = '#fff';
+          ctx.font = "bold 15px 'Arial'";
+          chartInstance.data.datasets.forEach(function (dataset, i) {
+            var meta = chartInstance.controller.getDatasetMeta(i);
+            if (i == 0) {
+              meta.data.forEach(function (line, index) {
+                var data = dataset.data[index];
+                ctx.fillStyle = '#000000';
+                ctx.fillText(data, line._model.x, line._model.y - 25); //bar數值y軸-25
+              });
+            } else if (i !== 0) {
+              meta.data.forEach(function (bar, index) {
+                var data = dataset.data[index];
+                var height = bar.height(); //bar數值垂直置中
+                var y = bar._view.y; //bar數值垂直置中
+                var _y = y + height / 2; //bar數值垂直置中
+                ctx.fillStyle = '#fff';
+                ctx.fillText(data, bar._model.x, _y); //bar數值垂直置中
+              });
+            }
+          });
+        }
+      }],
+
+    });
+
+    // 不同年級之平均得分PR值pg2
+    var ctx4 = document.getElementById('grade-average-pr-value').getContext('2d');
+    var myChart = new Chart(ctx4, {
+      type: "bar",
+      data: {
+        labels: [
+          "課室經營",
+          "突發狀況",
+          "親師溝通",
+          "人際互動"
+        ],
+        datasets: [{
+            label: '全國平均得分PR值',
+            backgroundColor: "#f3bb19",
+            borderColor: "#f3bb19",
+            type: 'line',
+            fill: false,
+            data: [47, 44, 47, 51],
+            pointRadius: 6,
+            pointHoverRadius: 6,
+            tension: 0.5
+          },
+          {
+            label: ["大學一二年級", ],
+            backgroundColor: "#5792c8",
+            data: [47, 44, 47, 24],
+          },
+          {
+            label: ["大學三四年級", ],
+            backgroundColor: "#e27933",
+            data: [60, 59, 47, 36],
+          },
+          {
+            label: ["碩博士班", ],
+            backgroundColor: "#a5a5a5",
+            data: [47, 44, 47, 51],
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        animation: {
+          duration: 0,
+        },
+        title: {
+          display: true,
+          text: '不同年級之平均得分PR值',
+          fontSize: 25,
+          padding: 25,
+          fontStyle: "bold",
+          fontColor: "#d4655c"
+        },
+        tooltips: {
+          // Disable the on-canvas tooltip
+          enabled: true,
+          yAlign: 'none',
+          // backgroundColor: '#227799',
+          position: 'custom',
+        },
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: {
+            fontColor: "#595757",
+            fontSize: 17,
+            padding: 20,
+            fontStyle: "bold",
+            boxWidth: 17,
+            boxHeight: 17,
+          },
+          onClick: null
+        },
+        scales: {
+          xAxes: [{
+            position: 'bottom',
+            ticks: {
+              // min: 0,
+              // max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 15,
+              fontStyle: "bold",
+            }
+          }],
+          yAxes: [{
+            position: 'left',
+            ticks: {
+              min: 0,
+              max: 100,
+              stepSize: 10,
+              fontColor: '#595757',
+              fontSize: 17,
+              fontStyle: "bold",
+            }
+          }]
+        },
+      },
+      plugins: [{
+        afterDraw: function (chartInstance) {
+          ctx = chartInstance.ctx;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillStyle = '#fff';
+          ctx.font = "bold 15px 'Arial'";
+          chartInstance.data.datasets.forEach(function (dataset, i) {
+            var meta = chartInstance.controller.getDatasetMeta(i);
+            if (i == 0) {
+              meta.data.forEach(function (line, index) {
+                var data = dataset.data[index];
+                ctx.fillStyle = '#000000';
+                ctx.fillText(data, line._model.x, line._model.y - 25); //bar數值y軸-25
+              });
+            } else if (i !== 0) {
+              meta.data.forEach(function (bar, index) {
+                var data = dataset.data[index];
+                var height = bar.height(); //bar數值垂直置中
+                var y = bar._view.y; //bar數值垂直置中
+                var _y = y + height / 2; //bar數值垂直置中
+                ctx.fillStyle = '#fff';
+                ctx.fillText(data, bar._model.x, _y); //bar數值垂直置中
+              });
+            }
+          });
+        }
+      }],
+
+    });
+
+
+    // 有無修習教程之平均得分pg3
+    var ctx5 = document.getElementById('average-score-with-or-without-practice').getContext('2d');
+    var myChart = new Chart(ctx5, {
+      type: "bar",
+      data: {
+        labels: [
+          "課室經營",
+          "突發狀況",
+          "親師溝通",
+          "人際互動"
+        ],
+        datasets: [{
+            label: '全國平均得分',
+            backgroundColor: "#f3bb19",
+            borderColor: "#f3bb19",
+            type: 'line',
+            fill: false,
+            data: [2.94, 3.07, 2.94, 3.14],
+            pointRadius: 6,
+            pointHoverRadius: 6,
+            tension: 0.5
+          },
+          {
+            label: ["未修教程", ],
+            backgroundColor: "#5792c8",
+            data: [2.95, 3.05, 2.94, 3.07],
+          },
+          {
+            label: ["有修教程", ],
+            backgroundColor: "#e27933",
+            data: [3.04, 3.19, 2.99, 3.09],
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        animation: {
+          duration: 0,
+        },
+        title: {
+          display: true,
+          text: '有無修習教程之平均得分',
+          fontSize: 25,
+          padding: 25,
+          fontStyle: "bold",
+          fontColor: "#e1b538"
+        },
+        tooltips: {
+          // Disable the on-canvas tooltip
+          enabled: true,
+          yAlign: 'none',
+          // backgroundColor: '#227799',
+          position: 'custom',
+        },
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: {
+            fontColor: "#595757",
+            fontSize: 17,
+            padding: 20,
+            fontStyle: "bold",
+            boxWidth: 17,
+            boxHeight: 17,
+          },
+          onClick: null
+        },
+        scales: {
+          xAxes: [{
+            position: 'bottom',
+            ticks: {
+              // min: 0,
+              // max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 15,
+              fontStyle: "bold",
+            }
+          }],
+          yAxes: [{
+            position: 'left',
+            ticks: {
+              min: 0,
+              max: 4,
+              stepSize: 1,
+              fontColor: '#595757',
+              fontSize: 17,
+              fontStyle: "bold",
+            }
+          }]
+        },
+      },
+      plugins: [{
+        afterDraw: function (chartInstance) {
+          ctx = chartInstance.ctx;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillStyle = '#fff';
+          ctx.font = "bold 15px 'Arial'";
+          chartInstance.data.datasets.forEach(function (dataset, i) {
+            var meta = chartInstance.controller.getDatasetMeta(i);
+            if (i == 0) {
+              meta.data.forEach(function (line, index) {
+                var data = dataset.data[index];
+                ctx.fillStyle = '#000000';
+                ctx.fillText(data, line._model.x, line._model.y - 25); //bar數值y軸-25
+              });
+            } else if (i !== 0) {
+              meta.data.forEach(function (bar, index) {
+                var data = dataset.data[index];
+                var height = bar.height(); //bar數值垂直置中
+                var y = bar._view.y; //bar數值垂直置中
+                var _y = y + height / 2; //bar數值垂直置中
+                ctx.fillStyle = '#fff';
+                ctx.fillText(data, bar._model.x, _y); //bar數值垂直置中
+              });
+            }
+          });
+        }
+      }],
+
+    });
+
+
+    // 有無修習教程之平均PRpg3
+    var ctx6 = document.getElementById('average-pr-with-or-without-practice').getContext('2d');
+    var myChart = new Chart(ctx6, {
+      type: "bar",
+      data: {
+        labels: [
+          "課室經營",
+          "突發狀況",
+          "親師溝通",
+          "人際互動"
+        ],
+        datasets: [{
+            label: '全國平均得分PR值',
+            backgroundColor: "#f3bb19",
+            borderColor: "#f3bb19",
+            type: 'line',
+            fill: false,
+            data: [47, 44, 47, 51],
+            pointRadius: 6,
+            pointHoverRadius: 6,
+            tension: 0.5
+          },
+          {
+            label: ["未修教程", ],
+            backgroundColor: "#5792c8",
+            data: [47, 44, 47, 36],
+          },
+          {
+            label: ["有修教程", ],
+            backgroundColor: "#e27933",
+            data: [60, 59, 47, 36],
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        animation: {
+          duration: 0,
+        },
+        title: {
+          display: true,
+          text: '有無修習教程之平均得分PR值',
+          fontSize: 25,
+          padding: 25,
+          fontStyle: "bold",
+          fontColor: "#e1b538"
+        },
+        tooltips: {
+          // Disable the on-canvas tooltip
+          enabled: true,
+          yAlign: 'none',
+          // backgroundColor: '#227799',
+          position: 'custom',
+        },
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: {
+            fontColor: "#595757",
+            fontSize: 17,
+            padding: 20,
+            fontStyle: "bold",
+            boxWidth: 17,
+            boxHeight: 17,
+          },
+          onClick: null
+        },
+        scales: {
+          xAxes: [{
+            position: 'bottom',
+            ticks: {
+              // min: 0,
+              // max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 15,
+              fontStyle: "bold",
+            }
+          }],
+          yAxes: [{
+            position: 'left',
+            ticks: {
+              min: 0,
+              max: 100,
+              stepSize: 10,
+              fontColor: '#595757',
+              fontSize: 17,
+              fontStyle: "bold",
+            }
+          }]
+        },
+      },
+      plugins: [{
+        afterDraw: function (chartInstance) {
+          ctx = chartInstance.ctx;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillStyle = '#fff';
+          ctx.font = "bold 15px 'Arial'";
+          chartInstance.data.datasets.forEach(function (dataset, i) {
+            var meta = chartInstance.controller.getDatasetMeta(i);
+            if (i == 0) {
+              meta.data.forEach(function (line, index) {
+                var data = dataset.data[index];
+                ctx.fillStyle = '#000000';
+                ctx.fillText(data, line._model.x, line._model.y - 25); //bar數值y軸-25
+              });
+            } else if (i !== 0) {
+              meta.data.forEach(function (bar, index) {
+                var data = dataset.data[index];
+                var height = bar.height(); //bar數值垂直置中
+                var y = bar._view.y; //bar數值垂直置中
+                var _y = y + height / 2; //bar數值垂直置中
+                ctx.fillStyle = '#fff';
+                ctx.fillText(data, bar._model.x, _y); //bar數值垂直置中
+              });
+            }
+          });
+        }
+      }],
+
+    });
+
+    // 不同教程修習年數之平均得分pg4
+    var ctx7 = document.getElementById('average-score-for-different-tutorials').getContext('2d');
+    var myChart = new Chart(ctx7, {
+      type: "bar",
+      data: {
+        labels: [
+          "課室經營",
+          "突發狀況",
+          "親師溝通",
+          "人際互動"
+        ],
+        datasets: [{
+            label: '全國平均得分',
+            backgroundColor: "#f3bb19",
+            borderColor: "#f3bb19",
+            type: 'line',
+            fill: false,
+            data: [2.94, 3.07, 2.94, 3.14],
+            pointRadius: 6,
+            pointHoverRadius: 6,
+            tension: 0.5
+          },
+          {
+            label: ["第一年", ],
+            backgroundColor: "#5792c8",
+            data: [3.03, 3.17, 2.97, 3.03],
+          },
+          {
+            label: ["第二年", ],
+            backgroundColor: "#e27933",
+            data: [3.13, 3.21, 3.04, 3.20],
+          },
+          {
+            label: ["第三年", ],
+            backgroundColor: "#a5a5a5",
+            data: [2.95, 3.14, 3.02, 3.03],
+          },
+          {
+            label: ["第四年(含以上)", ],
+            backgroundColor: "#6da546",
+            data: [3.15, 3.30, 2.89, 3.22],
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        animation: {
+          duration: 0,
+        },
+        title: {
+          display: true,
+          text: '有無修習教程之平均得分',
+          fontSize: 25,
+          padding: 25,
+          fontStyle: "bold",
+          fontColor: "#3e9979"
+        },
+        tooltips: {
+          // Disable the on-canvas tooltip
+          enabled: true,
+          yAlign: 'none',
+          // backgroundColor: '#227799',
+          position: 'custom',
+        },
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: {
+            fontColor: "#595757",
+            fontSize: 17,
+            padding: 20,
+            fontStyle: "bold",
+            boxWidth: 17,
+            boxHeight: 17,
+          },
+          onClick: null
+        },
+        scales: {
+          xAxes: [{
+            position: 'bottom',
+            ticks: {
+              // min: 0,
+              // max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 15,
+              fontStyle: "bold",
+            }
+          }],
+          yAxes: [{
+            position: 'left',
+            ticks: {
+              min: 0,
+              max: 4,
+              stepSize: 1,
+              fontColor: '#595757',
+              fontSize: 17,
+              fontStyle: "bold",
+            }
+          }]
+        },
+      },
+      plugins: [{
+        afterDraw: function (chartInstance) {
+          ctx = chartInstance.ctx;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillStyle = '#fff';
+          ctx.font = "bold 12px 'Arial'";
+          chartInstance.data.datasets.forEach(function (dataset, i) {
+            var meta = chartInstance.controller.getDatasetMeta(i);
+            if (i == 0) {
+              meta.data.forEach(function (line, index) {
+                var data = dataset.data[index];
+                ctx.fillStyle = '#000000';
+                ctx.fillText(data, line._model.x, line._model.y - 25); //bar數值y軸-25
+              });
+            } else if (i !== 0) {
+              meta.data.forEach(function (bar, index) {
+                var data = dataset.data[index];
+                var height = bar.height(); //bar數值垂直置中
+                var y = bar._view.y; //bar數值垂直置中
+                var _y = y + height / 2; //bar數值垂直置中
+                ctx.fillStyle = '#fff';
+                ctx.fillText(data, bar._model.x, _y); //bar數值垂直置中
+              });
+            }
+          });
+        }
+      }],
+
+    });
+
+    // 不同教程修習年數之平均得分PR值pg4
+    var ctx8 = document.getElementById('average-pr-for-different-tutorials').getContext('2d');
+    var myChart = new Chart(ctx8, {
+      type: "bar",
+      data: {
+        labels: [
+          "課室經營",
+          "突發狀況",
+          "親師溝通",
+          "人際互動"
+        ],
+        datasets: [{
+            label: '全國平均得分PR值',
+            backgroundColor: "#f3bb19",
+            borderColor: "#f3bb19",
+            type: 'line',
+            fill: false,
+            data: [47, 44, 47, 51],
+            pointRadius: 6,
+            pointHoverRadius: 6,
+            tension: 0.5
+          },
+          {
+            label: ["第一年", ],
+            backgroundColor: "#5792c8",
+            data: [60, 59, 47, 36],
+          },
+          {
+            label: ["第二年", ],
+            backgroundColor: "#e27933",
+            data: [73, 59, 60, 51],
+          },
+          {
+            label: ["第三年", ],
+            backgroundColor: "#a5a5a5",
+            data: [47, 59, 60, 36],
+          },
+          {
+            label: ["第四年(含以上)", ],
+            backgroundColor: "#6da546",
+            data: [73, 73, 42, 67],
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        animation: {
+          duration: 0,
+        },
+        title: {
+          display: true,
+          text: '有無修習教程之平均得分PR值',
+          fontSize: 25,
+          padding: 25,
+          fontStyle: "bold",
+          fontColor: "#3e9979"
+        },
+        tooltips: {
+          // Disable the on-canvas tooltip
+          enabled: true,
+          yAlign: 'none',
+          // backgroundColor: '#227799',
+          position: 'custom',
+        },
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: {
+            fontColor: "#595757",
+            fontSize: 17,
+            padding: 20,
+            fontStyle: "bold",
+            boxWidth: 17,
+            boxHeight: 17,
+          },
+          onClick: null
+        },
+        scales: {
+          xAxes: [{
+            position: 'bottom',
+            ticks: {
+              // min: 0,
+              // max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 15,
+              fontStyle: "bold",
+            }
+          }],
+          yAxes: [{
+            position: 'left',
+            ticks: {
+              min: 0,
+              max: 100,
+              stepSize: 10,
+              fontColor: '#595757',
+              fontSize: 17,
+              fontStyle: "bold",
+            }
+          }]
+        },
+      },
+      plugins: [{
+        afterDraw: function (chartInstance) {
+          ctx = chartInstance.ctx;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillStyle = '#fff';
+          ctx.font = "bold 15px 'Arial'";
+          chartInstance.data.datasets.forEach(function (dataset, i) {
+            var meta = chartInstance.controller.getDatasetMeta(i);
+            if (i == 0) {
+              meta.data.forEach(function (line, index) {
+                var data = dataset.data[index];
+                ctx.fillStyle = '#000000';
+                ctx.fillText(data, line._model.x, line._model.y - 25); //bar數值y軸-25
+              });
+            } else if (i !== 0) {
+              meta.data.forEach(function (bar, index) {
+                var data = dataset.data[index];
+                var height = bar.height(); //bar數值垂直置中
+                var y = bar._view.y; //bar數值垂直置中
+                var _y = y + height / 2; //bar數值垂直置中
+                ctx.fillStyle = '#fff';
+                ctx.fillText(data, bar._model.x, _y); //bar數值垂直置中
+              });
+            }
+          });
+        }
+      }],
+    });
+
+    // 全國平均得分pg5
+    var ctx9 = document.getElementById('national-average-score').getContext('2d');
+    var myChart = new Chart(ctx9, {
+      type: "bar",
+      data: {
+        labels: [
+          "課室經營",
+          "突發狀況",
+          "親師溝通",
+          "人際互動"
+        ],
+        datasets: [{
+          label: ["", ],
+          backgroundColor: "#5792c8",
+          data: [2.94, 3.07, 2.94, 3.14],
+        }, ],
+      },
+      options: {
+        responsive: true,
+        animation: {
+          duration: 0,
+        },
+        title: {
+          display: true,
+          text: '全國平均得分',
+          fontSize: 25,
+          padding: 25,
+          fontStyle: "bold",
+          fontColor: "#675e92"
+        },
+        tooltips: {
+          // Disable the on-canvas tooltip
+          enabled: true,
+          yAlign: 'none',
+          // backgroundColor: '#227799',
+          position: 'custom',
+        },
+        legend: {
+          display: false,
+          position: 'bottom',
+          labels: {
+            fontColor: "#595757",
+            fontSize: 17,
+            padding: 20,
+            fontStyle: "bold",
+            boxWidth: 17,
+            boxHeight: 17,
+          },
+          onClick: null
+        },
+        scales: {
+          xAxes: [{
+            position: 'bottom',
+            ticks: {
+              // min: 0,
+              // max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 15,
+              fontStyle: "bold",
+            }
+          }],
+          yAxes: [{
+            position: 'left',
+            ticks: {
+              min: 0,
+              max: 4,
+              stepSize: 1,
+              fontColor: '#595757',
+              fontSize: 17,
+              fontStyle: "bold",
+            }
+          }]
+        },
+      },
+      plugins: [{
+        afterDraw: function (chartInstance) {
+          ctx = chartInstance.ctx;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillStyle = '#fff';
+          ctx.font = "bold 15px 'Arial'";
+          chartInstance.data.datasets.forEach(function (dataset, i) {
+            var meta = chartInstance.controller.getDatasetMeta(i);
+            meta.data.forEach(function (bar, index) {
+              var data = dataset.data[index];
+              var height = bar.height(); //bar數值垂直置中
+              var y = bar._view.y; //bar數值垂直置中
+              var _y = y + height / 2; //bar數值垂直置中
+              ctx.fillText(data, bar._model.x, _y); //bar數值垂直置中
+            });
+
+          });
+        }
+      }],
+    });
+
+    // 全國平均PRpg5
+    var ctx10 = document.getElementById('national-average-score-pr').getContext('2d');
+    var myChart = new Chart(ctx10, {
+      type: "bar",
+      data: {
+        labels: [
+          "課室經營",
+          "突發狀況",
+          "親師溝通",
+          "人際互動"
+        ],
+        datasets: [{
+          label: ["", ],
+          backgroundColor: "#5792c8",
+          data: [47, 44, 47, 51],
+        }, ],
+      },
+
+      options: {
+        responsive: true,
+        animation: {
+          duration: 0,
+        },
+        title: {
+          display: true,
+          text: '全國平均得分PR值',
+          fontSize: 25,
+          padding: 25,
+          fontStyle: "bold",
+          fontColor: "#675e92"
+        },
+        tooltips: {
+          // Disable the on-canvas tooltip
+          enabled: true,
+          yAlign: 'none',
+          // backgroundColor: '#227799',
+          position: 'custom',
+        },
+        legend: {
+          display: false,
+          position: 'bottom',
+          labels: {
+            fontColor: "#595757",
+            fontSize: 17,
+            padding: 20,
+            fontStyle: "bold",
+            boxWidth: 17,
+            boxHeight: 17,
+          },
+          onClick: null
+        },
+        scales: {
+          xAxes: [{
+            position: 'bottom',
+            ticks: {
+              // min: 0,
+              // max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 15,
+              fontStyle: "bold",
+            }
+          }],
+          yAxes: [{
+            position: 'left',
+            ticks: {
+              min: 0,
+              max: 100,
+              stepSize: 10,
+              fontColor: '#595757',
+              fontSize: 17,
+              fontStyle: "bold",
+            }
+          }]
+        },
+      },
+      plugins: [{
+        afterDraw: function (chartInstance) {
+          ctx = chartInstance.ctx;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillStyle = '#fff';
+          ctx.font = "bold 15px 'Arial'";
+          chartInstance.data.datasets.forEach(function (dataset, i) {
+            var meta = chartInstance.controller.getDatasetMeta(i);
+            meta.data.forEach(function (bar, index) {
+              var data = dataset.data[index];
+              var height = bar.height(); //bar數值垂直置中
+              var y = bar._view.y; //bar數值垂直置中
+              var _y = y + height / 2; //bar數值垂直置中
+              ctx.fillText(data, bar._model.x, _y); //bar數值垂直置中
+            });
+
+          });
+        }
+      }],
+    });
+
+    // 各向度PR值對應得分pg5
+    var ctx11 = document.getElementById('anisotropic-pr-value').getContext('2d');
+    var myChart = new Chart(ctx11, {
+      type: "line",
+      data: {
+        labels: [
+          "課室經營",
+          "突發狀況",
+          "親師溝通",
+          "人際互動"
+        ],
+        datasets: [{
+            label: ["PR75", ],
+            backgroundColor: "#5792c8",
+            borderColor: "#5792c8",
+            fill: false,
+            data: [3.22, 3.33, 3.2, 3.33],
+            pointRadius: 6,
+            pointHoverRadius: 6,
+            tension: 0.5
+          },
+          {
+            label: ["PR50", ],
+            backgroundColor: "#e27933",
+            borderColor: "#e27933",
+            fill: false,
+            data: [3, 3.11, 3, 3.15],
+            pointRadius: 6,
+            pointHoverRadius: 6,
+            tension: 0.5
+          },
+          {
+            label: ["PR25", ],
+            backgroundColor: "#a5a5a5",
+            borderColor: "#a5a5a5",
+            fill: false,
+            data: [2.67, 2.89, 2.78, 3],
+            pointRadius: 6,
+            pointHoverRadius: 6,
+            tension: 0.5
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        animation: {
+          duration: 0,
+        },
+        title: {
+          display: true,
+          text: '各向度PR值對應得分',
+          fontSize: 25,
+          padding: 25,
+          fontStyle: "bold",
+          fontColor: "#675e92"
+        },
+        tooltips: {
+          // Disable the on-canvas tooltip
+          enabled: true,
+          yAlign: 'none',
+          // backgroundColor: '#227799',
+          position: 'custom',
+        },
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: {
+            fontColor: "#595757",
+            fontSize: 17,
+            padding: 20,
+            fontStyle: "bold",
+            boxWidth: 17,
+            boxHeight: 17,
+          },
+          onClick: null,
+          onHover: function (e) {
+            var data = dataset.data[index];
+            ctx.display = false
+            this.chart.update();
+          }
+        },
+        scales: {
+          xAxes: [{
+            position: 'bottom',
+            ticks: {
+              // min: 0,
+              // max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 15,
+              fontStyle: "bold",
+            }
+          }],
+          yAxes: [{
+            position: 'left',
+            ticks: {
+              min: 0,
+              max: 4,
+              stepSize: 1,
+              fontColor: '#595757',
+              fontSize: 17,
+              fontStyle: "bold",
+            }
+          }]
+        },
+      },
+
+      plugins: [{
+        afterDraw: function (chartInstance) {
+          ctx = chartInstance.ctx;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillStyle = '#000';
+          ctx.font = "bold 12px 'Arial'";
+          chartInstance.data.datasets.forEach(function (dataset, i) {
+            var meta = chartInstance.controller.getDatasetMeta(i);
+            if (i == 0) {
+              meta.data.forEach(function (bar, index) {
+                var data = dataset.data[index];
+                ctx.fillText(data, bar._model.x, bar._model.y - 10); //bar數值y軸-10
+              });
+            } else if (i == 1) {
+              meta.data.forEach(function (bar, index) {
+                var data = dataset.data[index];
+                ctx.fillText(data, bar._model.x, bar._model.y - 0); //bar數值y軸-0
+              });
+            } else if (i == 2) {
+              meta.data.forEach(function (bar, index) {
+                var data = dataset.data[index];
+                ctx.fillText(data, bar._model.x, bar._model.y + 10); //bar數值y軸+10
+              });
+            }
+          });
+        }
+      }],
+    });
+  </script>
+
+</body>
+
+</html>
