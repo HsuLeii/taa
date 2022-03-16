@@ -442,6 +442,7 @@ rt {
 
 .text-content p{
 text-align: justify;
+text-justify: inter-word;
 }
 
 .bottom-text {
@@ -1144,6 +1145,7 @@ text-align: justify;
 
   .text-content p{
     text-align: justify;
+    text-justify: inter-word;
     }
     
 
