@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;500;700;900&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 body,
 div,
 dl,
@@ -31,7 +33,7 @@ figure {
 
 *,
 body {
-  font-family: "微軟正黑體", 'Open Sans', 'Noto Sans TC', "PingFang TC", "蘋果儷中黑", 'sans-serif';
+  font-family: 'Noto Sans', 'Noto Sans TC', 'Noto Sans SC', 'Microsoft JhengHei', 'Noto Sans TC', 'Microsoft YaHei', 'PingFang TC', 'PingFang SC', 'Heiti TC', 'Heiti SC', 'LiHei Pro', 'STXihei', sans-serif;
   letter-spacing: 1.5px;
   /* font-weight: 400; */
   box-sizing: border-box;
@@ -810,6 +812,7 @@ text-align: justify;
 
 @media print {
   body {
+    font-family: 'Noto Sans', 'Noto Sans TC', 'Noto Sans SC', 'Microsoft JhengHei', 'Noto Sans TC', 'Microsoft YaHei', 'PingFang TC', 'PingFang SC', 'Heiti TC', 'Heiti SC', 'LiHei Pro', 'STXihei', sans-serif;
     background-color: #F7F7F7;
     counter-reset: page-number;
     /* 初始化，名字可自訂，數值為0 */
