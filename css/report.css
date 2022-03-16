@@ -441,8 +441,9 @@ rt {
 }
 
 .text-content p{
-text-align: justify;
-text-justify: inter-word;
+  text-align: justify;/*　Firefox到此即可對齊　*/
+  text-justify: auto;/*　IE需再加上此行　*/
+  text-justify: inter-word;
 }
 
 .bottom-text {
@@ -1144,7 +1145,8 @@ text-justify: inter-word;
   }
 
   .text-content p{
-    text-align: justify;
+    text-align: justify;/*　Firefox到此即可對齊　*/
+    text-justify: auto;/*　IE需再加上此行　*/
     text-justify: inter-word;
     }
     
