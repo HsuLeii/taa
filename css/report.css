@@ -440,6 +440,10 @@ rt {
   background-color: #efefef;
 }
 
+.text-content p{
+text-align: justify;
+}
+
 .bottom-text {
   position: relative;
   bottom: 0px;
@@ -1137,6 +1141,11 @@ rt {
     box-shadow: 1px 1px 5px #5957577a;
     background-color: #efefef;
   }
+
+  .text-content p{
+    text-align: justify;
+    }
+    
 
   .bottom-text {
     position: absolute;
