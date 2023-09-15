@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TAA</title>
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/report.css">
+</head>
+
+<body>
+
+  <div>
+    <canvas id="myChart"></canvas>
+  </div>
+  
+  
+  
+
+  <!-- page1 -->
+  <div class="page orange-border">
+    <div class="report-title">
+      <div class="logo">
+        <img src="image/logo/logo.png" alt="">
+      </div>
+      <div class="title-content page-one-title-content">
+        <div class="headline">
+          <h3>中教情境判斷測驗 <img src="image/chalk.png" alt=""> </h3>
+        </div>
+        <div class="subtitle">
+          <h4>全校綜合分析報表</h4>
+        </div>
+      </div>
+    </div>
+    <div class="material">
+      <div class="material-text">
+        <div class="school">
+          <p><span>測驗學校：</span><span>國立彰化師範大學</span></p>
+        </div>
+        <div class="date">
+          <p><span>測驗時程：</span><span>108.09.01 ~ 109.01.31</span></p>
+        </div>
+        <div class="people">
+          <p><span>測驗人數：</span><span>247人</span></p>
+        </div>
+      </div>
+      <div class="threepeople shadow">
+        <img src="image/threepeople.png" alt="">
+        <p>在全校圖表之後，有全國數據及圖表敘述提供參考</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-title">
+        <div class="number-mark">
+          <img src="image/svg/one.svg" alt="">
+        </div>
+        <div class="first-text bluebg">
+          <p class="white bold">測驗各項度綜合結果</p>
+        </div>
+      </div>
+      <div class="main">
+        <div class="data-page-scroll">
+          <div class="chart-control">
+            <canvas id="school-wide-average" style="width: 300px; height: 150px;"></canvas>
+          </div>
+        </div>
+        <div class="data-page-scroll">
+          <div class="chart-control">
+            <canvas id="pr-value" style="width: 300px; height: 150px;"></canvas>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="bottom-text">
+      <p>國立臺灣師範大學心測中心 版權所有‧翻印必究</p>
+    </div>
+  </div>
+
+  <!-- page1 -->
+
+
+  <script>
+    Chart.Tooltip.positioners.custom = function(elements, position) {
+    return {
+      x: elements[0]._model.x,
+      y: 30
+    }
+  }
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+  
+  const ctx = document.getElementById('myChart');
+
+  // new Chart(ctx, {
+  //   type: 'pie',
+  //   data: {
+  //     labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+  //     datasets: [{
+  //       label: '# of Votes',
+  //       data: [12, 19, 3, 5, 2, 3],
+  //       borderWidth: 1
+  //     }]
+  //   },
+  //   options: {
+  //     plugins: {
+  //       tooltips: {
+  //         // Disable the on-canvas tooltip
+  //         enabled: true,
+  //         yAlign: 'none',
+  //           // backgroundColor: '#227799',
+  //           position: 'custom',
+  //       },
+  //     }
+      
+  //   }
+  // });
+
+
+  new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+        plugins: {
+          legend: {
+            onClick: null,
+   },
+            tooltip: {
+                // Disable the on-canvas tooltip
+                enabled: false,
+
+                external: function(context) {
+                    // Tooltip Element
+                    let tooltipEl = document.getElementById('chartjs-tooltip');
+
+                    // Create element on first render
+                    if (!tooltipEl) {
+                        tooltipEl = document.createElement('div');
+                        tooltipEl.id = 'chartjs-tooltip';
+                        tooltipEl.innerHTML = '<table></table>';
+                        document.body.appendChild(tooltipEl);
+                    }
+
+                    // Hide if no tooltip
+                    const tooltipModel = context.tooltip;
+                    if (tooltipModel.opacity === 0) {
+                        tooltipEl.style.opacity = 0;
+                        return;
+                    }
+
+                    // Set caret Position
+                    tooltipEl.classList.remove('above', 'below', 'no-transform');
+                    if (tooltipModel.yAlign) {
+                        tooltipEl.classList.add(tooltipModel.yAlign);
+                    } else {
+                        tooltipEl.classList.add('no-transform');
+                    }
+
+                    function getBody(bodyItem) {
+                        return bodyItem.lines;
+                    }
+
+                    // Set Text
+                    if (tooltipModel.body) {
+                        const titleLines = tooltipModel.title || [];
+                        const bodyLines = tooltipModel.body.map(getBody);
+
+                        let innerHtml = '<thead>';
+
+                        titleLines.forEach(function(title) {
+                            innerHtml += '<tr><th>' + title + '</th></tr>';
+                        });
+                        innerHtml += '</thead><tbody>';
+
+                        bodyLines.forEach(function(body, i) {
+                            const colors = tooltipModel.labelColors[i];
+                            let style = 'background:' + colors.backgroundColor;
+                            style += '; border-color:' + colors.borderColor;
+                            style += '; border-width: 2px';
+                            const span = '<span style="' + style + '">' + body + '</span>';
+                            innerHtml += '<tr><td>' + span + '</td></tr>';
+                        });
+                        innerHtml += '</tbody>';
+
+                        let tableRoot = tooltipEl.querySelector('table');
+                        tableRoot.innerHTML = innerHtml;
+                    }
+
+                    const position = context.chart.canvas.getBoundingClientRect();
+                    const bodyFont = Chart.helpers.toFont(tooltipModel.options.bodyFont);
+
+                    // Display, position, and set styles for font
+                    tooltipEl.style.opacity = 1;
+                    tooltipEl.style.position = 'absolute';
+                    tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX + 'px';
+                    tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + 'px';
+                    tooltipEl.style.font = bodyFont.string;
+                    tooltipEl.style.padding = tooltipModel.padding + 'px ' + tooltipModel.padding + 'px';
+                    tooltipEl.style.pointerEvents = 'none';
+                }
+            }
+        }
+    }
+});
+
+      // 全校平均得分pg1
+      var ctx1 = document.getElementById('school-wide-average').getContext('2d');
+    var myChart = new Chart(ctx1, {
+      type: "bar",
+      data: {
+        labels: [
+          "班級經營",
+          "教學",
+          "同事相處",
+          "親師溝通",
+          "輔導"
+        ],
+        datasets: [{
+            label: '全國平均得分',
+            backgroundColor: "#f3bb19",
+            borderColor: "#f3bb19",
+            type: 'line',
+            fill: false,
+            data: [2.94, 3.07, 2.94, 3.14, 3.15],
+            pointRadius: 6,
+            pointHoverRadius: 6,
+            tension: 0.5
+          },
+          {
+            label: ["全校平均得分", ],
+            backgroundColor: "#2783BE",
+            data: [2.98, 3.09, 2.95, 3.08, 3.11],
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        animation: {
+          duration: 0,
+        },
+        title: {
+          display: true,
+          text: '全校平均得分',
+          fontSize: 25,
+          padding: 25,
+          fontStyle: "bold",
+          fontColor: "#2783be"
+        },
+        tooltips: {
+          // Disable the on-canvas tooltip
+          // enabled: true,
+          yAlign: 'none',
+            // backgroundColor: '#227799',
+            position: 'custom',
+        },
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: {
+            fontColor: "#595757",
+            fontSize: 17,
+            padding: 20,
+            fontStyle: "bold",
+            boxWidth: 17,
+            boxHeight: 17,
+          },
+          onClick: null
+        },
+        scales: {
+          xAxes: [{
+            position: 'bottom',
+            ticks: {
+              min: 0,
+              // max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 15,
+              fontStyle: "bold",
+            }
+          }],
+          yAxes: [{
+            position: 'left',
+            ticks: {
+              min: 0,
+              max: 4,
+              stepSize: 1,
+              fontColor: '#595757',
+              fontSize: 17,
+              fontStyle: "bold",
+            }
+          }]
+        },
+      },
+      plugins: [{
+        afterDraw: function (chartInstance) {
+          ctx = chartInstance.ctx;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillStyle = '#fff';
+          ctx.font = "bold 15px 'Arial'";
+          chartInstance.data.datasets.forEach(function (dataset, i) {
+            var meta = chartInstance.controller.getDatasetMeta(i);
+            if (i == 0) {
+              meta.data.forEach(function (line, index) {
+                var data = dataset.data[index];
+                ctx.fillStyle = '#000000';
+                ctx.fillText(data, line._model.x, line._model.y - 25); //bar數值y軸-25
+              });
+            } else if (i !== 0) {
+              meta.data.forEach(function (bar, index) {
+                var data = dataset.data[index];
+                var height = bar.height(); //bar數值垂直置中
+                var y = bar._view.y; //bar數值垂直置中
+                var _y = y + height / 2; //bar數值垂直置中
+                ctx.fillStyle = '#fff';
+                ctx.fillText(data, bar._model.x, _y); //bar數值垂直置中
+              });
+            }
+          });
+        }
+      }],
+
+    });
+
+    // 全校平均得分PR值pg1
+
+</script>
+
+</body>
+
+</html>
