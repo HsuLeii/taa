@@ -12,9 +12,67 @@
 
 <body>
 
-  <div>
-    <canvas id="myChart"></canvas>
-  </div>
+    <!-- page1 -->
+    <div class="page medium-border">
+      <div class="report-title">
+        <div class="logo medium-logo">
+          <img src="image/logo/logo.png" alt="">
+        </div>
+        <div class="title-content page-one-title-content">
+          <div class="headline mediumbg">
+            <h3>教師情境判斷測驗-中教版 <img src="image/chalk.png" alt=""> </h3>
+          </div>
+          <div class="subtitle">
+            <h4>全校綜合分析報表</h4>
+          </div>
+        </div>
+      </div>
+      <div class="material">
+        <div class="material-text">
+          <div class="school">
+            <p><span>測驗學校：</span><span>國立彰化師範大學</span></p>
+          </div>
+          <div class="date">
+            <p><span>測驗時程：</span><span>108.09.01 ~ 109.01.31</span></p>
+          </div>
+          <div class="people">
+            <p><span>測驗人數：</span><span>247人</span></p>
+          </div>
+        </div>
+        <div class="threepeople shadow">
+          <img src="image/threepeople.png" alt="">
+          <p>在全校圖表之後，有全國數據及圖表敘述提供參考</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-title">
+          <div class="number-mark">
+            <img src="image/svg/one.svg" alt="">
+          </div>
+          <div class="first-text bluebg">
+            <p class="white bold">測驗各項度綜合結果</p>
+          </div>
+        </div>
+        <div class="main">
+          <div class="data-page-scroll">
+            <div class="chart-control">
+              <canvas id="school-wide-average" style="width: 300px; height: 150px;"></canvas>
+            </div>
+          </div>
+          <div class="data-page-scroll">
+            <div class="chart-control">
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+      <div class="bottom-text mediumbg">
+        <p>國立臺灣師範大學心測中心 版權所有‧翻印必究</p>
+      </div>
+    </div>
+  
+    <!-- page1 -->
 
 
 <script src="js/chart4.4.js"></script>
@@ -24,6 +82,7 @@
   
   const ctx = document.getElementById('myChart');
 
+ 
   new Chart(ctx, {
     type: 'pie',
     data: {
@@ -42,10 +101,70 @@
             tooltip: {
                 // Disable the on-canvas tooltip
                 enabled: false,
+                external: function(context) {
+                    // Tooltip Element
+                    let tooltipEl = document.getElementById('chartjs-tooltip');
+                    // Create element on first render
+                    if (!tooltipEl) {
+                        tooltipEl = document.createElement('div');
+                        tooltipEl.id = 'chartjs-tooltip';
+                        tooltipEl.innerHTML = '<table></table>';
+                        document.body.appendChild(tooltipEl);
+                    }
+                    // Hide if no tooltip
+                    const tooltipModel = context.tooltip;
+                    if (tooltipModel.opacity === 0) {
+                        tooltipEl.style.opacity = 0;
+                        return;
+                    }
+                    // Set caret Position
+                    tooltipEl.classList.remove('above', 'below', 'no-transform');
+                    if (tooltipModel.yAlign) {
+                        tooltipEl.classList.add(tooltipModel.yAlign);
+                    } else {
+                        tooltipEl.classList.add('no-transform');
+                    }
+                    function getBody(bodyItem) {
+                        return bodyItem.lines;
+                    }
+                    // Set Text
+                    if (tooltipModel.body) {
+                        const titleLines = tooltipModel.title || [];
+                        const bodyLines = tooltipModel.body.map(getBody);
+                        let innerHtml = '<thead>';
+                        titleLines.forEach(function(title) {
+                            innerHtml += '<tr><th>' + title + '</th></tr>';
+                        });
+                        innerHtml += '</thead><tbody>';
+                        bodyLines.forEach(function(body, i) {
+                            const colors = tooltipModel.labelColors[i];
+                            let style = 'background:' + colors.backgroundColor;
+                            style += '; border-color:' + colors.borderColor;
+                            style += '; border-width: 2px';
+                            const span = '<span style="' + style + '">' + body + '</span>';
+                            innerHtml += '<tr><td>' + span + '</td></tr>';
+                        });
+                        innerHtml += '</tbody>';
+                        let tableRoot = tooltipEl.querySelector('table');
+                        tableRoot.innerHTML = innerHtml;
+                    }
+                    const position = context.chart.canvas.getBoundingClientRect();
+                    const bodyFont = Chart.helpers.toFont(tooltipModel.options.bodyFont);
+                    // Display, position, and set styles for font
+                    tooltipEl.style.opacity = 1;
+                    tooltipEl.style.position = 'absolute';
+                    tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX + 'px';
+                    tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + 'px';
+                    tooltipEl.style.font = bodyFont.string;
+                    tooltipEl.style.padding = tooltipModel.padding + 'px ' + tooltipModel.padding + 'px';
+                    tooltipEl.style.pointerEvents = 'none';
+                }
             }
         }
     }
 });
+
+
 
 
 </script>
