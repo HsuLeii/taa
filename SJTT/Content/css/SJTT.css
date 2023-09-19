@@ -1,10 +1,11 @@
+@charset "UTF-8";
 body { font-family: 'Noto Sans SC', 'Noto Sans TC'; }
 
 /*main*/
 /*transparency*/
 /*other*/
-/*green*/
-/*grade*/
+.page .page_caption .page_caption_img .page_caption_img_left .page_caption_item .page_caption_item_img { box-shadow: 5px 5px 10px 3px #e7591a25; }
+
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, figure { margin: 0; padding: 0; list-style: none; }
 
 h1 { font-size: 35px; line-height: 1.7; font-weight: bold; }
@@ -39,11 +40,9 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 *, body { letter-spacing: 1.5px; box-sizing: border-box; }
 
-body { background-color: #f8f5c8; }
-
 .cursor { cursor: pointer; }
 
-::selection { background: #385423; color: #fff; }
+::selection { background: #a33e11; color: #fff; }
 
 .table th, .table td { border-top: 0px; border-bottom: 0px; }
 
@@ -59,4 +58,36 @@ body { background-color: #f8f5c8; }
   input, label { font-size: 20px; }
   button, .btn { font-size: 20px; } }
 
-body { background-color: #f8f5c8; }
+.page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; max-width: 1024px; height: 1448px; width: 100%; /* height: 1448px; */ margin: 0 auto; overflow: hidden; border: 1px solid #20221f; padding: 10px 2.5%; }
+
+.page::after { /* content: counter(page-number); 取用該名字的計數器 */ /*counter-increment: page-number 1;  增加計數器數值 */ position: absolute; right: 0; bottom: 0; left: 0; font-size: 30px; text-align: center; }
+
+.page .report_title_area { width: 100%; display: flex; align-items: center; padding: 10px 20px; margin: 0 auto 20px; }
+
+.page .report_title_area .logo { width: 85px; }
+
+.page .report_title_area .report-title { position: absolute; left: 50%; transform: translate(-50%, 0%); }
+
+.page .report_title_area .report-title h3 { color: #e7591a; }
+
+.page .page_caption .page_caption_text p { color: #20221f; line-height: 2.5; }
+
+.page .page_caption .page_caption_text p span { font-size: 15px; }
+
+.page .page_caption .page_caption_img { display: flex; }
+
+.page .page_caption .page_caption_img .page_caption_img_left { display: flex; width: 77.5%; margin: 0 2.5% 0 0; }
+
+.page .page_caption .page_caption_img .page_caption_img_left .page_caption_item { display: flex; flex-direction: column; align-items: center; width: 30%; margin: 0 calc(10% / 6); }
+
+.page .page_caption .page_caption_img .page_caption_img_left .page_caption_item .page_caption_item_img { width: 80%; padding: 10px; border-radius: 50%; }
+
+.page .page_caption .page_caption_img .page_caption_img_left .page_caption_item .page_caption_item_text { margin: 15px auto; }
+
+.page .page_caption .page_caption_img .page_caption_img_left .page_caption_item.page_caption_item_one .page_caption_item_text { color: #32a5d6; }
+
+.page .page_caption .page_caption_img .page_caption_img_left .page_caption_item.page_caption_item_two .page_caption_item_text { color: #2c9a3b; }
+
+.page .page_caption .page_caption_img .page_caption_img_left .page_caption_item.page_caption_item_three .page_caption_item_text { color: #e0941d; }
+
+.page .page_caption .page_caption_img .page_caption_img_right { width: 20%; }

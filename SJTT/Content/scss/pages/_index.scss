@@ -1,0 +1,108 @@
+.page {
+    /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
+    /* page-break-after: always;  碰到此元素會直接換頁 */
+    page-break-inside: avoid;
+    position: relative;
+    max-width: 1024px;
+    height: 1448px;
+    width: 100%;
+    /* height: 1448px; */
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid $main_color_grey;
+    padding: 10px 2.5%;
+
+    &::after {
+        /* content: counter(page-number); 取用該名字的計數器 */
+        /*counter-increment: page-number 1;  增加計數器數值 */
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        font-size: 30px;
+        text-align: center;
+      }
+
+      .report_title_area {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        margin: 0 auto 20px;
+
+        .logo {
+            width: 85px;
+          }
+
+          .report-title{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            h3{
+                color: $main_color;
+              }
+          }
+          
+
+      }
+
+      .page_caption{
+        .page_caption_text{
+            p{
+                color: $main_color_grey;
+                line-height: 2.5;
+                span{
+                    font-size: 15px;
+                }
+            }
+        }
+        
+        .page_caption_img{
+            display: flex;
+            .page_caption_img_left{
+                display: flex;
+                width: 77.5%;
+                margin: 0 2.5% 0 0;
+                .page_caption_item{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 30%;
+                    margin: 0 calc(10% / 6);
+                    .page_caption_item_img{
+                        width: 80%;
+                        padding: 10px;
+                        border-radius: 50%;
+                        @extend %boxShadow;
+                    }
+                    
+                    .page_caption_item_text{
+                        margin: 15px auto;
+                    }
+
+                    &.page_caption_item_one{
+                        .page_caption_item_text{
+                            color: $main_color_blue;
+                        }
+                    }
+
+                    &.page_caption_item_two{
+                        .page_caption_item_text{
+                            color: $main_color_green;
+                        }
+                    }
+
+                    &.page_caption_item_three{
+                        .page_caption_item_text{
+                            color: $main_color_orange;
+                        }
+                    }
+                }
+            }
+
+            .page_caption_img_right{
+                width: 20%;
+            }
+        }
+      }
+  }
