@@ -4,8 +4,6 @@ body { font-family: 'Noto Sans SC', 'Noto Sans TC'; }
 /*main*/
 /*transparency*/
 /*other*/
-.page .page_caption .page_caption_img .page_caption_img_left .page_caption_item .page_caption_item_img { box-shadow: 5px 5px 10px 3px #e7591a25; }
-
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, figure { margin: 0; padding: 0; list-style: none; }
 
 h1 { font-size: 35px; line-height: 1.7; font-weight: bold; }
@@ -49,7 +47,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
 .table thead th { border-bottom: 0px; }
 
 @media screen and (min-width: 768px) { h1 { font-size: 38px; }
-  h3 { font-size: 35px; }
+  h3 { font-size: 40px; }
   h4 { font-size: 24px; }
   h5 { font-size: 24px; }
   p, i { font-size: 20px; }
@@ -58,36 +56,78 @@ button:disabled a { color: #fff !important; cursor: auto; }
   input, label { font-size: 20px; }
   button, .btn { font-size: 20px; } }
 
-.page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; max-width: 1024px; height: 1448px; width: 100%; /* height: 1448px; */ margin: 0 auto; overflow: hidden; border: 1px solid #20221f; padding: 10px 2.5%; }
+.page { background-color: #f4e3ce; }
+
+.page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; max-width: 1024px; height: 1448px; width: 100%; /* height: 1448px; */ margin: 0 auto; overflow: hidden; border: 1px solid #20221f; padding: 0 2.5%; }
 
 .page::after { /* content: counter(page-number); 取用該名字的計數器 */ /*counter-increment: page-number 1;  增加計數器數值 */ position: absolute; right: 0; bottom: 0; left: 0; font-size: 30px; text-align: center; }
 
-.page .report_title_area { width: 100%; display: flex; align-items: center; padding: 10px 20px; margin: 0 auto 20px; }
+.page .report_title_area { position: relative; width: 100%; display: flex; align-items: center; margin: 15px auto 50px; padding: 25px 0; border-bottom: 1.5px solid #20221f; }
 
-.page .report_title_area .logo { width: 85px; }
+.page .report_title_area .logo { width: 90px; }
 
 .page .report_title_area .report-title { position: absolute; left: 50%; transform: translate(-50%, 0%); }
 
 .page .report_title_area .report-title h3 { color: #e7591a; }
 
+.page .report_title_area .report-title::before { content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: calc(100% + 120px); height: calc(100% + 20px); border: 2px solid #e7591a; background-color: #f4e3ce; border-radius: 50px; z-index: -1; }
+
+.page .report_title_area .report-title::after { content: ""; position: absolute; left: 50%; top: 50%; transform: translate(calc(-50% + 10px), calc(-50% + 10px)); width: calc(100% + 120px); height: calc(100% + 20px); border: 2px solid #e7591a; border-radius: 50px; z-index: -2; }
+
+.page .page_caption { width: 80%; margin: 0 auto; }
+
 .page .page_caption .page_caption_text p { color: #20221f; line-height: 2.5; }
 
-.page .page_caption .page_caption_text p span { font-size: 15px; }
+.page .page_caption .page_caption_text p span { font-size: 14px; }
 
-.page .page_caption .page_caption_img { display: flex; }
+.page .page_caption .page_caption_img { display: flex; justify-content: space-between; align-items: center; margin: 40px auto 20px; }
 
-.page .page_caption .page_caption_img .page_caption_img_left { display: flex; width: 77.5%; margin: 0 2.5% 0 0; }
+.page .page_caption .page_caption_img .page_caption_img_left { display: flex; flex-direction: column; width: 50%; }
 
-.page .page_caption .page_caption_img .page_caption_img_left .page_caption_item { display: flex; flex-direction: column; align-items: center; width: 30%; margin: 0 calc(10% / 6); }
+.page .page_caption .page_caption_img .page_caption_img_left .page_caption_triangle { position: relative; width: 100%; }
 
-.page .page_caption .page_caption_img .page_caption_img_left .page_caption_item .page_caption_item_img { width: 80%; padding: 10px; border-radius: 50%; }
+.page .page_caption .page_caption_img .page_caption_img_left .page_caption_triangle .page_caption_svg { width: 100%; }
 
-.page .page_caption .page_caption_img .page_caption_img_left .page_caption_item .page_caption_item_text { margin: 15px auto; }
+.page .page_caption .page_caption_img .page_caption_img_left .page_caption_triangle .page_caption_svg svg path { fill: transparent; stroke: #20221f; stroke-width: 0.5px; }
 
-.page .page_caption .page_caption_img .page_caption_img_left .page_caption_item.page_caption_item_one .page_caption_item_text { color: #32a5d6; }
+.page .page_caption .page_caption_img .page_caption_img_left .page_caption_triangle .page_caption_item { display: flex; justify-content: center; width: 50%; position: absolute; }
 
-.page .page_caption .page_caption_img .page_caption_img_left .page_caption_item.page_caption_item_two .page_caption_item_text { color: #2c9a3b; }
+.page .page_caption .page_caption_img .page_caption_img_left .page_caption_triangle .page_caption_item .page_caption_item_img { width: 80%; padding: 10px; border-radius: 50%; }
 
-.page .page_caption .page_caption_img .page_caption_img_left .page_caption_item.page_caption_item_three .page_caption_item_text { color: #e0941d; }
+.page .page_caption .page_caption_img .page_caption_img_left .page_caption_triangle .page_caption_item .page_caption_item_text { margin: 15px auto; }
 
-.page .page_caption .page_caption_img .page_caption_img_right { width: 20%; }
+.page .page_caption .page_caption_img .page_caption_img_left .page_caption_triangle .page_caption_item.page_caption_item_one { top: 0; left: 50%; transform: translate(-50%, -50%); }
+
+.page .page_caption .page_caption_img .page_caption_img_left .page_caption_triangle .page_caption_item.page_caption_item_one .page_caption_item_text { color: #1ebbe9; }
+
+.page .page_caption .page_caption_img .page_caption_img_left .page_caption_triangle .page_caption_item.page_caption_item_two { bottom: 0; left: 0%; transform: translate(-50%, 50%); }
+
+.page .page_caption .page_caption_img .page_caption_img_left .page_caption_triangle .page_caption_item.page_caption_item_two .page_caption_item_text { color: #a3c313; }
+
+.page .page_caption .page_caption_img .page_caption_img_left .page_caption_triangle .page_caption_item.page_caption_item_three { bottom: 0; right: 0%; transform: translate(50%, 50%); }
+
+.page .page_caption .page_caption_img .page_caption_img_left .page_caption_triangle .page_caption_item.page_caption_item_three .page_caption_item_text { color: #e0941d; }
+
+.page .page_caption .page_caption_img .page_caption_img_left .page_caption_left_text { margin: 40px auto; }
+
+.page .page_caption .page_caption_img .page_caption_img_left .page_caption_left_text .page_caption_item_text_color { width: 15px; height: 15px; margin: 0 10px 0 0; border-radius: 50%; }
+
+.page .page_caption .page_caption_img .page_caption_img_left .page_caption_left_text .page_caption_left_text_item { display: flex; align-items: center; }
+
+.page .page_caption .page_caption_img .page_caption_img_left .page_caption_left_text .page_caption_left_text_item.page_caption_left_text_one .page_caption_item_text_color { background-color: #1ebbe9; }
+
+.page .page_caption .page_caption_img .page_caption_img_left .page_caption_left_text .page_caption_left_text_item.page_caption_left_text_two .page_caption_item_text_color { background-color: #a3c313; }
+
+.page .page_caption .page_caption_img .page_caption_img_left .page_caption_left_text .page_caption_left_text_item.page_caption_left_text_three .page_caption_item_text_color { background-color: #e0941d; }
+
+.page .page_caption .page_caption_img .page_caption_img_right { width: 45%; }
+
+.page .pagination { position: relative; display: flex; justify-content: flex-end; }
+
+.page .pagination .page_number { position: relative; z-index: 1; background-color: #f4e3ce; }
+
+.page .pagination .page_number p { color: #fff; }
+
+.page .pagination .page_number::after { content: ""; position: absolute; width: 60px; height: 60px; background-color: #e7591a; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 50%; z-index: -1; }
+
+.page .pagination::after { content: ""; position: absolute; width: calc(100% - 100px); height: 1px; background-color: #20221f; top: 50%; left: 0; transform: translate(0, -50%); }
