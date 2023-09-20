@@ -10,7 +10,6 @@
     margin: 0 auto;
     overflow: hidden;
     border: 1px solid $main_color_grey;
-    padding: 0 2.5%;
 
     &::after {
         /* content: counter(page-number); 取用該名字的計數器 */
@@ -28,12 +27,12 @@
         width: 100%;
         display: flex;
         align-items: center;
-        margin: 15px auto 50px;
-        padding: 25px 0;
-        border-bottom: 1.5px solid $main_color_grey;
+        margin: 0 auto 50px;
+        padding: 25px 2.5%;
+        background-color: $main_color;
 
         .logo {
-            width: 90px;
+            width: 65px;
         }
 
         .report-title {
@@ -41,41 +40,41 @@
             left: 50%;
             transform: translate(-50%, 0%);
 
-            h3 {
-                color: $main_color;
+            h1 {
+                color: $white;
             }
 
-            &::before {
-                content: "";
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                width: calc(100% + 120px);
-                height: calc(100% + 20px);
-                border: 2px solid $main_color;
-                background-color: $body_bg;
-                border-radius: 50px;
-                z-index: -1;
-            }
+            // &::before {
+            //     content: "";
+            //     position: absolute;
+            //     left: 50%;
+            //     top: 50%;
+            //     transform: translate(-50%, -50%);
+            //     width: calc(100% + 120px);
+            //     height: calc(100% + 20px);
+            //     border: 2px solid $main_color;
+            //     background-color: $body_bg;
+            //     border-radius: 50px;
+            //     z-index: -1;
+            // }
 
-            &::after {
-                content: "";
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(calc(-50% + 10px), calc(-50% + 10px));
-                width: calc(100% + 120px);
-                height: calc(100% + 20px);
-                border: 2px solid $main_color;
-                border-radius: 50px;
-                z-index: -2;
-            }
+            // &::after {
+            //     content: "";
+            //     position: absolute;
+            //     left: 50%;
+            //     top: 50%;
+            //     transform: translate(calc(-50% + 10px), calc(-50% + 10px));
+            //     width: calc(100% + 120px);
+            //     height: calc(100% + 20px);
+            //     border: 2px solid $main_color;
+            //     border-radius: 50px;
+            //     z-index: -2;
+            // }
         }
     }
 
     .page_caption {
-        width: 80%;
+        width: 75%;
         margin: 0 auto;
         .page_caption_text {
             p {
@@ -91,8 +90,8 @@
         .page_caption_img {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            margin: 40px auto 20px;
+            align-items: flex-end;
+            margin: 120px auto 20px;
 
             .page_caption_img_left {
                 display: flex;
@@ -105,10 +104,11 @@
                     .page_caption_svg{
                         width: 100%;
                         svg{
+                            polygon,
                             path{
                                 fill: transparent;
                                 stroke: $main_color_grey;
-                                stroke-width: 0.5px;
+                                stroke-width: 1px;
                             }
                         }
                     }
@@ -160,11 +160,11 @@
                 }
                 
                 .page_caption_left_text{
-                    margin: 40px auto;
+                    margin: 60px auto 0;
                     .page_caption_item_text_color{
-                        width: 15px;
-                        height: 15px;
-                        margin: 0 10px 0 0;
+                        width: 20px;
+                        height: 20px;
+                        margin: 0 15px 0 0;
                         border-radius: 50%;
                     }
 
@@ -191,34 +191,70 @@
             }
 
             .page_caption_img_right {
-                width: 45%;
+                position: relative;
+                display: flex;
+                justify-content: flex-end;
+                width: 48%;
+
+                .page_caption_item_img{
+                    width: 80%;
+                }
+
+                .page_caption_item_text{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transform: translate(0 , calc(-100% - 20px));
+                    background-color: $white;
+                    border: 1px solid $main_color;
+                    border-radius: 10px;
+                    padding: 10px 20px;
+
+                    &::before{
+                        content: "";
+    position: absolute;
+    border-width: 0px 10px 10px 10px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-100%, 0%);
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid $main_color;
+    border-right: 10px solid transparent;
+                    }
+                }
             }
         }
     }
 
     .pagination{
-        position: relative;
-        display: flex;
-        justify-content: flex-end;
+        position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+    margin: 0 auto;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
 
         .page_number{
             position: relative;
             z-index: 1;
             background-color: $body_bg;
             p{
-                color: $white;
+                color: $main_color;
             }
 
             &::after{
                 content: "";
                 position: absolute;
-                width: 60px;
-                height: 60px;
-                background-color: $main_color;
+                width: calc(100% + 40px);
+                height: calc(100% + 10px);
+                border: 1px solid $main_color;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50% , -50%);
-                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 10px;
                 z-index: -1;
             }
         }
@@ -228,7 +264,7 @@
             position: absolute;
             width: calc(100% - 100px);
             height: 1px;
-            background-color: $main_color_grey;
+            background-color: $main_color;
             top: 50%;
             left: 0;
             transform: translate(0 , -50%);
