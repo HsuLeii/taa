@@ -36,30 +36,32 @@ figure {
 h1 {
     font-size: 33px;
     line-height: 1.7;
+    letter-spacing: 2.5px;
     font-weight: bold;
 }
 
 h3 {
-    font-size: 28px;
+    font-size: 21px;
     line-height: 1.7;
+    letter-spacing: 2.5px;
     font-weight: bold;
 }
 
 h4 {
-    font-size: 22px;
+    font-size: 19px;
     line-height: 1.5;
     font-weight: bold;
 }
 
 h5 {
-    font-size: 20px;
+    font-size: 15px;
     line-height: 1.5;
     font-weight: bold;
 }
 
 p,
 i {
-    font-size: 16px;
+    font-size: 13px;
     line-height: 1.7;
 }
 
@@ -67,13 +69,13 @@ span,
 th,
 td,
 .form-control {
-    font-size: 16px;
+    font-size: 13px;
     text-decoration: none;
     line-height: 1.7;
 }
 
 a {
-    font-size: 16px;
+    font-size: 13px;
     text-decoration: none;
     line-height: 1.7;
 }
@@ -89,7 +91,7 @@ rt {
 
 input,
 label {
-    font-size: 16px;
+    font-size: 13px;
     line-height: 1.7;
 }
 
@@ -103,7 +105,7 @@ img {
 
 button,
 .btn {
-    font-size: 16px;
+    font-size: 13px;
     line-height: 1.7;
     padding: 0;
     border-width: 0px;
@@ -151,52 +153,197 @@ body {
     thead{
         th{
             border-bottom: 0px;
+            font-size: 16px;
+        }
+    }
+
+    tbody{
+        td{
+            font-size: 13px;
         }
     }
 }
 
-@media screen and (min-width: 576px) {}
+
+// @media screen and (min-width: 768px) {
+//     h1 {
+//         font-size: 35px;
+//     }
+
+//     h3 {
+//         font-size: 15px;
+//     }
+
+//     h4 {
+//         font-size: 13px;
+//     }
+
+//     h5 {
+//         font-size: 22px;
+//     }
+
+//     p,
+//     i {
+//         font-size: 20px;
+//     }
+
+//     span,
+//     th,
+//     td,
+//     .form-control {
+//         font-size: 20px;
+//     }
+
+//     a {
+//         font-size: 20px;
+//     }
+
+//     input,
+//     label {
+//         font-size: 20px;
+//     }
+
+//     button,
+//     .btn {
+//         font-size: 20px;
+//     }
+
+//     .table{
+//         th,
+//         td{
+//             border-top: 0px;
+//             border-bottom: 0px;
+//         }
+    
+//         thead{
+//             th{
+//                 border-bottom: 0px;
+//                 font-size: 24px;
+//             }
+//         }
+    
+//         tbody{
+//             td{
+//                 font-size: 20px;
+//             }
+//         }
+//     }
+// }
 
 @media screen and (min-width: 768px) {
     h1 {
-        font-size: 45px;
+        font-size: 35px;
     }
 
     h3 {
-        font-size: 40px;
+        font-size: 23px;
     }
 
     h4 {
-        font-size: 24px;
+        font-size: 21px;
     }
 
     h5 {
-        font-size: 24px;
+        font-size: 17px;
     }
 
     p,
     i {
-        font-size: 20px;
+        font-size: 15px;
     }
 
     span,
     th,
     td,
     .form-control {
-        font-size: 20px;
+        font-size: 15px;
     }
 
     a {
-        font-size: 20px;
+        font-size: 15px;
     }
 
     input,
     label {
-        font-size: 20px;
+        font-size: 15px;
     }
 
     button,
     .btn {
-        font-size: 20px;
+        font-size: 15px;
+    }
+
+    .table{
+    
+        thead{
+            th{
+                font-size: 19px;
+            }
+        }
+    
+        tbody{
+            td{
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    h4 {
+        font-size: 26px;
+    }
+
+    h5 {
+        font-size: 22px;
+    }
+
+    p,
+    i {
+        font-size: 17px;
+    }
+
+    span,
+    th,
+    td,
+    .form-control {
+        font-size: 17px;
+    }
+
+    a {
+        font-size: 17px;
+    }
+
+    input,
+    label {
+        font-size: 17px;
+    }
+
+    button,
+    .btn {
+        font-size: 17px;
+    }
+
+    .table{
+    
+        thead{
+            th{
+                font-size: 21px;
+            }
+        }
+    
+        tbody{
+            td{
+                font-size: 17px;
+            }
+        }
     }
 }
