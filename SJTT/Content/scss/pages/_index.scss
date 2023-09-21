@@ -24,10 +24,12 @@
     }
 
     .page_header{
-        width: 100%;
-        height: 10px;
-        background: linear-gradient(135deg, $body_bg 40%, $main_color 40%);
-        margin: 0 auto 30px;
+        .page_decorate{
+            width: 100%;
+            height: 12px;
+            background: linear-gradient(135deg, $main_color_green 33%, $main_color_blue 33%, $main_color_blue 66%, $main_color 66%);
+            margin: 0 auto 30px;
+        }
     }
 
     .page_content{
@@ -91,7 +93,7 @@
                 height: 75px;
                 transform: translate(0, 0%);
                 background-image: radial-gradient($main_color_80 30%, transparent 30%);
-                background-position: 0 0, 10px 0px;
+                background-position: 0 0, 5px 0px;
                 background-size: 15px 15px;
             }
         }
@@ -286,12 +288,13 @@
 
         .caption_table{
             .table{
+                border: 1.5px solid $main_color;
                 thead{
                     tr{
                         th{
                             color: $white;
                             background-color: $main_color;
-                            padding: 15px 10px;
+                            padding: 12px 10px;
                             text-align: center;
                         }
                     }
@@ -360,24 +363,114 @@
                             border-bottom: 0px;
     border-right: 0px;
                             &:nth-child(1){
-                            background-color: transparent;
+                            background-color: $white;
                             }
                         }
                     }
                 }
             }
         }
+        // page2
+
+        // page3
+        .chart_information{
+            display: flex;
+            justify-content: center;
+            margin: 0 auto 20px;
+            .chart_information_text{
+                margin: 0 20px;
+            }
+
+            .chart_information_value{
+                color: $main_color;
+                border-bottom: 1px solid $main_color;
+                font-weight: bold;
+            }
+        }
+
+        .caption_table{
+            &.chart_table{
+                .table{
+                    thead{
+                        tr{
+                            th{
+                                color: $main_color_grey;
+                                border-bottom: 1.5px solid $white;
+                                border-right: 1.5px solid $white;
+                                &:nth-child(1),
+                                &:nth-child(6){
+                                    background-color: $table_color_one;
+                                }
+                                &:nth-child(2){
+                                    background-color: $table_color_two;
+                                }
+                                &:nth-child(3){
+                                    background-color: $table_color_three;
+                                }
+                                &:nth-child(4){
+                                    background-color: $table_color_four;
+                                }
+                                &:nth-child(5){
+                                    background-color: $table_color_five;
+                                }
+                                &:nth-child(6){
+                                    border-right: 1.5px solid $main_color;
+                                }
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            td{
+                                text-align: center;
+                                background-color: $white;
+                                border-bottom: 1.5px solid $main_color;
+                                border-right: 1.5px solid $main_color;
+                                width: calc(100% / 6);
+
+                                &:nth-child(2),
+                                &:nth-child(3),
+                                &:nth-child(4),
+                                &:nth-child(5){
+
+                                    &.highest{
+                                        background-color: $main_color;
+                                    border-bottom: 1.5px solid $white;
+                                    border-right: 1.5px solid $white;
+                                    }
+                                }
+
+                                
+                                &:nth-child(6){
+                                    border-right: 1.5px solid $main_color;
+                                }
+                            }
         
+                            &:nth-child(3){
+                                td{
+                                    border-bottom: 0px;
+                                    background-color: $white;
+                                    border-right: 1.5px solid $main_color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     .page_footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
         .pagination {
             position: absolute;
             display: flex;
             justify-content: center;
             width: 90%;
             margin: 0 auto;
-            bottom: 30px;
+            bottom: 40px;
             left: 50%;
             transform: translate(-50%, 0);
     
@@ -430,6 +523,12 @@
                 transform: translate(0, -50%);
                 z-index: -1;
             }
+        }
+        .page_decorate{
+            width: 100%;
+            height: 12px;
+            background: linear-gradient(45deg, $main_color_green 33%, $main_color_blue 33%, $main_color_blue 66%, $main_color 66%);
+            margin: 0 auto;
         }
     }
 

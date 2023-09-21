@@ -79,7 +79,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page::after { /* content: counter(page-number); 取用該名字的計數器 */ /*counter-increment: page-number 1;  增加計數器數值 */ position: absolute; right: 0; bottom: 0; left: 0; font-size: 30px; text-align: center; }
 
-.page .page_header { width: 100%; height: 10px; background: linear-gradient(135deg, #fef3f0 40%, #e7591a 40%); margin: 0 auto 30px; }
+.page .page_header .page_decorate { width: 100%; height: 12px; background: linear-gradient(135deg, #a3c313 33%, #1ebbe9 33%, #1ebbe9 66%, #e7591a 66%); margin: 0 auto 30px; }
 
 .page .page_content { padding: 0 2.5%; }
 
@@ -95,7 +95,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_content .report_title_area .report-title::after { content: ""; position: absolute; left: 50%; top: 50%; transform: translate(calc(-50% + 15px), calc(-50% + 10px)); width: calc(100% + 180px); height: calc(100% + 15px); border: 2px solid #e7591a; border-radius: 50px; z-index: -2; }
 
-.page .page_content .report_title_area::after { content: ""; position: absolute; right: 0; bottom: 0; width: 90px; height: 75px; transform: translate(0, 0%); background-image: radial-gradient(#e7591a80 30%, transparent 30%); background-position: 0 0, 10px 0px; background-size: 15px 15px; }
+.page .page_content .report_title_area::after { content: ""; position: absolute; right: 0; bottom: 0; width: 90px; height: 75px; transform: translate(0, 0%); background-image: radial-gradient(#e7591a80 30%, transparent 30%); background-position: 0 0, 5px 0px; background-size: 15px 15px; }
 
 .page .page_content .page_caption { width: 80%; margin: 0 auto; }
 
@@ -157,7 +157,9 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_content .pagination_tittle::after { content: ""; position: absolute; right: 0; bottom: 0; width: 90px; height: 30px; transform: translate(0, 0%); background-image: radial-gradient(#e7591a80 30%, transparent 30%); background-position: 0 0, 10px 0px; background-size: 15px 15px; }
 
-.page .page_content .caption_table .table thead tr th { color: #fff; background-color: #e7591a; padding: 15px 10px; text-align: center; }
+.page .page_content .caption_table .table { border: 1.5px solid #e7591a; }
+
+.page .page_content .caption_table .table thead tr th { color: #fff; background-color: #e7591a; padding: 12px 10px; text-align: center; }
 
 .page .page_content .caption_table .table tbody tr td { width: 20%; border-bottom: 1.5px solid #fff; border-right: 1.5px solid #fff; padding: 8px 15px; vertical-align: middle; }
 
@@ -183,9 +185,39 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_content .caption_table.caption_table_two tr:nth-child(7) td, .page .page_content .caption_table.caption_table_two tr:nth-child(8) td { border-bottom: 0px; border-right: 0px; }
 
-.page .page_content .caption_table.caption_table_two tr:nth-child(7) td:nth-child(1), .page .page_content .caption_table.caption_table_two tr:nth-child(8) td:nth-child(1) { background-color: transparent; }
+.page .page_content .caption_table.caption_table_two tr:nth-child(7) td:nth-child(1), .page .page_content .caption_table.caption_table_two tr:nth-child(8) td:nth-child(1) { background-color: #fff; }
 
-.page .page_footer .pagination { position: absolute; display: flex; justify-content: center; width: 90%; margin: 0 auto; bottom: 30px; left: 50%; transform: translate(-50%, 0); }
+.page .page_content .chart_information { display: flex; justify-content: center; margin: 0 auto 20px; }
+
+.page .page_content .chart_information .chart_information_text { margin: 0 20px; }
+
+.page .page_content .chart_information .chart_information_value { color: #e7591a; border-bottom: 1px solid #e7591a; font-weight: bold; }
+
+.page .page_content .caption_table.chart_table .table thead tr th { color: #20221f; border-bottom: 1.5px solid #fff; border-right: 1.5px solid #fff; }
+
+.page .page_content .caption_table.chart_table .table thead tr th:nth-child(1), .page .page_content .caption_table.chart_table .table thead tr th:nth-child(6) { background-color: #c7c8ff; }
+
+.page .page_content .caption_table.chart_table .table thead tr th:nth-child(2) { background-color: #bfe3fe; }
+
+.page .page_content .caption_table.chart_table .table thead tr th:nth-child(3) { background-color: #ffeeb9; }
+
+.page .page_content .caption_table.chart_table .table thead tr th:nth-child(4) { background-color: #ffd6d5; }
+
+.page .page_content .caption_table.chart_table .table thead tr th:nth-child(5) { background-color: #c0ffe0; }
+
+.page .page_content .caption_table.chart_table .table thead tr th:nth-child(6) { border-right: 1.5px solid #e7591a; }
+
+.page .page_content .caption_table.chart_table .table tbody tr td { text-align: center; background-color: #fff; border-bottom: 1.5px solid #e7591a; border-right: 1.5px solid #e7591a; width: calc(100% / 6); }
+
+.page .page_content .caption_table.chart_table .table tbody tr td:nth-child(2).highest, .page .page_content .caption_table.chart_table .table tbody tr td:nth-child(3).highest, .page .page_content .caption_table.chart_table .table tbody tr td:nth-child(4).highest, .page .page_content .caption_table.chart_table .table tbody tr td:nth-child(5).highest { background-color: #e7591a; border-bottom: 1.5px solid #fff; border-right: 1.5px solid #fff; }
+
+.page .page_content .caption_table.chart_table .table tbody tr td:nth-child(6) { border-right: 1.5px solid #e7591a; }
+
+.page .page_content .caption_table.chart_table .table tbody tr:nth-child(3) td { border-bottom: 0px; background-color: #fff; border-right: 1.5px solid #e7591a; }
+
+.page .page_footer { position: absolute; bottom: 0; width: 100%; }
+
+.page .page_footer .pagination { position: absolute; display: flex; justify-content: center; width: 90%; margin: 0 auto; bottom: 40px; left: 50%; transform: translate(-50%, 0); }
 
 .page .page_footer .pagination .copyright_text { padding: 0 50px; background-color: #fef3f0; }
 
@@ -198,3 +230,5 @@ button:disabled a { color: #fff !important; cursor: auto; }
 .page .page_footer .pagination .page_number::after { content: ""; position: absolute; width: calc(100% + 40px); height: calc(100% + 10px); border: 1px solid #20221f; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 50px; z-index: -1; background-color: #fef3f0; }
 
 .page .page_footer .pagination::after { content: ""; position: absolute; width: calc(100% - 100px); height: 1px; background-color: #20221f; top: 50%; left: 0; transform: translate(0, -50%); z-index: -1; }
+
+.page .page_footer .page_decorate { width: 100%; height: 12px; background: linear-gradient(45deg, #a3c313 33%, #1ebbe9 33%, #1ebbe9 66%, #e7591a 66%); margin: 0 auto; }
