@@ -361,11 +361,19 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
   </script>
 
+
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  <script>
-    const ctx1 = document.getElementById('myChart');
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
 
+  <script>
+    Chart.register(ChartDataLabels);
+
+    const ctx1 = document.getElementById('myChart');
+    const backgroundColor = ['#21a0ff40', '#ffcc2f40', '#ff757240', '#64f1ac40'];
+    const hoverBackgroundColor = ['#21a0ff60', '#ffcc2f60', '#ff757260', '#64f1ac60'];
+const borderColor = ['#21a0ff', '#ffcc2f', '#ff7572', '#64f1ac'];
     new Chart(ctx1, {
       type: 'pie',
       data: {
@@ -377,9 +385,10 @@
         ],
         datasets: [{
           label: '# of Votes',
+          color: 'red',
           data: [23.8, 28.6, 28.6, 19],
-          backgroundColor: ['#bfe3fe', '#ffeeb9', '#ffd6d5', '#c0ffe0'],
-        hoverBackgroundColor: ['#bfe3fe', '#ffeeb9', '#ffd6d5', '#c0ffe0'],
+          backgroundColor: backgroundColor,
+        hoverBackgroundColor: hoverBackgroundColor,
         hoverBorderColor: '#e7591a',
         hoverBorderWidth: 3,
         }]
@@ -387,209 +396,57 @@
       options: {
         plugins: {
           legend: {
+
             onClick: null,
+
+            labels: {
+                    // This more specific font property overrides the global property
+                    
+                    font: function(context) {
+                var width = context.chart.width;
+                var size = Math.round(width / 40);
+
+                return {
+                    weight: 'bold',
+                    size: size
+                };
+            }
+                }
           },
-          colors: {
-      enabled: false,
-      forceOverride: true
-    },
+          
+    datalabels: {
+          color: '#20221f',
+          anchor: 'center',
+          align: 'center',
+          backgroundColor: borderColor,
+            borderColor: borderColor,
+            borderWidth: 1,
+          borderRadius:5,
+          padding:5,
+          formatter: function(value, context) {
+          return context.chart.data.labels[context.dataIndex] + ' :' + context.chart.data.datasets[0].data[context.dataIndex];
+
+          var a = context.chart.data.labels[context.dataIndex];
+        },
+        font: function(context) {
+                var width = context.chart.width;
+                var size = Math.round(width / 40);
+
+                return {
+                    weight: 'bold',
+                    size: size
+                };
+            }
+        },
           tooltip: {
             // Disable the on-canvas tooltip
             enabled: false,
-            external: function (context) {
-              // Tooltip Element
-              let tooltipEl = document.getElementById('chartjs-tooltip');
-              // Create element on first render
-              if (!tooltipEl) {
-                tooltipEl = document.createElement('div');
-                tooltipEl.id = 'chartjs-tooltip';
-                tooltipEl.innerHTML = '<table></table>';
-                document.body.appendChild(tooltipEl);
-              }
-              // Hide if no tooltip
-              const tooltipModel = context.tooltip;
-
-
-
-              function getBody(bodyItem) {
-                return bodyItem.lines;
-              }
-              // Set Text
-              if (tooltipModel.body) {
-                const titleLines = tooltipModel.title || [];
-                const bodyLines = tooltipModel.body.map(getBody);
-                let innerHtml = '<thead>';
-                titleLines.forEach(function (title) {
-                  innerHtml += '<tr><th>' + title + '</th></tr>';
-                });
-                innerHtml += '</thead><tbody>';
-                bodyLines.forEach(function (body, i) {
-                  const colors = tooltipModel.labelColors[i];
-                  let style = 'background:' + colors.backgroundColor;
-                  style += '; border-color: red';
-                  style += '; border-width: 2px';
-                  const span = '<span style="' + style + '">' + body + '</span>';
-                  innerHtml += '<tr><td>' + span + '</td></tr>';
-                });
-                innerHtml += '</tbody>';
-                let tableRoot = tooltipEl.querySelector('table');
-                tableRoot.innerHTML = innerHtml;
-              }
-              const position = context.chart.canvas.getBoundingClientRect();
-              const bodyFont = Chart.helpers.toFont(tooltipModel.options.bodyFont);
-              // 文字位子設定
-              tooltipEl.style.position = 'absolute';
-              tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX + 'px';
-              tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + 'px';
-              tooltipEl.style.font = bodyFont.string;
-              tooltipEl.style.padding = tooltipModel.padding + 'px ' + tooltipModel.padding + 'px';
-              tooltipEl.style.pointerEvents = 'none';
-            }
-          
-          
-          },
-          afterDraw: function (chartInstance) {
-                    ctx = chartInstance.ctx;
-                    ctx.textAlign = "center";
-                    ctx.textBaseline = "middle";
-                    ctx.fillStyle = '#fff';
-                    ctx.font = "bold 15px 'Arial'";
-                    chartInstance.data.datasets.forEach(function (dataset, i) {
-                        var meta = chartInstance.controller.getDatasetMeta(i);
-                        meta.data.forEach(function (bar, index) {
-                            var data = dataset.data[index];
-                            // var height = bar.height(); //bar數值垂直置中
-                            // var y = bar._view.y; //bar數值垂直置中
-                            // var _y = y + height / 2; //bar數值垂直置中
-                            ctx.fillStyle = '#000';
-                            ctx.fillText(data, bar._model.x, bar._model.y -
-                            20); //bar數值垂直置中
-                        });
-                    });
-                }
+            backgroundColor: '#227799',
+          }
         }
       }
     });
-  
-  
-  
-  
-    var ctx7 = document.getElementById('teacher-work-values-1').getContext('2d');
-        var myChart = new Chart(ctx7, {
-            type: "bar",
-            data: {
-                labels: [
-                    "正直自律",
-                    "積極堅持",
-                    "外向幽默",
-                    "領導果斷",
-                    "公正開放",
-                    "親和合作",
-                ],
-                datasets: [{
-                    label: '全校男性',
-                    backgroundColor: "#5792c8",
-                    data: [1.89, 21.1, 12.9, 25.7, 21.1, 21.1],
-                }, {
-                    label: '全校女性',
-                    backgroundColor: "#e27933",
-                    data: [4.6, 23.4, 11.0, 21.1, 22.0, 22.0],
-                }, {
-                    label: '全國常模',
-                    backgroundColor: "#a5a5a5",
-                    data: [6.8, 22.5, 11.7, 21.3, 18.3, 18.3],
-                }, ],
-            },
-            options: {
-                responsive: true,
-                animation: {
-                    duration: 0,
-                },
-                title: {
-                    display: true,
-                    text: '教師工作價值觀重視向度比例',
-                    fontSize: 25,
-                    padding: 25,
-                    fontStyle: "bold",
-                    fontColor: "#df7b5a"
-                },
-                tooltips: {
-                    // Disable the on-canvas tooltip
-                    enabled: true,
-                    yAlign: 'none',
-                    // backgroundColor: '#227799',
-                    position: 'custom',
-                },
-                legend: {
-                    display: false,
-                    reverse: false,
-                    position: 'bottom',
-                    labels: {
-                        fontColor: "#595757",
-                        fontSize: 17,
-                        padding: 20,
-                        fontStyle: "bold",
-                        boxWidth: 17,
-                        boxHeight: 17
-                    },
-                    onClick: null
-                },
-                scales: {
-                    xAxes: [{
-                        position: 'bottom',
-                        ticks: {
-                            min: 0,
-                            // max: 100,
-                            // stepSize: 20,
-                            fontColor: '#595757',
-                            fontSize: 15,
-                            fontStyle: "bold",
-                            // autoSkip: false,
-                            // maxRotation: 90,
-                            // minRotation: 90
-                        }
-                    }],
-                    yAxes: [{
-                        position: 'left',
-                        ticks: {
-                            min: 0,
-                            max: 100,
-                            stepSize: 20,
-                            fontColor: '#595757',
-                            fontSize: 17,
-                            fontStyle: "bold",
-                            callback: function (value, index, values) {
-                                return value + '%';
-                            }
-                        }
-                    }]
-                },
-            },
-            plugins: [{
-                afterDraw: function (chartInstance) {
-                    ctx = chartInstance.ctx;
-                    ctx.textAlign = "center";
-                    ctx.textBaseline = "middle";
-                    ctx.fillStyle = '#fff';
-                    ctx.font = "bold 15px 'Arial'";
-                    chartInstance.data.datasets.forEach(function (dataset, i) {
-                        var meta = chartInstance.controller.getDatasetMeta(i);
-                        meta.data.forEach(function (bar, index) {
-                            var data = dataset.data[index];
-                            // var height = bar.height(); //bar數值垂直置中
-                            // var y = bar._view.y; //bar數值垂直置中
-                            // var _y = y + height / 2; //bar數值垂直置中
-                            ctx.fillStyle = '#000';
-                            ctx.fillText(data, bar._model.x, bar._model.y -
-                            20); //bar數值垂直置中
-                        });
-                    });
-                }
-            }],
-
-        });
-  
-  </script>
+    </script>
 
 </body>
 

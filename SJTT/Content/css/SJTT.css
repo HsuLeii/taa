@@ -165,7 +165,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_content .caption_table .table tbody tr td:nth-child(1) { background-color: #c7c8ff; }
 
-.page .page_content .caption_table .table tbody tr td:nth-child(2) { background-color: #bfe3fe; }
+.page .page_content .caption_table .table tbody tr td:nth-child(2) { background-color: #83caff60; }
 
 .page .page_content .caption_table .table tbody tr td:nth-child(3) { background-color: #ffeeb9; }
 
@@ -175,7 +175,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_content .caption_table .table tbody tr:nth-child(4) td { border-bottom: 0px; }
 
-.page .page_content .caption_table.caption_table_two tr:nth-child(2) td:nth-child(1), .page .page_content .caption_table.caption_table_two tr:nth-child(3) td:nth-child(1), .page .page_content .caption_table.caption_table_two tr:nth-child(4) td:nth-child(1) { background-color: #bfe3fe; }
+.page .page_content .caption_table.caption_table_two tr:nth-child(2) td:nth-child(1), .page .page_content .caption_table.caption_table_two tr:nth-child(3) td:nth-child(1), .page .page_content .caption_table.caption_table_two tr:nth-child(4) td:nth-child(1) { background-color: #83caff60; }
 
 .page .page_content .caption_table.caption_table_two tr:nth-child(2) td:nth-child(2), .page .page_content .caption_table.caption_table_two tr:nth-child(3) td:nth-child(2), .page .page_content .caption_table.caption_table_two tr:nth-child(4) td:nth-child(2) { background-color: #ffeeb9; }
 
@@ -197,7 +197,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_content .caption_table.chart_table .table thead tr th:nth-child(1), .page .page_content .caption_table.chart_table .table thead tr th:nth-child(6) { background-color: #c7c8ff; }
 
-.page .page_content .caption_table.chart_table .table thead tr th:nth-child(2) { background-color: #bfe3fe; }
+.page .page_content .caption_table.chart_table .table thead tr th:nth-child(2) { background-color: #83caff60; }
 
 .page .page_content .caption_table.chart_table .table thead tr th:nth-child(3) { background-color: #ffeeb9; }
 
