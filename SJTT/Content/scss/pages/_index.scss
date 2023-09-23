@@ -23,8 +23,8 @@
         text-align: center;
     }
 
-    .page_header{
-        .page_decorate{
+    .page_header {
+        .page_decorate {
             width: 100%;
             height: 12px;
             background: linear-gradient(135deg, $main_color_green 33%, $main_color_blue 33%, $main_color_blue 66%, $main_color 66%);
@@ -32,8 +32,9 @@
         }
     }
 
-    .page_content{
+    .page_content {
         padding: 0 2.5%;
+
         // page1
         .report_title_area {
             position: relative;
@@ -42,20 +43,20 @@
             align-items: center;
             margin: 0 auto 40px;
             padding: 0 0 30px;
-    
+
             .logo {
                 width: 70px;
             }
-    
+
             .report-title {
                 position: absolute;
                 left: 50%;
                 transform: translate(-50%, 0%);
-    
+
                 h1 {
                     color: $white;
                 }
-    
+
                 &::before {
                     content: "";
                     position: absolute;
@@ -69,7 +70,7 @@
                     border-radius: 50px;
                     z-index: -1;
                 }
-    
+
                 &::after {
                     content: "";
                     position: absolute;
@@ -83,7 +84,7 @@
                     z-index: -2;
                 }
             }
-    
+
             &::after {
                 content: "";
                 position: absolute;
@@ -97,42 +98,42 @@
                 background-size: 15px 15px;
             }
         }
-    
+
         .page_caption {
             width: 80%;
             margin: 0 auto;
-    
+
             .page_caption_text {
                 p {
                     color: $main_color_grey;
                     line-height: 2.5;
-    
+
                     span {
                         font-size: 14px;
                     }
                 }
             }
-    
+
             .page_caption_img {
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-end;
                 margin: 150px auto 20px;
-    
+
                 .page_caption_img_left {
                     display: flex;
                     flex-direction: column;
                     width: 50%;
-    
+
                     .page_caption_triangle {
                         position: relative;
                         width: 100%;
-    
+
                         .page_caption_svg {
                             width: 100%;
-    
+
                             svg {
-    
+
                                 polygon,
                                 path {
                                     fill: transparent;
@@ -141,82 +142,82 @@
                                 }
                             }
                         }
-    
+
                         .page_caption_item {
                             display: flex;
                             justify-content: center;
                             width: 50%;
                             position: absolute;
-    
+
                             .page_caption_item_img {
                                 width: 80%;
                                 padding: 10px;
                                 border-radius: 50%;
                             }
-    
+
                             .page_caption_item_text {
                                 margin: 15px auto;
                             }
-    
+
                             &.page_caption_item_one {
                                 top: 0;
                                 left: 50%;
                                 transform: translate(-50%, -50%);
-    
+
                                 .page_caption_item_text {
                                     color: $main_color_blue;
                                 }
                             }
-    
+
                             &.page_caption_item_two {
                                 bottom: 0;
                                 left: 0%;
                                 transform: translate(-50%, 50%);
-    
+
                                 .page_caption_item_text {
                                     color: $main_color_green;
                                 }
                             }
-    
+
                             &.page_caption_item_three {
                                 bottom: 0;
                                 right: 0%;
                                 transform: translate(50%, 50%);
-    
+
                                 .page_caption_item_text {
                                     color: $main_color_orange;
                                 }
                             }
                         }
                     }
-    
+
                     .page_caption_left_text {
                         margin: 40px auto 0;
-    
+
                         .page_caption_item_text_color {
                             width: 20px;
                             height: 20px;
                             margin: 0 15px 0 0;
                             border-radius: 50%;
                         }
-    
+
                         .page_caption_left_text_item {
                             display: flex;
                             align-items: center;
                             margin: 10px auto;
-    
+
                             &.page_caption_left_text_one {
                                 .page_caption_item_text_color {
                                     background-color: $main_color_blue;
                                 }
                             }
-    
+
                             &.page_caption_left_text_two {
                                 .page_caption_item_text_color {
                                     background-color: $main_color_green;
                                 }
                             }
-    
+
                             &.page_caption_left_text_three {
                                 .page_caption_item_text_color {
                                     background-color: $main_color_orange;
@@ -225,17 +226,17 @@
                         }
                     }
                 }
-    
+
                 .page_caption_img_right {
                     position: relative;
                     display: flex;
                     justify-content: flex-end;
                     width: 48%;
-    
+
                     .page_caption_item_img {
                         width: 80%;
                     }
-    
+
                     .page_caption_item_text {
                         position: absolute;
                         top: 0;
@@ -245,7 +246,7 @@
                         border: 1px solid $main_color;
                         border-radius: 10px;
                         padding: 10px 20px;
-    
+
                         &::before {
                             content: "";
                             position: absolute;
@@ -262,13 +263,15 @@
                 }
             }
         }
+
         // page1
 
         // page2
-        .pagination_tittle{
+        .pagination_tittle {
             position: relative;
             margin: 0 0 20px;
-            h4{
+
+            h4 {
                 color: $main_color;
             }
 
@@ -286,12 +289,13 @@
             }
         }
 
-        .caption_table{
-            .table{
+        .caption_table {
+            .table {
                 border: 1.5px solid $main_color;
-                thead{
-                    tr{
-                        th{
+
+                thead {
+                    tr {
+                        th {
                             color: $white;
                             background-color: $main_color;
                             padding: 12px 10px;
@@ -299,35 +303,40 @@
                         }
                     }
                 }
-                tbody{
-                    tr{
-                        td{
+
+                tbody {
+                    tr {
+                        td {
                             width: 20%;
-                            border-bottom: 1.5px solid $white;
-                            border-right: 1.5px solid $white;
+                            border-bottom: 1.5px solid $main_color;
+                            border-right: 1.5px solid $main_color;
                             padding: 8px 15px;
                             vertical-align: middle;
-    
-                            &:nth-child(1){
+
+                            &:nth-child(1) {
                                 background-color: $table_color_one;
                             }
-                            &:nth-child(2){
-                                background-color: $table_color_two_50;
+
+                            &:nth-child(2) {
+                                background-color: $table_color_two_60;
                             }
-                            &:nth-child(3){
-                                background-color: $table_color_three;
+
+                            &:nth-child(3) {
+                                background-color: $table_color_three_60;
                             }
-                            &:nth-child(4){
-                                background-color: $table_color_four;
+
+                            &:nth-child(4) {
+                                background-color: $table_color_four_60;
                             }
-                            &:nth-child(5){
-                                background-color: $table_color_five;
+
+                            &:nth-child(5) {
+                                background-color: $table_color_five_60;
                                 border-right: 0px;
                             }
                         }
-    
-                        &:nth-child(4){
-                            td{
+
+                        &:nth-child(4) {
+                            td {
                                 border-bottom: 0px;
                             }
                         }
@@ -335,93 +344,116 @@
                 }
             }
 
-            &.caption_table_two{
-                tr{
+            &.caption_table_two {
+                tr {
+
                     &:nth-child(2),
                     &:nth-child(3),
-                    &:nth-child(4){
-                        td{
-                            &:nth-child(1){
-                                background-color: $table_color_two_50;
+                    &:nth-child(4) {
+                        td {
+                            &:nth-child(1) {
+                                background-color: $table_color_two_60;
                             }
-                            &:nth-child(2){
-                                background-color: $table_color_three;
+
+                            &:nth-child(2) {
+                                background-color: $table_color_three_60;
                             }
-                            &:nth-child(3){
-                                background-color: $table_color_four;
+
+                            &:nth-child(3) {
+                                background-color: $table_color_four_60;
                             }
-                            &:nth-child(4){
-                                background-color: $table_color_five;
+
+                            &:nth-child(4) {
+                                background-color: $table_color_five_60;
                                 border-right: 0px;
                             }
                         }
                     }
 
                     &:nth-child(7),
-                    &:nth-child(8){
-                        td{
+                    &:nth-child(8) {
+                        td {
                             border-bottom: 0px;
-    border-right: 0px;
-                            &:nth-child(1){
-                            background-color: $white;
+                            border-right: 0px;
+
+                            &:nth-child(1) {
+                                background-color: $white;
                             }
                         }
                     }
                 }
             }
         }
+
         // page2
 
         // page3
-        .chart_information{
+        .chart_information {
             display: flex;
             justify-content: center;
             margin: 0 auto 20px;
-            .chart_information_text{
+
+            .chart_information_text {
                 margin: 0 20px;
             }
 
-            .chart_information_value{
+            .chart_information_value {
                 color: $main_color;
                 border-bottom: 1px solid $main_color;
                 font-weight: bold;
             }
+
+            &.chart_area_information{
+                flex-direction: column;
+                margin: 40px auto;
+                
+                .chart_information_text {
+                    margin: 5px 0;
+                }
+            }
         }
 
-        .caption_table{
-            &.chart_table{
-                .table{
-                    thead{
-                        tr{
-                            th{
+        .caption_table {
+            &.chart_table {
+                .table {
+                    thead {
+                        tr {
+                            th {
                                 color: $main_color_grey;
-                                border-bottom: 1.5px solid $white;
-                                border-right: 1.5px solid $white;
+                                border-bottom: 1.5px solid $main_color;
+                                border-right: 1.5px solid $main_color;
+
                                 &:nth-child(1),
-                                &:nth-child(6){
+                                &:nth-child(6) {
                                     background-color: $table_color_one;
                                 }
-                                &:nth-child(2){
-                                    background-color: $table_color_two_50;
+
+                                &:nth-child(2) {
+                                    background-color: $table_color_two_60;
                                 }
-                                &:nth-child(3){
-                                    background-color: $table_color_three;
+
+                                &:nth-child(3) {
+                                    background-color: $table_color_three_60;
                                 }
-                                &:nth-child(4){
-                                    background-color: $table_color_four;
+
+                                &:nth-child(4) {
+                                    background-color: $table_color_four_60;
                                 }
-                                &:nth-child(5){
-                                    background-color: $table_color_five;
+
+                                &:nth-child(5) {
+                                    background-color: $table_color_five_60;
                                 }
-                                &:nth-child(6){
+
+                                &:nth-child(6) {
                                     border-right: 1.5px solid $main_color;
                                 }
                             }
                         }
                     }
-                    tbody{
-                        tr{
-                            td{
+
+                    tbody {
+                        tr {
+                            td {
                                 text-align: center;
                                 background-color: $white;
                                 border-bottom: 1.5px solid $main_color;
@@ -431,26 +463,34 @@
                                 &:nth-child(2),
                                 &:nth-child(3),
                                 &:nth-child(4),
-                                &:nth-child(5){
+                                &:nth-child(5) {
 
-                                    &.highest{
+                                    &.highest {
                                         background-color: $main_color;
-                                    border-bottom: 1.5px solid $white;
-                                    border-right: 1.5px solid $white;
+                                        border-bottom: 1.5px solid $white;
+                                        border-right: 1.5px solid $white;
                                     }
                                 }
 
-                                
-                                &:nth-child(6){
+
+                                &:nth-child(6) {
                                     border-right: 1.5px solid $main_color;
                                 }
                             }
-        
-                            &:nth-child(3){
-                                td{
+
+                            &:nth-child(3) {
+                                td {
                                     border-bottom: 0px;
                                     background-color: $white;
                                     border-right: 1.5px solid $main_color;
+                                }
+                            }
+
+                            &:nth-last-child(2) {
+                                td {
+                                    &.highest {
+                                        border-bottom: 1.5px solid $main_color;
+                                    }
                                 }
                             }
                         }
@@ -458,12 +498,207 @@
                 }
             }
         }
+
+        .chart_area {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px auto;
+
+            .chart_area_tittle{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin: 20px auto;
+                h5{
+                    color: $main_color_grey;
+                }
+            }
+
+            .chart_canvas {
+                width: 77%;
+                margin: 0 3% 0 0;
+                display: flex;
+                justify-content: center;
+                canvas{
+                    max-width: 600px;
+                    max-height: 600px;
+                }
+            }
+
+            .chart_category_area {
+                width: 20%;
+
+                .chart_category {
+                    display: flex;
+                    align-items: center;
+                    justify-self: center;
+                    margin: 10px 0;
+                    padding: 8px;
+
+                    .chart_category_color {
+                        width: 20px;
+                        height: 20px;
+                        margin: 0 5px 0 0;
+                        border-radius: 50%;
+                        border: 1px solid $white;
+                    }
+
+                    &.highest{
+                        background-color: $main_color;
+                        border-radius: 10px;
+                    }
+
+                    &.chart_category_one {
+                        .chart_category_color {
+                            background-color: $table_color_two;
+                        }
+                    }
+
+                    &.chart_category_two {
+                        .chart_category_color {
+                            background-color: $table_color_three;
+                        }
+                    }
+
+                    &.chart_category_three {
+                        .chart_category_color {
+                            background-color: $table_color_four;
+                        }
+                    }
+
+                    &.chart_category_four {
+                        .chart_category_color {
+                            background-color: $table_color_five;
+                        }
+                    }
+                }
+            }
+
+            
+        }
+        // page3
+
+        // page4
+        .caption_table {
+            &.chart_table_list {
+
+                .list_caption{
+                    margin: 0 auto 20px;
+                }
+                .table {
+                    thead {
+                        tr {
+                            th {
+                                color: $main_color_grey;
+                                border-bottom: 1.5px solid $main_color;
+                                border-right: 1.5px solid $main_color;
+                                background-color: $table_color_one;
+
+                                .chart_information{
+                                    margin: 0 auto;
+                                }
+                            }
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            td{
+                                text-align: center;
+                                border-right: 1.5px solid $main_color;
+                                border-bottom: 1.5px solid $main_color;
+
+                                &.highest{
+                                    font-weight: bolder;
+                                }
+
+                                &:nth-child(1),
+                                &:nth-child(2),
+                                &:nth-child(4){
+                                    width: 70px;
+                                }
+
+                                &:nth-child(3),
+                                &:nth-child(5){
+                                    width: 120px;
+                                }
+
+                                &:nth-child(6),
+                                &:nth-child(7),
+                                &:nth-child(8),
+                                &:nth-child(9){
+                                    width: calc((100% - 450px) / 4);
+                                }
+
+                                &:nth-child(1),
+                                &:nth-child(2),
+                                &:nth-child(3),
+                                &:nth-child(4),
+                                &:nth-child(5){
+                                    background-color: $white;
+                                }
+                                
+                                &:nth-child(6){
+                                    &.highest{
+                                        background-color: $table_color_two_60;
+                                    }
+                                }
+
+                                &:nth-child(7){
+                                    &.highest{
+                                        background-color: $table_color_three_60;
+                                    }
+                                }
+
+                                &:nth-child(8){
+                                    &.highest{
+                                        background-color: $table_color_four_60;
+                                    }
+                                }
+
+                                &:nth-child(9){
+                                    &.highest{
+                                        background-color: $table_color_five_60;
+                                    }
+                                }
+
+                                
+                            }
+
+                            &:nth-child(1){
+                                td{
+                                    &:nth-child(6){
+                                        background-color: $table_color_two_60;
+                                    }
+    
+                                    &:nth-child(7){
+                                        background-color: $table_color_three_60;
+                                    }
+    
+                                    &:nth-child(8){
+                                        background-color: $table_color_four_60;
+                                    }
+    
+                                    &:nth-child(9){
+                                        background-color: $table_color_five_60;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // page4
     }
 
-    .page_footer{
+    .page_footer {
         position: absolute;
         bottom: 0;
         width: 100%;
+
         .pagination {
             position: absolute;
             display: flex;
@@ -473,30 +708,30 @@
             bottom: 40px;
             left: 50%;
             transform: translate(-50%, 0);
-    
+
             .copyright_text {
                 padding: 0 50px;
                 background-color: $body_bg;
-    
+
                 p {
                     font-size: 16px;
                     color: $main_color_grey;
                 }
             }
-    
+
             .page_number {
                 position: absolute;
                 right: 0;
                 top: 50%;
                 transform: translate(0, -50%);
                 z-index: 1;
-                
-    
+
+
                 p {
                     color: $main_color_grey;
                     font-size: 16px;
                 }
-    
+
                 &::after {
                     content: "";
                     position: absolute;
@@ -511,7 +746,7 @@
                     background-color: $body_bg;
                 }
             }
-    
+
             &::after {
                 content: "";
                 position: absolute;
@@ -524,7 +759,8 @@
                 z-index: -1;
             }
         }
-        .page_decorate{
+
+        .page_decorate {
             width: 100%;
             height: 12px;
             background: linear-gradient(45deg, $main_color_green 33%, $main_color_blue 33%, $main_color_blue 66%, $main_color 66%);
