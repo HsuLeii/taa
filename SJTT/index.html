@@ -1076,6 +1076,20 @@
           </tbody>
         </table>
       </div>
+
+      <canvas id="canvas-chart"></canvas>
+
+      <div class="figure-container">
+        <figure>
+          <img id="myChartAsImg" 
+               src="#"
+               title="This is a chart on a img tag" />
+          <figcaption>
+            <i>Fig. 01</i>
+            A chart in a image tag
+          </figcaption>
+        </figure>
+      </div>
     </div>
 
     <div class="page_footer">
@@ -1181,8 +1195,15 @@
             // Disable the on-canvas tooltip
             enabled: false,
             backgroundColor: '#e7591a',
-          }
-        }
+          },
+
+          
+        },
+        animation: {
+        duration: 0,
+        onComplete: onComplete
+      },
+
       }
 
     };
@@ -1259,12 +1280,13 @@
     //     }
     //   }
     // });
-    const chartOne = new Chart(
-      document.getElementById('chartOne'),
-      config
-    );
+    
+    new Chart(document.getElementById('chartOne'),config,);
 
-    console.log(config)
+    function onComplete() {
+  var img = document.getElementById('myChartAsImg');
+  img.src = this.toBase64Image();
+}
 
     document.getElementById("chart_value_one").innerHTML = config.data.datasets[0].data[0];
     document.getElementById("chart_value_two").innerHTML = config.data.datasets[0].data[1];
