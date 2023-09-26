@@ -344,16 +344,7 @@
             &.caption_table_two {
                 tr {
 
-                    &:nth-child(7),
-                    &:nth-child(8) {
-                        td {
-                            border-bottom: 0px;
-
-                            &:nth-child(1) {
-                                background-color: $white;
-                            }
-                        }
-                    }
+                    
                 }
             }
         }
@@ -560,33 +551,19 @@
                                 border-right: 1.5px solid $main_color;
                                 border-bottom: 1.5px solid $main_color;
                                 
-                                &:nth-child(1),
-                                &:nth-child(2),
-                                &:nth-child(4){
+                                &.table_id,
+                                &.table_name,
+                                &.table_degree{
                                     width: 70px;
                                 }
 
-                                &:nth-child(3),
-                                &:nth-child(5){
+                                &.table_department,
+                                &.table_grade{
                                     width: 120px;
                                 }
 
-                                &:nth-child(6),
-                                &:nth-child(7),
-                                &:nth-child(8),
-                                &:nth-child(9){
-                                    width: calc((100% - 450px) / 4);
-                                }
-
-                                &:nth-child(1),
-                                &:nth-child(2),
-                                &:nth-child(3),
-                                &:nth-child(4),
-                                &:nth-child(5){
-                                    background-color: $white;
-                                }
-
                                 &.group_item{
+                                    width: calc((100% - 450px) / 4);
                                     background-color: $white;
 
                                     &.highest{
@@ -1055,16 +1032,7 @@
                 &.caption_table_two {
                     tr {
     
-                        &:nth-child(7),
-                        &:nth-child(8) {
-                            td {
-                                border-bottom: 0px;
-    
-                                &:nth-child(1) {
-                                    background-color: $white;
-                                }
-                            }
-                        }
+                        
                     }
                 }
             }
@@ -1271,33 +1239,19 @@
                                     border-right: 1.5px solid $main_color;
                                     border-bottom: 1.5px solid $main_color;
                                     
-                                    &:nth-child(1),
-                                    &:nth-child(2),
-                                    &:nth-child(4){
+                                    &.table_id,
+                                    &.table_name,
+                                    &.table_degree{
                                         width: 70px;
                                     }
     
-                                    &:nth-child(3),
-                                    &:nth-child(5){
+                                    &.table_department,
+                                    &.table_grade{
                                         width: 120px;
                                     }
     
-                                    &:nth-child(6),
-                                    &:nth-child(7),
-                                    &:nth-child(8),
-                                    &:nth-child(9){
-                                        width: calc((100% - 450px) / 4);
-                                    }
-    
-                                    &:nth-child(1),
-                                    &:nth-child(2),
-                                    &:nth-child(3),
-                                    &:nth-child(4),
-                                    &:nth-child(5){
-                                        background-color: $white;
-                                    }
-    
                                     &.group_item{
+                                        width: calc((100% - 450px) / 4);
                                         background-color: $white;
     
                                         &.highest{
