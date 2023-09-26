@@ -211,19 +211,16 @@
         //   onComplete: onComplete
         // },
 
-  //       bezierCurve : false,
-  // animation: {
-  //   onComplete: done
-  // },
+        bezierCurve : false,
+  animation: {
+    onComplete: done
+  },
 
       }
 
     });
 
-var canvas = document.getElementById("chartTwo");
-var dataURL = canvas.toDataURL("image/png", 1.0);
 
-$("#url").attr( "src" , dataURL);
 
 
     document.getElementById("chart_value_one").innerHTML = config.data.datasets[0].data[0];
@@ -231,9 +228,13 @@ $("#url").attr( "src" , dataURL);
     document.getElementById("chart_value_three").innerHTML = config.data.datasets[0].data[2];
     document.getElementById("chart_value_four").innerHTML = config.data.datasets[0].data[3];
 
+    function done(){
+      var canvas = document.getElementById("chartTwo");
+var dataURL = canvas.toDataURL("image/png", 1.0);
 
-  // var url = myLine.toBase64Image();
-  // document.getElementById("url").src=url;
+$("#url").attr( "src" , dataURL);
+}
+
 
 
   </script>
