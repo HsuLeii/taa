@@ -213,9 +213,9 @@
         // },
 
         // bezierCurve : false,
-        animation: {
-          onComplete: done
-        },
+        // animation: {
+        //   onComplete: done
+        // },
 
       }
 
@@ -226,15 +226,22 @@
     document.getElementById("chart_value_three").innerHTML = config.data.datasets[0].data[2];
     document.getElementById("chart_value_four").innerHTML = config.data.datasets[0].data[3];
 
-    var canvas = document.getElementById("chartTwo");
-    var dataURL = canvas.toDataURL("image/png", 1.0);
-    document.getElementById("url").src = url;
 
-    function done(){
-  console.log("haha");
-  var url=myLine.toBase64Image();
-  document.getElementById("url").src=url;
-}
+
+//     function done(){
+//   console.log("haha");
+//   var url=myLine.toBase64Image();
+//   document.getElementById("url").src=url;
+// }
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      var canvas = document.getElementById("chartTwo");
+    var dataURL = canvas.toDataURL("image/png", 1.0);
+    alert(dataURL);
+    document.getElementById("url").src = dataURL;
+        });
   </script>
 
 
