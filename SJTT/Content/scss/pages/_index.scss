@@ -35,7 +35,7 @@
     .page_content {
         padding: 0 2.5%;
 
-        .bold{
+        .bold {
             font-weight: bold;
         }
 
@@ -97,7 +97,7 @@
                 width: 90px;
                 height: 75px;
                 transform: translate(0, 0%);
-                background-image: radial-gradient($main_color_80 30%, transparent 30%);
+                background-image: radial-gradient($main_color_light 30%, transparent 30%);
                 background-position: 0 0, 5px 0px;
                 background-size: 15px 15px;
             }
@@ -127,6 +127,8 @@
                 .page_caption_img_left {
                     display: flex;
                     flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
                     width: 50%;
 
                     .page_caption_triangle {
@@ -186,7 +188,11 @@
                     }
 
                     .page_caption_left_text {
+                        width: 65%;
                         margin: 40px auto 0;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
 
                         .page_caption_item_text_color {
                             width: 20px;
@@ -198,7 +204,7 @@
                         .page_caption_left_text_item {
                             display: flex;
                             align-items: center;
-                            margin: 10px auto;
+                            margin: 10px 0;
 
                             &.page_caption_left_text_one {
                                 .page_caption_item_text_color {
@@ -277,7 +283,7 @@
                 width: 90px;
                 height: 30px;
                 transform: translate(0, 0%);
-                background-image: radial-gradient($main_color_80 30%, transparent 30%);
+                background-image: radial-gradient($main_color_light 30%, transparent 30%);
                 background-position: 0 0, 10px 0px;
                 background-size: 15px 15px;
             }
@@ -308,23 +314,23 @@
                             vertical-align: middle;
 
                             &.group_projects {
-                                background-color: $table_color_one;
+                                background-color: $group_projects;
                             }
 
                             &.group_one {
-                                background-color: $table_color_two_60;
+                                background-color: $group_one_light;
                             }
 
                             &.group_two {
-                                background-color: $table_color_three_60;
+                                background-color: $group_two_light;
                             }
 
                             &.group_three {
-                                background-color: $table_color_four_60;
+                                background-color: $group_three_light;
                             }
 
                             &.group_four {
-                                background-color: $table_color_five_60;
+                                background-color: $group_four_light;
                             }
                         }
                     }
@@ -332,10 +338,7 @@
             }
 
             &.caption_table_two {
-                tr {
-
-                    
-                }
+                tr {}
             }
         }
 
@@ -357,10 +360,10 @@
                 font-weight: bold;
             }
 
-            &.chart_area_information{
+            &.chart_area_information {
                 flex-direction: column;
                 margin: 40px auto;
-                
+
                 .chart_information_text {
                     margin: 5px 0;
                 }
@@ -378,23 +381,23 @@
                                 border-right: 1.5px solid $main_color;
 
                                 &.group_projects {
-                                    background-color: $table_color_one;
+                                    background-color: $group_projects;
                                 }
-    
+
                                 &.group_one {
-                                    background-color: $table_color_two_60;
+                                    background-color: $group_one_light;
                                 }
-    
+
                                 &.group_two {
-                                    background-color: $table_color_three_60;
+                                    background-color: $group_two_light;
                                 }
-    
+
                                 &.group_three {
-                                    background-color: $table_color_four_60;
+                                    background-color: $group_three_light;
                                 }
-    
+
                                 &.group_four {
-                                    background-color: $table_color_five_60;
+                                    background-color: $group_four_light;
                                 }
                             }
                         }
@@ -409,16 +412,16 @@
                                 border-right: 1.5px solid $main_color;
                                 width: calc(100% / 6);
 
-                                    &.highest {
-                                        background-color: $main_color;
-                                        border-bottom: 1.5px solid $white;
-                                        border-right: 1.5px solid $white;
-                                    }
+                                &.highest {
+                                    background-color: $main_color;
+                                    border-bottom: 1.5px solid $white;
+                                    border-right: 1.5px solid $white;
+                                }
 
                             }
 
-                            &.percentage{
-                                td{
+                            &.percentage {
+                                td {
                                     &.highest {
                                         border-bottom: 1.5px solid $main_color;
                                     }
@@ -437,12 +440,13 @@
             flex-wrap: wrap;
             margin: 20px auto;
 
-            .chart_area_tittle{
+            .chart_area_tittle {
                 width: 100%;
                 display: flex;
                 justify-content: center;
                 margin: 20px auto;
-                h5{
+
+                h5 {
                     color: $main_color_grey;
                 }
             }
@@ -452,7 +456,8 @@
                 margin: 0 3% 0 0;
                 display: flex;
                 justify-content: center;
-                canvas{
+
+                canvas {
                     max-width: 600px;
                     max-height: 600px;
                 }
@@ -476,48 +481,50 @@
                         border: 1px solid $white;
                     }
 
-                    &.highest{
+                    &.highest {
                         background-color: $main_color;
                         border-radius: 10px;
                     }
 
                     &.chart_category_one {
                         .chart_category_color {
-                            background-color: $table_color_two;
+                            background-color: $group_one;
                         }
                     }
 
                     &.chart_category_two {
                         .chart_category_color {
-                            background-color: $table_color_three;
+                            background-color: $group_two;
                         }
                     }
 
                     &.chart_category_three {
                         .chart_category_color {
-                            background-color: $table_color_four;
+                            background-color: $group_three;
                         }
                     }
 
                     &.chart_category_four {
                         .chart_category_color {
-                            background-color: $table_color_five;
+                            background-color: $group_four;
                         }
                     }
                 }
             }
 
-            
+
         }
+
         // page3
 
         // page4
         .caption_table {
             &.chart_table_list {
 
-                .list_caption{
+                .list_caption {
                     margin: 0 auto 20px;
                 }
+
                 .table {
                     thead {
                         tr {
@@ -525,9 +532,9 @@
                                 color: $main_color_grey;
                                 border-bottom: 1.5px solid $main_color;
                                 border-right: 1.5px solid $main_color;
-                                background-color: $table_color_one;
+                                background-color: $group_projects;
 
-                                .chart_information{
+                                .chart_information {
                                     margin: 0 auto;
                                 }
                             }
@@ -536,47 +543,47 @@
 
                     tbody {
                         tr {
-                            td{
+                            td {
                                 text-align: center;
                                 border-right: 1.5px solid $main_color;
                                 border-bottom: 1.5px solid $main_color;
-                                
+
                                 &:nth-child(1),
                                 &:nth-child(2),
-                                &:nth-child(4){
+                                &:nth-child(4) {
                                     width: 70px;
                                 }
 
                                 &:nth-child(3),
-                                &:nth-child(5){
+                                &:nth-child(5) {
                                     width: 120px;
                                 }
 
-                                &.group_item{
+                                &.group_item {
                                     width: calc((100% - 450px) / 4);
                                     background-color: $white;
 
-                                    &.highest{
+                                    &.highest {
                                         font-weight: bold;
 
-                                        &.group_one{
-                                            background-color: $table_color_two_60;
+                                        &.group_one {
+                                            background-color: $group_one_light;
                                         }
 
-                                        &.group_two{
-                                            background-color: $table_color_three_60;
+                                        &.group_two {
+                                            background-color: $group_two_light;
                                         }
 
-                                        &.group_three{
-                                            background-color: $table_color_four_60;
+                                        &.group_three {
+                                            background-color: $group_three_light;
                                         }
 
-                                        &.group_four{
-                                            background-color: $table_color_five_60;
+                                        &.group_four {
+                                            background-color: $group_four_light;
                                         }
                                     }
 
-                                    
+
                                 }
                             }
                         }
@@ -584,6 +591,7 @@
                 }
             }
         }
+
         // page4
     }
 
@@ -713,7 +721,7 @@
         .page_content {
             padding: 0 2.5%;
     
-            .bold{
+            .bold {
                 font-weight: bold;
             }
     
@@ -775,7 +783,7 @@
                     width: 90px;
                     height: 75px;
                     transform: translate(0, 0%);
-                    background-image: radial-gradient($main_color_80 30%, transparent 30%);
+                    background-image: radial-gradient($main_color_light 30%, transparent 30%);
                     background-position: 0 0, 5px 0px;
                     background-size: 15px 15px;
                 }
@@ -805,6 +813,8 @@
                     .page_caption_img_left {
                         display: flex;
                         flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
                         width: 50%;
     
                         .page_caption_triangle {
@@ -813,16 +823,6 @@
     
                             .page_caption_svg {
                                 width: 100%;
-    
-                                svg {
-    
-                                    polygon,
-                                    path {
-                                        fill: transparent;
-                                        stroke: $main_color_grey;
-                                        stroke-width: 1px;
-                                    }
-                                }
                             }
     
                             .page_caption_item {
@@ -874,7 +874,11 @@
                         }
     
                         .page_caption_left_text {
+                            width: 65%;
                             margin: 40px auto 0;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
     
                             .page_caption_item_text_color {
                                 width: 20px;
@@ -886,7 +890,7 @@
                             .page_caption_left_text_item {
                                 display: flex;
                                 align-items: center;
-                                margin: 10px auto;
+                                margin: 10px 0;
     
                                 &.page_caption_left_text_one {
                                     .page_caption_item_text_color {
@@ -965,7 +969,7 @@
                     width: 90px;
                     height: 30px;
                     transform: translate(0, 0%);
-                    background-image: radial-gradient($main_color_80 30%, transparent 30%);
+                    background-image: radial-gradient($main_color_light 30%, transparent 30%);
                     background-position: 0 0, 10px 0px;
                     background-size: 15px 15px;
                 }
@@ -996,23 +1000,23 @@
                                 vertical-align: middle;
     
                                 &.group_projects {
-                                    background-color: $table_color_one;
+                                    background-color: $group_projects;
                                 }
     
                                 &.group_one {
-                                    background-color: $table_color_two_60;
+                                    background-color: $group_one_light;
                                 }
     
                                 &.group_two {
-                                    background-color: $table_color_three_60;
+                                    background-color: $group_two_light;
                                 }
     
                                 &.group_three {
-                                    background-color: $table_color_four_60;
+                                    background-color: $group_three_light;
                                 }
     
                                 &.group_four {
-                                    background-color: $table_color_five_60;
+                                    background-color: $group_four_light;
                                 }
                             }
                         }
@@ -1020,19 +1024,7 @@
                 }
     
                 &.caption_table_two {
-                    tr {
-    
-                        &:nth-child(7),
-                        &:nth-child(8) {
-                            td {
-                                border-bottom: 0px;
-    
-                                &:nth-child(1) {
-                                    background-color: $white;
-                                }
-                            }
-                        }
-                    }
+                    tr {}
                 }
             }
     
@@ -1054,10 +1046,10 @@
                     font-weight: bold;
                 }
     
-                &.chart_area_information{
+                &.chart_area_information {
                     flex-direction: column;
                     margin: 40px auto;
-                    
+    
                     .chart_information_text {
                         margin: 5px 0;
                     }
@@ -1075,23 +1067,23 @@
                                     border-right: 1.5px solid $main_color;
     
                                     &.group_projects {
-                                        background-color: $table_color_one;
+                                        background-color: $group_projects;
                                     }
-        
+    
                                     &.group_one {
-                                        background-color: $table_color_two_60;
+                                        background-color: $group_one_light;
                                     }
-        
+    
                                     &.group_two {
-                                        background-color: $table_color_three_60;
+                                        background-color: $group_two_light;
                                     }
-        
+    
                                     &.group_three {
-                                        background-color: $table_color_four_60;
+                                        background-color: $group_three_light;
                                     }
-        
+    
                                     &.group_four {
-                                        background-color: $table_color_five_60;
+                                        background-color: $group_four_light;
                                     }
                                 }
                             }
@@ -1106,16 +1098,16 @@
                                     border-right: 1.5px solid $main_color;
                                     width: calc(100% / 6);
     
-                                        &.highest {
-                                            background-color: $main_color;
-                                            border-bottom: 1.5px solid $white;
-                                            border-right: 1.5px solid $white;
-                                        }
+                                    &.highest {
+                                        background-color: $main_color;
+                                        border-bottom: 1.5px solid $white;
+                                        border-right: 1.5px solid $white;
+                                    }
     
                                 }
     
-                                &.percentage{
-                                    td{
+                                &.percentage {
+                                    td {
                                         &.highest {
                                             border-bottom: 1.5px solid $main_color;
                                         }
@@ -1134,12 +1126,13 @@
                 flex-wrap: wrap;
                 margin: 20px auto;
     
-                .chart_area_tittle{
+                .chart_area_tittle {
                     width: 100%;
                     display: flex;
                     justify-content: center;
                     margin: 20px auto;
-                    h5{
+    
+                    h5 {
                         color: $main_color_grey;
                     }
                 }
@@ -1149,7 +1142,8 @@
                     margin: 0 3% 0 0;
                     display: flex;
                     justify-content: center;
-                    canvas{
+    
+                    canvas {
                         max-width: 600px;
                         max-height: 600px;
                     }
@@ -1173,48 +1167,50 @@
                             border: 1px solid $white;
                         }
     
-                        &.highest{
+                        &.highest {
                             background-color: $main_color;
                             border-radius: 10px;
                         }
     
                         &.chart_category_one {
                             .chart_category_color {
-                                background-color: $table_color_two;
+                                background-color: $group_one;
                             }
                         }
     
                         &.chart_category_two {
                             .chart_category_color {
-                                background-color: $table_color_three;
+                                background-color: $group_two;
                             }
                         }
     
                         &.chart_category_three {
                             .chart_category_color {
-                                background-color: $table_color_four;
+                                background-color: $group_three;
                             }
                         }
     
                         &.chart_category_four {
                             .chart_category_color {
-                                background-color: $table_color_five;
+                                background-color: $group_four;
                             }
                         }
                     }
                 }
     
-                
+    
             }
+    
             // page3
     
             // page4
             .caption_table {
                 &.chart_table_list {
     
-                    .list_caption{
+                    .list_caption {
                         margin: 0 auto 20px;
                     }
+    
                     .table {
                         thead {
                             tr {
@@ -1222,9 +1218,9 @@
                                     color: $main_color_grey;
                                     border-bottom: 1.5px solid $main_color;
                                     border-right: 1.5px solid $main_color;
-                                    background-color: $table_color_one;
+                                    background-color: $group_projects;
     
-                                    .chart_information{
+                                    .chart_information {
                                         margin: 0 auto;
                                     }
                                 }
@@ -1233,61 +1229,47 @@
     
                         tbody {
                             tr {
-                                td{
+                                td {
                                     text-align: center;
                                     border-right: 1.5px solid $main_color;
                                     border-bottom: 1.5px solid $main_color;
-                                    
+    
                                     &:nth-child(1),
                                     &:nth-child(2),
-                                    &:nth-child(4){
+                                    &:nth-child(4) {
                                         width: 70px;
                                     }
     
                                     &:nth-child(3),
-                                    &:nth-child(5){
+                                    &:nth-child(5) {
                                         width: 120px;
                                     }
     
-                                    &:nth-child(6),
-                                    &:nth-child(7),
-                                    &:nth-child(8),
-                                    &:nth-child(9){
+                                    &.group_item {
                                         width: calc((100% - 450px) / 4);
-                                    }
-    
-                                    &:nth-child(1),
-                                    &:nth-child(2),
-                                    &:nth-child(3),
-                                    &:nth-child(4),
-                                    &:nth-child(5){
-                                        background-color: $white;
-                                    }
-    
-                                    &.group_item{
                                         background-color: $white;
     
-                                        &.highest{
+                                        &.highest {
                                             font-weight: bold;
     
-                                            &.group_one{
-                                                background-color: $table_color_two_60;
+                                            &.group_one {
+                                                background-color: $group_one_light;
                                             }
     
-                                            &.group_two{
-                                                background-color: $table_color_three_60;
+                                            &.group_two {
+                                                background-color: $group_two_light;
                                             }
     
-                                            &.group_three{
-                                                background-color: $table_color_four_60;
+                                            &.group_three {
+                                                background-color: $group_three_light;
                                             }
     
-                                            &.group_four{
-                                                background-color: $table_color_five_60;
+                                            &.group_four {
+                                                background-color: $group_four_light;
                                             }
                                         }
     
-                                        
+    
                                     }
                                 }
                             }
@@ -1295,6 +1277,7 @@
                     }
                 }
             }
+    
             // page4
         }
     

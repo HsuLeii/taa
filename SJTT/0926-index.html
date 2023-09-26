@@ -1097,7 +1097,8 @@
   <script>
     Chart.register(ChartDataLabels);
 
-    const backgroundColor = ['#cfeaff', '#ffecb1', '#efc2c1', '#bcf5d9'];
+    const backgroundColor = ['#83caff40', '#ffcf3a40', '#fe979540', '#5dc99440'];
+    const hoverBackgroundColor = ['#83caff60', '#ffcf3a60', '#fe979560', '#5dc99460'];
     const borderColor = ['#83caff', '#ffcf3a', '#fe9795', '#5dc994'];
     const data = {
       labels: [
@@ -1109,6 +1110,7 @@
       datasets: [{
         data: [23.8, 28.6, 28.6, 19.0],
         backgroundColor: backgroundColor,
+        hoverBackgroundColor: hoverBackgroundColor,
         hoverBorderColor: '#e7591a',
         hoverBorderWidth: 3,
       }]
@@ -1179,7 +1181,81 @@
       }
 
     };
-new Chart(document.getElementById('chartOne'),config,);
+    // const ctx1 = new Chart(document.getElementById('chartOne'), {
+    //   type: 'pie',
+    //   data: {
+    //     labels: [
+    //       "杏壇潛力組",
+    //       "人際取向組",
+    //       "實在表現組",
+    //       "加倍努力組"
+    //     ],
+    //     datasets: [{
+    //       label: '# of Votes',
+    //       color: 'red',
+    //       data: [23.8, 28.6, 28.6, 19],
+    //       backgroundColor: backgroundColor,
+    //       hoverBackgroundColor: hoverBackgroundColor,
+    //       hoverBorderColor: '#e7591a',
+    //       hoverBorderWidth: 3,
+    //     }]
+    //   },
+    //   options: {
+    //     plugins: {
+    //       legend: {
+
+    //         onClick: null,
+
+    //         labels: {
+    //           // This more specific font property overrides the global property
+
+    //           font: function (context) {
+    //             var width = context.chart.width;
+    //             var size = Math.round(width / 40);
+
+    //             return {
+    //               weight: 'bold',
+    //               size: size
+    //             };
+    //           }
+    //         }
+    //       },
+
+    //       datalabels: {
+    //         color: '#20221f',
+    //         anchor: 'center',
+    //         align: 'center',
+    //         backgroundColor: borderColor,
+    //         borderColor: borderColor,
+    //         borderWidth: 1,
+    //         borderRadius: 5,
+    //         padding: 5,
+    //         formatter: function (value, context) {
+    //           return context.chart.data.labels[context.dataIndex] + ' :' + context.chart.data.datasets[0].data[
+    //             context.dataIndex];
+
+    //           var a = context.chart.data.labels[context.dataIndex];
+    //         },
+    //         font: function (context) {
+    //           var width = context.chart.width;
+    //           var size = Math.round(width / 40);
+
+    //           return {
+    //             weight: 'bold',
+    //             size: size
+    //           };
+    //         }
+    //       },
+    //       tooltip: {
+    //         // Disable the on-canvas tooltip
+    //         enabled: false,
+    //         backgroundColor: '#227799',
+    //       }
+    //     }
+    //   }
+    // });
+    
+    new Chart(document.getElementById('chartOne'),config,);
 
     function onComplete() {
   var img = document.getElementById('myChartAsImg');

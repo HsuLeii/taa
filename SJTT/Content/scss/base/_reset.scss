@@ -1,5 +1,5 @@
 %boxShadow {
-    box-shadow: 5px 5px 10px 3px $main_color_25;
+    box-shadow: 5px 5px 10px 3px $main_color_light;
 }
 
 body,
@@ -164,72 +164,6 @@ body {
     }
 }
 
-
-// @media screen and (min-width: 768px) {
-//     h1 {
-//         font-size: 35px;
-//     }
-
-//     h3 {
-//         font-size: 15px;
-//     }
-
-//     h4 {
-//         font-size: 13px;
-//     }
-
-//     h5 {
-//         font-size: 22px;
-//     }
-
-//     p,
-//     i {
-//         font-size: 20px;
-//     }
-
-//     span,
-//     th,
-//     td,
-//     .form-control {
-//         font-size: 20px;
-//     }
-
-//     a {
-//         font-size: 20px;
-//     }
-
-//     input,
-//     label {
-//         font-size: 20px;
-//     }
-
-//     button,
-//     .btn {
-//         font-size: 20px;
-//     }
-
-//     .table{
-//         th,
-//         td{
-//             border-top: 0px;
-//             border-bottom: 0px;
-//         }
-    
-//         thead{
-//             th{
-//                 border-bottom: 0px;
-//                 font-size: 24px;
-//             }
-//         }
-    
-//         tbody{
-//             td{
-//                 font-size: 20px;
-//             }
-//         }
-//     }
-// }
-
 @media screen and (min-width: 768px) {
     h1 {
         font-size: 35px;
@@ -346,4 +280,64 @@ body {
             }
         }
     }
+}
+
+@media print {
+    h1 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    h4 {
+        font-size: 26px;
+    }
+
+    h5 {
+        font-size: 22px;
+    }
+
+    p,
+    i {
+        font-size: 17px;
+    }
+
+    span,
+    th,
+    td,
+    .form-control {
+        font-size: 17px;
+    }
+
+    a {
+        font-size: 17px;
+    }
+
+    input,
+    label {
+        font-size: 17px;
+    }
+
+    button,
+    .btn {
+        font-size: 17px;
+    }
+
+    .table{
+    
+        thead{
+            th{
+                font-size: 21px;
+            }
+        }
+    
+        tbody{
+            td{
+                font-size: 17px;
+            }
+        }
+    }
+
 }
