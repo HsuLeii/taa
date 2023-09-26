@@ -551,14 +551,14 @@
                                 border-right: 1.5px solid $main_color;
                                 border-bottom: 1.5px solid $main_color;
                                 
-                                &.table_id,
-                                &.table_name,
-                                &.table_degree{
+                                &:nth-child(1),
+                                &:nth-child(2),
+                                &:nth-child(4){
                                     width: 70px;
                                 }
 
-                                &.table_department,
-                                &.table_grade{
+                                &:nth-child(3),
+                                &:nth-child(5){
                                     width: 120px;
                                 }
 
@@ -1032,7 +1032,16 @@
                 &.caption_table_two {
                     tr {
     
-                        
+                        &:nth-child(7),
+                        &:nth-child(8) {
+                            td {
+                                border-bottom: 0px;
+    
+                                &:nth-child(1) {
+                                    background-color: $white;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -1239,19 +1248,33 @@
                                     border-right: 1.5px solid $main_color;
                                     border-bottom: 1.5px solid $main_color;
                                     
-                                    &.table_id,
-                                    &.table_name,
-                                    &.table_degree{
+                                    &:nth-child(1),
+                                    &:nth-child(2),
+                                    &:nth-child(4){
                                         width: 70px;
                                     }
     
-                                    &.table_department,
-                                    &.table_grade{
+                                    &:nth-child(3),
+                                    &:nth-child(5){
                                         width: 120px;
                                     }
     
-                                    &.group_item{
+                                    &:nth-child(6),
+                                    &:nth-child(7),
+                                    &:nth-child(8),
+                                    &:nth-child(9){
                                         width: calc((100% - 450px) / 4);
+                                    }
+    
+                                    &:nth-child(1),
+                                    &:nth-child(2),
+                                    &:nth-child(3),
+                                    &:nth-child(4),
+                                    &:nth-child(5){
+                                        background-color: $white;
+                                    }
+    
+                                    &.group_item{
                                         background-color: $white;
     
                                         &.highest{
