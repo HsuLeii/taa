@@ -13,127 +13,20 @@
 </head>
 
 <body>
-
-  <!-- page2 -->
+  <!-- page3 -->
   <div class="page">
     <div class="page_header">
       <div class="page_decorate"></div>
     </div>
 
     <div class="page_content">
-      <div class="pagination_tittle">
-        <h4>一、教師分類圖像說明</h4>
-      </div>
-      <div class="caption_table">
-        <table class="table">
-          <thead>
-            <tr>
-              <th colspan="5">教師分類圖像-<span>各類組於三項測驗之成果表現</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="group_projects">類組</td>
-              <td class="group_one">杏壇潛力組</td>
-              <td class="group_two">人際取向組</td>
-              <td class="group_three">實在表現組</td>
-              <td class="group_four">加倍努力組</td>
-            </tr>
-            <tr>
-              <td class="group_projects">SJTT:教師情境判斷測驗-職場人際互動-教師教學專業</td>
-              <td class="group_one">在處理教師工作場域各式問題時，其想法大多數接近於優良教師典型</td>
-              <td class="group_two">在處理教師工作場域裡的人際面向問題時，其想法大多數接近於優良教師典型</td>
-              <td class="group_three">在處理教師工作場域各式問題時，其想法大多數接近於優良教師典型</td>
-              <td class="group_four">在處理教師工作場域各式問題時，其想法大多數與優良教師典型有明顯差異</td>
-            </tr>
-            <tr>
-              <td class="group_projects">WVST:教師價值觀測驗-職業動機追求</td>
-              <td class="group_one">教師職業價值觀取向與優良教師典型的接近程度，有較大機會在中等程度以上</td>
-              <td class="group_two">教師職業價值觀取向與優良教師典型的接近程度，有較大機會在中等程度以上</td>
-              <td class="group_three">教師職業價值觀取向與優良教師典型的接近程度，有較大機會落在中等到低</td>
-              <td class="group_four">教師職業價值觀取向與優良教師典型的接近程度，有明顯差異</td>
-            </tr>
-            <tr>
-              <td class="group_projects">PST:教師人格測驗-個人特質展現</td>
-              <td class="group_one">與優良教師典型之行為特質展現的接近程度，有較大機會在中等程度以上</td>
-              <td class="group_two">與優良教師典型之行為特質展現的接近程度，有較大的機會只落在中等程度</td>
-              <td class="group_three">與優良教師典型之行為特質展現的接近程度，有較大的機會只落在中等程度</td>
-              <td class="group_four">與優良教師典型之行為特質展現的接近程度，僅具有中等到低</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <div class="chart_area">
 
-      <div class="caption_table caption_table_two">
-        <table class="table">
-          <thead>
-            <tr>
-              <th colspan="5">教師分類圖像-<span>各類組說明</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td rowspan="4" class="group_projects">當前具備特質</td>
-              <td class="group_one">職場人際互動</td>
-              <td class="group_two">職場人際互動</td>
-              <td class="group_three">職場人際互動</td>
-              <td class="group_four">職場人際互動</td>
-            </tr>
+        <div class="chart_canvas">
+          <canvas id="chartOne"></canvas>
+          <canvas id="chartTwo"></canvas>
+        </div>
 
-            <tr>
-              <td class="group_one">教師教學專業</td>
-              <td class="group_two">教師教學專業</td>
-              <td class="group_three">教師教學專業</td>
-              <td class="group_four">教師教學專業</td>
-            </tr>
-
-            <tr>
-              <td class="group_one">職業動機追求</td>
-              <td class="group_two">職業動機追求</td>
-              <td class="group_three">職業動機追求</td>
-              <td class="group_four">職業動機追求</td>
-            </tr>
-
-            <tr>
-              <td class="group_one">個人特質展現</td>
-              <td class="group_two">個人特質展現</td>
-              <td class="group_three">個人特質展現</td>
-              <td class="group_four">個人特質展現</td>
-            </tr>
-
-            <tr>
-              <td class="group_projects">優良教師潛力</td>
-              <td class="group_one">未來成為優良教師的潛力，將較其他類組為高</td>
-              <td class="group_two">未來仍有成為優良教師的潛力</td>
-              <td class="group_three">未來仍有成為優良教師的潛力</td>
-              <td class="group_four">未來成為優良教師的潛力，將較其他類組為低</td>
-            </tr>
-
-            <tr>
-              <td class="group_projects">未來精進方向</td>
-              <td class="group_one">各方面都已經表現得很不錯，但仍需持續精進各項專業知能，時刻自我成長。<br />
-                並謹記保持教育熱情與初衷
-              </td>
-              <td class="group_two">可多汲取前輩的課室技巧及教學經驗、並觀察其行為特質展現與自身的差異。<br />
-                同時持續精進各項專業知能
-              </td>
-              <td class="group_three">可多思考自身價值觀追求的方向、並觀察前輩的行為特質展現與自身的差異。<br />
-                同時持續精進各項專業知能
-              </td>
-              <td class="group_four">建議可多加思量，教師工作是否仍為優先的職業選擇。<br />
-                未來若仍想成為教師，將需要比其他人付出更多心力
-              </td>
-            </tr>
-
-            <tr>
-              <td colspan="5">※ 優良教師典型：是指由一群公認表現優良且具備一定資歷之現場教師，於本測驗成果所形成之參照模型。</td>
-            </tr>
-
-            <tr>
-              <td colspan="5">※ 當前具備特質：是指在教師工作場域中，以其當前表現而言，在哪一些面向上是趨近於優良教師典型之表現</td>
-            </tr>
-          </tbody>
-        </table>
       </div>
 
     </div>
@@ -144,7 +37,7 @@
           <p>教育部 國立臺灣師範大學心測中心</p>
         </div>
         <div class="page_number">
-          <p>2/6</p>
+          <p>3/6</p>
         </div>
       </div>
       <div class="page_decorate"></div>
@@ -152,13 +45,238 @@
 
   </div>
 
-  <!-- page2 -->
+  <!-- page3 -->
+
+  <!-- page6 -->
+  <div class="page">
+    <div class="page_header">
+      <div class="page_decorate"></div>
+    </div>
+
+    <div class="page_content">
+
+      <div id="basetest"></div> 
+
+      <canvas id="overview"></canvas>
+
+      <div class="figure-container">
+        <figure>
+          <img id="myChartAsImg" src="#">
+
+          <!-- <a href="" id="myChartAsImg"> -->
+        </figure>
+      </div>
+    </div>
+    <img id="url"> 
+    <a href="#" id="btn-download" download="chart.jpg" target="_blank">Get Base64 Image</a>
+
+    <div class="page_footer">
+      <div class="pagination">
+        <div class="copyright_text">
+          <p>教育部 國立臺灣師範大學心測中心</p>
+        </div>
+        <div class="page_number">
+          <p>6/6</p>
+        </div>
+      </div>
+      <div class="page_decorate"></div>
+    </div>
+
+  </div>
+  
+
+  <!-- page6 -->
 
   <script src="Content/js/bootstrap@5.3.2.min.js"></script>
 
-  <!-- <script src="Content/js/chart.js@4.4.0.js"></script>
+  <script src="Content/js/chart.js@4.4.0.js"></script>
 
-  <script src="Content/js/datalabels@2.0.0.js"></script> -->
+  <script src="Content/js/datalabels@2.0.0.js"></script>
+
+  <script src="Content/js/jquery-3.6.1.min.js"></script>
+  <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+
+
+  <script>
+    Chart.register(ChartDataLabels);
+
+    const backgroundColor = ['#cfeaff', '#ffecb1', '#efc2c1', '#bcf5d9'];
+    const borderColor = ['#83caff', '#ffcf3a', '#fe9795', '#5dc994'];
+    const data = {
+      labels: [
+        "杏壇潛力組",
+        "人際取向組",
+        "實在表現組",
+        "加倍努力組"
+      ],
+      datasets: [{
+        data: [23.8, 28.6, 28.6, 19.0],
+        backgroundColor: backgroundColor,
+        hoverBorderColor: '#e7591a',
+        hoverBorderWidth: 3,
+      }]
+    };
+    const config = {
+      type: 'pie',
+      data,
+      options: {
+        plugins: {
+          legend: {
+            display: false,
+            onClick: null,
+
+            labels: {
+              // This more specific font property overrides the global property
+
+              font: function (context) {
+                var width = context.chart.width;
+                var size = Math.round(width / 40);
+
+                return {
+                  weight: 'bold',
+                  size: size
+                };
+              }
+            }
+          },
+
+          datalabels: {
+            color: '#20221f',
+            anchor: 'center',
+            align: 'center',
+            backgroundColor: borderColor,
+            borderColor: borderColor,
+            borderWidth: 1,
+            borderRadius: 5,
+            padding: 5,
+            formatter: function (value, context) {
+              return context.chart.data.labels[context.dataIndex] + ' :' + context.chart.data.datasets[0].data[
+                context.dataIndex];
+
+              var a = context.chart.data.labels[context.dataIndex];
+            },
+            font: function (context) {
+              var width = context.chart.width;
+              var size = Math.round(width / 40);
+
+              return {
+                weight: 'bold',
+                size: size
+              };
+            }
+          },
+
+          tooltip: {
+            // Disable the on-canvas tooltip
+            enabled: false,
+            backgroundColor: '#e7591a',
+          },
+
+
+        },
+        //   animation: {
+        //   duration: 0,
+        //   onComplete: onComplete
+        // },
+
+      }
+
+    };
+    
+    var myChart = new Chart(document.getElementById('chartOne').getContext("2d"), config, );
+    
+    var myLine = new Chart(document.getElementById("chartTwo").getContext("2d"),{
+      type: 'line',
+      data,
+      options: {
+        plugins: {
+          legend: {
+            display: false,
+            onClick: null,
+
+            labels: {
+              // This more specific font property overrides the global property
+
+              font: function (context) {
+                var width = context.chart.width;
+                var size = Math.round(width / 40);
+
+                return {
+                  weight: 'bold',
+                  size: size
+                };
+              }
+            }
+          },
+
+          datalabels: {
+            color: '#20221f',
+            anchor: 'center',
+            align: 'center',
+            backgroundColor: borderColor,
+            borderColor: borderColor,
+            borderWidth: 1,
+            borderRadius: 5,
+            padding: 5,
+            formatter: function (value, context) {
+              return context.chart.data.labels[context.dataIndex] + ' :' + context.chart.data.datasets[0].data[
+                context.dataIndex];
+
+              var a = context.chart.data.labels[context.dataIndex];
+            },
+            font: function (context) {
+              var width = context.chart.width;
+              var size = Math.round(width / 40);
+
+              return {
+                weight: 'bold',
+                size: size
+              };
+            }
+          },
+
+          tooltip: {
+            // Disable the on-canvas tooltip
+            enabled: false,
+            backgroundColor: '#e7591a',
+          },
+
+
+        },
+        //   animation: {
+        //   duration: 0,
+        //   onComplete: onComplete
+        // },
+
+        bezierCurve : false,
+  animation: {
+    onComplete: done
+  },
+
+      }
+
+    });
+    
+    
+    var url = myChart.toBase64Image();
+  document.getElementById("url").src=url;
+
+    document.getElementById("chart_value_one").innerHTML = config.data.datasets[0].data[0];
+    document.getElementById("chart_value_two").innerHTML = config.data.datasets[0].data[1];
+    document.getElementById("chart_value_three").innerHTML = config.data.datasets[0].data[2];
+    document.getElementById("chart_value_four").innerHTML = config.data.datasets[0].data[3];
+
+
+    function done(){
+  console.log("haha");
+  var url=myLine.toBase64Image();
+  document.getElementById("url").src=url;
+}
+
+  </script>
+
+
+
 
 </body>
 
