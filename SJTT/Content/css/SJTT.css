@@ -167,13 +167,13 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_content .caption_table .table tbody tr td.group_projects { background-color: #c7c8ff; }
 
-.page .page_content .caption_table .table tbody tr td.group_one { background-color: #83caff; }
+.page .page_content .caption_table .table tbody tr td.group_one { background-color: #cfeaff; }
 
-.page .page_content .caption_table .table tbody tr td.group_two { background-color: #ffcf3a; }
+.page .page_content .caption_table .table tbody tr td.group_two { background-color: #ffecb1; }
 
-.page .page_content .caption_table .table tbody tr td.group_three { background-color: #fe9795; }
+.page .page_content .caption_table .table tbody tr td.group_three { background-color: #efc2c1; }
 
-.page .page_content .caption_table .table tbody tr td.group_four { background-color: #5dc994; }
+.page .page_content .caption_table .table tbody tr td.group_four { background-color: #bcf5d9; }
 
 .page .page_content .chart_information { display: flex; justify-content: center; margin: 0 auto 20px; }
 
@@ -189,13 +189,13 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_content .caption_table.chart_table .table thead tr th.group_projects { background-color: #c7c8ff; }
 
-.page .page_content .caption_table.chart_table .table thead tr th.group_one { background-color: #83caff; }
+.page .page_content .caption_table.chart_table .table thead tr th.group_one { background-color: #cfeaff; }
 
-.page .page_content .caption_table.chart_table .table thead tr th.group_two { background-color: #ffcf3a; }
+.page .page_content .caption_table.chart_table .table thead tr th.group_two { background-color: #ffecb1; }
 
-.page .page_content .caption_table.chart_table .table thead tr th.group_three { background-color: #fe9795; }
+.page .page_content .caption_table.chart_table .table thead tr th.group_three { background-color: #efc2c1; }
 
-.page .page_content .caption_table.chart_table .table thead tr th.group_four { background-color: #5dc994; }
+.page .page_content .caption_table.chart_table .table thead tr th.group_four { background-color: #bcf5d9; }
 
 .page .page_content .caption_table.chart_table .table tbody tr td { text-align: center; background-color: #fff; border-bottom: 1.5px solid #e7591a; border-right: 1.5px solid #e7591a; width: calc(100% / 6); }
 
@@ -245,13 +245,13 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_content .caption_table.chart_table_list .table tbody tr td.group_item.highest { font-weight: bold; }
 
-.page .page_content .caption_table.chart_table_list .table tbody tr td.group_item.highest.group_one { background-color: #83caff; }
+.page .page_content .caption_table.chart_table_list .table tbody tr td.group_item.highest.group_one { background-color: #cfeaff; }
 
-.page .page_content .caption_table.chart_table_list .table tbody tr td.group_item.highest.group_two { background-color: #ffcf3a; }
+.page .page_content .caption_table.chart_table_list .table tbody tr td.group_item.highest.group_two { background-color: #ffecb1; }
 
-.page .page_content .caption_table.chart_table_list .table tbody tr td.group_item.highest.group_three { background-color: #fe9795; }
+.page .page_content .caption_table.chart_table_list .table tbody tr td.group_item.highest.group_three { background-color: #efc2c1; }
 
-.page .page_content .caption_table.chart_table_list .table tbody tr td.group_item.highest.group_four { background-color: #5dc994; }
+.page .page_content .caption_table.chart_table_list .table tbody tr td.group_item.highest.group_four { background-color: #bcf5d9; }
 
 .page .page_footer { position: absolute; bottom: 0; width: 100%; }
 
@@ -326,10 +326,10 @@ button:disabled a { color: #fff !important; cursor: auto; }
   .page .page_content .caption_table .table thead tr th { color: #fff; background-color: #e7591a; padding: 12px 10px; text-align: center; }
   .page .page_content .caption_table .table tbody tr td { width: 20%; border-bottom: 1.5px solid #e7591a; border-right: 1.5px solid #e7591a; padding: 8px 15px; vertical-align: middle; }
   .page .page_content .caption_table .table tbody tr td.group_projects { background-color: #c7c8ff; }
-  .page .page_content .caption_table .table tbody tr td.group_one { background-color: #83caff; }
-  .page .page_content .caption_table .table tbody tr td.group_two { background-color: #ffcf3a; }
-  .page .page_content .caption_table .table tbody tr td.group_three { background-color: #fe9795; }
-  .page .page_content .caption_table .table tbody tr td.group_four { background-color: #5dc994; }
+  .page .page_content .caption_table .table tbody tr td.group_one { background-color: #cfeaff; }
+  .page .page_content .caption_table .table tbody tr td.group_two { background-color: #ffecb1; }
+  .page .page_content .caption_table .table tbody tr td.group_three { background-color: #efc2c1; }
+  .page .page_content .caption_table .table tbody tr td.group_four { background-color: #bcf5d9; }
   .page .page_content .caption_table.caption_table_two tr:nth-child(7) td, .page .page_content .caption_table.caption_table_two tr:nth-child(8) td { border-bottom: 0px; }
   .page .page_content .caption_table.caption_table_two tr:nth-child(7) td:nth-child(1), .page .page_content .caption_table.caption_table_two tr:nth-child(8) td:nth-child(1) { background-color: #fff; }
   .page .page_content .chart_information { display: flex; justify-content: center; margin: 0 auto 20px; }
@@ -339,10 +339,10 @@ button:disabled a { color: #fff !important; cursor: auto; }
   .page .page_content .chart_information.chart_area_information .chart_information_text { margin: 5px 0; }
   .page .page_content .caption_table.chart_table .table thead tr th { color: #20221f; border-bottom: 1.5px solid #e7591a; border-right: 1.5px solid #e7591a; }
   .page .page_content .caption_table.chart_table .table thead tr th.group_projects { background-color: #c7c8ff; }
-  .page .page_content .caption_table.chart_table .table thead tr th.group_one { background-color: #83caff; }
-  .page .page_content .caption_table.chart_table .table thead tr th.group_two { background-color: #ffcf3a; }
-  .page .page_content .caption_table.chart_table .table thead tr th.group_three { background-color: #fe9795; }
-  .page .page_content .caption_table.chart_table .table thead tr th.group_four { background-color: #5dc994; }
+  .page .page_content .caption_table.chart_table .table thead tr th.group_one { background-color: #cfeaff; }
+  .page .page_content .caption_table.chart_table .table thead tr th.group_two { background-color: #ffecb1; }
+  .page .page_content .caption_table.chart_table .table thead tr th.group_three { background-color: #efc2c1; }
+  .page .page_content .caption_table.chart_table .table thead tr th.group_four { background-color: #bcf5d9; }
   .page .page_content .caption_table.chart_table .table tbody tr td { text-align: center; background-color: #fff; border-bottom: 1.5px solid #e7591a; border-right: 1.5px solid #e7591a; width: calc(100% / 6); }
   .page .page_content .caption_table.chart_table .table tbody tr td.highest { background-color: #e7591a; border-bottom: 1.5px solid #fff; border-right: 1.5px solid #fff; }
   .page .page_content .caption_table.chart_table .table tbody tr.percentage td.highest { border-bottom: 1.5px solid #e7591a; }
@@ -369,10 +369,10 @@ button:disabled a { color: #fff !important; cursor: auto; }
   .page .page_content .caption_table.chart_table_list .table tbody tr td:nth-child(1), .page .page_content .caption_table.chart_table_list .table tbody tr td:nth-child(2), .page .page_content .caption_table.chart_table_list .table tbody tr td:nth-child(3), .page .page_content .caption_table.chart_table_list .table tbody tr td:nth-child(4), .page .page_content .caption_table.chart_table_list .table tbody tr td:nth-child(5) { background-color: #fff; }
   .page .page_content .caption_table.chart_table_list .table tbody tr td.group_item { background-color: #fff; }
   .page .page_content .caption_table.chart_table_list .table tbody tr td.group_item.highest { font-weight: bold; }
-  .page .page_content .caption_table.chart_table_list .table tbody tr td.group_item.highest.group_one { background-color: #83caff; }
-  .page .page_content .caption_table.chart_table_list .table tbody tr td.group_item.highest.group_two { background-color: #ffcf3a; }
-  .page .page_content .caption_table.chart_table_list .table tbody tr td.group_item.highest.group_three { background-color: #fe9795; }
-  .page .page_content .caption_table.chart_table_list .table tbody tr td.group_item.highest.group_four { background-color: #5dc994; }
+  .page .page_content .caption_table.chart_table_list .table tbody tr td.group_item.highest.group_one { background-color: #cfeaff; }
+  .page .page_content .caption_table.chart_table_list .table tbody tr td.group_item.highest.group_two { background-color: #ffecb1; }
+  .page .page_content .caption_table.chart_table_list .table tbody tr td.group_item.highest.group_three { background-color: #efc2c1; }
+  .page .page_content .caption_table.chart_table_list .table tbody tr td.group_item.highest.group_four { background-color: #bcf5d9; }
   .page .page_footer { position: absolute; bottom: 0; width: 100%; }
   .page .page_footer .pagination { position: absolute; display: flex; justify-content: center; width: 90%; margin: 0 auto; bottom: 40px; left: 50%; transform: translate(-50%, 0); }
   .page .page_footer .pagination .copyright_text { padding: 0 50px; background-color: #fef3f0; }
