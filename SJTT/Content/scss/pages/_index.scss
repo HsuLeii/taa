@@ -746,6 +746,10 @@
         .page_content {
             padding: 0 2.5%;
     
+            .bold{
+                font-weight: bold;
+            }
+    
             // page1
             .report_title_area {
                 position: relative;
@@ -1024,31 +1028,24 @@
                                 padding: 8px 15px;
                                 vertical-align: middle;
     
-                                &:nth-child(1) {
+                                &.group_projects {
                                     background-color: $table_color_one;
                                 }
     
-                                &:nth-child(2) {
+                                &.group_one {
                                     background-color: $table_color_two_60;
                                 }
     
-                                &:nth-child(3) {
+                                &.group_two {
                                     background-color: $table_color_three_60;
                                 }
     
-                                &:nth-child(4) {
+                                &.group_three {
                                     background-color: $table_color_four_60;
                                 }
     
-                                &:nth-child(5) {
+                                &.group_four {
                                     background-color: $table_color_five_60;
-                                    border-right: 0px;
-                                }
-                            }
-    
-                            &:nth-child(4) {
-                                td {
-                                    border-bottom: 0px;
                                 }
                             }
                         }
@@ -1058,34 +1055,10 @@
                 &.caption_table_two {
                     tr {
     
-                        &:nth-child(2),
-                        &:nth-child(3),
-                        &:nth-child(4) {
-                            td {
-                                &:nth-child(1) {
-                                    background-color: $table_color_two_60;
-                                }
-    
-                                &:nth-child(2) {
-                                    background-color: $table_color_three_60;
-                                }
-    
-                                &:nth-child(3) {
-                                    background-color: $table_color_four_60;
-                                }
-    
-                                &:nth-child(4) {
-                                    background-color: $table_color_five_60;
-                                    border-right: 0px;
-                                }
-                            }
-                        }
-    
                         &:nth-child(7),
                         &:nth-child(8) {
                             td {
                                 border-bottom: 0px;
-                                border-right: 0px;
     
                                 &:nth-child(1) {
                                     background-color: $white;
@@ -1134,29 +1107,24 @@
                                     border-bottom: 1.5px solid $main_color;
                                     border-right: 1.5px solid $main_color;
     
-                                    &:nth-child(1),
-                                    &:nth-child(6) {
+                                    &.group_projects {
                                         background-color: $table_color_one;
                                     }
-    
-                                    &:nth-child(2) {
+        
+                                    &.group_one {
                                         background-color: $table_color_two_60;
                                     }
-    
-                                    &:nth-child(3) {
+        
+                                    &.group_two {
                                         background-color: $table_color_three_60;
                                     }
-    
-                                    &:nth-child(4) {
+        
+                                    &.group_three {
                                         background-color: $table_color_four_60;
                                     }
-    
-                                    &:nth-child(5) {
+        
+                                    &.group_four {
                                         background-color: $table_color_five_60;
-                                    }
-    
-                                    &:nth-child(6) {
-                                        border-right: 1.5px solid $main_color;
                                     }
                                 }
                             }
@@ -1171,34 +1139,16 @@
                                     border-right: 1.5px solid $main_color;
                                     width: calc(100% / 6);
     
-                                    &:nth-child(2),
-                                    &:nth-child(3),
-                                    &:nth-child(4),
-                                    &:nth-child(5) {
-    
                                         &.highest {
                                             background-color: $main_color;
                                             border-bottom: 1.5px solid $white;
                                             border-right: 1.5px solid $white;
                                         }
-                                    }
     
-    
-                                    &:nth-child(6) {
-                                        border-right: 1.5px solid $main_color;
-                                    }
                                 }
     
-                                &:nth-child(3) {
-                                    td {
-                                        border-bottom: 0px;
-                                        background-color: $white;
-                                        border-right: 1.5px solid $main_color;
-                                    }
-                                }
-    
-                                &:nth-last-child(2) {
-                                    td {
+                                &.percentage{
+                                    td{
                                         &.highest {
                                             border-bottom: 1.5px solid $main_color;
                                         }
@@ -1320,11 +1270,7 @@
                                     text-align: center;
                                     border-right: 1.5px solid $main_color;
                                     border-bottom: 1.5px solid $main_color;
-    
-                                    &.highest{
-                                        font-weight: bolder;
-                                    }
-    
+                                    
                                     &:nth-child(1),
                                     &:nth-child(2),
                                     &:nth-child(4){
@@ -1350,51 +1296,31 @@
                                     &:nth-child(5){
                                         background-color: $white;
                                     }
-                                    
-                                    &:nth-child(6){
+    
+                                    &.group_item{
+                                        background-color: $white;
+    
                                         &.highest{
-                                            background-color: $table_color_two_60;
-                                        }
-                                    }
+                                            font-weight: bold;
     
-                                    &:nth-child(7){
-                                        &.highest{
-                                            background-color: $table_color_three_60;
-                                        }
-                                    }
+                                            &.group_one{
+                                                background-color: $table_color_two_60;
+                                            }
     
-                                    &:nth-child(8){
-                                        &.highest{
-                                            background-color: $table_color_four_60;
-                                        }
-                                    }
+                                            &.group_two{
+                                                background-color: $table_color_three_60;
+                                            }
     
-                                    &:nth-child(9){
-                                        &.highest{
-                                            background-color: $table_color_five_60;
-                                        }
-                                    }
+                                            &.group_three{
+                                                background-color: $table_color_four_60;
+                                            }
     
-                                    
-                                }
+                                            &.group_four{
+                                                background-color: $table_color_five_60;
+                                            }
+                                        }
     
-                                &:nth-child(1){
-                                    td{
-                                        &:nth-child(6){
-                                            background-color: $table_color_two_60;
-                                        }
-        
-                                        &:nth-child(7){
-                                            background-color: $table_color_three_60;
-                                        }
-        
-                                        &:nth-child(8){
-                                            background-color: $table_color_four_60;
-                                        }
-        
-                                        &:nth-child(9){
-                                            background-color: $table_color_five_60;
-                                        }
+                                        
                                     }
                                 }
                             }
