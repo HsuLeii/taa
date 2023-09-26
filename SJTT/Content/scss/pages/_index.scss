@@ -135,16 +135,6 @@
 
                         .page_caption_svg {
                             width: 100%;
-
-                            svg {
-
-                                polygon,
-                                path {
-                                    fill: transparent;
-                                    stroke: $main_color_grey;
-                                    stroke-width: 1px;
-                                }
-                            }
                         }
 
                         .page_caption_item {

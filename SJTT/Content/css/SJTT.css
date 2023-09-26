@@ -113,8 +113,6 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_content .page_caption .page_caption_img .page_caption_img_left .page_caption_triangle .page_caption_svg { width: 100%; }
 
-.page .page_content .page_caption .page_caption_img .page_caption_img_left .page_caption_triangle .page_caption_svg svg polygon, .page .page_content .page_caption .page_caption_img .page_caption_img_left .page_caption_triangle .page_caption_svg svg path { fill: transparent; stroke: #20221f; stroke-width: 1px; }
-
 .page .page_content .page_caption .page_caption_img .page_caption_img_left .page_caption_triangle .page_caption_item { display: flex; justify-content: center; width: 50%; position: absolute; }
 
 .page .page_content .page_caption .page_caption_img .page_caption_img_left .page_caption_triangle .page_caption_item .page_caption_item_img { width: 80%; padding: 10px; border-radius: 50%; }
