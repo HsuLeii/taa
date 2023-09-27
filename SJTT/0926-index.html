@@ -1171,20 +1171,20 @@
 
           
         },
-      //   animation: {
-      //   duration: 0,
-      //   onComplete: onComplete
-      // },
+        animation: {
+        duration: 0,
+        onComplete: onComplete
+      },
 
       }
 
     };
 new Chart(document.getElementById('chartOne'),config,);
 
-//     function onComplete() {
-//   var img = document.getElementById('myChartAsImg');
-//   img.src = this.toBase64Image();
-// }
+    function onComplete() {
+  var img = document.getElementById('myChartAsImg');
+  img.src = this.toBase64Image();
+}
 
     document.getElementById("chart_value_one").innerHTML = config.data.datasets[0].data[0];
     document.getElementById("chart_value_two").innerHTML = config.data.datasets[0].data[1];
