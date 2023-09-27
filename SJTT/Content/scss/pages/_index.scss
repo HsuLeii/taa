@@ -1,6 +1,11 @@
-img{
-    width: 500px;
+:root {
+    counter-reset: current total;
 }
+
+.pagenum {
+    counter-increment: total;
+}
+
 .page {
     /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
     /* page-break-after: always;  碰到此元素會直接換頁 */
@@ -9,22 +14,10 @@ img{
     max-width: 1024px;
     height: 1448px;
     width: 100%;
-    /* height: 1448px; */
     margin: 0 auto;
     overflow: hidden;
     border: 1px solid $main_color_grey;
     background-color: $body_bg;
-
-    &::after {
-        /* content: counter(page-number); 取用該名字的計數器 */
-        /*counter-increment: page-number 1;  增加計數器數值 */
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        font-size: 30px;
-        text-align: center;
-    }
 
     .page_header {
         .page_decorate {
@@ -36,7 +29,7 @@ img{
     }
 
     .page_content {
-        padding: 0 2.5%;
+        padding: 0 5%;
 
         .bold {
             font-weight: bold;
@@ -48,17 +41,21 @@ img{
             width: 100%;
             display: flex;
             align-items: center;
-            margin: 0 auto 40px;
-            padding: 0 0 30px;
+            margin: 0 auto 30px;
 
             .logo {
-                width: 70px;
+                width: 55px;
             }
 
             .report-title {
                 position: absolute;
+                width: 66%;
                 left: 50%;
-                transform: translate(-50%, 0%);
+                top: 50%;
+                transform: translate(-50%, -50%);
+                margin: 0 0 0 40px;
+                display: flex;
+                justify-content: center;
 
                 h1 {
                     color: $white;
@@ -70,7 +67,7 @@ img{
                     left: 50%;
                     top: 50%;
                     transform: translate(-50%, -50%);
-                    width: calc(100% + 180px);
+                    width: calc(100% + 40px);
                     height: calc(100% + 15px);
                     border: 2px solid $main_color;
                     background-color: $main_color;
@@ -83,26 +80,13 @@ img{
                     position: absolute;
                     left: 50%;
                     top: 50%;
-                    transform: translate(calc(-50% + 15px), calc(-50% + 10px));
-                    width: calc(100% + 180px);
+                    transform: translate(calc(-50% + 8px), calc(-50% + 8px));
+                    width: calc(100% + 40px);
                     height: calc(100% + 15px);
                     border: 2px solid $main_color;
                     border-radius: 50px;
                     z-index: -2;
                 }
-            }
-
-            &::after {
-                content: "";
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                width: 90px;
-                height: 75px;
-                transform: translate(0, 0%);
-                background-image: radial-gradient($main_color_light 30%, transparent 30%);
-                background-position: 0 0, 5px 0px;
-                background-size: 15px 15px;
             }
         }
 
@@ -116,7 +100,11 @@ img{
                     line-height: 2.5;
 
                     span {
-                        font-size: 14px;
+                        font-size: 11px;
+
+                        &.bold {
+                            font-size: 14px;
+                        }
                     }
                 }
             }
@@ -125,14 +113,16 @@ img{
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-end;
-                margin: 150px auto 20px;
+                margin: 50px auto 20px;
+                flex-direction: column;
 
                 .page_caption_img_left {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    width: 50%;
+                    width: 80%;
+                    margin: 0 auto;
 
                     .page_caption_triangle {
                         position: relative;
@@ -149,7 +139,7 @@ img{
                             position: absolute;
 
                             .page_caption_item_img {
-                                width: 80%;
+                                width: 70%;
                                 padding: 10px;
                                 border-radius: 50%;
                             }
@@ -191,7 +181,7 @@ img{
                     }
 
                     .page_caption_left_text {
-                        width: 65%;
+                        width: 80%;
                         margin: 40px auto 0;
                         display: flex;
                         flex-direction: column;
@@ -207,7 +197,7 @@ img{
                         .page_caption_left_text_item {
                             display: flex;
                             align-items: center;
-                            margin: 10px 0;
+                            margin: 5px 0;
 
                             &.page_caption_left_text_one {
                                 .page_caption_item_text_color {
@@ -234,17 +224,18 @@ img{
                     position: relative;
                     display: flex;
                     justify-content: flex-end;
-                    width: 48%;
+                    width: 100%;
 
                     .page_caption_item_img {
-                        width: 80%;
+                        width: 25%;
                     }
 
                     .page_caption_item_text {
+                        width: calc(100% - 30%);
                         position: absolute;
-                        top: 0;
+                        top: 50%;
                         left: 0;
-                        transform: translate(0, calc(-100% - 20px));
+                        transform: translate(0, -50%);
                         background-color: $white;
                         border: 1px solid $main_color;
                         border-radius: 10px;
@@ -254,12 +245,12 @@ img{
                             content: "";
                             position: absolute;
                             border-width: 0px 10px 10px 10px;
-                            top: 100%;
-                            left: 50%;
-                            transform: translate(-100%, 0%);
-                            border-left: 10px solid transparent;
+                            top: 50%;
+                            left: 100%;
+                            transform: translate(0%, -50%);
+                            border-left: 10px solid $main_color;
                             border-bottom: 10px solid transparent;
-                            border-top: 10px solid $main_color;
+                            border-top: 10px solid transparent;
                             border-right: 10px solid transparent;
                         }
                     }
@@ -277,25 +268,27 @@ img{
             h4 {
                 color: $main_color;
             }
-
-            &::after {
-                content: "";
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                width: 90px;
-                height: 30px;
-                transform: translate(0, 0%);
-                background-image: radial-gradient($main_color_light 30%, transparent 30%);
-                background-position: 0 0, 10px 0px;
-                background-size: 15px 15px;
-            }
         }
 
         .caption_table {
             overflow-x: scroll;
+            margin: 0 auto 60px;
+
+            &::-webkit-scrollbar {
+                background: transparent;
+                height: 8px;
+                width: 12px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border: none;
+                box-shadow: none;
+                background: $main_color;
+                min-height: 40px;
+            }
+
             .table {
-                min-width: 695px;
+                min-width: 760px;
                 border: 1.5px solid $main_color;
 
                 thead {
@@ -338,12 +331,14 @@ img{
                                 background-color: $group_four_light;
                             }
                         }
+
+                        &:nth-child(7) {
+                            td {
+                                border-bottom: 0px;
+                            }
+                        }
                     }
                 }
-            }
-
-            &.caption_table_two {
-                tr {}
             }
         }
 
@@ -352,11 +347,12 @@ img{
         // page3
         .chart_information {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             margin: 0 auto 20px;
+            flex-wrap: wrap;
 
             .chart_information_text {
-                margin: 0 20px;
+                margin: 10px 4px;
             }
 
             .chart_information_value {
@@ -457,25 +453,27 @@ img{
             }
 
             .chart_canvas {
-                width: 77%;
-                margin: 0 3% 0 0;
+                width: 100%;
+                margin: 0 0 20px 0;
                 display: flex;
                 justify-content: center;
 
                 canvas {
-                    max-width: 600px;
-                    max-height: 600px;
+                    max-width: 550px;
+                    max-height: 550px;
                 }
             }
 
             .chart_category_area {
-                width: 20%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
 
                 .chart_category {
                     display: flex;
                     align-items: center;
-                    justify-self: center;
-                    margin: 10px 0;
+                    margin: 10px 3px;
                     padding: 8px;
 
                     .chart_category_color {
@@ -616,40 +614,31 @@ img{
             transform: translate(-50%, 0);
 
             .copyright_text {
-                padding: 0 50px;
+                padding: 0 15px;
                 background-color: $body_bg;
 
                 p {
-                    font-size: 16px;
+                    font-size: 13px;
                     color: $main_color_grey;
                 }
             }
 
             .page_number {
                 position: absolute;
-                right: 0;
+                right: 5px;
                 top: 50%;
                 transform: translate(0, -50%);
                 z-index: 1;
 
-
-                p {
+                &::before {
+                    counter-increment: current;
+                    content: counter(current) "/"counter(total);
+                    font-size: 13px;
                     color: $main_color_grey;
-                    font-size: 16px;
-                }
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    width: calc(100% + 40px);
-                    height: calc(100% + 10px);
                     border: 1px solid $main_color_grey;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
                     border-radius: 50px;
-                    z-index: -1;
                     background-color: $body_bg;
+                    padding: 5px 10px;
                 }
             }
 
@@ -676,284 +665,96 @@ img{
 
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 499px) {
     .page {
-        /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
-        /* page-break-after: always;  碰到此元素會直接換頁 */
-        page-break-inside: avoid;
-        position: relative;
-        max-width: 1024px;
-        height: 1448px;
-        width: 100%;
-        /* height: 1448px; */
-        margin: 0 auto;
-        overflow: hidden;
-        border: 1px solid $main_color_grey;
-        background-color: $body_bg;
-    
-        &::after {
-            /* content: counter(page-number); 取用該名字的計數器 */
-            /*counter-increment: page-number 1;  增加計數器數值 */
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            font-size: 30px;
-            text-align: center;
-        }
-    
-        .page_header {
-            .page_decorate {
-                width: 100%;
-                height: 12px;
-                background: linear-gradient(135deg, $main_color_green 33%, $main_color_blue 33%, $main_color_blue 66%, $main_color 66%);
-                margin: 0 auto 30px;
-            }
-        }
-    
+
         .page_content {
-            padding: 0 2.5%;
-    
-            .bold {
-                font-weight: bold;
-            }
-    
+
             // page1
             .report_title_area {
-                position: relative;
-                width: 100%;
-                display: flex;
-                align-items: center;
-                margin: 0 auto 40px;
-                padding: 0 0 30px;
-    
-                .logo {
-                    width: 70px;
-                }
-    
+
                 .report-title {
-                    position: absolute;
-                    left: 50%;
-                    transform: translate(-50%, 0%);
-    
-                    h1 {
-                        color: $white;
-                    }
-    
+                    width: 60%;
+
                     &::before {
-                        content: "";
-                        position: absolute;
-                        left: 50%;
-                        top: 50%;
-                        transform: translate(-50%, -50%);
-                        width: calc(100% + 180px);
-                        height: calc(100% + 15px);
-                        border: 2px solid $main_color;
-                        background-color: $main_color;
-                        border-radius: 50px;
-                        z-index: -1;
+                        width: calc(100% + 50px);
                     }
-    
+
                     &::after {
-                        content: "";
-                        position: absolute;
-                        left: 50%;
-                        top: 50%;
-                        transform: translate(calc(-50% + 15px), calc(-50% + 10px));
-                        width: calc(100% + 180px);
-                        height: calc(100% + 15px);
-                        border: 2px solid $main_color;
-                        border-radius: 50px;
-                        z-index: -2;
+                        width: calc(100% + 50px);
                     }
                 }
-    
-                &::after {
-                    content: "";
-                    position: absolute;
-                    right: 0;
-                    bottom: 0;
-                    width: 90px;
-                    height: 75px;
-                    transform: translate(0, 0%);
-                    background-image: radial-gradient($main_color_light 30%, transparent 30%);
-                    background-position: 0 0, 5px 0px;
-                    background-size: 15px 15px;
-                }
             }
-    
+
             .page_caption {
-                width: 80%;
-                margin: 0 auto;
-    
-                .page_caption_text {
-                    p {
-                        color: $main_color_grey;
-                        line-height: 2.5;
-    
-                        span {
-                            font-size: 14px;
-                        }
-                    }
-                }
-    
+
                 .page_caption_img {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: flex-end;
-                    margin: 150px auto 20px;
-    
-                    .page_caption_img_left {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        width: 50%;
-    
-                        .page_caption_triangle {
-                            position: relative;
-                            width: 100%;
-    
-                            .page_caption_svg {
-                                width: 100%;
-                            }
-    
-                            .page_caption_item {
-                                display: flex;
-                                justify-content: center;
-                                width: 50%;
-                                position: absolute;
-    
-                                .page_caption_item_img {
-                                    width: 80%;
-                                    padding: 10px;
-                                    border-radius: 50%;
-                                }
-    
-                                .page_caption_item_text {
-                                    margin: 15px auto;
-                                }
-    
-                                &.page_caption_item_one {
-                                    top: 0;
-                                    left: 50%;
-                                    transform: translate(-50%, -50%);
-    
-                                    .page_caption_item_text {
-                                        color: $main_color_blue;
-                                    }
-                                }
-    
-                                &.page_caption_item_two {
-                                    bottom: 0;
-                                    left: 0%;
-                                    transform: translate(-50%, 50%);
-    
-                                    .page_caption_item_text {
-                                        color: $main_color_green;
-                                    }
-                                }
-    
-                                &.page_caption_item_three {
-                                    bottom: 0;
-                                    right: 0%;
-                                    transform: translate(50%, 50%);
-    
-                                    .page_caption_item_text {
-                                        color: $main_color_orange;
-                                    }
-                                }
-                            }
-                        }
-    
-                        .page_caption_left_text {
-                            width: 65%;
-                            margin: 40px auto 0;
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-    
-                            .page_caption_item_text_color {
-                                width: 20px;
-                                height: 20px;
-                                margin: 0 15px 0 0;
-                                border-radius: 50%;
-                            }
-    
-                            .page_caption_left_text_item {
-                                display: flex;
-                                align-items: center;
-                                margin: 10px 0;
-    
-                                &.page_caption_left_text_one {
-                                    .page_caption_item_text_color {
-                                        background-color: $main_color_blue;
-                                    }
-                                }
-    
-                                &.page_caption_left_text_two {
-                                    .page_caption_item_text_color {
-                                        background-color: $main_color_green;
-                                    }
-                                }
-    
-                                &.page_caption_left_text_three {
-                                    .page_caption_item_text_color {
-                                        background-color: $main_color_orange;
-                                    }
-                                }
-                            }
-                        }
-                    }
-    
+                    margin: 80px auto 20px;
+
                     .page_caption_img_right {
-                        position: relative;
-                        display: flex;
-                        justify-content: flex-end;
-                        width: 48%;
-    
+
                         .page_caption_item_img {
-                            width: 80%;
+                            width: 35%;
                         }
-    
+
                         .page_caption_item_text {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            transform: translate(0, calc(-100% - 20px));
-                            background-color: $white;
-                            border: 1px solid $main_color;
-                            border-radius: 10px;
-                            padding: 10px 20px;
-    
-                            &::before {
-                                content: "";
-                                position: absolute;
-                                border-width: 0px 10px 10px 10px;
-                                top: 100%;
-                                left: 50%;
-                                transform: translate(-100%, 0%);
-                                border-left: 10px solid transparent;
-                                border-bottom: 10px solid transparent;
-                                border-top: 10px solid $main_color;
-                                border-right: 10px solid transparent;
-                            }
+                            width: calc(100% - 40%);
                         }
                     }
                 }
             }
-    
+
             // page1
-    
+
+            // page3
+            .chart_area {
+                .chart_canvas {
+                    width: 75%;
+                    margin: 0 0 40px 0;
+                }
+
+                .chart_category_area {
+                    width: 90%;
+
+                    .chart_category {
+                        justify-content: center;
+                        margin: 10px auto;
+                        width: 45%;
+                    }
+                }
+            }
+
+            // page3
+        }
+
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .page {
+
+        .page_content {
+
+            // page1
+
+            .page_caption {
+
+                .page_caption_img {
+
+                    .page_caption_img_left {
+
+                        .page_caption_left_text {
+                            margin: 60px auto 0;
+                        }
+                    }
+                }
+            }
+
+            // page1
+
             // page2
             .pagination_tittle {
-                position: relative;
-                margin: 0 0 20px;
-    
-                h4 {
-                    color: $main_color;
-                }
-    
+
                 &::after {
                     content: "";
                     position: absolute;
@@ -967,302 +768,236 @@ img{
                     background-size: 15px 15px;
                 }
             }
-    
-            .caption_table {
-                .table {
-                    border: 1.5px solid $main_color;
-    
-                    thead {
-                        tr {
-                            th {
-                                color: $white;
-                                background-color: $main_color;
-                                padding: 12px 10px;
-                                text-align: center;
-                            }
-                        }
-                    }
-    
-                    tbody {
-                        tr {
-                            td {
-                                width: 20%;
-                                border-bottom: 1.5px solid $main_color;
-                                border-right: 1.5px solid $main_color;
-                                padding: 8px 15px;
-                                vertical-align: middle;
-    
-                                &.group_projects {
-                                    background-color: $group_projects;
-                                }
-    
-                                &.group_one {
-                                    background-color: $group_one_light;
-                                }
-    
-                                &.group_two {
-                                    background-color: $group_two_light;
-                                }
-    
-                                &.group_three {
-                                    background-color: $group_three_light;
-                                }
-    
-                                &.group_four {
-                                    background-color: $group_four_light;
-                                }
+
+            // page2
+        }
+
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .page {
+
+        .page_content {
+
+            // page1
+
+            .page_caption {
+
+                .page_caption_text {
+                    p {
+                        span {
+                            font-size: 12px;
+
+                            &.bold {
+                                font-size: 15px;
                             }
                         }
                     }
                 }
-    
-                &.caption_table_two {
-                    tr {}
+
+                .page_caption_img {
+                    flex-direction: row;
+                    align-items: center;
+                    margin: 110px auto 20px;
+
+                    .page_caption_img_left {
+                        width: 60%;
+
+                        .page_caption_triangle {
+
+                            .page_caption_item {
+
+                                .page_caption_item_img {
+                                    width: 80%;
+                                }
+
+                            }
+                        }
+
+                        .page_caption_left_text {
+                            width: 65%;
+                            margin: 80px auto 0;
+                        }
+                    }
+
+                    .page_caption_img_right {
+                        width: 35%;
+                        margin: 0 0 0 5%;
+
+                        .page_caption_item_img {
+                            width: 80%;
+                        }
+
+                        .page_caption_item_text {
+                            top: 0;
+                            transform: translate(0, calc(-100% - 20px));
+                            width: 100%;
+
+                            &::before {
+                                top: 100%;
+                                left: 50%;
+                                transform: translate(-100%, 0%);
+                                border-left: 10px solid transparent;
+                                border-top: 10px solid $main_color;
+                            }
+                        }
+                    }
+
                 }
             }
-    
-            // page2
-    
+
+            // page1
+
             // page3
+            .chart_area {
+
+                .chart_area_tittle {
+                    margin: 30px auto;
+                }
+
+                .chart_canvas {
+                    width: 67%;
+                    margin: 0 3% 0 0;
+                }
+
+                .chart_category_area {
+                    width: 30%;
+                    flex-direction: column;
+
+                    .chart_category {
+                        width: 100%;
+                    }
+                }
+
+
+            }
+
+            // page3
+        }
+
+        .page_footer {
+
+            .pagination {
+
+                .copyright_text {
+
+                    p {
+                        font-size: 15px;
+                    }
+                }
+
+                .page_number {
+
+                    &::before {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .page {
+        .page_content {
+            padding: 0 2.5%;
+
+            // page1
+            .report_title_area {
+                margin: 0 auto 40px;
+                padding: 0 0 30px;
+
+                .logo {
+                    width: 70px;
+                }
+
+                .report-title {
+
+                    &::before {
+                        width: calc(100% + 180px);
+                    }
+
+                    &::after {
+                        width: calc(100% + 180px);
+                    }
+                }
+            }
+
+            .page_caption {
+
+                .page_caption_text {
+                    p {
+                        span {
+                            font-size: 14px;
+
+                            &.bold {
+                                font-size: 17px;
+                            }
+                        }
+                    }
+                }
+
+                .page_caption_img {
+                    align-items: flex-end;
+                    margin: 150px auto 20px;
+
+                    .page_caption_img_left {
+                        width: 50%;
+                    }
+
+                    .page_caption_img_right {
+                        width: 48%;
+                    }
+                }
+            }
+
+            // page1
+
+            // page2
+
+            .caption_table {
+                margin: 0 auto;
+            }
+
+            // page2
+
+            // page3
+
             .chart_information {
-                display: flex;
                 justify-content: center;
-                margin: 0 auto 20px;
-    
+
                 .chart_information_text {
                     margin: 0 20px;
                 }
-    
-                .chart_information_value {
-                    color: $main_color;
-                    border-bottom: 1px solid $main_color;
-                    font-weight: bold;
-                }
-    
-                &.chart_area_information {
-                    flex-direction: column;
-                    margin: 40px auto;
-    
-                    .chart_information_text {
-                        margin: 5px 0;
-                    }
-                }
             }
-    
-            .caption_table {
-                &.chart_table {
-                    .table {
-                        thead {
-                            tr {
-                                th {
-                                    color: $main_color_grey;
-                                    border-bottom: 1.5px solid $main_color;
-                                    border-right: 1.5px solid $main_color;
-    
-                                    &.group_projects {
-                                        background-color: $group_projects;
-                                    }
-    
-                                    &.group_one {
-                                        background-color: $group_one_light;
-                                    }
-    
-                                    &.group_two {
-                                        background-color: $group_two_light;
-                                    }
-    
-                                    &.group_three {
-                                        background-color: $group_three_light;
-                                    }
-    
-                                    &.group_four {
-                                        background-color: $group_four_light;
-                                    }
-                                }
-                            }
-                        }
-    
-                        tbody {
-                            tr {
-                                td {
-                                    text-align: center;
-                                    background-color: $white;
-                                    border-bottom: 1.5px solid $main_color;
-                                    border-right: 1.5px solid $main_color;
-                                    width: calc(100% / 6);
-    
-                                    &.highest {
-                                        background-color: $main_color;
-                                        border-bottom: 1.5px solid $white;
-                                        border-right: 1.5px solid $white;
-                                    }
-    
-                                }
-    
-                                &.percentage {
-                                    td {
-                                        &.highest {
-                                            border-bottom: 1.5px solid $main_color;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-    
+
             .chart_area {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-wrap: wrap;
-                margin: 20px auto;
-    
+
                 .chart_area_tittle {
-                    width: 100%;
-                    display: flex;
-                    justify-content: center;
                     margin: 20px auto;
-    
-                    h5 {
-                        color: $main_color_grey;
-                    }
                 }
-    
-                .chart_canvas {
-                    width: 77%;
-                    margin: 0 3% 0 0;
-                    display: flex;
-                    justify-content: center;
-    
-                    canvas {
-                        max-width: 600px;
-                        max-height: 600px;
-                    }
-                }
-    
+
+
                 .chart_category_area {
-                    width: 20%;
-    
-                    .chart_category {
-                        display: flex;
-                        align-items: center;
-                        justify-self: center;
-                        margin: 10px 0;
-                        padding: 8px;
-    
-                        .chart_category_color {
-                            width: 20px;
-                            height: 20px;
-                            margin: 0 5px 0 0;
-                            border-radius: 50%;
-                            border: 1px solid $white;
-                        }
-    
-                        &.highest {
-                            background-color: $main_color;
-                            border-radius: 10px;
-                        }
-    
-                        &.chart_category_one {
-                            .chart_category_color {
-                                background-color: $group_one;
-                            }
-                        }
-    
-                        &.chart_category_two {
-                            .chart_category_color {
-                                background-color: $group_two;
-                            }
-                        }
-    
-                        &.chart_category_three {
-                            .chart_category_color {
-                                background-color: $group_three;
-                            }
-                        }
-    
-                        &.chart_category_four {
-                            .chart_category_color {
-                                background-color: $group_four;
-                            }
-                        }
-                    }
+                    width: 25%;
                 }
-    
-    
+
+
             }
-    
+
             // page3
-    
+
             // page4
             .caption_table {
                 &.chart_table_list {
-    
-                    .list_caption {
-                        margin: 0 auto 20px;
-                    }
-    
+
                     .table {
                         thead {
                             tr {
                                 th {
-                                    color: $main_color_grey;
-                                    border-bottom: 1.5px solid $main_color;
-                                    border-right: 1.5px solid $main_color;
-                                    background-color: $group_projects;
-    
                                     .chart_information {
-                                        margin: 0 auto;
-                                    }
-                                }
-                            }
-                        }
-    
-                        tbody {
-                            tr {
-                                td {
-                                    text-align: center;
-                                    border-right: 1.5px solid $main_color;
-                                    border-bottom: 1.5px solid $main_color;
-    
-                                    &:nth-child(1),
-                                    &:nth-child(2),
-                                    &:nth-child(4) {
-                                        width: 70px;
-                                    }
-    
-                                    &:nth-child(3),
-                                    &:nth-child(5) {
-                                        width: 120px;
-                                    }
-    
-                                    &.group_item {
-                                        width: calc((100% - 450px) / 4);
-                                        background-color: $white;
-    
-                                        &.highest {
-                                            font-weight: bold;
-    
-                                            &.group_one {
-                                                background-color: $group_one_light;
-                                            }
-    
-                                            &.group_two {
-                                                background-color: $group_two_light;
-                                            }
-    
-                                            &.group_three {
-                                                background-color: $group_three_light;
-                                            }
-    
-                                            &.group_four {
-                                                background-color: $group_four_light;
-                                            }
-                                        }
-    
-    
+                                        justify-content: center;
                                     }
                                 }
                             }
@@ -1270,84 +1005,29 @@ img{
                     }
                 }
             }
-    
+
             // page4
         }
-    
+
         .page_footer {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-    
+
             .pagination {
-                position: absolute;
-                display: flex;
-                justify-content: center;
-                width: 90%;
-                margin: 0 auto;
-                bottom: 40px;
-                left: 50%;
-                transform: translate(-50%, 0);
-    
+
                 .copyright_text {
-                    padding: 0 50px;
-                    background-color: $body_bg;
-    
+
                     p {
-                        font-size: 16px;
-                        color: $main_color_grey;
+                        font-size: 17px;
                     }
                 }
-    
+
                 .page_number {
-                    position: absolute;
-                    right: 0;
-                    top: 50%;
-                    transform: translate(0, -50%);
-                    z-index: 1;
-    
-    
-                    p {
-                        color: $main_color_grey;
-                        font-size: 16px;
-                    }
-    
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        width: calc(100% + 40px);
-                        height: calc(100% + 10px);
-                        border: 1px solid $main_color_grey;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        border-radius: 50px;
-                        z-index: -1;
-                        background-color: $body_bg;
+
+                    &::before {
+                        font-size: 17px;
                     }
                 }
-    
-                &::after {
-                    content: "";
-                    position: absolute;
-                    width: calc(100% - 100px);
-                    height: 1px;
-                    background-color: $main_color_grey;
-                    top: 50%;
-                    left: 0;
-                    transform: translate(0, -50%);
-                    z-index: -1;
-                }
-            }
-    
-            .page_decorate {
-                width: 100%;
-                height: 12px;
-                background: linear-gradient(45deg, $main_color_green 33%, $main_color_blue 33%, $main_color_blue 66%, $main_color 66%);
-                margin: 0 auto;
             }
         }
-    
     }
 }
 
@@ -1363,10 +1043,14 @@ img{
 }
 
 @media print {
-
-    img{
-        width: 500px;
+    :root {
+        counter-reset: current total;
     }
+
+    .pagenum {
+        counter-increment: total;
+    }
+
     .page {
         /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
         /* page-break-after: always;  碰到此元素會直接換頁 */
@@ -1380,18 +1064,7 @@ img{
         overflow: hidden;
         border: 1px solid $main_color_grey;
         background-color: $body_bg;
-    
-        &::after {
-            /* content: counter(page-number); 取用該名字的計數器 */
-            /*counter-increment: page-number 1;  增加計數器數值 */
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            font-size: 30px;
-            text-align: center;
-        }
-    
+
         .page_header {
             .page_decorate {
                 width: 100%;
@@ -1400,14 +1073,14 @@ img{
                 margin: 0 auto 30px;
             }
         }
-    
+
         .page_content {
             padding: 0 2.5%;
-    
+
             .bold {
                 font-weight: bold;
             }
-    
+
             // page1
             .report_title_area {
                 position: relative;
@@ -1416,20 +1089,25 @@ img{
                 align-items: center;
                 margin: 0 auto 40px;
                 padding: 0 0 30px;
-    
+
                 .logo {
                     width: 70px;
                 }
-    
+
                 .report-title {
                     position: absolute;
+                    width: 60%;
                     left: 50%;
-                    transform: translate(-50%, 0%);
-    
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    margin: 0 0 0 40px;
+                    display: flex;
+                    justify-content: center;
+
                     h1 {
                         color: $white;
                     }
-    
+
                     &::before {
                         content: "";
                         position: absolute;
@@ -1443,7 +1121,7 @@ img{
                         border-radius: 50px;
                         z-index: -1;
                     }
-    
+
                     &::after {
                         content: "";
                         position: absolute;
@@ -1457,136 +1135,129 @@ img{
                         z-index: -2;
                     }
                 }
-    
-                &::after {
-                    content: "";
-                    position: absolute;
-                    right: 0;
-                    bottom: 0;
-                    width: 90px;
-                    height: 75px;
-                    transform: translate(0, 0%);
-                    background-image: radial-gradient($main_color_light 30%, transparent 30%);
-                    background-position: 0 0, 5px 0px;
-                    background-size: 15px 15px;
-                }
             }
-    
+
             .page_caption {
                 width: 80%;
                 margin: 0 auto;
-    
+
                 .page_caption_text {
                     p {
                         color: $main_color_grey;
                         line-height: 2.5;
-    
+
                         span {
                             font-size: 14px;
+
+                            &.bold {
+                                font-size: 17px;
+                            }
                         }
                     }
                 }
-    
+
                 .page_caption_img {
                     display: flex;
                     justify-content: space-between;
                     align-items: flex-end;
                     margin: 150px auto 20px;
-    
+                    flex-direction: row;
+
                     .page_caption_img_left {
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
                         width: 50%;
-    
+                        margin: 0 auto;
+
                         .page_caption_triangle {
                             position: relative;
                             width: 100%;
-    
+
                             .page_caption_svg {
                                 width: 100%;
                             }
-    
+
                             .page_caption_item {
                                 display: flex;
                                 justify-content: center;
                                 width: 50%;
                                 position: absolute;
-    
+
                                 .page_caption_item_img {
                                     width: 80%;
                                     padding: 10px;
                                     border-radius: 50%;
                                 }
-    
+
                                 .page_caption_item_text {
                                     margin: 15px auto;
                                 }
-    
+
                                 &.page_caption_item_one {
                                     top: 0;
                                     left: 50%;
                                     transform: translate(-50%, -50%);
-    
+
                                     .page_caption_item_text {
                                         color: $main_color_blue;
                                     }
                                 }
-    
+
                                 &.page_caption_item_two {
                                     bottom: 0;
                                     left: 0%;
                                     transform: translate(-50%, 50%);
-    
+
                                     .page_caption_item_text {
                                         color: $main_color_green;
                                     }
                                 }
-    
+
                                 &.page_caption_item_three {
                                     bottom: 0;
                                     right: 0%;
                                     transform: translate(50%, 50%);
-    
+
                                     .page_caption_item_text {
                                         color: $main_color_orange;
                                     }
                                 }
                             }
                         }
-    
+
                         .page_caption_left_text {
                             width: 65%;
-                            margin: 40px auto 0;
+                            margin: 80px auto 0;
                             display: flex;
                             flex-direction: column;
                             justify-content: center;
-    
+
                             .page_caption_item_text_color {
                                 width: 20px;
                                 height: 20px;
                                 margin: 0 15px 0 0;
                                 border-radius: 50%;
                             }
-    
+
                             .page_caption_left_text_item {
                                 display: flex;
                                 align-items: center;
-                                margin: 10px 0;
-    
+                                margin: 5px 0;
+
                                 &.page_caption_left_text_one {
                                     .page_caption_item_text_color {
                                         background-color: $main_color_blue;
                                     }
                                 }
-    
+
                                 &.page_caption_left_text_two {
                                     .page_caption_item_text_color {
                                         background-color: $main_color_green;
                                     }
                                 }
-    
+
                                 &.page_caption_left_text_three {
                                     .page_caption_item_text_color {
                                         background-color: $main_color_orange;
@@ -1595,18 +1266,20 @@ img{
                             }
                         }
                     }
-    
+
                     .page_caption_img_right {
                         position: relative;
                         display: flex;
                         justify-content: flex-end;
                         width: 48%;
-    
+                        margin: 0 0 0 5%;
+
                         .page_caption_item_img {
                             width: 80%;
                         }
-    
+
                         .page_caption_item_text {
+                            width: 100%;
                             position: absolute;
                             top: 0;
                             left: 0;
@@ -1615,7 +1288,7 @@ img{
                             border: 1px solid $main_color;
                             border-radius: 10px;
                             padding: 10px 20px;
-    
+
                             &::before {
                                 content: "";
                                 position: absolute;
@@ -1632,18 +1305,18 @@ img{
                     }
                 }
             }
-    
+
             // page1
-    
+
             // page2
             .pagination_tittle {
                 position: relative;
                 margin: 0 0 20px;
-    
+
                 h4 {
                     color: $main_color;
                 }
-    
+
                 &::after {
                     content: "";
                     position: absolute;
@@ -1657,11 +1330,11 @@ img{
                     background-size: 15px 15px;
                 }
             }
-    
+
             .caption_table {
                 .table {
                     border: 1.5px solid $main_color;
-    
+
                     thead {
                         tr {
                             th {
@@ -1672,7 +1345,7 @@ img{
                             }
                         }
                     }
-    
+
                     tbody {
                         tr {
                             td {
@@ -1681,64 +1354,67 @@ img{
                                 border-right: 1.5px solid $main_color;
                                 padding: 8px 15px;
                                 vertical-align: middle;
-    
+
                                 &.group_projects {
                                     background-color: $group_projects;
                                 }
-    
+
                                 &.group_one {
                                     background-color: $group_one_light;
                                 }
-    
+
                                 &.group_two {
                                     background-color: $group_two_light;
                                 }
-    
+
                                 &.group_three {
                                     background-color: $group_three_light;
                                 }
-    
+
                                 &.group_four {
                                     background-color: $group_four_light;
+                                }
+                            }
+
+                            &:nth-child(7) {
+                                td {
+                                    border-bottom: 0px;
                                 }
                             }
                         }
                     }
                 }
-    
-                &.caption_table_two {
-                    tr {}
-                }
             }
-    
+
             // page2
-    
+
             // page3
             .chart_information {
                 display: flex;
                 justify-content: center;
                 margin: 0 auto 20px;
-    
+                flex-wrap: wrap;
+
                 .chart_information_text {
                     margin: 0 20px;
                 }
-    
+
                 .chart_information_value {
                     color: $main_color;
                     border-bottom: 1px solid $main_color;
                     font-weight: bold;
                 }
-    
+
                 &.chart_area_information {
                     flex-direction: column;
                     margin: 40px auto;
-    
+
                     .chart_information_text {
                         margin: 5px 0;
                     }
                 }
             }
-    
+
             .caption_table {
                 &.chart_table {
                     .table {
@@ -1748,30 +1424,30 @@ img{
                                     color: $main_color_grey;
                                     border-bottom: 1.5px solid $main_color;
                                     border-right: 1.5px solid $main_color;
-    
+
                                     &.group_projects {
                                         background-color: $group_projects;
                                     }
-    
+
                                     &.group_one {
                                         background-color: $group_one_light;
                                     }
-    
+
                                     &.group_two {
                                         background-color: $group_two_light;
                                     }
-    
+
                                     &.group_three {
                                         background-color: $group_three_light;
                                     }
-    
+
                                     &.group_four {
                                         background-color: $group_four_light;
                                     }
                                 }
                             }
                         }
-    
+
                         tbody {
                             tr {
                                 td {
@@ -1780,15 +1456,15 @@ img{
                                     border-bottom: 1.5px solid $main_color;
                                     border-right: 1.5px solid $main_color;
                                     width: calc(100% / 6);
-    
+
                                     &.highest {
                                         background-color: $main_color;
                                         border-bottom: 1.5px solid $white;
                                         border-right: 1.5px solid $white;
                                     }
-    
+
                                 }
-    
+
                                 &.percentage {
                                     td {
                                         &.highest {
@@ -1801,47 +1477,46 @@ img{
                     }
                 }
             }
-    
+
             .chart_area {
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 flex-wrap: wrap;
                 margin: 20px auto;
-    
+
                 .chart_area_tittle {
                     width: 100%;
                     display: flex;
                     justify-content: center;
                     margin: 20px auto;
-    
+
                     h5 {
                         color: $main_color_grey;
                     }
                 }
-    
+
                 .chart_canvas {
-                    width: 77%;
+                    width: 67%;
                     margin: 0 3% 0 0;
                     display: flex;
                     justify-content: center;
-    
+
                     canvas {
-                        max-width: 600px;
-                        max-height: 600px;
+                        max-width: 550px;
+                        max-height: 550px;
                     }
                 }
-    
+
                 .chart_category_area {
-                    width: 20%;
-    
+                    width: 25%;
+
                     .chart_category {
                         display: flex;
                         align-items: center;
-                        justify-self: center;
-                        margin: 10px 0;
+                        margin: 10px auto;
                         padding: 8px;
-    
+
                         .chart_category_color {
                             width: 20px;
                             height: 20px;
@@ -1849,30 +1524,30 @@ img{
                             border-radius: 50%;
                             border: 1px solid $white;
                         }
-    
+
                         &.highest {
                             background-color: $main_color;
                             border-radius: 10px;
                         }
-    
+
                         &.chart_category_one {
                             .chart_category_color {
                                 background-color: $group_one;
                             }
                         }
-    
+
                         &.chart_category_two {
                             .chart_category_color {
                                 background-color: $group_two;
                             }
                         }
-    
+
                         &.chart_category_three {
                             .chart_category_color {
                                 background-color: $group_three;
                             }
                         }
-    
+
                         &.chart_category_four {
                             .chart_category_color {
                                 background-color: $group_four;
@@ -1880,20 +1555,20 @@ img{
                         }
                     }
                 }
-    
-    
+
+
             }
-    
+
             // page3
-    
+
             // page4
             .caption_table {
                 &.chart_table_list {
-    
+
                     .list_caption {
                         margin: 0 auto 20px;
                     }
-    
+
                     .table {
                         thead {
                             tr {
@@ -1902,57 +1577,57 @@ img{
                                     border-bottom: 1.5px solid $main_color;
                                     border-right: 1.5px solid $main_color;
                                     background-color: $group_projects;
-    
+
                                     .chart_information {
                                         margin: 0 auto;
                                     }
                                 }
                             }
                         }
-    
+
                         tbody {
                             tr {
                                 td {
                                     text-align: center;
                                     border-right: 1.5px solid $main_color;
                                     border-bottom: 1.5px solid $main_color;
-    
+
                                     &:nth-child(1),
                                     &:nth-child(2),
                                     &:nth-child(4) {
                                         width: 70px;
                                     }
-    
+
                                     &:nth-child(3),
                                     &:nth-child(5) {
                                         width: 120px;
                                     }
-    
+
                                     &.group_item {
                                         width: calc((100% - 450px) / 4);
                                         background-color: $white;
-    
+
                                         &.highest {
                                             font-weight: bold;
-    
+
                                             &.group_one {
                                                 background-color: $group_one_light;
                                             }
-    
+
                                             &.group_two {
                                                 background-color: $group_two_light;
                                             }
-    
+
                                             &.group_three {
                                                 background-color: $group_three_light;
                                             }
-    
+
                                             &.group_four {
                                                 background-color: $group_four_light;
                                             }
                                         }
-    
-    
+
+
                                     }
                                 }
                             }
@@ -1960,15 +1635,15 @@ img{
                     }
                 }
             }
-    
+
             // page4
         }
-    
+
         .page_footer {
             position: absolute;
             bottom: 0;
             width: 100%;
-    
+
             .pagination {
                 position: absolute;
                 display: flex;
@@ -1978,45 +1653,36 @@ img{
                 bottom: 40px;
                 left: 50%;
                 transform: translate(-50%, 0);
-    
+
                 .copyright_text {
-                    padding: 0 50px;
+                    padding: 0 15px;
                     background-color: $body_bg;
-    
+
                     p {
-                        font-size: 16px;
+                        font-size: 17px;
                         color: $main_color_grey;
                     }
                 }
-    
+
                 .page_number {
                     position: absolute;
-                    right: 0;
+                    right: 5px;
                     top: 50%;
                     transform: translate(0, -50%);
                     z-index: 1;
-    
-    
-                    p {
+
+                    &::before {
+                        counter-increment: current;
+                        content: counter(current) "/"counter(total);
+                        font-size: 13px;
                         color: $main_color_grey;
-                        font-size: 16px;
-                    }
-    
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        width: calc(100% + 40px);
-                        height: calc(100% + 10px);
                         border: 1px solid $main_color_grey;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
                         border-radius: 50px;
-                        z-index: -1;
                         background-color: $body_bg;
+                        padding: 5px 10px;
                     }
                 }
-    
+
                 &::after {
                     content: "";
                     position: absolute;
@@ -2029,7 +1695,7 @@ img{
                     z-index: -1;
                 }
             }
-    
+
             .page_decorate {
                 width: 100%;
                 height: 12px;
@@ -2037,6 +1703,6 @@ img{
                 margin: 0 auto;
             }
         }
-    
+
     }
 }
