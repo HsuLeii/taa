@@ -90,7 +90,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .pagenum { counter-increment: total; }
 
-.page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; max-width: 1024px; height: 1448px; width: 100%; margin: 0 auto; overflow: hidden; border: 1px solid #20221f; background-color: #fef3f0; }
+.page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; max-width: 1024px; height: 1448px; width: 100%; margin: 0 auto; overflow: hidden; background-color: #fef3f0; }
 
 .page .page_header .page_decorate { width: 100%; height: 12px; background: linear-gradient(135deg, #a3c313 33%, #1ebbe9 33%, #1ebbe9 66%, #e7591a 66%); margin: 0 auto 30px; }
 
@@ -346,7 +346,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 @media print { :root { counter-reset: current total; }
   .pagenum { counter-increment: total; }
-  .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; max-width: 1024px; height: 1448px; width: 100%; /* height: 1448px; */ margin: 0 auto; overflow: hidden; border: 1px solid #20221f; background-color: #fef3f0; }
+  .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; max-width: 1024px; height: 1448px; width: 100%; /* height: 1448px; */ margin: 0 auto; overflow: hidden; background-color: #fef3f0; }
   .page .page_header .page_decorate { width: 100%; height: 12px; background: linear-gradient(135deg, #a3c313 33%, #1ebbe9 33%, #1ebbe9 66%, #e7591a 66%); margin: 0 auto 30px; }
   .page .page_content { padding: 0 2.5%; }
   .page .page_content .bold { font-weight: bold; }

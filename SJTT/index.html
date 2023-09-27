@@ -47,10 +47,11 @@
             師資生潛能測驗系統共有教師情境判斷測驗<span>（Situational Judgment Tests for teachers ,SJTT）</span>、教師工作價值觀量表<span>（Work Values
               Scale for teachers, WVST）</span>、教師人格量表 <span>（Personality Scale for teachers,
               PST）</span>三大類：SJTT測量內容包含學生當前師培知識、技巧，態度及經驗；WVST能有效解釋學生在教師工作中所看重的事物；PST則能預測學生之情緒、行為等的教師人格特質展現。
-          </p><br/>
+          </p><br />
           <p>
             本報表使用潛在類別分析<span>（latent class
-              analysis）</span>，整合貴校學生在SJTT、WVST、PST之測量結果，進行再次分類、對應至可以有效解釋上述測驗觀察指標組合的教師圖像類組<span>（詳述如下頁）</span>，並於報表中呈現全校學生分類至各類組的整體機率值、及個別學生其最大機率的類組落點。<span class="bold">建議解讀報表時，需同時參考各類別的機率值</span>將較為合適。本報表將能提供綜合三項測驗結果之整體性觀點，使師資培育單位在進行相關決策如甄選、擇才時，有更全面的參考訊息。
+              analysis）</span>，整合貴校學生在SJTT、WVST、PST之測量結果，進行再次分類、對應至可以有效解釋上述測驗觀察指標組合的教師圖像類組<span>（詳述如下頁）</span>，並於報表中呈現全校學生分類至各類組的整體機率值、及個別學生其最大機率的類組落點。<span
+              class="bold">建議解讀報表時，需同時參考各類別的機率值</span>將較為合適。本報表將能提供綜合三項測驗結果之整體性觀點，使師資培育單位在進行相關決策如甄選、擇才時，有更全面的參考訊息。
           </p>
         </div>
 
@@ -326,9 +327,9 @@
           教師分類圖概況
         </h5>
 
-        <div class="chart_canvas">
+        <!-- <div class="chart_canvas">
           <canvas id="chartOne"></canvas>
-        </div>
+        </div> -->
 
         <div class="chart_category_area">
           <div class="chart_category chart_category_one">
@@ -1059,22 +1060,12 @@
         </table>
       </div>
 
-      <div id="basetest"></div> 
-
-      <div class="figure-container">
-        <figure>
-          <img id="myChartAsImg" src="#">
-
-          <!-- <a href="" id="myChartAsImg"> -->
-        </figure>
+      <div>
+        <canvas id="myChart"></canvas>
       </div>
-    </div>
 
-    <div id="basetest"></div> 
-      <div id="chart"> 
-         <canvas id="myChart" width="400" height="400"></canvas> 
-         <div id="legende"></div> 
-      </div> 
+      <img id="some-image-tag" src="#">
+    </div>
 
     <a href="#" id="btn-download" download="chart.jpg" target="_blank">Get Base64 Image</a>
 
@@ -1087,25 +1078,40 @@
       </div>
       <div class="page_decorate"></div>
     </div>
-
   </div>
 
   <!-- page6 -->
-
-
-
-
   <script src="Content/js/bootstrap@5.3.2.min.js"></script>
-
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
   <script src="Content/js/chart.js@4.4.0.js"></script>
-
   <script src="Content/js/datalabels@2.0.0.js"></script>
-
   <script src="Content/js/jquery-3.6.1.min.js"></script>
-  <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
-
 
   <script>
+    var myChart = new Chart(document.getElementById('myChart').getContext('2d'), {
+      type: 'bar',
+      data: {
+         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+         datasets: [{
+           label: '# of Votes',
+           data: [12, 19, 3, 5, 2, 3],
+           borderWidth: 1
+         }]
+       },
+       options: {
+    animation: {
+      onComplete: function () {
+        document.getElementById('some-image-tag').src = myChart.toBase64Image();
+      },
+    },
+  },
+   });
+
+   
+     
+   </script>
+
+  <!-- <script>
     Chart.register(ChartDataLabels);
 
     const backgroundColor = ['#cfeaff', '#ffecb1', '#efc2c1', '#bcf5d9'];
@@ -1124,6 +1130,7 @@
         hoverBorderWidth: 3,
       }]
     };
+
     const config = {
       type: 'pie',
       data,
@@ -1177,27 +1184,22 @@
           tooltip: {
             // Disable the on-canvas tooltip
             enabled: false,
-            backgroundColor: '#e7591a',
           },
 
-
         },
-        //   animation: {
-        //   duration: 0,
-        //   onComplete: onComplete
-        // },
-
       }
-
     };
 
+    // Get the chart's base64 image string
+
     new Chart(document.getElementById('chartOne'), config, );
+
 
     document.getElementById("chart_value_one").innerHTML = config.data.datasets[0].data[0];
     document.getElementById("chart_value_two").innerHTML = config.data.datasets[0].data[1];
     document.getElementById("chart_value_three").innerHTML = config.data.datasets[0].data[2];
     document.getElementById("chart_value_four").innerHTML = config.data.datasets[0].data[3];
-  </script>
+  </script> -->
 
 </body>
 
