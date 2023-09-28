@@ -413,6 +413,7 @@
                                 width: calc(100% / 6);
 
                                 &.highest {
+                                    font-weight: bold;
                                     background-color: $main_color;
                                     border-bottom: 1.5px solid $white;
                                     border-right: 1.5px solid $white;

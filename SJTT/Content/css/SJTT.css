@@ -216,7 +216,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_content .caption_table.chart_table .table tbody tr td { text-align: center; background-color: #fff; border-bottom: 1.5px solid #e7591a; border-right: 1.5px solid #e7591a; width: calc(100% / 6); }
 
-.page .page_content .caption_table.chart_table .table tbody tr td.highest { background-color: #e7591a; border-bottom: 1.5px solid #fff; border-right: 1.5px solid #fff; }
+.page .page_content .caption_table.chart_table .table tbody tr td.highest { font-weight: bold; background-color: #e7591a; border-bottom: 1.5px solid #fff; border-right: 1.5px solid #fff; }
 
 .page .page_content .caption_table.chart_table .table tbody tr.percentage td.highest { border-bottom: 1.5px solid #e7591a; }
 
