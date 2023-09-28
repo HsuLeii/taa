@@ -168,7 +168,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_content .pagination_tittle h4 { color: #e7591a; }
 
-.page .page_content .caption_table { overflow-x: scroll; margin: 0 auto 60px; }
+.page .page_content .caption_table { overflow-x: scroll; margin: 0 auto 0px; }
 
 .page .page_content .caption_table::-webkit-scrollbar { background: transparent; height: 8px; width: 12px; }
 
