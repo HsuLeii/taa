@@ -23,12 +23,45 @@
             width: 100%;
             height: 12px;
             background: linear-gradient(135deg, $main_color_green 33%, $main_color_blue 33%, $main_color_blue 66%, $main_color 66%);
-            margin: 0 auto 30px;
+            margin: 0 auto 18px;
         }
     }
 
     .page_content {
         padding: 0 5%;
+
+        .chart_category_icon{
+            display: inline-block;
+
+            i{
+                margin: 0 3px 0 0;
+                font-size: 18px;
+            }
+
+            &.chart_category_one {
+                    i{
+                        color: darken($group_one, 15%);
+                    }
+            }
+
+            &.chart_category_two {
+                    i{
+                        color: darken($group_two, 15%);
+                    }
+            }
+
+            &.chart_category_three {
+                    i{
+                        color: darken($group_three, 15%);
+                    }
+            }
+
+            &.chart_category_four {
+                    i{
+                        color: darken($group_four, 15%);
+                    }
+            }
+        }
 
         .bold {
             font-weight: bold;
@@ -262,7 +295,7 @@
         // page2
         .pagination_tittle {
             position: relative;
-            margin: 0 0 20px;
+            margin: 0 0 18px;
 
             h4 {
                 color: $main_color;
@@ -274,7 +307,7 @@
             margin: 0 auto 0px;
 
             &::-webkit-scrollbar {
-                background: transparent;
+                background: $main_color_light;
                 height: 8px;
                 width: 12px;
             }
@@ -289,6 +322,12 @@
             .table {
                 min-width: 760px;
                 border: 1.5px solid $main_color;
+
+                .chart_category_icon{
+                    i{
+                        margin: 0;
+                    }
+                }
 
                 thead {
                     tr {
@@ -307,8 +346,9 @@
                             width: 20%;
                             border-bottom: 1.5px solid $main_color;
                             border-right: 1.5px solid $main_color;
-                            padding: 8px 15px;
+                            padding: 6px 15px;
                             vertical-align: middle;
+                            color: $main_color_grey;
 
                             &.group_projects {
                                 background-color: $group_projects;
@@ -329,11 +369,17 @@
                             &.group_four {
                                 background-color: $group_four_light;
                             }
+
+                            .group_projects_img{
+                                width: 70px;
+                                margin: 0 auto 10px 
+                            }
                         }
 
                         &:nth-child(7) {
                             td {
                                 border-bottom: 0px;
+                                padding: 6px 15px 0;
                             }
                         }
                     }
@@ -366,6 +412,11 @@
 
                 .chart_information_text {
                     margin: 5px 0;
+
+                    &.chart_information_list{
+                        display: flex;
+                        align-items: center;
+                    }
                 }
             }
         }
@@ -379,26 +430,6 @@
                                 color: $main_color_grey;
                                 border-bottom: 1.5px solid $main_color;
                                 border-right: 1.5px solid $main_color;
-
-                                &.group_projects {
-                                    background-color: $group_projects;
-                                }
-
-                                &.group_one {
-                                    background-color: $group_one_light;
-                                }
-
-                                &.group_two {
-                                    background-color: $group_two_light;
-                                }
-
-                                &.group_three {
-                                    background-color: $group_three_light;
-                                }
-
-                                &.group_four {
-                                    background-color: $group_four_light;
-                                }
                             }
                         }
                     }
@@ -407,7 +438,6 @@
                         tr {
                             td {
                                 text-align: center;
-                                background-color: $white;
                                 border-bottom: 1.5px solid $main_color;
                                 border-right: 1.5px solid $main_color;
                                 width: calc(100% / 6);
@@ -478,40 +508,13 @@
                     margin: 10px 3px;
                     padding: 8px;
 
-                    .chart_category_color {
-                        width: 20px;
-                        height: 20px;
-                        margin: 0 5px 0 0;
-                        border-radius: 50%;
-                        border: 1px solid $white;
-                    }
-
                     &.highest {
                         background-color: $main_color;
                         border-radius: 10px;
-                    }
-
-                    &.chart_category_one {
-                        .chart_category_color {
-                            background-color: $group_one;
-                        }
-                    }
-
-                    &.chart_category_two {
-                        .chart_category_color {
-                            background-color: $group_two;
-                        }
-                    }
-
-                    &.chart_category_three {
-                        .chart_category_color {
-                            background-color: $group_three;
-                        }
-                    }
-
-                    &.chart_category_four {
-                        .chart_category_color {
-                            background-color: $group_four;
+                        .chart_category_icon {
+                            i{
+                                color: $star;
+                            }
                         }
                     }
                 }
@@ -537,7 +540,7 @@
                                 color: $main_color_grey;
                                 border-bottom: 1.5px solid $main_color;
                                 border-right: 1.5px solid $main_color;
-                                background-color: $group_projects;
+                                background-color: $purple;
 
                                 .chart_information {
                                     margin: 0 auto;
@@ -552,6 +555,7 @@
                                 text-align: center;
                                 border-right: 1.5px solid $main_color;
                                 border-bottom: 1.5px solid $main_color;
+                                padding: 6px 5px;
 
                                 &:nth-child(1),
                                 &:nth-child(2),
@@ -561,11 +565,11 @@
 
                                 &:nth-child(3),
                                 &:nth-child(5) {
-                                    width: 120px;
+                                    width: 105px;
                                 }
 
                                 &.group_item {
-                                    width: calc((100% - 450px) / 4);
+                                    width: calc((100% - 420px) / 4);
                                     background-color: $white;
 
                                     &.highest {
@@ -611,7 +615,7 @@
             justify-content: center;
             width: 90%;
             margin: 0 auto;
-            bottom: 40px;
+            bottom: 30px;
             left: 50%;
             transform: translate(-50%, 0);
 
@@ -960,6 +964,10 @@
 
             .caption_table {
                 margin: 0 auto;
+
+                &::-webkit-scrollbar {
+                    background: transparent;
+                }
             }
 
             // page2
@@ -1071,12 +1079,45 @@
                 width: 100%;
                 height: 12px;
                 background: linear-gradient(135deg, $main_color_green 33%, $main_color_blue 33%, $main_color_blue 66%, $main_color 66%);
-                margin: 0 auto 30px;
+                margin: 0 auto 18px;
             }
         }
 
         .page_content {
             padding: 0 2.5%;
+
+            .chart_category_icon{
+                display: inline-block;
+    
+                i{
+                    margin: 0 3px 0 0;
+                    font-size: 18px;
+                }
+    
+                &.chart_category_one {
+                        i{
+                            color: darken($group_one, 15%);
+                        }
+                }
+    
+                &.chart_category_two {
+                        i{
+                            color: darken($group_two, 15%);
+                        }
+                }
+    
+                &.chart_category_three {
+                        i{
+                            color: darken($group_three, 15%);
+                        }
+                }
+    
+                &.chart_category_four {
+                        i{
+                            color: darken($group_four, 15%);
+                        }
+                }
+            }
 
             .bold {
                 font-weight: bold;
@@ -1312,7 +1353,7 @@
             // page2
             .pagination_tittle {
                 position: relative;
-                margin: 0 0 20px;
+                margin: 0 0 18px;
 
                 h4 {
                     color: $main_color;
@@ -1336,6 +1377,12 @@
                 .table {
                     border: 1.5px solid $main_color;
 
+                    .chart_category_icon{
+                        i{
+                            margin: 0;
+                        }
+                    }
+
                     thead {
                         tr {
                             th {
@@ -1353,8 +1400,9 @@
                                 width: 20%;
                                 border-bottom: 1.5px solid $main_color;
                                 border-right: 1.5px solid $main_color;
-                                padding: 8px 15px;
+                                padding: 6px 15px;
                                 vertical-align: middle;
+                                color: $main_color_grey;
 
                                 &.group_projects {
                                     background-color: $group_projects;
@@ -1375,11 +1423,17 @@
                                 &.group_four {
                                     background-color: $group_four_light;
                                 }
+
+                                .group_projects_img{
+                                    width: 80px;
+                                    margin: 0 auto 10px ;
+                                }
                             }
 
                             &:nth-child(7) {
                                 td {
                                     border-bottom: 0px;
+                                    padding: 6px 15px 0;
                                 }
                             }
                         }
@@ -1425,26 +1479,6 @@
                                     color: $main_color_grey;
                                     border-bottom: 1.5px solid $main_color;
                                     border-right: 1.5px solid $main_color;
-
-                                    &.group_projects {
-                                        background-color: $group_projects;
-                                    }
-
-                                    &.group_one {
-                                        background-color: $group_one_light;
-                                    }
-
-                                    &.group_two {
-                                        background-color: $group_two_light;
-                                    }
-
-                                    &.group_three {
-                                        background-color: $group_three_light;
-                                    }
-
-                                    &.group_four {
-                                        background-color: $group_four_light;
-                                    }
                                 }
                             }
                         }
@@ -1453,7 +1487,6 @@
                             tr {
                                 td {
                                     text-align: center;
-                                    background-color: $white;
                                     border-bottom: 1.5px solid $main_color;
                                     border-right: 1.5px solid $main_color;
                                     width: calc(100% / 6);
@@ -1520,40 +1553,13 @@
                         margin: 10px auto;
                         padding: 8px;
 
-                        .chart_category_color {
-                            width: 20px;
-                            height: 20px;
-                            margin: 0 5px 0 0;
-                            border-radius: 50%;
-                            border: 1px solid $white;
-                        }
-
                         &.highest {
                             background-color: $main_color;
                             border-radius: 10px;
-                        }
-
-                        &.chart_category_one {
                             .chart_category_color {
-                                background-color: $group_one;
-                            }
-                        }
-
-                        &.chart_category_two {
-                            .chart_category_color {
-                                background-color: $group_two;
-                            }
-                        }
-
-                        &.chart_category_three {
-                            .chart_category_color {
-                                background-color: $group_three;
-                            }
-                        }
-
-                        &.chart_category_four {
-                            .chart_category_color {
-                                background-color: $group_four;
+                                i{
+                                    color: $star;
+                                }
                             }
                         }
                     }
@@ -1579,7 +1585,7 @@
                                     color: $main_color_grey;
                                     border-bottom: 1.5px solid $main_color;
                                     border-right: 1.5px solid $main_color;
-                                    background-color: $group_projects;
+                                    background-color: $purple;
 
                                     .chart_information {
                                         margin: 0 auto;
@@ -1594,6 +1600,7 @@
                                     text-align: center;
                                     border-right: 1.5px solid $main_color;
                                     border-bottom: 1.5px solid $main_color;
+                                    padding: 6px 5px;
 
                                     &:nth-child(1),
                                     &:nth-child(2),
@@ -1603,11 +1610,11 @@
 
                                     &:nth-child(3),
                                     &:nth-child(5) {
-                                        width: 120px;
+                                        width: 105px;
                                     }
 
                                     &.group_item {
-                                        width: calc((100% - 450px) / 4);
+                                        width: calc((100% - 420px) / 4);
                                         background-color: $white;
 
                                         &.highest {
@@ -1653,7 +1660,7 @@
                 justify-content: center;
                 width: 90%;
                 margin: 0 auto;
-                bottom: 40px;
+                bottom: 30px;
                 left: 50%;
                 transform: translate(-50%, 0);
 
