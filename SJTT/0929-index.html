@@ -77,7 +77,7 @@
     <!-- page8 -->
     <script src="Content/js/bootstrap@5.3.2.min.js"></script>
     <script src="Content/js/chart.js@4.4.0.js"></script>
-    <script src="Content/js/datalabels@2.0.0.js"></script>
+    <!-- <script src="Content/js/datalabels@2.0.0.js"></script> -->
     <script src="Content/js/jquery-3.6.1.min.js"></script>
 
     <script>
@@ -95,21 +95,14 @@
                 animation: false
             },
         });
-
     </script>
 
 <script>
-    const canvas = document.getElementById('chartOne');
-
+    const canvas = document.getElementById('myChart');
     // Convert canvas to dataURL and log to console
     const dataURL = canvas.toDataURL();
-    console.log(dataURL);
-    // Logs data:image/png;base64,wL2dvYWwgbW9yZ...
-
-    // Convert to Base64 string
-    const base64 = getBase64StringFromDataURL(dataURL);
-    alert(base64);
-    // Logs wL2dvYWwgbW9yZ...
+    alert(dataURL);
+    document.getElementById('some-image-tag').src = myChart.toBase64Image();
 </script>
 
 </body>
