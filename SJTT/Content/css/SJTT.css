@@ -228,7 +228,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_content .chart_area .chart_canvas { width: 100%; margin: 0 0 20px 0; display: flex; justify-content: center; }
 
-.page .page_content .chart_area .chart_canvas canvas { max-width: 550px; max-height: 550px; }
+.page .page_content .chart_area .chart_canvas canvas { width: 100% !important; height: auto !important; max-width: 550px; max-height: 550px; }
 
 .page .page_content .chart_area .chart_category_area { width: 100%; display: flex; justify-content: center; flex-wrap: wrap; }
 
@@ -413,7 +413,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
   .page .page_content .chart_area .chart_area_tittle { width: 100%; display: flex; justify-content: center; margin: 20px auto; }
   .page .page_content .chart_area .chart_area_tittle h5 { color: #20221f; }
   .page .page_content .chart_area .chart_canvas { width: 67%; margin: 0 3% 0 0; display: flex; justify-content: center; }
-  .page .page_content .chart_area .chart_canvas canvas { max-width: 550px; max-height: 550px; }
+  .page .page_content .chart_area .chart_canvas canvas { width: 100% !important; height: auto !important; max-width: 550px; max-height: 550px; }
   .page .page_content .chart_area .chart_category_area { width: 25%; }
   .page .page_content .chart_area .chart_category_area .chart_category { display: flex; align-items: center; margin: 10px auto; padding: 8px; }
   .page .page_content .chart_area .chart_category_area .chart_category .chart_category_color { width: 20px; height: 20px; margin: 0 5px 0 0; border-radius: 50%; border: 1px solid #fff; }
