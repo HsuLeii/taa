@@ -92,7 +92,10 @@
                 }]
             },
             options: {
-                animation: false
+                responsive: true,
+        animation: {
+          duration: 0,
+        },
             },
         });
     </script>
@@ -101,8 +104,7 @@
     const canvas = document.getElementById('myChart');
     // Convert canvas to dataURL and log to console
     const dataURL = canvas.toDataURL();
-    alert(dataURL);
-    document.getElementById('some-image-tag').src = myChart.toBase64Image();
+    document.getElementById('some-image-tag').src = dataURL;
 </script>
 
 </body>
