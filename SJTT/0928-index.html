@@ -126,14 +126,14 @@
             },
         });
 
-        // document.getElementById('some-image-tag').src = myChart.toBase64Image();
+        document.getElementById('some-image-tag').src = myChart.toBase64Image();
 
     </script>
 
 <script>
     const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
-const img = document.getElementById("abc");
+const img = document.getElementById("some-image-tag");
 ctx.drawImage(img, 10, 10);
     </script>
 
