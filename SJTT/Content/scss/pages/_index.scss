@@ -130,6 +130,7 @@
                 p {
                     color: $main_color_grey;
                     line-height: 2.5;
+                    text-align: justify;
 
                     span {
                         font-size: 11px;
@@ -219,35 +220,8 @@
                         flex-direction: column;
                         justify-content: center;
 
-                        .page_caption_item_text_color {
-                            width: 20px;
-                            height: 20px;
-                            margin: 0 15px 0 0;
-                            border-radius: 50%;
-                        }
-
-                        .page_caption_left_text_item {
-                            display: flex;
-                            align-items: center;
-                            margin: 5px 0;
-
-                            &.page_caption_left_text_one {
-                                .page_caption_item_text_color {
-                                    background-color: $main_color_blue;
-                                }
-                            }
-
-                            &.page_caption_left_text_two {
-                                .page_caption_item_text_color {
-                                    background-color: $main_color_green;
-                                }
-                            }
-
-                            &.page_caption_left_text_three {
-                                .page_caption_item_text_color {
-                                    background-color: $main_color_orange;
-                                }
-                            }
+                        p{
+                            text-align: center;
                         }
                     }
                 }
@@ -348,9 +322,24 @@
                             border-right: 1.5px solid $main_color;
                             padding: 6px 15px;
                             color: $main_color_grey;
+                            text-align: justify;
 
                             &.group_projects {
                                 background-color: $group_projects;
+                                width: 24%;
+                                .group_projects_text{
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+                            }
+
+                            &.group_one,
+                            &.group_two,
+                            &.group_three,
+                            &.group_four{
+                                width: 19%;
                             }
 
                             &.group_one {
@@ -379,6 +368,35 @@
                             td {
                                 border-bottom: 0px;
                                 padding: 6px 15px 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.caption_table_two{
+                .table{
+                    .chart_category_icon{
+                        vertical-align: sub;
+                        i{
+                            font-size: 19px;
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            td {
+    
+                                &.group_projects {
+                                    width: 18%;
+                                }
+    
+                                &.group_one,
+                                &.group_two,
+                                &.group_three,
+                                &.group_four{
+                                    width: 20.5%;
+                                }
                             }
                         }
                     }
@@ -443,19 +461,9 @@
 
                                 &.highest {
                                     font-weight: bold;
-                                    background-color: $main_color;
-                                    border-bottom: 1.5px solid $white;
-                                    border-right: 1.5px solid $white;
+                                    background-color: $main_color_light;
                                 }
 
-                            }
-
-                            &.percentage {
-                                td {
-                                    &.highest {
-                                        border-bottom: 1.5px solid $main_color;
-                                    }
-                                }
                             }
                         }
                     }
@@ -514,6 +522,16 @@
         // page3
 
         // page4
+        .chart_information {
+            &.chart_area_information {
+                &.interpretation_examples{
+                    padding: 5px 10px;
+                    background-color: $main_color_light;
+                    border-radius: 10px;
+                }
+            }
+        }
+
         .caption_table {
             &.chart_table_list {
 
@@ -522,6 +540,7 @@
                 }
 
                 .table {
+                    min-width: 972px;
                     thead {
                         tr {
                             th {
@@ -539,25 +558,38 @@
 
                     tbody {
                         tr {
+                            &:nth-child(1){
+                                td{
+                                    &.table_id,
+                                    &.table_name{
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                            
                             td {
                                 text-align: center;
                                 border-right: 1.5px solid $main_color;
                                 border-bottom: 1.5px solid $main_color;
                                 padding: 6px 5px;
 
-                                &:nth-child(1),
-                                &:nth-child(2),
-                                &:nth-child(4) {
-                                    width: 70px;
-                                }
+                                &.table_id,
+                                    &.table_name {
+                                        text-align: left;
+                                        width: calc((100% - 560px) / 2);
+                                    }
 
-                                &:nth-child(3),
-                                &:nth-child(5) {
-                                    width: 105px;
-                                }
+                                    &.table_degree {
+                                        width: 70px;
+                                    }
+
+                                    &.table_department,
+                                    &.table_grade {
+                                        width: 105px;
+                                    }
 
                                 &.group_item {
-                                    width: calc((100% - 420px) / 4);
+                                    width: 105px;
                                     background-color: $white;
 
                                     &.highest {
@@ -607,13 +639,23 @@
             left: 50%;
             transform: translate(-50%, 0);
 
-            .copyright_text {
-                padding: 0 15px;
+            .footer_logo{
+                width: 185px;
                 background-color: $body_bg;
+                padding: 10px;
 
-                p {
-                    font-size: 13px;
-                    color: $main_color_grey;
+                .moe_logo,
+                .ntnu_logo{
+                    display: inline-block;
+                }
+
+                .moe_logo{
+                    width: 14%;
+                    margin: 0 calc(6.2% - 6px) 0 0;
+                }
+
+                .ntnu_logo{
+                    width: 79.8%;
                 }
             }
 
@@ -821,11 +863,13 @@
                             top: 0;
                             transform: translate(0, calc(-100% - 20px));
                             width: 100%;
+                            border-radius: 50%;
+                        padding: 20px 30px;
 
                             &::before {
                                 top: 100%;
                                 left: 50%;
-                                transform: translate(-100%, 0%);
+                                transform: translate(-50%, 0%);
                                 border-left: 10px solid transparent;
                                 border-top: 10px solid $main_color;
                             }
@@ -868,11 +912,8 @@
 
             .pagination {
 
-                .copyright_text {
-
-                    p {
-                        font-size: 15px;
-                    }
+                .footer_logo{
+                    width: 285px;
                 }
 
                 .page_number {
@@ -946,6 +987,16 @@
 
             .caption_table {
                 margin: 0 auto;
+
+                &.caption_table_two{
+                    .table{
+                        .chart_category_icon{
+                            i{
+                                font-size: 30px;
+                            }
+                        }
+                    }
+                }
             }
 
             // page2
@@ -1000,13 +1051,6 @@
         .page_footer {
 
             .pagination {
-
-                .copyright_text {
-
-                    p {
-                        font-size: 17px;
-                    }
-                }
 
                 .page_number {
 
@@ -1165,6 +1209,7 @@
                     p {
                         color: $main_color_grey;
                         line-height: 2.5;
+                        text-align: justify;
 
                         span {
                             font-size: 14px;
@@ -1254,35 +1299,8 @@
                             flex-direction: column;
                             justify-content: center;
 
-                            .page_caption_item_text_color {
-                                width: 20px;
-                                height: 20px;
-                                margin: 0 15px 0 0;
-                                border-radius: 50%;
-                            }
-
-                            .page_caption_left_text_item {
-                                display: flex;
-                                align-items: center;
-                                margin: 5px 0;
-
-                                &.page_caption_left_text_one {
-                                    .page_caption_item_text_color {
-                                        background-color: $main_color_blue;
-                                    }
-                                }
-
-                                &.page_caption_left_text_two {
-                                    .page_caption_item_text_color {
-                                        background-color: $main_color_green;
-                                    }
-                                }
-
-                                &.page_caption_left_text_three {
-                                    .page_caption_item_text_color {
-                                        background-color: $main_color_orange;
-                                    }
-                                }
+                            p{
+                                text-align: center;
                             }
                         }
                     }
@@ -1306,8 +1324,8 @@
                             transform: translate(0, calc(-100% - 20px));
                             background-color: $white;
                             border: 1px solid $main_color;
-                            border-radius: 10px;
-                            padding: 10px 20px;
+                            border-radius: 50%;
+                            padding: 20px 30px;
 
                             &::before {
                                 content: "";
@@ -1380,9 +1398,24 @@
                                 border-right: 1.5px solid $main_color;
                                 padding: 6px 15px;
                                 color: $main_color_grey;
+                                text-align: justify;
 
                                 &.group_projects {
                                     background-color: $group_projects;
+                                    width: 24%;
+                                    .group_projects_text{
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+                                        justify-content: center;
+                                    }
+                                }
+    
+                                &.group_one,
+                                &.group_two,
+                                &.group_three,
+                                &.group_four{
+                                    width: 19%;
                                 }
 
                                 &.group_one {
@@ -1411,6 +1444,35 @@
                                 td {
                                     border-bottom: 0px;
                                     padding: 6px 15px 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.caption_table_two{
+                    .table{
+                        .chart_category_icon{
+                            vertical-align: sub;
+                            i{
+                                font-size: 30px;
+                            }
+                        }
+    
+                        tbody {
+                            tr {
+                                td {
+        
+                                    &.group_projects {
+                                        width: 18%;
+                                    }
+        
+                                    &.group_one,
+                                    &.group_two,
+                                    &.group_three,
+                                    &.group_four{
+                                        width: 20.5%;
+                                    }
                                 }
                             }
                         }
@@ -1469,19 +1531,9 @@
                                     width: calc(100% / 6);
 
                                     &.highest {
-                                        background-color: $main_color;
-                                        border-bottom: 1.5px solid $white;
-                                        border-right: 1.5px solid $white;
+                                        background-color: $main_color_light;
                                     }
 
-                                }
-
-                                &.percentage {
-                                    td {
-                                        &.highest {
-                                            border-bottom: 1.5px solid $main_color;
-                                        }
-                                    }
                                 }
                             }
                         }
@@ -1538,6 +1590,16 @@
             // page3
 
             // page4
+            .chart_information {
+                &.chart_area_information {
+                    &.interpretation_examples{
+                        padding: 5px 10px;
+                        background-color: $main_color_light;
+                        border-radius: 10px;
+                    }
+                }
+            }
+
             .caption_table {
                 &.chart_table_list {
 
@@ -1546,6 +1608,7 @@
                     }
 
                     .table {
+                        min-width: 972px;
                         thead {
                             tr {
                                 th {
@@ -1563,25 +1626,37 @@
 
                         tbody {
                             tr {
+                                &:nth-child(1){
+                                    td{
+                                        &.table_id,
+                                        &.table_name{
+                                            text-align: center;
+                                        }
+                                    }
+                                }
                                 td {
                                     text-align: center;
                                     border-right: 1.5px solid $main_color;
                                     border-bottom: 1.5px solid $main_color;
                                     padding: 6px 5px;
 
-                                    &:nth-child(1),
-                                    &:nth-child(2),
-                                    &:nth-child(4) {
+                                    &.table_id,
+                                    &.table_name {
+                                        text-align: left;
+                                        width: calc((100% - 560px) / 2);
+                                    }
+
+                                    &.table_degree {
                                         width: 70px;
                                     }
 
-                                    &:nth-child(3),
-                                    &:nth-child(5) {
+                                    &.table_department,
+                                    &.table_grade {
                                         width: 105px;
                                     }
 
                                     &.group_item {
-                                        width: calc((100% - 420px) / 4);
+                                        width: 70px;
                                         background-color: $white;
 
                                         &.highest {
@@ -1631,13 +1706,23 @@
                 left: 50%;
                 transform: translate(-50%, 0);
 
-                .copyright_text {
-                    padding: 0 15px;
+                .footer_logo{
+                    width: 285px;
                     background-color: $body_bg;
-
-                    p {
-                        font-size: 17px;
-                        color: $main_color_grey;
+                    padding: 10px;
+    
+                    .moe_logo,
+                    .ntnu_logo{
+                        display: inline-block;
+                    }
+    
+                    .moe_logo{
+                        width: 14%;
+                        margin: 0 calc(6.2% - 6px) 0 0;
+                    }
+    
+                    .ntnu_logo{
+                        width: 79.8%;
                     }
                 }
 
