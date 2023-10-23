@@ -166,14 +166,10 @@
                         }
 
                         .page_caption_item {
-                            display: flex;
-                            justify-content: center;
-                            width: 50%;
                             position: absolute;
+                            width: 35%;
 
                             .page_caption_item_img {
-                                width: 70%;
-                                padding: 10px;
                                 border-radius: 50%;
                             }
 
@@ -194,7 +190,7 @@
                             &.page_caption_item_two {
                                 bottom: 0;
                                 left: 0%;
-                                transform: translate(-50%, 50%);
+                                transform: translate(0%, 0%);
 
                                 .page_caption_item_text {
                                     color: $main_color_green;
@@ -204,7 +200,7 @@
                             &.page_caption_item_three {
                                 bottom: 0;
                                 right: 0%;
-                                transform: translate(50%, 50%);
+                                transform: translate(0%, 0%);
 
                                 .page_caption_item_text {
                                     color: $main_color_orange;
@@ -574,10 +570,18 @@
                                 padding: 6px 5px;
 
                                 &.table_id,
-                                    &.table_name {
-                                        text-align: left;
-                                        width: calc((100% - 560px) / 2);
-                                    }
+                                &.table_name{
+                                    text-align: left;
+                                    word-break: break-all;
+                                }
+
+                                &.table_id {
+                                    width: 100px;
+                                }
+
+                                &.table_name {
+                                    width: calc(100% - 800px);
+                                }
 
                                     &.table_degree {
                                         width: 70px;
@@ -640,22 +644,15 @@
             transform: translate(-50%, 0);
 
             .footer_logo{
-                width: 185px;
+                width: 120px;
                 background-color: $body_bg;
                 padding: 10px;
 
                 .moe_logo,
                 .ntnu_logo{
                     display: inline-block;
-                }
-
-                .moe_logo{
-                    width: 14%;
-                    margin: 0 calc(6.2% - 6px) 0 0;
-                }
-
-                .ntnu_logo{
-                    width: 79.8%;
+                    width: 45%;
+                    margin: 0 calc(2.5% - 2px);
                 }
             }
 
@@ -834,16 +831,16 @@
                     .page_caption_img_left {
                         width: 60%;
 
-                        .page_caption_triangle {
+                        // .page_caption_triangle {
 
-                            .page_caption_item {
+                        //     .page_caption_item {
 
-                                .page_caption_item_img {
-                                    width: 80%;
-                                }
+                        //         .page_caption_item_img {
+                        //             width: 80%;
+                        //         }
 
-                            }
-                        }
+                        //     }
+                        // }
 
                         .page_caption_left_text {
                             width: 65%;
@@ -913,7 +910,7 @@
             .pagination {
 
                 .footer_logo{
-                    width: 285px;
+                    width: 180px;
                 }
 
                 .page_number {
@@ -1245,46 +1242,42 @@
                             }
 
                             .page_caption_item {
-                                display: flex;
-                                justify-content: center;
-                                width: 50%;
                                 position: absolute;
-
+                                width: 35%;
+    
                                 .page_caption_item_img {
-                                    width: 80%;
-                                    padding: 10px;
                                     border-radius: 50%;
                                 }
-
+    
                                 .page_caption_item_text {
                                     margin: 15px auto;
                                 }
-
+    
                                 &.page_caption_item_one {
                                     top: 0;
                                     left: 50%;
                                     transform: translate(-50%, -50%);
-
+    
                                     .page_caption_item_text {
                                         color: $main_color_blue;
                                     }
                                 }
-
+    
                                 &.page_caption_item_two {
                                     bottom: 0;
                                     left: 0%;
-                                    transform: translate(-50%, 50%);
-
+                                    transform: translate(0%, 0%);
+    
                                     .page_caption_item_text {
                                         color: $main_color_green;
                                     }
                                 }
-
+    
                                 &.page_caption_item_three {
                                     bottom: 0;
                                     right: 0%;
-                                    transform: translate(50%, 50%);
-
+                                    transform: translate(0%, 0%);
+    
                                     .page_caption_item_text {
                                         color: $main_color_orange;
                                     }
@@ -1641,9 +1634,17 @@
                                     padding: 6px 5px;
 
                                     &.table_id,
-                                    &.table_name {
+                                    &.table_name{
                                         text-align: left;
-                                        width: calc((100% - 560px) / 2);
+                                        word-break: break-all;
+                                    }
+    
+                                    &.table_id {
+                                        width: 100px;
+                                    }
+    
+                                    &.table_name {
+                                        width: calc(100% - 800px);
                                     }
 
                                     &.table_degree {
@@ -1656,7 +1657,7 @@
                                     }
 
                                     &.group_item {
-                                        width: 70px;
+                                        width: 105px;
                                         background-color: $white;
 
                                         &.highest {
@@ -1707,23 +1708,16 @@
                 transform: translate(-50%, 0);
 
                 .footer_logo{
-                    width: 285px;
+                    width: 180px;
                     background-color: $body_bg;
                     padding: 10px;
     
                     .moe_logo,
                     .ntnu_logo{
-                        display: inline-block;
-                    }
-    
-                    .moe_logo{
-                        width: 14%;
-                        margin: 0 calc(6.2% - 6px) 0 0;
-                    }
-    
-                    .ntnu_logo{
-                        width: 79.8%;
-                    }
+                    display: inline-block;
+                    width: 45%;
+                    margin: 0 calc(2.5% - 2px);
+                }
                 }
 
                 .page_number {
