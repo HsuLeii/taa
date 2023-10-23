@@ -242,7 +242,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_content .chart_area .chart_category_area { width: 100%; display: flex; flex-wrap: wrap; }
 
-.page .page_content .chart_area .chart_category_area .chart_category { display: flex; align-items: center; margin: 10px 3px; padding: 8px; }
+.page .page_content .chart_area .chart_category_area .chart_category { display: flex; align-items: center; margin: 10px 0; padding: 5px; }
 
 .page .page_content .chart_information.chart_area_information.interpretation_examples { padding: 5px 10px; background-color: #ffaf8b; border-radius: 10px; }
 
@@ -302,7 +302,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
   .page .page_content .page_caption .page_caption_img { margin: 80px auto 20px; }
   .page .page_content .page_caption .page_caption_img .page_caption_img_right .page_caption_item_img { width: 35%; }
   .page .page_content .page_caption .page_caption_img .page_caption_img_right .page_caption_item_text { width: calc(100% - 40%); }
-  .page .page_content .chart_area .chart_canvas { width: 75%; margin: 0 0 40px 0; }
+  .page .page_content .chart_area .chart_canvas { width: 80%; margin: 0 0 40px 0; }
   .page .page_content .chart_area .chart_category_area { justify-content: center; } }
 
 @media screen and (min-width: 576px) { .page .page_content .page_caption .page_caption_img .page_caption_img_left .page_caption_left_text { margin: 60px auto 0; }
@@ -318,10 +318,9 @@ button:disabled a { color: #fff !important; cursor: auto; }
   .page .page_content .page_caption .page_caption_img .page_caption_img_right .page_caption_item_text { top: 0; transform: translate(0, calc(-100% - 20px)); width: 100%; border-radius: 50%; padding: 20px 30px; }
   .page .page_content .page_caption .page_caption_img .page_caption_img_right .page_caption_item_text::before { top: 100%; left: 50%; transform: translate(-50%, 0%); border-left: 10px solid transparent; border-top: 10px solid #e7591a; }
   .page .page_content .chart_area .chart_area_tittle { margin: 30px auto; }
-  .page .page_content .chart_area .chart_canvas { width: 67%; margin: 0 3% 0 0; }
-  .page .page_content .chart_area .chart_category_area { width: 30%; flex-direction: column; }
+  .page .page_content .chart_area .chart_canvas { width: 72%; margin: 0 3% 0 0; }
+  .page .page_content .chart_area .chart_category_area { width: 25%; flex-direction: column; }
   .page .page_content .chart_area .chart_category_area .chart_category { width: 100%; }
-  .page .page_footer .pagination .footer_logo { width: 180px; }
   .page .page_footer .pagination .page_number::before { font-size: 15px; } }
 
 @media screen and (min-width: 1024px) { .page .page_content { padding: 0 2.5%; }
@@ -424,10 +423,10 @@ button:disabled a { color: #fff !important; cursor: auto; }
   .page .page_content .chart_area { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; margin: 20px auto; }
   .page .page_content .chart_area .chart_area_tittle { width: 100%; display: flex; justify-content: center; margin: 20px auto; }
   .page .page_content .chart_area .chart_area_tittle h5 { color: #20221f; }
-  .page .page_content .chart_area .chart_canvas { width: 67%; margin: 0 3% 0 0; display: flex; justify-content: center; }
+  .page .page_content .chart_area .chart_canvas { width: 72%; margin: 0 3% 0 0; display: flex; justify-content: center; }
   .page .page_content .chart_area .chart_canvas canvas { width: 100% !important; height: auto !important; max-width: 550px; max-height: 550px; }
   .page .page_content .chart_area .chart_category_area { width: 25%; }
-  .page .page_content .chart_area .chart_category_area .chart_category { display: flex; align-items: center; margin: 10px 3px; padding: 8px; }
+  .page .page_content .chart_area .chart_category_area .chart_category { display: flex; align-items: center; margin: 10px 0; padding: 5px; }
   .page .page_content .chart_information.chart_area_information.interpretation_examples { padding: 5px 10px; background-color: #ffaf8b; border-radius: 10px; }
   .page .page_content .caption_table.chart_table_list .list_caption { margin: 0 auto 20px; }
   .page .page_content .caption_table.chart_table_list .table { min-width: 972px; }
@@ -448,7 +447,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
   .page .page_content .caption_table.chart_table_list .table tbody tr td.group_item.highest.group_four { background-color: #efc2c1; }
   .page .page_footer { position: absolute; bottom: 0; width: 100%; }
   .page .page_footer .pagination { position: absolute; display: flex; justify-content: center; width: 90%; margin: 0 auto; bottom: 30px; left: 50%; transform: translate(-50%, 0); }
-  .page .page_footer .pagination .footer_logo { width: 180px; background-color: #fef3f0; padding: 10px; }
+  .page .page_footer .pagination .footer_logo { width: 120px; background-color: #fef3f0; padding: 10px; }
   .page .page_footer .pagination .footer_logo .moe_logo, .page .page_footer .pagination .footer_logo .ntnu_logo { display: inline-block; width: 45%; margin: 0 calc(2.5% - 2px); }
   .page .page_footer .pagination .page_number { position: absolute; right: 5px; top: 50%; transform: translate(0, -50%); z-index: 1; }
   .page .page_footer .pagination .page_number::before { counter-increment: current; content: counter(current) "/" counter(total); font-size: 13px; color: #20221f; border: 1px solid #20221f; border-radius: 50px; background-color: #fef3f0; padding: 5px 10px; }

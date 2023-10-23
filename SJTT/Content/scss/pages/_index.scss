@@ -507,8 +507,8 @@
                 .chart_category {
                     display: flex;
                     align-items: center;
-                    margin: 10px 3px;
-                    padding: 8px;
+                    margin: 10px 0;
+                    padding: 5px;
                 }
             }
 
@@ -742,7 +742,7 @@
             // page3
             .chart_area {
                 .chart_canvas {
-                    width: 75%;
+                    width: 80%;
                     margin: 0 0 40px 0;
                 }
 
@@ -886,12 +886,12 @@
                 }
 
                 .chart_canvas {
-                    width: 67%;
+                    width: 72%;
                     margin: 0 3% 0 0;
                 }
 
                 .chart_category_area {
-                    width: 30%;
+                    width: 25%;
                     flex-direction: column;
 
                     .chart_category {
@@ -908,10 +908,6 @@
         .page_footer {
 
             .pagination {
-
-                .footer_logo{
-                    width: 180px;
-                }
 
                 .page_number {
 
@@ -1553,7 +1549,7 @@
                 }
 
                 .chart_canvas {
-                    width: 67%;
+                    width: 72%;
                     margin: 0 3% 0 0;
                     display: flex;
                     justify-content: center;
@@ -1572,8 +1568,8 @@
                     .chart_category {
                         display: flex;
                         align-items: center;
-                        margin: 10px 3px;
-                        padding: 8px;
+                        margin: 10px 0;
+                        padding: 5px;
                     }
                 }
 
@@ -1708,7 +1704,7 @@
                 transform: translate(-50%, 0);
 
                 .footer_logo{
-                    width: 180px;
+                    width: 120px;
                     background-color: $body_bg;
                     padding: 10px;
     
