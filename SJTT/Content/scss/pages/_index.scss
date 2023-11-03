@@ -30,36 +30,36 @@
     .page_content {
         padding: 0 5%;
 
-        .chart_category_icon{
+        .chart_category_icon {
             display: inline-block;
 
-            i{
+            i {
                 margin: 0 3px 0 0;
                 font-size: 18px;
             }
 
             &.chart_category_one {
-                    i{
-                        color: darken($group_one, 15%);
-                    }
+                i {
+                    color: darken($group_one, 15%);
+                }
             }
 
             &.chart_category_two {
-                    i{
-                        color: darken($group_two, 15%);
-                    }
+                i {
+                    color: darken($group_two, 15%);
+                }
             }
 
             &.chart_category_three {
-                    i{
-                        color: darken($group_three, 15%);
-                    }
+                i {
+                    color: darken($group_three, 15%);
+                }
             }
 
             &.chart_category_four {
-                    i{
-                        color: darken($group_four, 15%);
-                    }
+                i {
+                    color: darken($group_four, 15%);
+                }
             }
         }
 
@@ -141,123 +141,6 @@
                     }
                 }
             }
-
-            .page_caption_img {
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-end;
-                margin: 50px auto 20px;
-                flex-direction: column;
-
-                .page_caption_img_left {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    width: 80%;
-                    margin: 0 auto;
-
-                    .page_caption_triangle {
-                        position: relative;
-                        width: 100%;
-
-                        .page_caption_svg {
-                            width: 100%;
-                        }
-
-                        .page_caption_item {
-                            position: absolute;
-                            width: 35%;
-
-                            .page_caption_item_img {
-                                border-radius: 50%;
-                            }
-
-                            .page_caption_item_text {
-                                margin: 15px auto;
-                            }
-
-                            &.page_caption_item_one {
-                                top: 0;
-                                left: 50%;
-                                transform: translate(-50%, -50%);
-
-                                .page_caption_item_text {
-                                    color: $main_color_blue;
-                                }
-                            }
-
-                            &.page_caption_item_two {
-                                bottom: 0;
-                                left: 0%;
-                                transform: translate(0%, 0%);
-
-                                .page_caption_item_text {
-                                    color: $main_color_green;
-                                }
-                            }
-
-                            &.page_caption_item_three {
-                                bottom: 0;
-                                right: 0%;
-                                transform: translate(0%, 0%);
-
-                                .page_caption_item_text {
-                                    color: $main_color_orange;
-                                }
-                            }
-                        }
-                    }
-
-                    .page_caption_left_text {
-                        width: 80%;
-                        margin: 40px auto 0;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-
-                        p{
-                            text-align: center;
-                        }
-                    }
-                }
-
-                .page_caption_img_right {
-                    position: relative;
-                    display: flex;
-                    justify-content: flex-end;
-                    width: 100%;
-
-                    .page_caption_item_img {
-                        width: 25%;
-                    }
-
-                    .page_caption_item_text {
-                        width: calc(100% - 30%);
-                        position: absolute;
-                        top: 50%;
-                        left: 0;
-                        transform: translate(0, -50%);
-                        background-color: $white;
-                        border: 1px solid $main_color;
-                        border-radius: 10px;
-                        padding: 10px 20px;
-
-                        &::before {
-                            content: "";
-                            position: absolute;
-                            border-width: 0px 10px 10px 10px;
-                            top: 50%;
-                            left: 100%;
-                            transform: translate(0%, -50%);
-                            border-left: 10px solid $main_color;
-                            border-bottom: 10px solid transparent;
-                            border-top: 10px solid transparent;
-                            border-right: 10px solid transparent;
-                        }
-                    }
-                }
-            }
         }
 
         // page1
@@ -290,11 +173,11 @@
             }
 
             .table {
-                min-width: 760px;
+                min-width: 845px;
                 border: 1.5px solid $main_color;
 
-                .chart_category_icon{
-                    i{
+                .chart_category_icon {
+                    i {
                         margin: 0;
                     }
                 }
@@ -304,7 +187,7 @@
                         th {
                             color: $white;
                             background-color: $main_color;
-                            padding: 12px 10px;
+                            padding: 5px 10px;
                             text-align: center;
                         }
                     }
@@ -319,11 +202,17 @@
                             padding: 6px 15px;
                             color: $main_color_grey;
                             text-align: justify;
+                            vertical-align: middle;
+
+                            &:nth-child(1) {
+                                text-align: center;
+                            }
 
                             &.group_projects {
                                 background-color: $group_projects;
                                 width: 24%;
-                                .group_projects_text{
+
+                                .group_projects_text {
                                     display: flex;
                                     flex-direction: column;
                                     align-items: center;
@@ -334,7 +223,7 @@
                             &.group_one,
                             &.group_two,
                             &.group_three,
-                            &.group_four{
+                            &.group_four {
                                 width: 19%;
                             }
 
@@ -354,13 +243,17 @@
                                 background-color: $group_four_light;
                             }
 
-                            .group_projects_img{
+                            &.group_icon_item{
+                                text-align: center;
+                            }
+
+                            .group_projects_img {
                                 width: 70px;
-                                margin: 0 auto 10px 
+                                margin: 0 auto 10px
                             }
                         }
 
-                        &:nth-child(7) {
+                        &:nth-child(8) {
                             td {
                                 border-bottom: 0px;
                                 padding: 6px 15px 0;
@@ -370,29 +263,14 @@
                 }
             }
 
-            &.caption_table_two{
-                .table{
-                    .chart_category_icon{
-                        vertical-align: sub;
-                        i{
-                            font-size: 19px;
-                        }
-                    }
-
-                    tbody {
-                        tr {
-                            td {
+            &.caption_table_two {
+                .table {
+                    .group_icon_item{
+                        .chart_category_icon {
+                            vertical-align: sub;
     
-                                &.group_projects {
-                                    width: 18%;
-                                }
-    
-                                &.group_one,
-                                &.group_two,
-                                &.group_three,
-                                &.group_four{
-                                    width: 20.5%;
-                                }
+                            i {
+                                font-size: 19px;
                             }
                         }
                     }
@@ -426,7 +304,7 @@
                 .chart_information_text {
                     margin: 5px 0;
 
-                    &.chart_information_list{
+                    &.chart_information_list {
                         display: flex;
                         align-items: center;
                     }
@@ -520,7 +398,7 @@
         // page4
         .chart_information {
             &.chart_area_information {
-                &.interpretation_examples{
+                &.interpretation_examples {
                     padding: 5px 10px;
                     background-color: $main_color_light;
                     border-radius: 10px;
@@ -537,6 +415,7 @@
 
                 .table {
                     min-width: 972px;
+
                     thead {
                         tr {
                             th {
@@ -554,15 +433,16 @@
 
                     tbody {
                         tr {
-                            &:nth-child(1){
-                                td{
+                            &:nth-child(1) {
+                                td {
+
                                     &.table_id,
-                                    &.table_name{
+                                    &.table_name {
                                         text-align: center;
                                     }
                                 }
                             }
-                            
+
                             td {
                                 text-align: center;
                                 border-right: 1.5px solid $main_color;
@@ -570,7 +450,7 @@
                                 padding: 6px 5px;
 
                                 &.table_id,
-                                &.table_name{
+                                &.table_name {
                                     text-align: left;
                                     word-break: break-all;
                                 }
@@ -583,14 +463,14 @@
                                     width: calc(100% - 800px);
                                 }
 
-                                    &.table_degree {
-                                        width: 70px;
-                                    }
+                                &.table_degree {
+                                    width: 70px;
+                                }
 
-                                    &.table_department,
-                                    &.table_grade {
-                                        width: 105px;
-                                    }
+                                &.table_department,
+                                &.table_grade {
+                                    width: 105px;
+                                }
 
                                 &.group_item {
                                     width: 105px;
@@ -643,13 +523,13 @@
             left: 50%;
             transform: translate(-50%, 0);
 
-            .footer_logo{
+            .footer_logo {
                 width: 120px;
                 background-color: $body_bg;
                 padding: 10px;
 
                 .moe_logo,
-                .ntnu_logo{
+                .ntnu_logo {
                     display: inline-block;
                     width: 45%;
                     margin: 0 calc(2.5% - 2px);
@@ -715,24 +595,6 @@
 
                     &::after {
                         width: calc(100% + 50px);
-                    }
-                }
-            }
-
-            .page_caption {
-
-                .page_caption_img {
-                    margin: 80px auto 20px;
-
-                    .page_caption_img_right {
-
-                        .page_caption_item_img {
-                            width: 35%;
-                        }
-
-                        .page_caption_item_text {
-                            width: calc(100% - 40%);
-                        }
                     }
                 }
             }
@@ -804,57 +666,6 @@
                             }
                         }
                     }
-                }
-
-                .page_caption_img {
-                    flex-direction: row;
-                    align-items: center;
-                    margin: 110px auto 20px;
-
-                    .page_caption_img_left {
-                        width: 60%;
-
-                        // .page_caption_triangle {
-
-                        //     .page_caption_item {
-
-                        //         .page_caption_item_img {
-                        //             width: 80%;
-                        //         }
-
-                        //     }
-                        // }
-
-                        .page_caption_left_text {
-                            width: 65%;
-                        }
-                    }
-
-                    .page_caption_img_right {
-                        width: 35%;
-                        margin: 0 0 0 5%;
-
-                        .page_caption_item_img {
-                            width: 80%;
-                        }
-
-                        .page_caption_item_text {
-                            top: 0;
-                            transform: translate(0, calc(-100% - 20px));
-                            width: 100%;
-                            border-radius: 50%;
-                        padding: 20px 30px;
-
-                            &::before {
-                                top: 100%;
-                                left: 50%;
-                                transform: translate(-50%, 0%);
-                                border-left: 10px solid transparent;
-                                border-top: 10px solid $main_color;
-                            }
-                        }
-                    }
-
                 }
             }
 
@@ -941,19 +752,6 @@
                         }
                     }
                 }
-
-                .page_caption_img {
-                    align-items: flex-end;
-                    margin: 150px auto 20px;
-
-                    .page_caption_img_left {
-                        width: 50%;
-                    }
-
-                    .page_caption_img_right {
-                        width: 48%;
-                    }
-                }
             }
 
             // page1
@@ -963,11 +761,13 @@
             .caption_table {
                 margin: 0 auto;
 
-                &.caption_table_two{
-                    .table{
-                        .chart_category_icon{
-                            i{
-                                font-size: 30px;
+                &.caption_table_two {
+                    .table {
+                        .group_icon_item{
+                            .chart_category_icon {
+                                i {
+                                    font-size: 30px;
+                                }
                             }
                         }
                     }
@@ -1083,36 +883,36 @@
         .page_content {
             padding: 0 2.5%;
 
-            .chart_category_icon{
+            .chart_category_icon {
                 display: inline-block;
-    
-                i{
+
+                i {
                     margin: 0 3px 0 0;
                     font-size: 18px;
                 }
-    
+
                 &.chart_category_one {
-                        i{
-                            color: darken($group_one, 15%);
-                        }
+                    i {
+                        color: darken($group_one, 15%);
+                    }
                 }
-    
+
                 &.chart_category_two {
-                        i{
-                            color: darken($group_two, 15%);
-                        }
+                    i {
+                        color: darken($group_two, 15%);
+                    }
                 }
-    
+
                 &.chart_category_three {
-                        i{
-                            color: darken($group_three, 15%);
-                        }
+                    i {
+                        color: darken($group_three, 15%);
+                    }
                 }
-    
+
                 &.chart_category_four {
-                        i{
-                            color: darken($group_four, 15%);
-                        }
+                    i {
+                        color: darken($group_four, 15%);
+                    }
                 }
             }
 
@@ -1195,124 +995,6 @@
                         }
                     }
                 }
-
-                .page_caption_img {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: flex-end;
-                    margin: 150px auto 20px;
-                    flex-direction: row;
-
-                    .page_caption_img_left {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        width: 50%;
-                        margin: 0 auto;
-
-                        .page_caption_triangle {
-                            position: relative;
-                            width: 100%;
-
-                            .page_caption_svg {
-                                width: 100%;
-                            }
-
-                            .page_caption_item {
-                                position: absolute;
-                                width: 35%;
-    
-                                .page_caption_item_img {
-                                    border-radius: 50%;
-                                }
-    
-                                .page_caption_item_text {
-                                    margin: 15px auto;
-                                }
-    
-                                &.page_caption_item_one {
-                                    top: 0;
-                                    left: 50%;
-                                    transform: translate(-50%, -50%);
-    
-                                    .page_caption_item_text {
-                                        color: $main_color_blue;
-                                    }
-                                }
-    
-                                &.page_caption_item_two {
-                                    bottom: 0;
-                                    left: 0%;
-                                    transform: translate(0%, 0%);
-    
-                                    .page_caption_item_text {
-                                        color: $main_color_green;
-                                    }
-                                }
-    
-                                &.page_caption_item_three {
-                                    bottom: 0;
-                                    right: 0%;
-                                    transform: translate(0%, 0%);
-    
-                                    .page_caption_item_text {
-                                        color: $main_color_orange;
-                                    }
-                                }
-                            }
-                        }
-
-                        .page_caption_left_text {
-                            width: 65%;
-                            margin: 40px auto 0;
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-
-                            p{
-                                text-align: center;
-                            }
-                        }
-                    }
-
-                    .page_caption_img_right {
-                        position: relative;
-                        display: flex;
-                        justify-content: flex-end;
-                        width: 48%;
-                        margin: 0 0 0 5%;
-
-                        .page_caption_item_img {
-                            width: 80%;
-                        }
-
-                        .page_caption_item_text {
-                            width: 100%;
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            transform: translate(0, calc(-100% - 20px));
-                            background-color: $white;
-                            border: 1px solid $main_color;
-                            border-radius: 50%;
-                            padding: 20px 30px;
-
-                            &::before {
-                                content: "";
-                                position: absolute;
-                                border-width: 0px 10px 10px 10px;
-                                top: 100%;
-                                left: 50%;
-                                transform: translate(-100%, 0%);
-                                border-left: 10px solid transparent;
-                                border-bottom: 10px solid transparent;
-                                border-top: 10px solid $main_color;
-                                border-right: 10px solid transparent;
-                            }
-                        }
-                    }
-                }
             }
 
             // page1
@@ -1344,8 +1026,8 @@
                 .table {
                     border: 1.5px solid $main_color;
 
-                    .chart_category_icon{
-                        i{
+                    .chart_category_icon {
+                        i {
                             margin: 0;
                         }
                     }
@@ -1355,7 +1037,7 @@
                             th {
                                 color: $white;
                                 background-color: $main_color;
-                                padding: 12px 10px;
+                                padding: 5px 10px;
                                 text-align: center;
                             }
                         }
@@ -1370,22 +1052,28 @@
                                 padding: 6px 15px;
                                 color: $main_color_grey;
                                 text-align: justify;
+                                vertical-align: middle;
+
+                                &:nth-child(1) {
+                                    text-align: center;
+                                }
 
                                 &.group_projects {
                                     background-color: $group_projects;
                                     width: 24%;
-                                    .group_projects_text{
+
+                                    .group_projects_text {
                                         display: flex;
                                         flex-direction: column;
                                         align-items: center;
                                         justify-content: center;
                                     }
                                 }
-    
+
                                 &.group_one,
                                 &.group_two,
                                 &.group_three,
-                                &.group_four{
+                                &.group_four {
                                     width: 19%;
                                 }
 
@@ -1405,13 +1093,17 @@
                                     background-color: $group_four_light;
                                 }
 
-                                .group_projects_img{
+                                &.group_icon_item{
+                                text-align: center;
+                            }
+
+                                .group_projects_img {
                                     width: 80px;
-                                    margin: 0 auto 10px ;
+                                    margin: 0 auto 10px;
                                 }
                             }
 
-                            &:nth-child(7) {
+                            &:nth-child(8) {
                                 td {
                                     border-bottom: 0px;
                                     padding: 6px 15px 0;
@@ -1421,27 +1113,31 @@
                     }
                 }
 
-                &.caption_table_two{
-                    .table{
-                        .chart_category_icon{
-                            vertical-align: sub;
-                            i{
-                                font-size: 30px;
+                &.caption_table_two {
+                    .table {
+                        .group_icon_item{
+                            .chart_category_icon {
+                                vertical-align: sub;
+    
+                                i {
+                                    font-size: 30px;
+                                }
                             }
                         }
-    
+                        
+
                         tbody {
                             tr {
                                 td {
-        
+
                                     &.group_projects {
                                         width: 18%;
                                     }
-        
+
                                     &.group_one,
                                     &.group_two,
                                     &.group_three,
-                                    &.group_four{
+                                    &.group_four {
                                         width: 20.5%;
                                     }
                                 }
@@ -1538,9 +1234,9 @@
 
                     canvas {
                         width: 100% !important;
-                    height: auto !important;
-                    max-width: 550px;
-                    max-height: 550px;
+                        height: auto !important;
+                        max-width: 550px;
+                        max-height: 550px;
                     }
                 }
 
@@ -1563,7 +1259,7 @@
             // page4
             .chart_information {
                 &.chart_area_information {
-                    &.interpretation_examples{
+                    &.interpretation_examples {
                         padding: 5px 10px;
                         background-color: $main_color_light;
                         border-radius: 10px;
@@ -1580,6 +1276,7 @@
 
                     .table {
                         min-width: 972px;
+
                         thead {
                             tr {
                                 th {
@@ -1597,14 +1294,16 @@
 
                         tbody {
                             tr {
-                                &:nth-child(1){
-                                    td{
+                                &:nth-child(1) {
+                                    td {
+
                                         &.table_id,
-                                        &.table_name{
+                                        &.table_name {
                                             text-align: center;
                                         }
                                     }
                                 }
+
                                 td {
                                     text-align: center;
                                     border-right: 1.5px solid $main_color;
@@ -1612,15 +1311,15 @@
                                     padding: 6px 5px;
 
                                     &.table_id,
-                                    &.table_name{
+                                    &.table_name {
                                         text-align: left;
                                         word-break: break-all;
                                     }
-    
+
                                     &.table_id {
                                         width: 100px;
                                     }
-    
+
                                     &.table_name {
                                         width: calc(100% - 800px);
                                     }
@@ -1685,17 +1384,17 @@
                 left: 50%;
                 transform: translate(-50%, 0);
 
-                .footer_logo{
+                .footer_logo {
                     width: 120px;
                     background-color: $body_bg;
                     padding: 10px;
-    
+
                     .moe_logo,
-                    .ntnu_logo{
-                    display: inline-block;
-                    width: 45%;
-                    margin: 0 calc(2.5% - 2px);
-                }
+                    .ntnu_logo {
+                        display: inline-block;
+                        width: 45%;
+                        margin: 0 calc(2.5% - 2px);
+                    }
                 }
 
                 .page_number {
