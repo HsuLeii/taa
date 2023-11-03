@@ -211,12 +211,17 @@
                             &.group_projects {
                                 background-color: $group_projects;
                                 width: 24%;
+                                padding: 5px;
 
                                 .group_projects_text {
                                     display: flex;
                                     flex-direction: column;
                                     align-items: center;
                                     justify-content: center;
+
+                                    span{
+                                        letter-spacing: 1px;
+                                    }
                                 }
                             }
 
@@ -1066,12 +1071,17 @@
                                 &.group_projects {
                                     background-color: $group_projects;
                                     width: 24%;
+                                    padding: 5px;
 
                                     .group_projects_text {
                                         display: flex;
                                         flex-direction: column;
                                         align-items: center;
                                         justify-content: center;
+
+                                        span{
+                                            letter-spacing: 1px;
+                                        }
                                     }
                                 }
 
