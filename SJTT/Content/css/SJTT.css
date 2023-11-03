@@ -146,9 +146,9 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_content .caption_table .table thead tr th { color: #fff; background-color: #e7591a; padding: 5px 10px; text-align: center; }
 
-.page .page_content .caption_table .table tbody tr td { width: 20%; border-bottom: 1.5px solid #e7591a; border-right: 1.5px solid #e7591a; padding: 6px 15px; color: #20221f; text-align: justify; vertical-align: middle; }
+.page .page_content .caption_table .table tbody tr td { width: 20%; border-bottom: 1.5px solid #e7591a; border-right: 1.5px solid #e7591a; padding: 5px 15px; color: #20221f; text-align: justify; }
 
-.page .page_content .caption_table .table tbody tr td:nth-child(1) { text-align: center; }
+.page .page_content .caption_table .table tbody tr td:nth-child(1) { text-align: center; vertical-align: middle; }
 
 .page .page_content .caption_table .table tbody tr td.group_projects { background-color: #fff; width: 24%; }
 
@@ -168,11 +168,11 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_content .caption_table .table tbody tr td .group_projects_img { width: 70px; margin: 0 auto 10px; }
 
-.page .page_content .caption_table .table tbody tr:nth-child(8) td { border-bottom: 0px; padding: 6px 15px 0; }
+.page .page_content .caption_table .table tbody tr:nth-child(8) td { border-bottom: 0px; padding: 5px 15px 0; }
 
-.page .page_content .caption_table.caption_table_two .table .group_icon_item .chart_category_icon { vertical-align: sub; }
+.page .page_content .caption_table.caption_table_two .table .group_icon_item .chart_category_icon.big_icon { vertical-align: sub; }
 
-.page .page_content .caption_table.caption_table_two .table .group_icon_item .chart_category_icon i { font-size: 19px; }
+.page .page_content .caption_table.caption_table_two .table .group_icon_item .chart_category_icon.big_icon i { font-size: 19px; }
 
 .page .page_content .chart_information { display: flex; justify-content: flex-start; margin: 0 auto 20px; flex-wrap: wrap; }
 
@@ -282,7 +282,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
   .page .page_content .page_caption .page_caption_text p span { font-size: 14px; }
   .page .page_content .page_caption .page_caption_text p span.bold { font-size: 17px; }
   .page .page_content .caption_table { margin: 0 auto; }
-  .page .page_content .caption_table.caption_table_two .table .group_icon_item .chart_category_icon i { font-size: 30px; }
+  .page .page_content .caption_table.caption_table_two .table .group_icon_item .chart_category_icon.big_icon i { font-size: 30px; }
   .page .page_content .chart_information { justify-content: center; }
   .page .page_content .chart_information .chart_information_text { margin: 0 20px; }
   .page .page_content .chart_area .chart_area_tittle { margin: 20px auto; }
@@ -327,8 +327,8 @@ button:disabled a { color: #fff !important; cursor: auto; }
   .page .page_content .caption_table .table { border: 1.5px solid #e7591a; }
   .page .page_content .caption_table .table .chart_category_icon i { margin: 0; }
   .page .page_content .caption_table .table thead tr th { color: #fff; background-color: #e7591a; padding: 5px 10px; text-align: center; }
-  .page .page_content .caption_table .table tbody tr td { width: 20%; border-bottom: 1.5px solid #e7591a; border-right: 1.5px solid #e7591a; padding: 6px 15px; color: #20221f; text-align: justify; vertical-align: middle; }
-  .page .page_content .caption_table .table tbody tr td:nth-child(1) { text-align: center; }
+  .page .page_content .caption_table .table tbody tr td { width: 20%; border-bottom: 1.5px solid #e7591a; border-right: 1.5px solid #e7591a; padding: 5px 15px; color: #20221f; text-align: justify; }
+  .page .page_content .caption_table .table tbody tr td:nth-child(1) { text-align: center; vertical-align: middle; }
   .page .page_content .caption_table .table tbody tr td.group_projects { background-color: #fff; width: 24%; }
   .page .page_content .caption_table .table tbody tr td.group_projects .group_projects_text { display: flex; flex-direction: column; align-items: center; justify-content: center; }
   .page .page_content .caption_table .table tbody tr td.group_one, .page .page_content .caption_table .table tbody tr td.group_two, .page .page_content .caption_table .table tbody tr td.group_three, .page .page_content .caption_table .table tbody tr td.group_four { width: 19%; }
@@ -338,9 +338,9 @@ button:disabled a { color: #fff !important; cursor: auto; }
   .page .page_content .caption_table .table tbody tr td.group_four { background-color: #efc2c1; }
   .page .page_content .caption_table .table tbody tr td.group_icon_item { text-align: center; }
   .page .page_content .caption_table .table tbody tr td .group_projects_img { width: 80px; margin: 0 auto 10px; }
-  .page .page_content .caption_table .table tbody tr:nth-child(8) td { border-bottom: 0px; padding: 6px 15px 0; }
-  .page .page_content .caption_table.caption_table_two .table .group_icon_item .chart_category_icon { vertical-align: sub; }
-  .page .page_content .caption_table.caption_table_two .table .group_icon_item .chart_category_icon i { font-size: 30px; }
+  .page .page_content .caption_table .table tbody tr:nth-child(8) td { border-bottom: 0px; padding: 5px 15px 0; }
+  .page .page_content .caption_table.caption_table_two .table .group_icon_item .chart_category_icon.big_icon { vertical-align: sub; }
+  .page .page_content .caption_table.caption_table_two .table .group_icon_item .chart_category_icon.big_icon i { font-size: 30px; }
   .page .page_content .caption_table.caption_table_two .table tbody tr td.group_projects { width: 18%; }
   .page .page_content .caption_table.caption_table_two .table tbody tr td.group_one, .page .page_content .caption_table.caption_table_two .table tbody tr td.group_two, .page .page_content .caption_table.caption_table_two .table tbody tr td.group_three, .page .page_content .caption_table.caption_table_two .table tbody tr td.group_four { width: 20.5%; }
   .page .page_content .chart_information { display: flex; justify-content: center; margin: 0 auto 20px; flex-wrap: wrap; }
