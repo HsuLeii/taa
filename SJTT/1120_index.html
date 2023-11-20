@@ -7,101 +7,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TAA</title>
   <link rel="shortcut icon" type="image/x-icon" href="Content/image/favicon.ico">
+  
 </head>
 
 <body>
+
+    
     <div>
         <p id="p1">Hello World!</p>
         <img id="url">
         <canvas id="myChart"></canvas>
       </div>
       
-  <script src="Content/js/jquery-3.6.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  
 
-  <script>
-    
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  
 
-    // Chart.register(ChartDataLabels);
-    // const ctx = document.getElementById('myChart');
-  
-
-
-    var myLine = new Chart(document.getElementById("myChart").getContext("2d"),{
-      type: 'bar',
-      data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-          label: '# of Votes',
-          data: [12, 19, 3, 5, 2, 3],
-          borderWidth: 1,
-          backgroundColor: "green",
-        }]
+      <script>
+        var myLine = new Chart(document.getElementById("myChart").getContext("2d"),{
+          type: 'bar',
+          data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+              label: '# of Votes',
+              data: [12, 19, 3, 5, 2, 3],
+              borderWidth: 1,
+              backgroundColor: "orange",
+            }]
+          },
+          options: {
+            animation: {
+                duration: 0,
+                onComplete: done,
       },
-      options: {
-        animation: {
-            duration: 0,
-            onComplete: done,
-    //         onComplete: function() {
-    //             document.getElementById("p1").innerHTML = "hello kitty!";
-    //   }
-  },
-        plugins: {
-          legend: {
-            display: false,
-          },
-          tooltip: {
-            enabled: false,
-          },
-
-        },
-      }
-    });
-
-    function done(){
-//   console.log("haha");
-//   var url=myLine.toBase64Image();
-//   document.getElementById("url").src=url;
-document.getElementById("p1").innerHTML = "hello!";
-}
-//     new Chart(ctx, {
-//       type: 'bar',
-//       data: {
-//         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-//         datasets: [{
-//           label: '# of Votes',
-//           data: [12, 19, 3, 5, 2, 3],
-//           borderWidth: 1,
-//           backgroundColor: "black",
-//         }]
-//       },
-//       options: {
-//         // animation: {
-//         //   duration: 0,
-//         // },
-//         animation: {
-//     onComplete: done
-//   },
-//         plugins: {
-//           legend: {
-//             display: false,
-//           },
-//           tooltip: {
-//             enabled: false,
-//           },
-
-//         },
-//       }
-//     });
-
+            plugins: {
+              legend: {
+                display: false,
+              },
+              tooltip: {
+                enabled: false,
+              },
     
-  </script>
-
-<!-- <script>
-  var apple = document.getElementById('myChart').toDataURL();
-
-  $('#page_caption_img_one').attr('src', apple);
-</script> -->
+            },
+          }
+        });
+    
+        function done(){
+    document.getElementById("p1").innerHTML = "hello!";
+    }
+      </script>
 
 
 </body>
