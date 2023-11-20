@@ -32,7 +32,7 @@
           label: '# of Votes',
           data: [12, 19, 3, 5, 2, 3],
           borderWidth: 1,
-          backgroundColor: "red",
+          backgroundColor: "black",
         }]
       },
       options: {
@@ -55,15 +55,7 @@
 <script>
   var apple = document.getElementById('myChart').toDataURL();
 
-window.onload = function() {
-  setTimeout(function() {
-    document.getElementById('btn').click();
-  }, 0);
-  $("button").click(function(){
-    document.getElementById("page_caption_img_one").src = apple;
-
-  });
-};
+  $('#page_caption_img_one').attr('src', apple);
 </script>
 
 
