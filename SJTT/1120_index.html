@@ -11,7 +11,7 @@
 
 <body>
     <div>
-        <button id="btn">123</button>
+        <p id="p1">Hello World!</p>
         <img id="url">
         <canvas id="myChart"></canvas>
       </div>
@@ -35,7 +35,7 @@
           label: '# of Votes',
           data: [12, 19, 3, 5, 2, 3],
           borderWidth: 1,
-          backgroundColor: "black",
+          backgroundColor: "green",
         }]
       },
       options: {
@@ -43,7 +43,9 @@
         //   duration: 0,
         // },
         animation: {
-    onComplete: done
+            onComplete: function() {
+                document.getElementById("p1").innerHTML = "hello kitty!";
+      }
   },
         plugins: {
           legend: {
