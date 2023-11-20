@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TAA</title>
+  <link rel="shortcut icon" type="image/x-icon" href="Content/image/favicon.ico">
+</head>
+
+<body>
+    <div>
+        <canvas id="myChart"></canvas>
+        <img id="page_caption_img_one"></img>
+      </div>
+      
+  <script src="Content/js/jquery-3.6.1.min.js"></script>
+  <script src="Content/js/1120chart.js@4.4.0.js"></script>
+
+
+  <script>
+    const ctx = document.getElementById('myChart');
+  
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+          label: '# of Votes',
+          data: [12, 19, 3, 5, 2, 3],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+
+<script>
+  var apple = document.getElementById('myChart').toDataURL();
+  document.getElementById("page_caption_img_one").src = apple;
+</script>
+
+
+</body>
+
+</html>
