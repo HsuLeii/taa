@@ -224,13 +224,13 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_content .caption_table.chart_table_list .table tbody tr td.table_id, .page .page_content .caption_table.chart_table_list .table tbody tr td.table_name { text-align: left; word-break: break-all; }
 
-.page .page_content .caption_table.chart_table_list .table tbody tr td.table_id { width: 100px; }
+.page .page_content .caption_table.chart_table_list .table tbody tr td.table_id { width: 80px; }
 
-.page .page_content .caption_table.chart_table_list .table tbody tr td.table_name { width: 100px; }
+.page .page_content .caption_table.chart_table_list .table tbody tr td.table_name { width: calc(100% - 900px); }
 
-.page .page_content .caption_table.chart_table_list .table tbody tr td.table_degree { width: 70px; }
+.page .page_content .caption_table.chart_table_list .table tbody tr td.table_department { width: 165px; }
 
-.page .page_content .caption_table.chart_table_list .table tbody tr td.table_department, .page .page_content .caption_table.chart_table_list .table tbody tr td.table_grade { width: 105px; }
+.page .page_content .caption_table.chart_table_list .table tbody tr td.table_degree, .page .page_content .caption_table.chart_table_list .table tbody tr td.table_grade { width: 105px; }
 
 .page .page_content .caption_table.chart_table_list .table tbody tr td.group_item { width: 105px; background-color: #fff; }
 

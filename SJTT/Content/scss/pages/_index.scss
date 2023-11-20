@@ -464,18 +464,22 @@
                                 }
 
                                 &.table_id {
-                                    width: 100px;
+                                    width: 80px;
                                 }
 
                                 &.table_name {
-                                    width: 100px;
+                                    width: calc(100% - 900px);
                                 }
 
-                                &.table_degree {
-                                    width: 70px;
+                                // &.table_degree {
+                                //     width: 70px;
+                                // }
+
+                                &.table_department {
+                                    width: 165px;
                                 }
 
-                                &.table_department,
+                                &.table_degree,
                                 &.table_grade {
                                     width: 105px;
                                 }

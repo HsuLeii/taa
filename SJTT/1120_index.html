@@ -39,13 +39,12 @@
         }]
       },
       options: {
-        // animation: {
-        //   duration: 0,
-        // },
         animation: {
-            onComplete: function() {
-                document.getElementById("p1").innerHTML = "hello kitty!";
-      }
+            duration: 0,
+            onComplete: done,
+    //         onComplete: function() {
+    //             document.getElementById("p1").innerHTML = "hello kitty!";
+    //   }
   },
         plugins: {
           legend: {
@@ -60,9 +59,10 @@
     });
 
     function done(){
-  console.log("haha");
-  var url=myLine.toBase64Image();
-  document.getElementById("url").src=url;
+//   console.log("haha");
+//   var url=myLine.toBase64Image();
+//   document.getElementById("url").src=url;
+document.getElementById("p1").innerHTML = "hello!";
 }
 //     new Chart(ctx, {
 //       type: 'bar',
