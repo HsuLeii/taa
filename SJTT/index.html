@@ -59,7 +59,7 @@
     </div>
     
     <div class="page_caption_img">
-      <img src="Content/image/caption/caption.png" alt="">
+      <img src="Content/image/caption/caption.png" alt="" id="page_caption_img_one" class="page_caption_img_one">
     </div>
 
     <div class="page_footer">
@@ -1508,6 +1508,11 @@
     };
 
     new Chart(document.getElementById('chartOne'), config, );
+  </script>
+
+  <script>
+    var apple = document.getElementById('chartOne').toDataURL();
+    document.getElementById("page_caption_img_one").src = apple;
   </script>
 
 </body>
