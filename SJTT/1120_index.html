@@ -31,7 +31,7 @@
               label: '# of Votes',
               data: [12, 19, 3, 5, 2, 3],
               borderWidth: 1,
-              backgroundColor: "orange",
+              backgroundColor: "yellow",
             }]
           },
           options: {
@@ -54,6 +54,9 @@
         function done(){
     document.getElementById("p1").innerHTML = "hello!";
     }
+
+    var url=myLine.toBase64Image();
+    document.getElementById("url").src=url;
       </script>
 
 
