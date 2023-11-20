@@ -12,9 +12,8 @@
 <body>
     <div>
         <button id="btn">123</button>
-
-        <canvas id="myChart"></canvas>
         <img id="page_caption_img_one">
+        <canvas id="myChart"></canvas>
       </div>
       
   <script src="Content/js/jquery-3.6.1.min.js"></script>
@@ -32,7 +31,8 @@
         datasets: [{
           label: '# of Votes',
           data: [12, 19, 3, 5, 2, 3],
-          borderWidth: 1
+          borderWidth: 1,
+          backgroundColor: "red",
         }]
       },
       options: {
@@ -54,17 +54,15 @@
 
 <script>
   var apple = document.getElementById('myChart').toDataURL();
-  $(document).ready(function(){
-  $("button").click(function(){
-    document.getElementById("page_caption_img_one").src = apple;
-
-  });
-});
 
 window.onload = function() {
   setTimeout(function() {
     document.getElementById('btn').click();
   }, 0);
+  $("button").click(function(){
+    document.getElementById("page_caption_img_one").src = apple;
+
+  });
 };
 </script>
 
