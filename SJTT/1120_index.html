@@ -11,8 +11,10 @@
 
 <body>
     <div>
+        <button id="btn">123</button>
+
         <canvas id="myChart"></canvas>
-        <img id="page_caption_img_one"></img>
+        <img id="page_caption_img_one">
       </div>
       
   <script src="Content/js/jquery-3.6.1.min.js"></script>
@@ -20,6 +22,7 @@
 
 
   <script>
+    // Chart.register(ChartDataLabels);
     const ctx = document.getElementById('myChart');
   
     new Chart(ctx, {
@@ -33,18 +36,36 @@
         }]
       },
       options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
+        animation: {
+          duration: 0,
+        },
+        plugins: {
+          legend: {
+            display: false,
+          },
+          tooltip: {
+            enabled: false,
+          },
+
+        },
       }
     });
   </script>
 
 <script>
   var apple = document.getElementById('myChart').toDataURL();
-  document.getElementById("page_caption_img_one").src = apple;
+  $(document).ready(function(){
+  $("button").click(function(){
+    document.getElementById("page_caption_img_one").src = apple;
+
+  });
+});
+
+window.onload = function() {
+  setTimeout(function() {
+    document.getElementById('btn').click();
+  }, 0);
+};
 </script>
 
 
