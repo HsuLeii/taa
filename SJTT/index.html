@@ -57,6 +57,8 @@
         </div>
       </div>
     </div>
+
+    <canvas id="myChart"></canvas>
     
     <div class="page_caption_img">
       <img src="Content/image/caption/caption.png" alt="" id="page_caption_img_one" class="page_caption_img_one">
@@ -1434,7 +1436,29 @@
   <script src="Content/js/fontawesome-free-6.1.1.min.js"></script>
   <script src="Content/js/chart.js@4.4.0.js"></script>
   <script src="Content/js/datalabels@2.0.0.js"></script>
-  <!-- <script src="Content/js/jquery-3.6.1.min.js"></script> -->
+
+  <script>
+    const ctx = document.getElementById('myChart');
+  
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+          label: '# of Votes',
+          data: [12, 19, 3, 5, 2, 3],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
 
   <script>
     Chart.register(ChartDataLabels);
@@ -1510,10 +1534,11 @@
     new Chart(document.getElementById('chartOne'), config, );
   </script>
 
-  <script>
-    var apple = document.getElementById('chartOne').toDataURL();
-    document.getElementById("page_caption_img_one").src = apple;
-  </script>
+<script>
+  var apple = document.getElementById('myChart').toDataURL();
+  document.getElementById("page_caption_img_one").src = apple;
+</script>
+
 
 </body>
 
