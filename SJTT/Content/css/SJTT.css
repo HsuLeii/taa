@@ -226,7 +226,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_content .caption_table.chart_table_list .table tbody tr td.table_id { width: 100px; }
 
-.page .page_content .caption_table.chart_table_list .table tbody tr td.table_name { width: calc(100% - 800px); }
+.page .page_content .caption_table.chart_table_list .table tbody tr td.table_name { width: 100px; }
 
 .page .page_content .caption_table.chart_table_list .table tbody tr td.table_degree { width: 70px; }
 
