@@ -1464,103 +1464,74 @@
     <!-- <script src="Content/js/fontawesome-free-6.1.1.min.js"></script> -->
     <!-- <script src="Content/js/chart.js@4.4.0.js"></script> -->
     <script src="Content/js/chart2.9.3.min.js"></script>
-    <!-- <script src="Content/js/datalabels@2.0.0.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+    <script src="Content/js/datalabels@0.7.0.js"></script>
 
     <script>
-        var ctx = document.getElementById('chartOne').getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'pie',
-            data: {
-                labels: [
-                    "杏壇潛力組",
-                    "人際取向組",
-                    "實在表現組",
-                    "加倍努力組"
-                ],
-                datasets: [{
-                    backgroundColor: ['#cfeaff', '#ffecb1', '#bcf5d9', '#efc2c1'],
-                    borderColor: ['#83caff', '#ffcf3a', '#5dc994', '#fe9795'],
-                    data: [23.8, 28.6, 28.6, 19.0],
-                }, ],
+        const backgroundColor = ['#cfeaff', '#ffecb1', '#bcf5d9', '#efc2c1'];
+        const borderColor = ['#83caff', '#ffcf3a', '#5dc994', '#fe9795'];
+        const data = {
+          labels: [
+            "杏壇潛力組",
+            "人際取向組",
+            "實在表現組",
+            "加倍努力組"
+          ],
+          datasets: [{
+            data: [23.8, 28.6, 28.6, 19.0],
+            backgroundColor: backgroundColor,
+            hoverBorderColor: '#e7591a',
+            hoverBorderWidth: 3,
+          }]
+        };
+        const config = {
+          type: 'pie',
+          data,
+          options: {
+            responsive: false,
+            animation: {
+              duration: 0,
             },
-            options: {
-                responsive: false,
-                animation: {
-                    duration: 0,
+            plugins: {
+              legend: {
+                display: false,
+                onClick: null,
+              },
+              datalabels: {
+                color: '#20221f',
+                // 位置
+                anchor: 'center',
+                // 水平位置
+                align: 'center',
+                // 文字置中
+                textAlign: 'center' ,
+                backgroundColor: borderColor,
+                borderColor: borderColor,
+                borderWidth: 1,
+                borderRadius: 5,
+                padding: 5,
+                formatter: function (value, context) {
+                  return context.chart.data.labels[context.dataIndex] + '\n' + context.chart.data.datasets[0].data[
+                    context.dataIndex] + '%';
                 },
-                tooltips: {
-                    // Disable the on-canvas tooltip
-                    enabled: false,
-                },
-                legend: {
-                    display: false,
+                font: function (context) {
+                  var width = context.chart.width;
+                  var size = Math.round(width / 25);
+                  
+                  return {
+                    weight: 'bold',
+                    size: size,
+                  };
                 }
+              },
+              tooltip: {
+                // Disable the on-canvas tooltip
+                enabled: false,
+              },
             },
-
-            plugins: [{
-                afterDatasetsDraw: function (chartInstance) {
-
-                    // We get the canvas context
-                    ctx = chartInstance.ctx;
-
-                    // And set the properties we need
-                    ctx.font = "bold 15px 'Arial'";
-                    ctx.textAlign = 'center';
-                    ctx.textBaseline = 'bottom';
-                    ctx.fillStyle = '#666';
-
-                    // For ervery dataset ...
-                    chartInstance.data.datasets.forEach(function (dataset, i) {
-                        var meta = chartInstance.controller.getDatasetMeta(i);
-                        for (var i = 0; i < dataset.data.length; i++){
-                            meta.data.forEach(function (pie, index) {
-                            var data = dataset.data[index];
-                            var model = dataset._meta[Object.keys(dataset._meta)[0]]
-                                .data[i]._model
-                            var total = dataset._meta[Object.keys(dataset._meta)[0]]
-                                .total
-                            var mid_radius = model.innerRadius + (model
-                                .outerRadius - model.innerRadius) / 2
-                            var start_angle = model.startAngle;
-                            var end_angle = model.endAngle;
-                            var mid_angle = start_angle + (end_angle -
-                                start_angle) / 2;
-                            var x = mid_radius * 1.5 * Math.cos(mid_angle);
-                            var y = mid_radius * 1.5 * Math.sin(mid_angle);
-                            var percent = String(Math.round(dataset.data[i])) +
-                                "%";
-                            ctx.fillStyle = '#000000';
-                            ctx.fillText(percent, model.x + x, model.y + y); //bar數值y軸-25
-                        });
-                        }
-                        
-                        // For every data in the dataset ...
-                        // for (var i = 0; i < dataset.data.length; i++) {
-
-                        //     // We get all the properties & values we need
-                        //     var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model,
-                        //         total = dataset._meta[Object.keys(dataset._meta)[0]].total,
-                        //         mid_radius = model.innerRadius + (model.outerRadius - model.innerRadius) / 2,
-                        //         start_angle = model.startAngle,
-                        //         end_angle = model.endAngle,
-                        //         mid_angle = start_angle + (end_angle - start_angle) / 2;
-
-                        //     // We calculate the right positions for our text
-                        //     var x = mid_radius * 1.5 * Math.cos(mid_angle);
-                        //     var y = mid_radius * 1.5 * Math.sin(mid_angle);
-
-                        //     // We calculate the percentage
-                        //     var percent = String(Math.round(dataset.data[i] / 1)) + "%";
-                        //     // var percentABC = String(Math.round(data.labels[i]));
-                        //     // And display it
-                        //     ctx.fillText(percent, model.x + x, model.y + y);
-                        // }
-                    });
-                }
-            }],
-        });
-    </script>
+          }
+        };
+        new Chart(document.getElementById('chartOne'), config, );
+      </script>
 
 
 
