@@ -15,7 +15,10 @@
     
     <div>
         <p id="p1">Hello World!</p>
-        <img id="url">
+        <button id="btn-download">
+            Download
+          </button>
+          <canvas id="chart" width=600 height=600></canvas>
         <canvas id="myChart"></canvas>
       </div>
       
@@ -23,12 +26,37 @@
       <script src="Content/js/1120chart.js@4.4.0.js"></script>  
 
       <script>
+
+const myChart = new Chart(document.getElementById('chart').getContext("2d"), {
+  type: 'bar',
+  data: {
+    labels: ['One', 'Two', 'Three', 'Four', 'Five', 'Six'],
+    datasets: [{
+      label: 'My data',
+      data: [12, 19, 3, 5, 2, 3],
+      backgroundColor: 'rgba(255, 99, 132, 0.2)',
+      borderColor: 'rgba(255,99,132,1)',
+      borderWidth: 1
+    }]
+  },
+  options: {
+  	animation: {
+    	duration: 0,
+    }
+  }
+});
+
+// Get the chart's base64 image string
+var image = myChart.toBase64Image();
+console.log(image);
+
+document.getElementById("p1").innerHTML = image;
+
+
+
         
         var myLine = new Chart(document.getElementById("myChart").getContext("2d"),{
             type: 'bar',
-            animation: {
-          duration: 0,
-        },
 	data: {
 		labels: ["06-2020", "07-2020", "08-2020", "09-2020", "10-2020", "11-2020", "12-2020", "01-2021", "02-2021", "03-2021", "04-2021", "05-2021"],
 		datasets: [{
@@ -63,7 +91,8 @@
 				'rgba(255, 159, 64, 1)'
 			],
 			borderWidth: 1
-		}]
+		}],
+
 	},
 
 	plugins: [{

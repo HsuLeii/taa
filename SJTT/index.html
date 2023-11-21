@@ -1438,29 +1438,6 @@
   <script src="Content/js/datalabels@2.0.0.js"></script>
 
   <script>
-    const ctx = document.getElementById('myChart');
-  
-    new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-        datasets: [{
-          label: '# of Votes',
-          data: [12, 19, 3, 5, 2, 3],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
-  </script>
-
-  <script>
     Chart.register(ChartDataLabels);
 
     const backgroundColor = ['#cfeaff', '#ffecb1', '#bcf5d9', '#efc2c1'];
@@ -1486,7 +1463,12 @@
         animation: {
           duration: 0,
         },
-        plugins: {
+        
+        plugins: [{
+          afterRender: function (chart, args, options) {
+			var img = new Image();
+			img.src = chart.toBase64Image('image/png', 1);
+			chart.canvas.parentNode.insertBefore(img, chart.canvas.nextSibling);},
           legend: {
             display: false,
             onClick: null,
@@ -1525,7 +1507,7 @@
             enabled: false,
           },
 
-        },
+        }],
       }
     };
 
