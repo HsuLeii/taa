@@ -7,9 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TAA</title>
   <link rel="shortcut icon" type="image/x-icon" href="Content/image/favicon.ico">
-  <link href="
-https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.css
-" rel="stylesheet">
 </head>
 
 <body>
@@ -21,9 +18,7 @@ https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.css
       </div>
       
 
-      <script src="
-https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js
-"></script>
+      <script src="Content/js/chart2.9.3.min.js"></script>
 
       <script>
         var myLine = new Chart(document.getElementById("myChart").getContext("2d"),{
@@ -66,7 +61,7 @@ https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js
 	},
 
     plugins: [{
-		afterRender: function (chart, args, options) {
+		afterDraw: function (chart, args, options) {
 			var img = new Image();
 			img.src = chart.toBase64Image('image/png', 1);
 			chart.canvas.parentNode.insertBefore(img, chart.canvas.nextSibling);
