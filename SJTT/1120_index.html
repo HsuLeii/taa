@@ -14,21 +14,14 @@
 
     
     <div>
-        <p id="p1">Hello World!</p>
-        <a id="savegraph" href="http://">123</a>
-        <button id="btn-download">
-            Download
-          </button>
+        <p id="p1">123</p>
         <canvas id="myChart"></canvas>
-        <div id="mychart"></div>
-        <img id="imgwrap" src="" alt="">
       </div>
       
 
       <script src="Content/js/1120chart.js@4.4.0.js"></script>  
 
       <script>
-        
         var myLine = new Chart(document.getElementById("myChart").getContext("2d"),{
             type: 'bar',
 	data: {
@@ -66,18 +59,23 @@
 			],
 			borderWidth: 1
 		}],
-
 	},
+
+    plugins: [{
+		afterRender: function (chart, args, options) {
+			var img = new Image();
+			img.src = chart.toBase64Image('image/png', 1);
+			chart.canvas.parentNode.insertBefore(img, chart.canvas.nextSibling);
+			chart.canvas.style.display = 'none'; // Hide the chart canvas
+			chart.canvas.remove(); // To remove the chart canvas
+		}
+	}],
 
 
 
 });
 
-myLine.toBase64Image();
-// => returns png data url of the image on the canvas
-
-
-document.getElementById("p1").innerHTML = myLine.toBase64Image('image/jpeg', 1);
+document.getElementById("p1").innerHTML = myLine.toBase64Image('image/png', 1);
 
 
       </script>
