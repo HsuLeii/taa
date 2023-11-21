@@ -58,7 +58,6 @@
       </div>
     </div>
 
-    <canvas id="myChart"></canvas>
     
     <div class="page_caption_img">
       <img src="Content/image/caption/caption.png" alt="" id="page_caption_img_one" class="page_caption_img_one">
@@ -1436,10 +1435,10 @@
   <!-- <script src="Content/js/fontawesome-free-6.1.1.min.js"></script> -->
   <script src="Content/js/chart.js@4.4.0.js"></script>
   <script src="Content/js/datalabels@2.0.0.js"></script>
+  <script src="Content/js/jquery-3.6.1.min.js"></script>
 
   <script>
     Chart.register(ChartDataLabels);
-
     const backgroundColor = ['#cfeaff', '#ffecb1', '#bcf5d9', '#efc2c1'];
     const borderColor = ['#83caff', '#ffcf3a', '#5dc994', '#fe9795'];
     const data = {
@@ -1452,9 +1451,10 @@
       datasets: [{
         data: [23.8, 28.6, 28.6, 19.0],
         backgroundColor: backgroundColor,
+        hoverBorderColor: '#e7591a',
+        hoverBorderWidth: 3,
       }]
     };
-
     const config = {
       type: 'pie',
       data,
@@ -1463,17 +1463,11 @@
         animation: {
           duration: 0,
         },
-        
-        plugins: [{
-          afterRender: function (chart, args, options) {
-			var img = new Image();
-			img.src = chart.toBase64Image('image/png', 1);
-			chart.canvas.parentNode.insertBefore(img, chart.canvas.nextSibling);},
+        plugins: {
           legend: {
             display: false,
             onClick: null,
           },
-
           datalabels: {
             color: '#20221f',
             // 位置
@@ -1501,16 +1495,13 @@
               };
             }
           },
-
           tooltip: {
             // Disable the on-canvas tooltip
             enabled: false,
           },
-
-        }],
+        },
       }
     };
-
     new Chart(document.getElementById('chartOne'), config, );
   </script>
 
