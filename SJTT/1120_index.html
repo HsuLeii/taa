@@ -15,45 +15,19 @@
     
     <div>
         <p id="p1">Hello World!</p>
+        <a id="savegraph" href="http://">123</a>
         <button id="btn-download">
             Download
           </button>
-          <canvas id="chart" width=600 height=600></canvas>
         <canvas id="myChart"></canvas>
+        <div id="mychart"></div>
+        <img id="imgwrap" src="" alt="">
       </div>
       
 
       <script src="Content/js/1120chart.js@4.4.0.js"></script>  
 
       <script>
-
-const myChart = new Chart(document.getElementById('chart').getContext("2d"), {
-  type: 'bar',
-  data: {
-    labels: ['One', 'Two', 'Three', 'Four', 'Five', 'Six'],
-    datasets: [{
-      label: 'My data',
-      data: [12, 19, 3, 5, 2, 3],
-      backgroundColor: 'rgba(255, 99, 132, 0.2)',
-      borderColor: 'rgba(255,99,132,1)',
-      borderWidth: 1
-    }]
-  },
-  options: {
-  	animation: {
-    	duration: 0,
-    }
-  }
-});
-
-// Get the chart's base64 image string
-var image = myChart.toBase64Image();
-console.log(image);
-
-document.getElementById("p1").innerHTML = image;
-
-
-
         
         var myLine = new Chart(document.getElementById("myChart").getContext("2d"),{
             type: 'bar',
@@ -95,15 +69,17 @@ document.getElementById("p1").innerHTML = image;
 
 	},
 
-	plugins: [{
-		afterRender: function (chart, args, options) {
-			var img = new Image();
-			img.src = chart.toBase64Image('image/png', 1);
-			chart.canvas.parentNode.insertBefore(img, chart.canvas.nextSibling);
-		}
-	}]
+
+
 });
-      
+
+myLine.toBase64Image();
+// => returns png data url of the image on the canvas
+
+
+document.getElementById("p1").innerHTML = myLine.toBase64Image('image/jpeg', 1);
+
+
       </script>
 
 
