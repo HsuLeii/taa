@@ -1503,7 +1503,8 @@
         color: '#fff',
         display: true, 
         formatter: function (value, ctx) {
-          return ((value * 100) / total(ctx)).toFixed(1) + '%';
+            // return ((value * 100) / total(ctx)).toFixed(1) + '%';
+          return (total(ctx));
         },
       },
     },
@@ -1512,8 +1513,9 @@
             
         })
         function total(chart){
-  let data = chart.chart.data.datasets[0].data;
-  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  let data = chart.chart.data.labels;
+//   const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  const reducer = (currentValue) => currentValue;
   var total = data.reduce(reducer);
   return total;
 }
