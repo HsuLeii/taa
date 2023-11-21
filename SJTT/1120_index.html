@@ -20,13 +20,15 @@
       </div>
       
 
-      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  
+      <script src="Content/js/1120chart.js@4.4.0.js"></script>  
 
       <script>
         
-document.getElementById("p1").innerHTML = "hello!";
         var myLine = new Chart(document.getElementById("myChart").getContext("2d"),{
             type: 'bar',
+            animation: {
+          duration: 0,
+        },
 	data: {
 		labels: ["06-2020", "07-2020", "08-2020", "09-2020", "10-2020", "11-2020", "12-2020", "01-2021", "02-2021", "03-2021", "04-2021", "05-2021"],
 		datasets: [{
@@ -69,15 +71,10 @@ document.getElementById("p1").innerHTML = "hello!";
 			var img = new Image();
 			img.src = chart.toBase64Image('image/png', 1);
 			chart.canvas.parentNode.insertBefore(img, chart.canvas.nextSibling);
-			chart.canvas.style.display = 'none'; // Hide the chart canvas
-			chart.canvas.remove(); // To remove the chart canvas
 		}
 	}]
 });
-    
       
-        var aa=$("#myChart").toBase64Image();
-    document.getElementById("url").src = aa;
       </script>
 
 
