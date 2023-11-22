@@ -1532,60 +1532,56 @@ var myChart = new Chart(ctx, {
     
 })
 
-var ctx1 = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'pie',
-	data: {
-		labels: ["06-2020", "07-2020", "08-2020", "09-2020", "10-2020", "11-2020", "12-2020", "01-2021", "02-2021", "03-2021", "04-2021", "05-2021"],
-		datasets: [{
-			label: '# of Sells',
-			data: [12, 19, 30, 17, 12, 26, 20, 13, 15, 16, 20, 10],
-			backgroundColor: [
-				'rgba(255, 99, 132, 0.2)',
-				'rgba(54, 162, 235, 0.2)',
-				'rgba(255, 206, 86, 0.2)',
-				'rgba(75, 192, 192, 0.2)',
-				'rgba(153, 102, 255, 0.2)',
-				'rgba(255, 159, 64, 0.2)',
-				'rgba(255, 99, 132, 0.2)',
-				'rgba(54, 162, 235, 0.2)',
-				'rgba(255, 206, 86, 0.2)',
-				'rgba(75, 192, 192, 0.2)',
-				'rgba(153, 102, 255, 0.2)',
-				'rgba(255, 159, 64, 0.2)'
-			],
-			borderColor: [
-				'rgba(255,99,132,1)',
-				'rgba(54, 162, 235, 1)',
-				'rgba(255, 206, 86, 1)',
-				'rgba(75, 192, 192, 1)',
-				'rgba(153, 102, 255, 1)',
-				'rgba(255, 159, 64, 1)',
-				'rgba(255,99,132,1)',
-				'rgba(54, 162, 235, 1)',
-				'rgba(255, 206, 86, 1)',
-				'rgba(75, 192, 192, 1)',
-				'rgba(153, 102, 255, 1)',
-				'rgba(255, 159, 64, 1)'
-			],
-			borderWidth: 1
-		}],
-	},
+// var ctx1 = document.getElementById('myChart').getContext('2d');
+// var myChart = new Chart(ctx, {
+//     type: 'pie',
+// 	data: {
+// 		labels: ["06-2020", "07-2020", "08-2020", "09-2020", "10-2020", "11-2020", "12-2020", "01-2021", "02-2021", "03-2021", "04-2021", "05-2021"],
+// 		datasets: [{
+// 			label: '# of Sells',
+// 			data: [12, 19, 30, 17, 12, 26, 20, 13, 15, 16, 20, 10],
+// 			backgroundColor: [
+// 				'rgba(255, 99, 132, 0.2)',
+// 				'rgba(54, 162, 235, 0.2)',
+// 				'rgba(255, 206, 86, 0.2)',
+// 				'rgba(75, 192, 192, 0.2)',
+// 				'rgba(153, 102, 255, 0.2)',
+// 				'rgba(255, 159, 64, 0.2)',
+// 				'rgba(255, 99, 132, 0.2)',
+// 				'rgba(54, 162, 235, 0.2)',
+// 				'rgba(255, 206, 86, 0.2)',
+// 				'rgba(75, 192, 192, 0.2)',
+// 				'rgba(153, 102, 255, 0.2)',
+// 				'rgba(255, 159, 64, 0.2)'
+// 			],
+// 			borderColor: [
+// 				'rgba(255,99,132,1)',
+// 				'rgba(54, 162, 235, 1)',
+// 				'rgba(255, 206, 86, 1)',
+// 				'rgba(75, 192, 192, 1)',
+// 				'rgba(153, 102, 255, 1)',
+// 				'rgba(255, 159, 64, 1)',
+// 				'rgba(255,99,132,1)',
+// 				'rgba(54, 162, 235, 1)',
+// 				'rgba(255, 206, 86, 1)',
+// 				'rgba(75, 192, 192, 1)',
+// 				'rgba(153, 102, 255, 1)',
+// 				'rgba(255, 159, 64, 1)'
+// 			],
+// 			borderWidth: 1
+// 		}],
+// 	},
 
-    plugins: [{
-		afterRender: function (chart, args, options) {
-			var img = new Image();
-			img.src = chart.toBase64Image('image/png', 1);
-			chart.canvas.parentNode.insertBefore(img, chart.canvas.nextSibling);
-			chart.canvas.style.display = 'none'; // Hide the chart canvas
-			chart.canvas.remove(); // To remove the chart canvas
-		}
-	}],
-
-
-});
-
-
+//     plugins: [{
+// 		afterRender: function (chart, args, options) {
+// 			var img = new Image();
+// 			img.src = chart.toBase64Image('image/png', 1);
+// 			chart.canvas.parentNode.insertBefore(img, chart.canvas.nextSibling);
+// 			chart.canvas.style.display = 'none'; // Hide the chart canvas
+// 			chart.canvas.remove(); // To remove the chart canvas
+// 		}
+// 	}],
+// });
 
       </script>
 
