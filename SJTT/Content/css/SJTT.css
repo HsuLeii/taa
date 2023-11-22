@@ -264,8 +264,6 @@ button:disabled a { color: #fff !important; cursor: auto; }
   .page .page_content .chart_area .chart_canvas { width: 80%; margin: 0 0 40px 0; }
   .page .page_content .chart_area .chart_category_area { justify-content: center; } }
 
-@media screen and (min-width: 576px) { .page .page_content .pagination_tittle::after { content: ""; position: absolute; right: 0; bottom: 0; width: 90px; height: 30px; transform: translate(0, 0%); background-image: radial-gradient(#ffaf8b 30%, transparent 30%); background-position: 0 0, 10px 0px; background-size: 15px 15px; } }
-
 @media screen and (min-width: 768px) { .page .page_content .page_caption .page_caption_text p span { font-size: 12px; }
   .page .page_content .page_caption .page_caption_text p span.bold { font-size: 15px; }
   .page .page_content .chart_area .chart_area_tittle { margin: 30px auto; }
@@ -329,7 +327,6 @@ button:disabled a { color: #fff !important; cursor: auto; }
   .page .page_content .page_caption .page_caption_text p span.bold { font-size: 17px; }
   .page .page_content .pagination_tittle { position: relative; margin: 0 0 15px; }
   .page .page_content .pagination_tittle h4 { color: #e7591a; }
-  .page .page_content .pagination_tittle::after { content: ""; position: absolute; right: 0; bottom: 0; width: 90px; height: 30px; transform: translate(0, 0%); background-image: radial-gradient(#ffaf8b 30%, transparent 30%); background-position: 0 0, 10px 0px; background-size: 15px 15px; }
   .page .page_content .caption_table .table { border: 1.5px solid #e7591a; }
   .page .page_content .caption_table .table .chart_category_icon svg { margin: 0; }
   .page .page_content .caption_table .table thead tr th { color: #fff; background-color: #e7591a; padding: 5px 10px; text-align: center; }

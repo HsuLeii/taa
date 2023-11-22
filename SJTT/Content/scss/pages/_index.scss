@@ -624,34 +624,6 @@
     }
 }
 
-@media screen and (min-width: 576px) {
-    .page {
-
-        .page_content {
-
-            // page2
-            .pagination_tittle {
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    right: 0;
-                    bottom: 0;
-                    width: 90px;
-                    height: 30px;
-                    transform: translate(0, 0%);
-                    background-image: radial-gradient($main_color_light 30%, transparent 30%);
-                    background-position: 0 0, 10px 0px;
-                    background-size: 15px 15px;
-                }
-            }
-
-            // page2
-        }
-
-    }
-}
-
 @media screen and (min-width: 768px) {
     .page {
 
@@ -1046,19 +1018,6 @@
 
                 h4 {
                     color: $main_color;
-                }
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    right: 0;
-                    bottom: 0;
-                    width: 90px;
-                    height: 30px;
-                    transform: translate(0, 0%);
-                    background-image: radial-gradient($main_color_light 30%, transparent 30%);
-                    background-position: 0 0, 10px 0px;
-                    background-size: 15px 15px;
                 }
             }
 
