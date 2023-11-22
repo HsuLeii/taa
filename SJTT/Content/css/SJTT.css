@@ -318,9 +318,16 @@ button:disabled a { color: #fff !important; cursor: auto; }
   .page .page_content { padding: 0 2.5%; }
   .page .page_content .chart_category_icon { display: inline-block; font-family: "Font Awesome 6 Free"; font-weight: 900; }
   .page .page_content .chart_category_icon i { margin: 0 3px 0 0; font-size: 18px; }
+  .page .page_content .chart_category_icon svg { margin: 0 3px 0 0; font-size: 18px; }
+  .page .page_content .chart_category_icon.chart_category_one:before { content: "\f005"; display: none; color: #37a9ff; }
   .page .page_content .chart_category_icon.chart_category_one i { color: #37a9ff; }
+  .page .page_content .chart_category_icon.chart_category_one svg { fill: #37a9ff; }
+  .page .page_content .chart_category_icon.chart_category_two:before { content: "\f005"; }
   .page .page_content .chart_category_icon.chart_category_two i { color: #edb300; }
+  .page .page_content .chart_category_icon.chart_category_two svg { fill: #edb300; }
+  .page .page_content .chart_category_icon.chart_category_three:before { content: ""; }
   .page .page_content .chart_category_icon.chart_category_three i { color: #36a36e; }
+  .page .page_content .chart_category_icon.chart_category_three svg { fill: #36a36e; }
   .page .page_content .chart_category_icon.chart_category_four i { color: #fd4d49; }
   .page .page_content .bold { font-weight: bold; }
   .page .page_content .report_title_area { position: relative; width: 100%; display: flex; align-items: center; margin: 0 auto 40px; padding: 0 0 30px; }
