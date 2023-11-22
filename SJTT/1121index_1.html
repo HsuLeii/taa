@@ -59,8 +59,10 @@
             </div>
         </div>
 
+        <canvas id="myChart"></canvas>
+
         <div class="page_caption_img">
-            <img src="Content/image/caption/caption.png" alt="" id="page_caption_img_one" class="page_caption_img_one">
+            <img id="url" src="Content/image/caption/caption.png" alt="" id="page_caption_img_one" class="page_caption_img_one">
         </div>
 
         <div class="page_footer">
@@ -1467,36 +1469,39 @@
     <script src="Content/js/datalabels@0.7.0.js"></script>
 
     <script>
-        const backgroundColor = ['#cfeaff', '#ffecb1', '#bcf5d9', '#efc2c1'];
-        const borderColor = ['#83caff', '#ffcf3a', '#5dc994', '#fe9795'];
-        const data = {
-          labels: [
+
+var ctx = document.getElementById('chartOne').getContext('2d');
+
+var myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: [
             "杏壇潛力組",
             "人際取向組",
             "實在表現組",
             "加倍努力組"
-          ],
-          datasets: [{
+        ],
+        datasets: [{
+            backgroundColor: ['#cfeaff', '#ffecb1', '#bcf5d9', '#efc2c1'],
+            borderColor: ['#83caff', '#ffcf3a', '#5dc994', '#fe9795'],
             data: [23.8, 28.6, 28.6, 19.0],
-            backgroundColor: backgroundColor,
-            hoverBorderColor: '#e7591a',
-            hoverBorderWidth: 3,
-          }]
-        };
-        const config = {
-          type: 'pie',
-          data,
-          options: {
-            responsive: false,
-            animation: {
-              duration: 0,
-            },
-            plugins: {
-              legend: {
-                display: false,
-                onClick: null,
-              },
-              datalabels: {
+        }, ],
+    },
+    options: {
+        responsive: false,
+        animation: {
+            duration: 0,
+        },
+        tooltips: {
+            // Disable the on-canvas tooltip
+            enabled: false,
+        },
+        legend: {
+            display: false,
+        },
+        plugins: {
+        
+            datalabels: {
                 color: '#20221f',
                 // 位置
                 anchor: 'center',
@@ -1504,8 +1509,6 @@
                 align: 'center',
                 // 文字置中
                 textAlign: 'center' ,
-                backgroundColor: borderColor,
-                borderColor: borderColor,
                 borderWidth: 1,
                 borderRadius: 5,
                 padding: 5,
@@ -1523,14 +1526,67 @@
                   };
                 }
               },
-              tooltip: {
-                // Disable the on-canvas tooltip
-                enabled: false,
-              },
-            },
-          }
-        };
-        new Chart(document.getElementById('chartOne'), config, );
+},
+    },
+
+    
+})
+
+var ctx1 = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'pie',
+	data: {
+		labels: ["06-2020", "07-2020", "08-2020", "09-2020", "10-2020", "11-2020", "12-2020", "01-2021", "02-2021", "03-2021", "04-2021", "05-2021"],
+		datasets: [{
+			label: '# of Sells',
+			data: [12, 19, 30, 17, 12, 26, 20, 13, 15, 16, 20, 10],
+			backgroundColor: [
+				'rgba(255, 99, 132, 0.2)',
+				'rgba(54, 162, 235, 0.2)',
+				'rgba(255, 206, 86, 0.2)',
+				'rgba(75, 192, 192, 0.2)',
+				'rgba(153, 102, 255, 0.2)',
+				'rgba(255, 159, 64, 0.2)',
+				'rgba(255, 99, 132, 0.2)',
+				'rgba(54, 162, 235, 0.2)',
+				'rgba(255, 206, 86, 0.2)',
+				'rgba(75, 192, 192, 0.2)',
+				'rgba(153, 102, 255, 0.2)',
+				'rgba(255, 159, 64, 0.2)'
+			],
+			borderColor: [
+				'rgba(255,99,132,1)',
+				'rgba(54, 162, 235, 1)',
+				'rgba(255, 206, 86, 1)',
+				'rgba(75, 192, 192, 1)',
+				'rgba(153, 102, 255, 1)',
+				'rgba(255, 159, 64, 1)',
+				'rgba(255,99,132,1)',
+				'rgba(54, 162, 235, 1)',
+				'rgba(255, 206, 86, 1)',
+				'rgba(75, 192, 192, 1)',
+				'rgba(153, 102, 255, 1)',
+				'rgba(255, 159, 64, 1)'
+			],
+			borderWidth: 1
+		}],
+	},
+
+    plugins: [{
+		afterRender: function (chart, args, options) {
+			var img = new Image();
+			img.src = chart.toBase64Image('image/png', 1);
+			chart.canvas.parentNode.insertBefore(img, chart.canvas.nextSibling);
+			chart.canvas.style.display = 'none'; // Hide the chart canvas
+			chart.canvas.remove(); // To remove the chart canvas
+		}
+	}],
+
+
+});
+
+
+
       </script>
 
 
