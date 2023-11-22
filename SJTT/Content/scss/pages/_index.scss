@@ -39,11 +39,6 @@
             }
 
             &.chart_category_one {
-                &:before{
-                    content: "\f005";
-                    display: none;
-                    color: darken($group_one, 15%);
-                }
                 i {
                     color: darken($group_one, 15%);
                 }
@@ -54,10 +49,6 @@
             }
 
             &.chart_category_two {
-                &:before{
-                    content: "\f005";
-                }
-                
                 i {
                     color: darken($group_two, 15%);
                 }
@@ -68,9 +59,6 @@
             }
 
             &.chart_category_three {
-                &:before{
-                    content: "";
-                }
                 i {
                     color: darken($group_three, 15%);
                 }
