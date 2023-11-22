@@ -52,7 +52,7 @@
 
             &.chart_category_three {
                 &:before{
-                    content: "\f5a2";
+                    content: "";
                 }
                 i {
                     color: darken($group_three, 15%);

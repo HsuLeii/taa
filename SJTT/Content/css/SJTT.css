@@ -104,7 +104,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_content .chart_category_icon.chart_category_two i { color: #edb300; }
 
-.page .page_content .chart_category_icon.chart_category_three:before { content: "\f5a2"; }
+.page .page_content .chart_category_icon.chart_category_three:before { content: ""; }
 
 .page .page_content .chart_category_icon.chart_category_three i { color: #36a36e; }
 
