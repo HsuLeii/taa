@@ -1,11 +1,3 @@
-:root {
-    counter-reset: current total;
-}
-
-.pagenum {
-    counter-increment: total;
-}
-
 .page {
     /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
     /* page-break-after: always;  碰到此元素會直接換頁 */
@@ -867,14 +859,6 @@
 }
 
 @media print {
-    :root {
-        counter-reset: current total;
-    }
-
-    .pagenum {
-        counter-increment: total;
-    }
-
     .page {
         /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
         /* page-break-after: always;  碰到此元素會直接換頁 */
