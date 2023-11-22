@@ -302,7 +302,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
 @media print { .page { /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */ /* page-break-after: always;  碰到此元素會直接換頁 */ page-break-inside: avoid; position: relative; max-width: 1024px; height: 1448px; width: 100%; /* height: 1448px; */ margin: 0 auto; overflow: hidden; background-color: #f7f5f5; }
   .page .page_header .page_decorate { width: 100%; height: 12px; background: linear-gradient(135deg, #a3c313 33%, #1ebbe9 33%, #1ebbe9 66%, #e7591a 66%); margin: 0 auto 15px; }
   .page .page_content { padding: 0 2.5%; }
-  .page .page_content .chart_category_icon { display: inline-block; }
+  .page .page_content .chart_category_icon { display: inline-block; font-family: "Font Awesome 6 Free"; font-weight: 900; }
   .page .page_content .chart_category_icon i { margin: 0 3px 0 0; font-size: 18px; }
   .page .page_content .chart_category_icon.chart_category_one i { color: #37a9ff; }
   .page .page_content .chart_category_icon.chart_category_two i { color: #edb300; }

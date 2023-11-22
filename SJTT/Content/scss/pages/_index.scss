@@ -33,6 +33,7 @@
             }
 
             &.chart_category_one {
+
                 i {
                     color: darken($group_one, 15%);
                 }
@@ -889,6 +890,8 @@
 
             .chart_category_icon {
                 display: inline-block;
+                font-family: "Font Awesome 6 Free";
+            font-weight: 900;
 
                 i {
                     margin: 0 3px 0 0;
