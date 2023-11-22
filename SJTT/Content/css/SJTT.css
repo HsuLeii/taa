@@ -365,7 +365,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
   .page .page_content .caption_table.chart_table_list .table tbody tr:nth-child(1) { text-align: center; vertical-align: middle; }
   .page .page_content .caption_table.chart_table_list .table tbody tr:nth-child(1) td.table_id, .page .page_content .caption_table.chart_table_list .table tbody tr:nth-child(1) td.table_name { text-align: center; vertical-align: middle; }
   .page .page_content .caption_table.chart_table_list .table tbody tr td { text-align: center; border-right: 1.5px solid #e7591a; border-bottom: 1.5px solid #e7591a; padding: 6px 5px; }
-  .page .page_content .caption_table.chart_table_list .table tbody tr td.table_id, .page .page_content .caption_table.chart_table_list .table tbody tr td.table_name { text-align: left; word-break: break-all; }
+  .page .page_content .caption_table.chart_table_list .table tbody tr td.table_id, .page .page_content .caption_table.chart_table_list .table tbody tr td.table_name { word-break: break-all; }
   .page .page_content .caption_table.chart_table_list .table tbody tr td.table_id { width: 90px; vertical-align: top; }
   .page .page_content .caption_table.chart_table_list .table tbody tr td.table_name { width: calc(100% - 835px); }
   .page .page_content .caption_table.chart_table_list .table tbody tr td.table_department { width: 165px; }
