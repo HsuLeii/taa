@@ -82,7 +82,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
   input, label { font-size: 17px; }
   button, .btn { font-size: 17px; }
   .table thead th { font-size: 21px; }
-  .table tbody td { font-size: 17px; } }
+  .table tbody td { font-size: 16px; } }
 
 .table { margin-bottom: 0; --bs-table-bg: white; }
 
