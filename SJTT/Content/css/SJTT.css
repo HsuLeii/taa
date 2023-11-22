@@ -96,8 +96,6 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_content .chart_category_icon i { margin: 0 3px 0 0; font-size: 18px; }
 
-.page .page_content .chart_category_icon.chart_category_one:before { content: "\f028"; }
-
 .page .page_content .chart_category_icon.chart_category_one i { color: #37a9ff; }
 
 .page .page_content .chart_category_icon.chart_category_two i { color: #edb300; }

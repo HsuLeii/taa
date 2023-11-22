@@ -33,9 +33,6 @@
             }
 
             &.chart_category_one {
-                &:before{
-                    content: "\f028";
-                }
                 i {
                     color: darken($group_one, 15%);
                 }
