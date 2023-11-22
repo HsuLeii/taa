@@ -25,35 +25,9 @@
         .chart_category_icon {
             display: inline-block;
 
-            svg {
-                font-family: "Font Awesome 6 Free";
-                font-weight: 900;
+            img {
                 margin: 0 3px 0 0;
                 width: 18px;
-            }
-
-            &.chart_category_one {
-                svg {
-                    fill: darken($group_one, 15%);
-                }
-            }
-
-            &.chart_category_two {
-                svg{
-                    fill: darken($group_two, 15%);
-                }
-            }
-
-            &.chart_category_three {
-                svg{
-                    fill: darken($group_three, 15%);
-                }
-            }
-
-            &.chart_category_four {
-                svg{
-                    fill: darken($group_four, 15%);
-                }
             }
         }
 
@@ -171,7 +145,7 @@
                 border: 1.5px solid $main_color;
 
                 .chart_category_icon {
-                    svg {
+                    img {
                         margin: 0;
                     }
                 }
@@ -270,9 +244,8 @@
                         .chart_category_icon {
 
                             &.big_icon{
-                                vertical-align: sub;
 
-                                svg {
+                                img {
                                     width: 19px;
                                 }
                             }
@@ -743,7 +716,7 @@
                         .group_icon_item{
                             .chart_category_icon {
                                 &.big_icon{
-                                    svg {
+                                    img {
                                         width: 30px;
                                     }
                                 }
@@ -861,35 +834,10 @@
 
             .chart_category_icon {
                 display: inline-block;
-                svg {
-                    font-family: "Font Awesome 6 Free";
-                    font-weight: 900;
+                
+                img {
                     margin: 0 3px 0 0;
                     width: 18px;
-                }
-
-                &.chart_category_one {
-                    svg {
-                        fill: darken($group_one, 15%);
-                    }
-                }
-
-                &.chart_category_two {
-                    svg{
-                        fill: darken($group_two, 15%);
-                    }
-                }
-
-                &.chart_category_three {
-                    svg{
-                        fill: darken($group_three, 15%);
-                    }
-                }
-
-                &.chart_category_four {
-                    svg{
-                        fill: darken($group_four, 15%);
-                    }
                 }
             }
 
@@ -991,7 +939,7 @@
                     border: 1.5px solid $main_color;
 
                     .chart_category_icon {
-                        svg {
+                        img {
                             margin: 0;
                         }
                     }
@@ -1088,9 +1036,8 @@
                             .chart_category_icon {
     
                                 &.big_icon{
-                                    vertical-align: sub;
 
-                                    svg {
+                                    img {
                                         width: 30px;
                                     }
                                 }
