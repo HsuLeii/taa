@@ -1251,12 +1251,14 @@
 
                 .chart_category_area {
                     width: 25%;
+                    flex-direction: column;
 
                     .chart_category {
                         display: flex;
                         align-items: center;
                         margin: 10px 0;
                         padding: 5px;
+                        width: 100%;
                     }
                 }
 
