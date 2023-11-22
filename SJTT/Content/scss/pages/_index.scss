@@ -258,6 +258,8 @@
                             }
                         }
 
+                        
+
                         &:nth-child(8) {
                             td {
                                 border-bottom: 0px;
@@ -442,6 +444,8 @@
                     tbody {
                         tr {
                             &:nth-child(1) {
+                                    text-align: center;
+                                    vertical-align: middle;
                                 td {
 
                                     &.table_id,
@@ -459,21 +463,17 @@
 
                                 &.table_id,
                                 &.table_name {
-                                    text-align: left;
                                     word-break: break-all;
                                 }
 
                                 &.table_id {
-                                    width: 80px;
+                                    width: 90px;
+                                    vertical-align: top;
                                 }
 
                                 &.table_name {
-                                    width: calc(100% - 900px);
+                                    width: calc(100% - 835px);
                                 }
-
-                                // &.table_degree {
-                                //     width: 70px;
-                                // }
 
                                 &.table_department {
                                     width: 165px;
@@ -481,7 +481,7 @@
 
                                 &.table_degree,
                                 &.table_grade {
-                                    width: 105px;
+                                    width: 80px;
                                 }
 
                                 &.group_item {
@@ -508,9 +508,9 @@
                                         }
                                     }
 
-
                                 }
                             }
+                            
                         }
                     }
                 }
@@ -555,9 +555,7 @@
                 transform: translate(0, -50%);
                 z-index: 1;
 
-                &::before {
-                    counter-increment: current;
-                    content: counter(current) "/"counter(total);
+                .page_number_text{
                     font-size: 13px;
                     color: $main_color_grey;
                     border: 1px solid $main_color_grey;
@@ -716,7 +714,7 @@
 
                 .page_number {
 
-                    &::before {
+                    .page_number_text{
                         font-size: 15px;
                     }
                 }
@@ -843,8 +841,13 @@
 
                 .page_number {
 
-                    &::before {
+                    .page_number_text{
                         font-size: 17px;
+                        color: $main_color_grey;
+                        border: 1px solid $main_color_grey;
+                        border-radius: 50px;
+                        background-color: $body_bg;
+                        padding: 5px 10px;
                     }
                 }
             }
@@ -1071,7 +1074,7 @@
                                     text-align: center;
                                     vertical-align: middle;
                                 }
-
+                                
                                 &.group_projects {
                                     background-color: $group_projects;
                                     width: 24%;
@@ -1317,6 +1320,8 @@
                         tbody {
                             tr {
                                 &:nth-child(1) {
+                                    text-align: center;
+                                    vertical-align: middle;
                                     td {
 
                                         &.table_id,
@@ -1339,20 +1344,21 @@
                                     }
 
                                     &.table_id {
-                                        width: 100px;
+                                        width: 90px;
+                                        vertical-align: top;
                                     }
 
                                     &.table_name {
-                                        width: calc(100% - 800px);
+                                        width: calc(100% - 835px);
                                     }
 
-                                    &.table_degree {
-                                        width: 70px;
+                                    &.table_department {
+                                        width: 165px;
                                     }
-
-                                    &.table_department,
+    
+                                    &.table_degree,
                                     &.table_grade {
-                                        width: 105px;
+                                        width: 80px;
                                     }
 
                                     &.group_item {
@@ -1426,10 +1432,8 @@
                     transform: translate(0, -50%);
                     z-index: 1;
 
-                    &::before {
-                        counter-increment: current;
-                        content: counter(current) "/"counter(total);
-                        font-size: 13px;
+                    .page_number_text{
+                        font-size: 17px;
                         color: $main_color_grey;
                         border: 1px solid $main_color_grey;
                         border-radius: 50px;

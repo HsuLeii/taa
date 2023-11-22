@@ -218,19 +218,21 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_content .caption_table.chart_table_list .table thead tr th .chart_information { margin: 0 auto; }
 
+.page .page_content .caption_table.chart_table_list .table tbody tr:nth-child(1) { text-align: center; vertical-align: middle; }
+
 .page .page_content .caption_table.chart_table_list .table tbody tr:nth-child(1) td.table_id, .page .page_content .caption_table.chart_table_list .table tbody tr:nth-child(1) td.table_name { text-align: center; }
 
 .page .page_content .caption_table.chart_table_list .table tbody tr td { text-align: center; border-right: 1.5px solid #e7591a; border-bottom: 1.5px solid #e7591a; padding: 6px 5px; }
 
-.page .page_content .caption_table.chart_table_list .table tbody tr td.table_id, .page .page_content .caption_table.chart_table_list .table tbody tr td.table_name { text-align: left; word-break: break-all; }
+.page .page_content .caption_table.chart_table_list .table tbody tr td.table_id, .page .page_content .caption_table.chart_table_list .table tbody tr td.table_name { word-break: break-all; }
 
-.page .page_content .caption_table.chart_table_list .table tbody tr td.table_id { width: 80px; }
+.page .page_content .caption_table.chart_table_list .table tbody tr td.table_id { width: 90px; vertical-align: top; }
 
-.page .page_content .caption_table.chart_table_list .table tbody tr td.table_name { width: calc(100% - 900px); }
+.page .page_content .caption_table.chart_table_list .table tbody tr td.table_name { width: calc(100% - 835px); }
 
 .page .page_content .caption_table.chart_table_list .table tbody tr td.table_department { width: 165px; }
 
-.page .page_content .caption_table.chart_table_list .table tbody tr td.table_degree, .page .page_content .caption_table.chart_table_list .table tbody tr td.table_grade { width: 105px; }
+.page .page_content .caption_table.chart_table_list .table tbody tr td.table_degree, .page .page_content .caption_table.chart_table_list .table tbody tr td.table_grade { width: 80px; }
 
 .page .page_content .caption_table.chart_table_list .table tbody tr td.group_item { width: 105px; background-color: #fff; }
 
@@ -254,7 +256,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_footer .pagination .page_number { position: absolute; right: 5px; top: 50%; transform: translate(0, -50%); z-index: 1; }
 
-.page .page_footer .pagination .page_number::before { counter-increment: current; content: counter(current) "/" counter(total); font-size: 13px; color: #20221f; border: 1px solid #20221f; border-radius: 50px; background-color: #f7f5f5; padding: 5px 10px; }
+.page .page_footer .pagination .page_number .page_number_text { font-size: 13px; color: #20221f; border: 1px solid #20221f; border-radius: 50px; background-color: #f7f5f5; padding: 5px 10px; }
 
 .page .page_footer .pagination::after { content: ""; position: absolute; width: calc(100% - 100px); height: 1px; background-color: #20221f; top: 50%; left: 0; transform: translate(0, -50%); z-index: -1; }
 
@@ -274,7 +276,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
   .page .page_content .chart_area .chart_canvas { width: 72%; margin: 0 3% 0 0; }
   .page .page_content .chart_area .chart_category_area { width: 25%; flex-direction: column; }
   .page .page_content .chart_area .chart_category_area .chart_category { width: 100%; }
-  .page .page_footer .pagination .page_number::before { font-size: 15px; } }
+  .page .page_footer .pagination .page_number .page_number_text { font-size: 15px; } }
 
 @media screen and (min-width: 1024px) { .page .page_content { padding: 0 2.5%; }
   .page .page_content .report_title_area { margin: 0 auto 40px; padding: 0 0 30px; }
@@ -290,7 +292,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
   .page .page_content .chart_area .chart_area_tittle { margin: 20px auto; }
   .page .page_content .chart_area .chart_category_area { width: 25%; }
   .page .page_content .caption_table.chart_table_list .table thead tr th .chart_information { justify-content: center; }
-  .page .page_footer .pagination .page_number::before { font-size: 17px; } }
+  .page .page_footer .pagination .page_number .page_number_text { font-size: 17px; color: #20221f; border: 1px solid #20221f; border-radius: 50px; background-color: #f7f5f5; padding: 5px 10px; } }
 
 @page { /*size: portrait;  直向 */
   /*size: landscape;  橫向 */
@@ -366,13 +368,14 @@ button:disabled a { color: #fff !important; cursor: auto; }
   .page .page_content .caption_table.chart_table_list .table { min-width: 972px; }
   .page .page_content .caption_table.chart_table_list .table thead tr th { color: #20221f; border-bottom: 1.5px solid #e7591a; border-right: 1.5px solid #e7591a; background-color: #fff; }
   .page .page_content .caption_table.chart_table_list .table thead tr th .chart_information { margin: 0 auto; }
+  .page .page_content .caption_table.chart_table_list .table tbody tr:nth-child(1) { text-align: center; vertical-align: middle; }
   .page .page_content .caption_table.chart_table_list .table tbody tr:nth-child(1) td.table_id, .page .page_content .caption_table.chart_table_list .table tbody tr:nth-child(1) td.table_name { text-align: center; }
   .page .page_content .caption_table.chart_table_list .table tbody tr td { text-align: center; border-right: 1.5px solid #e7591a; border-bottom: 1.5px solid #e7591a; padding: 6px 5px; }
   .page .page_content .caption_table.chart_table_list .table tbody tr td.table_id, .page .page_content .caption_table.chart_table_list .table tbody tr td.table_name { text-align: left; word-break: break-all; }
-  .page .page_content .caption_table.chart_table_list .table tbody tr td.table_id { width: 100px; }
-  .page .page_content .caption_table.chart_table_list .table tbody tr td.table_name { width: calc(100% - 800px); }
-  .page .page_content .caption_table.chart_table_list .table tbody tr td.table_degree { width: 70px; }
-  .page .page_content .caption_table.chart_table_list .table tbody tr td.table_department, .page .page_content .caption_table.chart_table_list .table tbody tr td.table_grade { width: 105px; }
+  .page .page_content .caption_table.chart_table_list .table tbody tr td.table_id { width: 90px; vertical-align: top; }
+  .page .page_content .caption_table.chart_table_list .table tbody tr td.table_name { width: calc(100% - 835px); }
+  .page .page_content .caption_table.chart_table_list .table tbody tr td.table_department { width: 165px; }
+  .page .page_content .caption_table.chart_table_list .table tbody tr td.table_degree, .page .page_content .caption_table.chart_table_list .table tbody tr td.table_grade { width: 80px; }
   .page .page_content .caption_table.chart_table_list .table tbody tr td.group_item { width: 105px; background-color: #fff; }
   .page .page_content .caption_table.chart_table_list .table tbody tr td.group_item.highest { font-weight: bold; }
   .page .page_content .caption_table.chart_table_list .table tbody tr td.group_item.highest.group_one { background-color: #cfeaff; }
@@ -384,6 +387,6 @@ button:disabled a { color: #fff !important; cursor: auto; }
   .page .page_footer .pagination .footer_logo { width: 120px; background-color: #f7f5f5; padding: 10px; }
   .page .page_footer .pagination .footer_logo .moe_logo, .page .page_footer .pagination .footer_logo .ntnu_logo { display: inline-block; width: 45%; margin: 0 calc(2.5% - 2px); }
   .page .page_footer .pagination .page_number { position: absolute; right: 5px; top: 50%; transform: translate(0, -50%); z-index: 1; }
-  .page .page_footer .pagination .page_number::before { counter-increment: current; content: counter(current) "/" counter(total); font-size: 13px; color: #20221f; border: 1px solid #20221f; border-radius: 50px; background-color: #f7f5f5; padding: 5px 10px; }
+  .page .page_footer .pagination .page_number .page_number_text { font-size: 17px; color: #20221f; border: 1px solid #20221f; border-radius: 50px; background-color: #f7f5f5; padding: 5px 10px; }
   .page .page_footer .pagination::after { content: ""; position: absolute; width: calc(100% - 100px); height: 1px; background-color: #20221f; top: 50%; left: 0; transform: translate(0, -50%); z-index: -1; }
   .page .page_footer .page_decorate { width: 100%; height: 12px; background: linear-gradient(45deg, #a3c313 33%, #1ebbe9 33%, #1ebbe9 66%, #e7591a 66%); margin: 0 auto; } }
