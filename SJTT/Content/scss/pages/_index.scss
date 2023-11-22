@@ -80,8 +80,17 @@
             }
 
             &.chart_category_four {
+                &:before{
+                    content: "\f005";
+                    font-size: 0;
+                }
+
                 i {
                     color: darken($group_four, 15%);
+                }
+
+                svg{
+                    fill: darken($group_four, 15%);
                 }
             }
         }
@@ -976,8 +985,17 @@
                 }
 
                 &.chart_category_four {
+                    &:before{
+                        content: "\f005";
+                        font-size: 0;
+                    }
+    
                     i {
                         color: darken($group_four, 15%);
+                    }
+    
+                    svg{
+                        fill: darken($group_four, 15%);
                     }
                 }
             }
