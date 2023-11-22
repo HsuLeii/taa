@@ -94,25 +94,13 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_content .chart_category_icon { display: inline-block; }
 
-.page .page_content .chart_category_icon i { margin: 0 3px 0 0; font-size: 18px; }
-
 .page .page_content .chart_category_icon svg { font-family: "Font Awesome 6 Free"; font-weight: 900; margin: 0 3px 0 0; width: 18px; }
-
-.page .page_content .chart_category_icon.chart_category_one i { color: #37a9ff; }
 
 .page .page_content .chart_category_icon.chart_category_one svg { fill: #37a9ff; }
 
-.page .page_content .chart_category_icon.chart_category_two i { color: #edb300; }
-
 .page .page_content .chart_category_icon.chart_category_two svg { fill: #edb300; }
 
-.page .page_content .chart_category_icon.chart_category_three i { color: #36a36e; }
-
 .page .page_content .chart_category_icon.chart_category_three svg { fill: #36a36e; }
-
-.page .page_content .chart_category_icon.chart_category_four:before { content: "\f005"; font-size: 0; }
-
-.page .page_content .chart_category_icon.chart_category_four i { color: #fd4d49; }
 
 .page .page_content .chart_category_icon.chart_category_four svg { fill: #fd4d49; }
 
@@ -150,7 +138,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_content .caption_table .table { min-width: 845px; border: 1.5px solid #e7591a; }
 
-.page .page_content .caption_table .table .chart_category_icon i { margin: 0; }
+.page .page_content .caption_table .table .chart_category_icon svg { margin: 0; }
 
 .page .page_content .caption_table .table thead tr th { color: #fff; background-color: #e7591a; padding: 5px 10px; text-align: center; }
 
@@ -182,7 +170,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_content .caption_table.caption_table_two .table .group_icon_item .chart_category_icon.big_icon { vertical-align: sub; }
 
-.page .page_content .caption_table.caption_table_two .table .group_icon_item .chart_category_icon.big_icon i { font-size: 19px; }
+.page .page_content .caption_table.caption_table_two .table .group_icon_item .chart_category_icon.big_icon svg { width: 19px; }
 
 .page .page_content .chart_information { display: flex; justify-content: flex-start; margin: 0 auto 20px; flex-wrap: wrap; }
 
@@ -294,7 +282,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
   .page .page_content .page_caption .page_caption_text p span { font-size: 14px; }
   .page .page_content .page_caption .page_caption_text p span.bold { font-size: 17px; }
   .page .page_content .caption_table { margin: 0 auto; }
-  .page .page_content .caption_table.caption_table_two .table .group_icon_item .chart_category_icon.big_icon i { font-size: 30px; }
+  .page .page_content .caption_table.caption_table_two .table .group_icon_item .chart_category_icon.big_icon svg { width: 30px; }
   .page .page_content .chart_information { justify-content: center; }
   .page .page_content .chart_information .chart_information_text { margin: 0 20px; }
   .page .page_content .chart_area .chart_area_tittle { margin: 20px auto; }
@@ -315,7 +303,6 @@ button:disabled a { color: #fff !important; cursor: auto; }
   .page .page_header .page_decorate { width: 100%; height: 12px; background: linear-gradient(135deg, #a3c313 33%, #1ebbe9 33%, #1ebbe9 66%, #e7591a 66%); margin: 0 auto 15px; }
   .page .page_content { padding: 0 2.5%; }
   .page .page_content .chart_category_icon { display: inline-block; }
-  .page .page_content .chart_category_icon i { margin: 0 3px 0 0; font-size: 18px; }
   .page .page_content .chart_category_icon svg { font-family: "Font Awesome 6 Free"; font-weight: 900; margin: 0 3px 0 0; width: 18px; }
   .page .page_content .chart_category_icon.chart_category_one:before { content: "\f005"; display: none; color: #37a9ff; }
   .page .page_content .chart_category_icon.chart_category_one i { color: #37a9ff; }
@@ -344,7 +331,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
   .page .page_content .pagination_tittle h4 { color: #e7591a; }
   .page .page_content .pagination_tittle::after { content: ""; position: absolute; right: 0; bottom: 0; width: 90px; height: 30px; transform: translate(0, 0%); background-image: radial-gradient(#ffaf8b 30%, transparent 30%); background-position: 0 0, 10px 0px; background-size: 15px 15px; }
   .page .page_content .caption_table .table { border: 1.5px solid #e7591a; }
-  .page .page_content .caption_table .table .chart_category_icon i { margin: 0; }
+  .page .page_content .caption_table .table .chart_category_icon svg { margin: 0; }
   .page .page_content .caption_table .table thead tr th { color: #fff; background-color: #e7591a; padding: 5px 10px; text-align: center; }
   .page .page_content .caption_table .table tbody tr td { width: 20%; border-bottom: 1.5px solid #e7591a; border-right: 1.5px solid #e7591a; padding: 5px 15px; color: #20221f; text-align: justify; }
   .page .page_content .caption_table .table tbody tr td:nth-child(1) { text-align: center; vertical-align: middle; }
@@ -360,7 +347,7 @@ button:disabled a { color: #fff !important; cursor: auto; }
   .page .page_content .caption_table .table tbody tr td .group_projects_img { width: 80px; margin: 0 auto 10px; }
   .page .page_content .caption_table .table tbody tr:nth-child(8) td { border-bottom: 0px; padding: 5px 15px 0; }
   .page .page_content .caption_table.caption_table_two .table .group_icon_item .chart_category_icon.big_icon { vertical-align: sub; }
-  .page .page_content .caption_table.caption_table_two .table .group_icon_item .chart_category_icon.big_icon i { font-size: 30px; }
+  .page .page_content .caption_table.caption_table_two .table .group_icon_item .chart_category_icon.big_icon svg { font-size: 30px; }
   .page .page_content .caption_table.caption_table_two .table tbody tr td.group_projects { width: 18%; }
   .page .page_content .caption_table.caption_table_two .table tbody tr td.group_one, .page .page_content .caption_table.caption_table_two .table tbody tr td.group_two, .page .page_content .caption_table.caption_table_two .table tbody tr td.group_three, .page .page_content .caption_table.caption_table_two .table tbody tr td.group_four { width: 20.5%; }
   .page .page_content .chart_information { display: flex; justify-content: center; margin: 0 auto 20px; flex-wrap: wrap; }

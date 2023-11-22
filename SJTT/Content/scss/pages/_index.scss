@@ -24,12 +24,6 @@
 
         .chart_category_icon {
             display: inline-block;
-            
-
-            i {
-                margin: 0 3px 0 0;
-                font-size: 18px;
-            }
 
             svg {
                 font-family: "Font Awesome 6 Free";
@@ -39,45 +33,24 @@
             }
 
             &.chart_category_one {
-                i {
-                    color: darken($group_one, 15%);
-                }
-
                 svg {
                     fill: darken($group_one, 15%);
                 }
             }
 
             &.chart_category_two {
-                i {
-                    color: darken($group_two, 15%);
-                }
-
                 svg{
                     fill: darken($group_two, 15%);
                 }
             }
 
             &.chart_category_three {
-                i {
-                    color: darken($group_three, 15%);
-                }
-
                 svg{
                     fill: darken($group_three, 15%);
                 }
             }
 
             &.chart_category_four {
-                &:before{
-                    content: "\f005";
-                    font-size: 0;
-                }
-
-                i {
-                    color: darken($group_four, 15%);
-                }
-
                 svg{
                     fill: darken($group_four, 15%);
                 }
@@ -198,7 +171,7 @@
                 border: 1.5px solid $main_color;
 
                 .chart_category_icon {
-                    i {
+                    svg {
                         margin: 0;
                     }
                 }
@@ -299,8 +272,8 @@
                             &.big_icon{
                                 vertical-align: sub;
 
-                                i {
-                                    font-size: 19px;
+                                svg {
+                                    width: 19px;
                                 }
                             }
                         }
@@ -798,8 +771,8 @@
                         .group_icon_item{
                             .chart_category_icon {
                                 &.big_icon{
-                                    i {
-                                        font-size: 30px;
+                                    svg {
+                                        width: 30px;
                                     }
                                 }
                             }
@@ -916,12 +889,6 @@
 
             .chart_category_icon {
                 display: inline-block;
-
-                i {
-                    margin: 0 3px 0 0;
-                    font-size: 18px;
-                }
-
                 svg {
                     font-family: "Font Awesome 6 Free";
                     font-weight: 900;
@@ -1100,7 +1067,7 @@
                     border: 1.5px solid $main_color;
 
                     .chart_category_icon {
-                        i {
+                        svg {
                             margin: 0;
                         }
                     }
@@ -1199,7 +1166,7 @@
                                 &.big_icon{
                                     vertical-align: sub;
 
-                                    i {
+                                    svg {
                                         font-size: 30px;
                                     }
                                 }
