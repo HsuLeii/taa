@@ -59,10 +59,8 @@
             </div>
         </div>
 
-        <canvas id="myChart"></canvas>
-
         <div class="page_caption_img">
-            <img id="url" src="Content/image/caption/caption.png" alt="" id="page_caption_img_one" class="page_caption_img_one">
+            <img src="Content/image/caption/caption.png" alt="" id="page_caption_img_one" class="page_caption_img_one">
         </div>
 
         <div class="page_footer">
@@ -1473,6 +1471,7 @@
 var ctx = document.getElementById('chartOne').getContext('2d');
 
 var myChart = new Chart(ctx, {
+    
     type: 'pie',
     data: {
         labels: [
@@ -1488,7 +1487,8 @@ var myChart = new Chart(ctx, {
         }, ],
     },
     options: {
-        responsive: false,
+        responsive: true,
+        aspectRatio: 1,
         animation: {
             duration: 0,
         },
@@ -1509,6 +1509,7 @@ var myChart = new Chart(ctx, {
                 align: 'center',
                 // 文字置中
                 textAlign: 'center' ,
+                backgroundColor: ['#83caff', '#ffcf3a', '#5dc994', '#fe9795'],
                 borderWidth: 1,
                 borderRadius: 5,
                 padding: 5,
@@ -1531,6 +1532,7 @@ var myChart = new Chart(ctx, {
 
     
 })
+
 </script>
 
 
