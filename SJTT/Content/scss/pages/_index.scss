@@ -32,21 +32,37 @@
                 font-size: 18px;
             }
 
+            svg {
+                margin: 0 3px 0 0;
+                font-size: 18px;
+            }
+
             &.chart_category_one {
                 &:before{
                     content: "\f005";
+                    display: none;
+                    color: darken($group_one, 15%);
                 }
                 i {
                     color: darken($group_one, 15%);
+                }
+
+                svg {
+                    fill: darken($group_one, 15%);
                 }
             }
 
             &.chart_category_two {
                 &:before{
-                    content: "\f14d";
+                    content: "\f005";
                 }
+                
                 i {
                     color: darken($group_two, 15%);
+                }
+
+                svg{
+                    fill: darken($group_two, 15%);
                 }
             }
 
@@ -56,6 +72,10 @@
                 }
                 i {
                     color: darken($group_three, 15%);
+                }
+
+                svg{
+                    fill: darken($group_three, 15%);
                 }
             }
 
