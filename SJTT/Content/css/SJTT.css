@@ -92,11 +92,11 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_content { padding: 0 5%; }
 
-.page .page_content .chart_category_icon { display: inline-block; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.page .page_content .chart_category_icon { display: inline-block; }
 
 .page .page_content .chart_category_icon i { margin: 0 3px 0 0; font-size: 18px; }
 
-.page .page_content .chart_category_icon svg { margin: 0 3px 0 0; font-size: 18px; }
+.page .page_content .chart_category_icon svg { font-family: "Font Awesome 6 Free"; font-weight: 900; margin: 0 3px 0 0; font-size: 18px; }
 
 .page .page_content .chart_category_icon.chart_category_one:before { content: "\f005"; display: none; color: #37a9ff; }
 
