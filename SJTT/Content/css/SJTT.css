@@ -234,15 +234,17 @@ button:disabled a { color: #fff !important; cursor: auto; }
 
 .page .page_footer { position: absolute; bottom: 0; width: 100%; }
 
-.page .page_footer .pagination { position: absolute; display: flex; justify-content: center; width: 90%; margin: 0 auto; bottom: 30px; left: 50%; transform: translate(-50%, 0); }
+.page .page_footer .pagination { position: absolute; display: flex; justify-content: flex-start; width: 90%; margin: 0 auto; bottom: 30px; left: 50%; transform: translate(-50%, 0); }
 
 .page .page_footer .pagination .footer_logo { width: 120px; background-color: #f7f5f5; padding: 10px; }
 
 .page .page_footer .pagination .footer_logo .moe_logo, .page .page_footer .pagination .footer_logo .ntnu_logo { display: inline-block; width: 45%; margin: 0 calc(2.5% - 2px); }
 
-.page .page_footer .pagination .page_number { position: absolute; right: 5px; top: 50%; transform: translate(0, -50%); z-index: 1; }
+.page .page_footer .pagination .page_number { position: absolute; right: 5px; top: 50%; transform: translate(0, -50%); z-index: 1; background-color: #f7f5f5; padding: 0 0 0 10px; display: flex; align-items: center; }
 
-.page .page_footer .pagination .page_number .page_number_text { font-size: 13px; color: #20221f; border: 1px solid #20221f; border-radius: 50px; background-color: #f7f5f5; padding: 5px 10px; }
+.page .page_footer .pagination .page_number .page_name { margin: 0 10px 0 0; }
+
+.page .page_footer .pagination .page_number .page_number_text { font-size: 13px; color: #20221f; border: 1px solid #20221f; border-radius: 50px; padding: 5px 10px; }
 
 .page .page_footer .pagination::after { content: ""; position: absolute; width: calc(100% - 100px); height: 1px; background-color: #20221f; top: 50%; left: 0; transform: translate(0, -50%); z-index: -1; }
 
@@ -254,12 +256,15 @@ button:disabled a { color: #fff !important; cursor: auto; }
   .page .page_content .chart_area .chart_canvas { width: 80%; margin: 0 0 40px 0; }
   .page .page_content .chart_area .chart_category_area { justify-content: center; } }
 
+@media screen and (min-width: 576px) { .page .page_footer .pagination { justify-content: center; } }
+
 @media screen and (min-width: 768px) { .page .page_content .page_caption .page_caption_text p span { font-size: 12px; }
   .page .page_content .page_caption .page_caption_text p span.bold { font-size: 15px; }
   .page .page_content .chart_area .chart_area_tittle { margin: 30px auto; }
   .page .page_content .chart_area .chart_canvas { width: 72%; margin: 0 3% 0 0; }
   .page .page_content .chart_area .chart_category_area { width: 25%; flex-direction: column; }
   .page .page_content .chart_area .chart_category_area .chart_category { width: 100%; }
+  .page .page_footer .pagination .page_number { padding: 0 0 0 15px; }
   .page .page_footer .pagination .page_number .page_number_text { font-size: 15px; } }
 
 @media screen and (min-width: 1024px) { .page .page_content { padding: 0 2.5%; }
@@ -362,7 +367,8 @@ button:disabled a { color: #fff !important; cursor: auto; }
   .page .page_footer .pagination { position: absolute; display: flex; justify-content: center; width: 90%; margin: 0 auto; bottom: 30px; left: 50%; transform: translate(-50%, 0); }
   .page .page_footer .pagination .footer_logo { width: 120px; background-color: #f7f5f5; padding: 10px; }
   .page .page_footer .pagination .footer_logo .moe_logo, .page .page_footer .pagination .footer_logo .ntnu_logo { display: inline-block; width: 45%; margin: 0 calc(2.5% - 2px); }
-  .page .page_footer .pagination .page_number { position: absolute; right: 5px; top: 50%; transform: translate(0, -50%); z-index: 1; }
+  .page .page_footer .pagination .page_number { position: absolute; right: 5px; top: 50%; transform: translate(0, -50%); z-index: 1; background-color: #f7f5f5; padding: 0 0 0 15px; display: flex; align-items: center; }
+  .page .page_footer .pagination .page_number .page_name { margin: 0 10px 0 0; }
   .page .page_footer .pagination .page_number .page_number_text { font-size: 17px; color: #20221f; border: 1px solid #20221f; border-radius: 50px; background-color: #f7f5f5; padding: 5px 10px; }
   .page .page_footer .pagination::after { content: ""; position: absolute; width: calc(100% - 100px); height: 1px; background-color: #20221f; top: 50%; left: 0; transform: translate(0, -50%); z-index: -1; }
   .page .page_footer .page_decorate { width: 100%; height: 12px; background: linear-gradient(45deg, #a3c313 33%, #1ebbe9 33%, #1ebbe9 66%, #e7591a 66%); margin: 0 auto; } }

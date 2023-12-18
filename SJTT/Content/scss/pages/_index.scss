@@ -497,7 +497,7 @@
         .pagination {
             position: absolute;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             width: 90%;
             margin: 0 auto;
             bottom: 30px;
@@ -523,13 +523,20 @@
                 top: 50%;
                 transform: translate(0, -50%);
                 z-index: 1;
+                background-color: $body_bg;
+                padding: 0 0 0 10px;
+                display: flex;
+                align-items: center;
+
+                .page_name{
+                    margin: 0 10px 0 0;
+                }
 
                 .page_number_text{
                     font-size: 13px;
                     color: $main_color_grey;
                     border: 1px solid $main_color_grey;
                     border-radius: 50px;
-                    background-color: $body_bg;
                     padding: 5px 10px;
                 }
             }
@@ -598,6 +605,17 @@
     }
 }
 
+@media screen and (min-width: 576px){
+    .page {
+        .page_footer {
+    
+            .pagination {
+                justify-content: center;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 768px) {
     .page {
 
@@ -654,6 +672,7 @@
             .pagination {
 
                 .page_number {
+                    padding: 0 0 0 15px;
 
                     .page_number_text{
                         font-size: 15px;
@@ -1329,6 +1348,14 @@
                     top: 50%;
                     transform: translate(0, -50%);
                     z-index: 1;
+                    background-color: $body_bg;
+                    padding: 0 0 0 15px;
+                    display: flex;
+                    align-items: center;
+
+                    .page_name{
+                        margin: 0 10px 0 0;
+                    }
 
                     .page_number_text{
                         font-size: 17px;
