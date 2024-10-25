@@ -356,14 +356,41 @@ rt {
   margin-left: auto;
   display: flex;
   justify-content: space-around;
+  align-items: flex-start;
   margin-top: 20px;
+}
+
+.material-text {
+  width: 50%;
 }
 
 .school,
 .date,
-.people {
+.people,
+.filter {
   padding: 8px 0px;
   border-bottom: 1px dotted #595757;
+}
+
+.school p,
+.date p,
+.people p,
+.filter p{
+    display: flex;
+}
+
+.school p span:nth-child(1),
+.date p span:nth-child(1),
+.people p span:nth-child(1),
+.filter p span:nth-child(1){
+    width: 110px;
+}
+
+.school p span:nth-child(2),
+.date p span:nth-child(2),
+.people p span:nth-child(2),
+.filter p span:nth-child(2){
+    width: calc(100% - 115px);
 }
 
 .threepeople {
@@ -644,6 +671,20 @@ rt {
     margin: 15px 25px 0px auto;
   }
 
+  .school p span:nth-child(1),
+.date p span:nth-child(1),
+.people p span:nth-child(1),
+.filter p span:nth-child(1){
+    width: 100px;
+}
+
+.school p span:nth-child(2),
+.date p span:nth-child(2),
+.people p span:nth-child(2),
+.filter p span:nth-child(2){
+    width: calc(100% - 105px);
+}
+
   .threepeople.shadow {
     margin: 30px 25px 0px 0px;
   }
@@ -698,6 +739,20 @@ rt {
   .subtitle {
     padding: 5px 0px;
   }
+
+  .school p span:nth-child(1),
+.date p span:nth-child(1),
+.people p span:nth-child(1),
+.filter p span:nth-child(1){
+    width: 95px;
+}
+
+.school p span:nth-child(2),
+.date p span:nth-child(2),
+.people p span:nth-child(2),
+.filter p span:nth-child(2){
+    width: calc(100% - 100px);
+}
 
   .threepeople.shadow {
     width: 55%;
@@ -785,9 +840,22 @@ rt {
   }
 
   .material-text {
-    width: 100%;
     margin: 15px auto 0px;
   }
+
+  .school p span:nth-child(1),
+.date p span:nth-child(1),
+.people p span:nth-child(1),
+.filter p span:nth-child(1){
+    width: 75px;
+}
+
+.school p span:nth-child(2),
+.date p span:nth-child(2),
+.people p span:nth-child(2),
+.filter p span:nth-child(2){
+    width: calc(100% - 80px);
+}
 
   .threepeople.shadow {
     width: 100%;
@@ -1061,15 +1129,38 @@ rt {
     margin-left: auto;
     display: flex;
     justify-content: space-around;
+    align-items: flex-start;
     margin-top: 20px;
   }
 
   .school,
   .date,
-  .people {
+  .people,
+  .filter {
     padding: 8px 0px;
     border-bottom: 1px dotted #595757;
   }
+
+  .school p,
+.date p,
+.people p,
+.filter p{
+    display: flex;
+}
+
+.school p span:nth-child(1),
+.date p span:nth-child(1),
+.people p span:nth-child(1),
+.filter p span:nth-child(1){
+    width: 110px;
+}
+
+.school p span:nth-child(2),
+.date p span:nth-child(2),
+.people p span:nth-child(2),
+.filter p span:nth-child(2){
+    width: calc(100% - 115px);
+}
 
   .threepeople {
     background-color: #fff;
