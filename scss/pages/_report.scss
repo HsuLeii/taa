@@ -1,0 +1,1517 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+figure {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+*,
+body {
+    font-family: "微軟正黑體", 'Open Sans', 'Noto Sans TC', "PingFang TC", "蘋果儷中黑", 'sans-serif';
+    letter-spacing: 1.5px;
+    /* font-weight: 400; */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F7F7F7;
+    counter-reset: page-number;
+    /* 初始化，名字可自訂，數值為0 */
+    -webkit-print-color-adjust: exact;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #00a7e5;
+}
+
+h2 {
+    font-size: 23px;
+    font-weight: bold;
+    color: #00a7e5;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 1.5;
+}
+
+h4 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #595757;
+    line-height: 1.6;
+}
+
+p,
+label,
+tr,
+td {
+    font-size: 20px;
+    color: #595757;
+    line-height: 1.5;
+}
+
+table {
+    border-collapse: collapse;
+    border-color: white;
+}
+
+label {
+    padding: 0px 9px 0px 0px;
+}
+
+a {
+    font-size: 17px;
+    color: #fff;
+    text-decoration: none;
+}
+
+button {
+    background-color: transparent;
+    padding: 0px;
+    border-width: 0px;
+}
+
+select {
+    color: #595757;
+    background-color: #FCFAF7;
+    border-color: #595757;
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+.selectbook * {
+    border-radius: 15px;
+    background-color: #FCFAF7;
+    border-color: #00a7e5;
+
+}
+
+option {
+    color: #00a7e5;
+    background-color: #FCFAF7;
+    border-color: #00a7e5;
+    border-radius: 10px;
+    padding: 3px 8px;
+}
+
+input {
+    color: #595757;
+    background-color: #FCFAF7;
+    border: 1px solid #595757;
+    padding: 3px 8px;
+    font-size: 17px;
+    border-radius: 5px;
+
+}
+
+input[type=radio] {
+    width: 16px;
+    height: 16px;
+    display: inline;
+    vertical-align: top;
+    margin-top: 7px;
+}
+
+select:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: 0;
+    border: 1px solid #00a7e5;
+    color: #00a7e5;
+    -webkit-box-shadow: 1px 1px 5px #595757;
+    -moz-box-shadow: 1px 1px 5px #595757;
+    box-shadow: 1px 1px 5px #595757;
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -moz-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+img {
+    width: 100%;
+}
+
+rt {
+    -webkit-transform: translateY(-35%);
+    -moz-transform: translateY(-35%);
+    transform: translateY(-35%);
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+.white {
+    color: #FFF;
+}
+
+.blue {
+    color: #2783be;
+}
+
+.bluebg {
+    background-color: #2783be;
+}
+
+.redbg {
+    background-color: #d4655c;
+}
+
+.yellowbg {
+    background-color: #e1b538;
+}
+
+.greenbg {
+    background-color: #3e9979;
+}
+
+.purplebg {
+    background-color: #675e92;
+}
+
+.orange-border {
+    border-left: 1px solid #d26512;
+    border-right: 1px solid #d26512;
+}
+
+
+.blue-border {
+    border: 1px solid #2783be;
+}
+
+.red-border {
+    border: 1px solid #d4655c;
+}
+
+.yellow-border {
+    border: 1px solid #e1b538;
+}
+
+.shadow {
+    -webkit-box-shadow: 1px 1px 5px #5957576b;
+    -moz-box-shadow: 1px 1px 5px #5957576b;
+    box-shadow: 1px 1px 5px #5957576b;
+}
+
+.page {
+    /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
+    /* page-break-after: always;  碰到此元素會直接換頁 */
+    page-break-inside: avoid;
+    position: relative;
+    max-width: 1024px;
+    width: 100%;
+    /* height: 1448px; */
+    margin: 0 auto;
+    overflow: hidden;
+
+    &::after {
+        /* content: counter(page-number); 取用該名字的計數器 */
+        /*counter-increment: page-number 1;  增加計數器數值 */
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+.report-title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .logo {
+        position: relative;
+        width: 150px;
+        margin-left: 30px;
+        z-index: 1;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 240px;
+            height: 240px;
+            top: 0%;
+            left: 0%;
+            transform: translate(-30%, -30%);
+            background-color: #d26512;
+            z-index: -1;
+            border-radius: 50%;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 240px;
+            height: 240px;
+            top: 0%;
+            left: 0%;
+            transform: translate(-25%, -30%);
+            background: #fff468;
+            z-index: -2;
+            border-radius: 50%;
+        }
+    }
+
+    .title-content {
+        width: 100%;
+
+        .headline {
+            padding: 15px 0px;
+            text-align: center;
+            background-color: #d26512;
+
+            h3 {
+                margin-left: 35px;
+
+                img {
+                    width: 35px;
+                }
+            }
+        }
+
+        .subtitle {
+            padding: 10px 0px;
+            text-align: center;
+            background: #fff468;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "";
+                background-image: url(../image/board-eraser.png);
+                width: 60px;
+                height: 100%;
+                left: 15%;
+                top: -50%;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+
+.material {
+    width: calc(100% - 200px);
+    margin-left: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 20px;
+
+    .material-text {
+        width: 50%;
+
+        .school,
+        .date,
+        .people,
+        .filter {
+            padding: 8px 0px;
+            border-bottom: 1px dotted #595757;
+
+            p {
+                display: flex;
+
+                span {
+                    &:nth-child(1) {
+                        width: 110px;
+                    }
+
+                    &:nth-child(2) {
+                        width: calc(100% - 115px);
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+    }
+
+    .threepeople {
+        background-color: #fff;
+        width: 40%;
+        position: relative;
+        padding: 10px;
+        border-radius: 10px;
+
+        img {
+            width: 40%;
+            margin: -15% auto 15px;
+            display: block;
+        }
+
+        p {
+            color: #004795;
+        }
+    }
+}
+
+.test-content {
+    width: 60%;
+    z-index: 2;
+    height: calc(100% - 417px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h3 {
+        font-size: 42px;
+        border-bottom: 5px solid #f7ae00;
+        margin: 10px auto;
+    }
+}
+
+.item {
+    .item-title {
+        display: flex;
+        align-items: flex-end;
+        margin-left: 2.5%;
+
+        .number-mark {
+            width: 10%;
+            line-height: 0;
+        }
+
+        .first-text {
+            width: 100%;
+            padding: 10px;
+        }
+    }
+
+    .main {
+        width: 90%;
+        margin: 0 auto;
+
+        .data-page-scroll {
+            padding: 10px 20px;
+            margin: 30px auto;
+            border-radius: 15px;
+            box-shadow: 1px 1px 5px #5957577a;
+            background-color: #efefef;
+
+            .chart-control {
+                min-width: 768px;
+            }
+        }
+
+        .text-area {
+            margin: 40px auto;
+
+            .title {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 7%;
+                    margin-right: 20px;
+                }
+            }
+
+            .text-content {
+                padding: 10px 20px;
+                margin: 20px auto;
+                border-radius: 15px;
+                box-shadow: 1px 1px 5px #5957577a;
+                background-color: #efefef;
+
+                p {
+                    text-align: justify;
+                    /*　Firefox到此即可對齊　*/
+                    text-justify: auto;
+                    /*　IE需再加上此行　*/
+                    text-justify: inter-word;
+                }
+            }
+        }
+    }
+}
+
+.bottom-text {
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    background-color: #d26512;
+    padding: 10px;
+    width: 100%;
+
+    p {
+        color: white;
+        text-align: center;
+    }
+}
+
+/* values開始 */
+.green {
+    color: #3e9979;
+}
+
+.green-border {
+    border: 1px solid #3e9979;
+}
+
+.school-text {
+    color: #c73a3a;
+}
+
+.national-text {
+    color: #043789;
+}
+
+.value-logo {
+    &::before {
+        background: #3e9979;
+    }
+}
+
+.valuebg {
+    background: #d0e8d7;
+}
+
+.value {
+    .headline {
+        h3 {
+            color: #595757;
+        }
+    }
+}
+
+.values-title-bg {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.value {
+    .material {
+        justify-content: flex-start;
+    }
+}
+
+.three-chart {
+    .data-page-scroll {
+        margin: 28px auto;
+        padding: 5px 20px;
+    }
+}
+
+.compare-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin: 0px auto 20px;
+}
+
+.compare-title {
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+
+.compare-content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    margin: 15px auto;
+}
+
+.compare-value {
+    p {
+        border-radius: 15px;
+        padding: 5px 10px;
+        margin-top: 10px;
+    }
+}
+
+.left-block,
+.right-block {
+    width: 47.5%;
+}
+
+.sort {
+    display: flex;
+    flex-direction: column;
+    margin: 15px auto;
+}
+
+.one-value {
+    width: 100%;
+}
+
+.compare-classification {
+    margin: 20px auto;
+}
+
+.valuebg {
+    .bottom-text {
+        background-color: #3e9979;
+    }
+}
+
+/*情境測驗 幼教 小教 中教 特教*/
+
+.smallbg {
+    background-color: #628332;
+}
+
+.small-border {
+    border: 1px solid #628332;
+}
+
+.small-logo {
+    &::before {
+        background-color: #628332;
+    }
+}
+
+.youngbg {
+    background-color: #0f9b66;
+}
+
+.young-border {
+    border: 1px solid #0f9b66;
+}
+
+.young-logo {
+    &::before {
+        background-color: #0f9b66;
+    }
+}
+
+.mediumbg {
+    background-color: #d26512;
+}
+
+.medium-border {
+    border: 1px solid #d26512;
+}
+
+.medium-logo {
+    &::before {
+        background-color: #d26512;
+    }
+}
+
+.specialbg {
+    background-color: #3d5ba3;
+}
+
+.special-border {
+    border: 1px solid #3d5ba3;
+}
+
+.special-logo {
+    &::before {
+        background-color: #3d5ba3;
+    }
+}
+
+.stay-left {
+    justify-content: flex-start;
+}
+
+/*教師人格測驗*/
+.personality-logo {
+    &::before {
+        background-color: #df7b5a;
+    }
+}
+
+.personalitybg {
+    background-color: #fbd9ac;
+}
+
+.personality-border {
+    border: 1px solid #fbd9ac;
+}
+
+.personalitybg {
+    .bottom-text {
+        background-color: #df7b5a;
+    }
+}
+
+.pinkorange {
+    color: #df7b5a;
+}
+
+@media screen and (max-width: 1024px) {
+    p {
+        font-size: 18px;
+    }
+
+    .material {
+        flex-direction: column;
+        align-items: end;
+        width: 88%;
+
+        .material-text {
+            order: 2;
+            width: 100%;
+            margin: 15px 25px 0px auto;
+
+            .school,
+            .date,
+            .people,
+            .filter {
+                p {
+                    span {
+                        &:nth-child(1) {
+                            width: 100px;
+                        }
+
+                        &:nth-child(2) {
+                            width: calc(100% - 105px);
+                        }
+                    }
+                }
+            }
+        }
+
+        .threepeople {
+            margin: 30px 25px 0px 0px;
+        }
+    }
+
+    .item {
+        .main {
+            .data-page-scroll {
+                overflow-x: scroll;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h3 {
+        font-size: 30px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    p,
+    label,
+    tr,
+    td {
+        font-size: 17px;
+        color: #595757;
+    }
+
+    .report-title {
+        .logo {
+            width: 120px;
+
+            &::before {
+                width: 180px;
+                height: 180px;
+            }
+
+            &::after {
+                width: 180px;
+                height: 180px;
+            }
+        }
+
+        .title-content {
+            .headline {
+                padding: 10px 0px;
+
+                h3 {
+                    margin-left: 25px;
+
+                    img {
+                        width: 25px;
+                    }
+                }
+            }
+
+            .subtitle {
+                padding: 5px 0px;
+            }
+        }
+    }
+
+    .material {
+        .material-text {
+
+            .school,
+            .date,
+            .people,
+            .filter {
+                p {
+                    span {
+                        &:nth-child(1) {
+                            width: 95px;
+                        }
+
+                        &:nth-child(2) {
+                            width: calc(100% - 100px);
+                        }
+                    }
+                }
+            }
+        }
+
+        .threepeople {
+            width: 55%;
+        }
+    }
+
+    .item {
+        .item-title {
+            margin-top: 30px;
+
+            .number-mark {
+                width: 15%;
+            }
+        }
+
+        .main {
+            .data-page-scroll {
+                overflow-x: scroll;
+            }
+        }
+    }
+
+    /* values開始 */
+    .sort {
+        display: none;
+    }
+
+    .left-block,
+    .right-block {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    .compare-content {
+        div {
+            width: 100%;
+        }
+    }
+
+    .compare-content {
+        .two {
+            div {
+                width: 45%;
+            }
+        }
+    }
+
+    .compare-content {
+        .three {
+            div {
+                width: 30%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    p,
+    label,
+    tr,
+    td {
+        font-size: 13px;
+        color: #595757;
+    }
+
+    .report-title {
+        .logo {
+            width: 90px;
+            margin-left: 10px;
+
+            &::before {
+                width: 125px;
+                height: 125px;
+            }
+
+            &::after {
+                width: 125px;
+                height: 125px;
+            }
+        }
+
+        .title-content {
+            .headline {
+                padding: 5px 0;
+                h3 {
+                    margin-left: 15px;
+
+                    img {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .material {
+        margin: 0 auto;
+        width: 90%;
+
+        .material-text {
+            margin: 15px auto 0px;
+
+            .school,
+            .date,
+            .people,
+            .filter {
+                p {
+                    span {
+                        &:nth-child(1) {
+                            width: 75px;
+                        }
+
+                        &:nth-child(2) {
+                            width: calc(100% - 80px);
+                        }
+                    }
+                }
+            }
+        }
+
+        .threepeople {
+            width: 100%;
+            margin: 30px auto 0px;
+        }
+    }
+
+    .item {
+        .item-title {
+            .number-mark {
+                width: 12%;
+            }
+        }
+    }
+}
+
+@page {
+    /*size: portrait;  直向 */
+    /*size: landscape;  橫向 */
+    /*size: A4;  紙張大小 */
+    size: A4 portrait;
+    /* 混合使用 */
+    min-height: 100vh;
+    margin: 0;
+    /* 邊界與內容的距離 */
+}
+
+@media print {
+    body {
+        background-color: #F7F7F7;
+        counter-reset: page-number;
+        /* 初始化，名字可自訂，數值為0 */
+        -webkit-print-color-adjust: exact;
+    }
+
+    h1 {
+        font-size: 30px;
+        font-weight: bold;
+        color: #00a7e5;
+    }
+
+    h2 {
+        font-size: 23px;
+        font-weight: bold;
+        color: #00a7e5;
+    }
+
+    h3 {
+        font-size: 40px;
+        font-weight: bold;
+        color: #fff;
+        line-height: 1.5;
+    }
+
+    h4 {
+        font-size: 25px;
+        font-weight: bold;
+        color: #595757;
+        line-height: 1.6;
+    }
+
+    p,
+    label,
+    tr,
+    td {
+        font-size: 20px;
+        color: #595757;
+        line-height: 1.5;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-color: white;
+    }
+
+    label {
+        padding: 0px 9px 0px 0px;
+    }
+
+    a {
+        font-size: 17px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .white {
+        color: #FFF;
+    }
+
+    .blue {
+        color: #2783be;
+    }
+
+    .bluebg {
+        background-color: #2783be;
+    }
+
+    .redbg {
+        background-color: #d4655c;
+    }
+
+    .yellowbg {
+        background-color: #e1b538;
+    }
+
+    .greenbg {
+        background-color: #3e9979;
+    }
+
+    .purplebg {
+        background-color: #675e92;
+    }
+
+    .orange-border {
+        border: 1px solid #d26512;
+    }
+
+    .blue-border {
+        border: 1px solid #2783be;
+    }
+
+    .red-border {
+        border: 1px solid #d4655c;
+    }
+
+    .yellow-border {
+        border: 1px solid #e1b538;
+    }
+
+    .shadow {
+        -webkit-box-shadow: 1px 1px 5px #5957576b;
+        -moz-box-shadow: 1px 1px 5px #5957576b;
+        box-shadow: 1px 1px 5px #5957576b;
+    }
+
+    section {
+        width: 100vw;
+        height: 100vh;
+        page-break-after: always;
+    }
+
+    .page {
+        /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
+        /* page-break-after: always;  碰到此元素會直接換頁 */
+        page-break-inside: avoid;
+        position: relative;
+        max-width: 1024px;
+        width: 100%;
+        height: 1448px;
+        margin: 0 auto;
+        overflow: hidden;
+
+        &::after {
+            /* content: counter(page-number); 取用該名字的計數器 */
+            /*counter-increment: page-number 1;  增加計數器數值 */
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            font-size: 30px;
+            text-align: center;
+        }
+    }
+
+    .report-title {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .logo {
+            position: relative;
+            width: 150px;
+            margin-left: 30px;
+            z-index: 1;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 240px;
+                height: 240px;
+                top: 0%;
+                left: 0%;
+                transform: translate(-30%, -30%);
+                background: #d26512;
+                z-index: -1;
+                border-radius: 50%;
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 240px;
+                height: 240px;
+                top: 0%;
+                left: 0%;
+                transform: translate(-25%, -30%);
+                background: #fff468;
+                z-index: -2;
+                border-radius: 50%;
+            }
+        }
+
+        .title-content {
+            width: 100%;
+
+            .headline {
+                padding: 15px 0px;
+                text-align: center;
+                background: #d26512;
+
+                h3 {
+                    margin-left: 35px;
+
+                    img {
+                        width: 35px;
+                    }
+                }
+            }
+
+            .subtitle {
+                padding: 10px 0px;
+                text-align: center;
+                background: #fff468;
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    background-image: url(../image/board-eraser.png);
+                    width: 60px;
+                    height: 100%;
+                    left: 15%;
+                    top: -50%;
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+
+    .material {
+        width: calc(100% - 200px);
+        margin-left: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin-top: 20px;
+
+        .material-text {
+            width: 50%;
+
+            .school,
+            .date,
+            .people,
+            .filter {
+                padding: 8px 0px;
+                border-bottom: 1px dotted #595757;
+
+                p {
+                    display: flex;
+
+                    span {
+                        &:nth-child(1) {
+                            width: 110px;
+                        }
+
+                        &:nth-child(2) {
+                            width: calc(100% - 115px);
+                        }
+                    }
+                }
+            }
+        }
+
+        .threepeople {
+            background-color: #fff;
+            width: 40%;
+            position: relative;
+            padding: 10px;
+            border-radius: 10px;
+
+            img {
+                width: 40%;
+                margin: -15% auto 15px;
+                display: block;
+            }
+
+            p {
+                color: #004795;
+            }
+        }
+    }
+
+    .test-content {
+        width: 60%;
+        z-index: 2;
+        height: calc(100% - 417px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h3 {
+            font-size: 42px;
+            border-bottom: 5px solid #f7ae00;
+            margin: 10px auto;
+        }
+    }
+
+    .item {
+        .item-title {
+            display: flex;
+            align-items: flex-end;
+            margin-left: 2.5%;
+
+            .number-mark {
+                width: 10%;
+                line-height: 0;
+            }
+
+            .first-text {
+                width: 100%;
+                padding: 10px;
+            }
+        }
+
+        .main {
+            width: 90%;
+            margin: 0 auto;
+
+            .data-page-scroll {
+                padding: 10px 20px;
+                margin: 30px auto;
+                border-radius: 15px;
+                box-shadow: 1px 1px 5px #5957577a;
+                background-color: #efefef;
+
+                .chart-control {
+                    min-width: 768px;
+                }
+            }
+
+            .text-area {
+                margin: 40px auto;
+
+                .title {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        width: 7%;
+                        margin-right: 20px;
+                    }
+                }
+
+                .text-content {
+                    padding: 10px 20px;
+                    margin: 20px auto;
+                    border-radius: 15px;
+                    box-shadow: 1px 1px 5px #5957577a;
+                    background-color: #efefef;
+
+                    p {
+                        text-align: justify;
+                        /*　Firefox到此即可對齊　*/
+                        text-justify: auto;
+                        /*　IE需再加上此行　*/
+                        text-justify: inter-word;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom-text {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        background-color: #d26512;
+        padding: 10px;
+        width: 100%;
+
+        p {
+            color: white;
+            text-align: center;
+        }
+    }
+
+    /* values開始 */
+    .green {
+        color: #3e9979;
+    }
+
+    .green-border {
+        border: 1px solid #3e9979;
+    }
+
+    .school-text {
+        color: #c73a3a;
+    }
+
+    .national-text {
+        color: #043789;
+    }
+
+    .value-logo {
+        &::before {
+            background: #3e9979;
+        }
+    }
+
+    .valuebg {
+        background: #d0e8d7;
+    }
+
+    .value {
+        .headline {
+            h3 {
+                color: #595757;
+            }
+        }
+    }
+
+    .values-title-bg {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .value {
+        .material {
+            justify-content: flex-start;
+        }
+    }
+
+    .three-chart {
+        .data-page-scroll {
+            margin: 28px auto;
+            padding: 5px 20px;
+        }
+    }
+
+    .compare-area {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        margin: 0px auto 10px;
+    }
+
+    .compare-title {
+        border-radius: 15px;
+        padding: 5px 10px;
+    }
+
+    .compare-content {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+        margin: 12px auto;
+    }
+
+    .compare-value {
+        p {
+            border-radius: 15px;
+            padding: 5px 10px;
+            margin-top: 10px;
+        }
+    }
+
+    .left-block,
+    .right-block {
+        width: 47.5%;
+    }
+
+    .sort {
+        display: flex;
+        flex-direction: column;
+        margin: 12px auto;
+    }
+
+    .one-value {
+        width: 100%;
+    }
+
+    .compare-classification {
+        margin: 12px auto;
+    }
+
+    .valuebg {
+        .bottom-text {
+            background-color: #3e9979;
+        }
+    }
+
+    /*情境測驗 幼教 小教 中教 特教*/
+
+    .smallbg {
+        background-color: #628332;
+    }
+
+    .small-border {
+        border: 1px solid #628332;
+    }
+
+    .small-logo {
+        &::before {
+            background-color: #628332;
+        }
+    }
+
+    .youngbg {
+        background-color: #0f9b66;
+    }
+
+    .young-border {
+        border: 1px solid #0f9b66;
+    }
+
+    .young-logo {
+        &::before {
+            background-color: #0f9b66;
+        }
+    }
+
+    .mediumbg {
+        background-color: #d26512;
+    }
+
+    .medium-border {
+        border: 1px solid #d26512;
+    }
+
+    .medium-logo {
+        &::before {
+            background-color: #d26512;
+        }
+    }
+
+    .specialbg {
+        background-color: #3d5ba3;
+    }
+
+    .special-border {
+        border: 1px solid #3d5ba3;
+    }
+
+    .special-logo {
+        &::before {
+            background-color: #3d5ba3;
+        }
+    }
+
+    .stay-left {
+        justify-content: flex-start;
+    }
+
+    /*教師人格測驗*/
+    .personality-logo {
+        &::before {
+            background-color: #df7b5a;
+        }
+    }
+
+    .personalitybg {
+        background-color: #fbd9ac;
+    }
+
+    .personality-border {
+        border: 1px solid #fbd9ac;
+    }
+
+    .personalitybg.bottom-text {
+        background-color: #df7b5a;
+    }
+
+    .pinkorange {
+        color: #df7b5a;
+    }
+}
