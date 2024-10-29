@@ -847,19 +847,23 @@ rt {
             margin: 10px auto;
 
             .compare-content {
-                div {
-                    width: 100%;
-                }
-
-                .two {
+                &.two {
                     div {
                         width: 45%;
+
+                        div{
+                            width: 100%;
+                        }
                     }
                 }
 
-                .three {
+                &.three {
                     div {
                         width: 30%;
+
+                        div{
+                            width: 100%;
+                        }
                     }
                 }
             }

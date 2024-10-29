@@ -713,17 +713,21 @@ rt {
     width: 100%;
     margin: 10px auto;
   }
-  .item .main .compare-area .left-block .compare-content div,
-  .item .main .compare-area .right-block .compare-content div {
-    width: 100%;
-  }
-  .item .main .compare-area .left-block .compare-content .two div,
-  .item .main .compare-area .right-block .compare-content .two div {
+  .item .main .compare-area .left-block .compare-content.two div,
+  .item .main .compare-area .right-block .compare-content.two div {
     width: 45%;
   }
-  .item .main .compare-area .left-block .compare-content .three div,
-  .item .main .compare-area .right-block .compare-content .three div {
+  .item .main .compare-area .left-block .compare-content.two div div,
+  .item .main .compare-area .right-block .compare-content.two div div {
+    width: 100%;
+  }
+  .item .main .compare-area .left-block .compare-content.three div,
+  .item .main .compare-area .right-block .compare-content.three div {
     width: 30%;
+  }
+  .item .main .compare-area .left-block .compare-content.three div div,
+  .item .main .compare-area .right-block .compare-content.three div div {
+    width: 100%;
   }
   .item .main .compare-area .sort {
     display: none;
