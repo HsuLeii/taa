@@ -1,0 +1,1837 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TAA</title>
+  <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/report_241029.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <!-- page1 -->
+  <div class="page green-border">
+    <div class="report-title">
+      <div class="logo value">
+        <img src="image/logo/logo.png" alt="">
+      </div>
+      <div class="title-content page-one-title-content">
+        <div class="headline value">
+          <h3>教師工作價值觀測驗 <img src="image/chalk.png" alt=""> </h3>
+        </div>
+        <div class="subtitle">
+          <h4>全校綜合分析報表</h4>
+        </div>
+      </div>
+    </div>
+    <div class="material value">
+      <div class="material-text">
+        <div class="school">
+          <p><span>測驗學校：</span><span>國立彰化師範大學</span></p>
+        </div>
+        <div class="date">
+          <p><span>測驗時程：</span><span>108.09.01 ~ 109.01.31</span></p>
+        </div>
+        <div class="people">
+          <p><span>測驗人數：</span><span>247人</span></p>
+        </div>
+        <div class="filter">
+          <p><span>篩選條件：</span><span>112-1實習生T3、113-1實習生T2、個人帳號申請、113-1實習生T2、個人帳號申請、113-1實習生T2、個人帳號申請、113-1實習生T2、個人帳號申請</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="main">
+        <div class="text-area">
+          <div class="title">
+            <img src="image/svg/chart.svg" alt="">
+            <h4 class="bold green">學生於教師工作價值觀測驗成果之教師適配度比例圖示</h4>
+          </div>
+          <div class="text-content">
+            <p>呈現貴校整體與不同分類之學生的教師適配度比例，並與全國學生的適配度比例做比較。
+              教師適配程度分為非常高、高、中、需考量四個等級。教師適配度代表其工作價值觀與理想教師工作價值觀之間相近的程度，相近程度越高，表示擔任教師適配程度相對越高。
+            </p>
+          </div>
+        </div>
+        <div class="data-page-scroll">
+          <div class="chart-control">
+            <canvas id="school-and-national-matching-ratio" style="width: 300px; height: 150px;"></canvas>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="bottom-text value">
+      <p>國立臺灣師範大學心測中心 版權所有‧翻印必究</p>
+    </div>
+  </div>
+
+  <!-- page1 -->
+  <!-- page2 -->
+  <div class="page green-border">
+    <div class="report-title">
+      <div class="title-content">
+        <div class="headline value">
+          <h3>教師工作價值觀測驗 <img src="image/chalk.png" alt=""> </h3>
+        </div>
+        <div class="subtitle">
+          <h4>全校綜合分析報表</h4>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-title">
+        <div class="number-mark">
+          <img src="image/svg/one.svg" alt="">
+        </div>
+        <div class="first-text bluebg">
+          <p class="white bold">不同性別之適配度比例圖示</p>
+        </div>
+      </div>
+      <div class="main three-chart">
+          <div class="data-page-scroll">
+            <div class="chart-control">
+              <canvas id="different-gender" style="width: 300px; height: 85px;"></canvas>
+            </div>
+          </div>
+      </div>
+      <div class="item-title">
+        <div class="number-mark">
+          <img src="image/svg/two.svg" alt="">
+        </div>
+        <div class="first-text redbg">
+          <p class="white bold">不同年級之適配度比例圖示</p>
+        </div>
+      </div>
+      <div class="main three-chart">
+          <div class="data-page-scroll">
+            <div class="chart-control ">
+              <canvas id="different-grade" style="width: 300px; height: 85px;"></canvas>
+            </div>
+          </div>
+      </div>
+      <div class="item-title">
+        <div class="number-mark">
+          <img src="image/svg/three.svg" alt="">
+        </div>
+        <div class="first-text yellowbg">
+          <p class="white bold">有無修習教程之適配度比例圖示</p>
+        </div>
+      </div>
+      <div class="main three-chart">
+          <div class="data-page-scroll">
+            <div class="chart-control">
+              <canvas id="with-or-without-practice" style="width: 300px; height: 85px;"></canvas>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="bottom-text value">
+      <p>國立臺灣師範大學心測中心 版權所有‧翻印必究</p>
+    </div>
+  </div>
+  <!-- page2 -->
+  <!-- page3 -->
+  <div class="page green-border">
+    <div class="report-title">
+      <div class="title-content">
+        <div class="headline value">
+          <h3>教師工作價值觀測驗 <img src="image/chalk.png" alt=""> </h3>
+        </div>
+        <div class="subtitle">
+          <h4>全校綜合分析報表</h4>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="item-title">
+        <div class="number-mark">
+          <img src="image/svg/four.svg" alt="">
+        </div>
+        <div class="first-text greenbg">
+          <p class="white bold">測驗各向度與不同年級類別之分析結果</p>
+        </div>
+      </div>
+      <div class="main">
+        <div class="data-page-scroll">
+          <div class="chart-control">
+            <canvas id="year-of-study-school" style="width: 300px; height: 150px;"></canvas>
+          </div>
+        </div>
+        <div class="data-page-scroll">
+          <div class="chart-control">
+            <canvas id="year-of-study-national" style="width: 300px; height: 150px;"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-text value">
+      <p>國立臺灣師範大學心測中心 版權所有‧翻印必究</p>
+    </div>
+  </div>
+  <!-- page3 -->
+  <!-- page4 -->
+  <div class="page green-border">
+    <div class="report-title">
+      <div class="title-content">
+        <div class="headline value">
+          <h3>教師工作價值觀測驗 <img src="image/chalk.png" alt=""> </h3>
+        </div>
+        <div class="subtitle">
+          <h4>全校綜合分析報表</h4>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="main">
+        <div class="text-area">
+          <div class="title">
+            <img src="image/svg/chart.svg" alt="">
+            <h4 class="bold green">學生於教師工作價值觀測驗成果之重視向度比例圖示</h4>
+          </div>
+          <div class="text-content">
+            <p>
+              呈現不同分類之受測者在所有向度當中，個別向度得分最高的比例。三個分類分別為男性學生、女性學生、以及全國受測學生常模。例如在常模中，有6.8%之學生在「專業自我實現」向度的得分為最高，代表有6.8%的學生在所有工作價值觀中，最重視「專業自我實現」向度。
+            </p>
+          </div>
+        </div>
+        <div class="data-page-scroll">
+          <div class="chart-control">
+            <canvas id="teacher-work-values-1" style="width: 300px; height: 140px;"></canvas>
+            <canvas id="teacher-work-values-2" style="width: 300px; height: 140px;"></canvas>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="bottom-text value">
+      <p>國立臺灣師範大學心測中心 版權所有‧翻印必究</p>
+    </div>
+  </div>
+  <!-- page4 -->
+  <!-- page5 -->
+  <div class="page green-border">
+    <div class="report-title">
+      <div class="title-content">
+        <div class="headline value">
+          <h3>教師工作價值觀測驗 <img src="image/chalk.png" alt=""> </h3>
+        </div>
+        <div class="subtitle">
+          <h4>全校綜合分析報表</h4>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="main">
+        <div class="text-area">
+          <div class="title">
+            <img src="image/svg/chart.svg" alt="">
+            <h4 class="bold green">學生於教師工作價值觀測驗成果之重視向度比例圖示</h4>
+          </div>
+          <div class="text-content">
+            <p>
+              呈現不同分類之受測者在所有向度當中，個別向度得分最高的比例。三個分類分別為男性學生、女性學生、以及全國受測學生常模。例如在常模中，有6.8%之學生在「專業自我實現」向度的得分為最高，代表有6.8%的學生在所有工作價值觀中，最重視「專業自我實現」向度。
+            </p>
+          </div>
+        </div>
+        <div class="compare-area">
+          <div class="left-block">
+            <div class="compare-title greenbg">
+              <p class="white bold center">較受重視的三項價值觀</p>
+            </div>
+            <div class="compare-content three">
+              <div class="compare-content-one">
+                <p class="green center">向度</p>
+              <div class="compare-value">
+                <p class="center green-border">引導陪伴學生</p>
+              </div>
+              <div class="compare-value">
+                <p class="center green-border">專業自我成長</p>
+              </div>
+              <div class="compare-value">
+                <p class="center green-border">社會貢獻</p>
+              </div>
+              </div>
+              <div class="compare-content-two">
+                <p class="green center">全校<br/>平均得分</p>
+                <div class="compare-value">
+                  <p class="center green-border">4.46</p>
+                </div>
+                <div class="compare-value">
+                  <p class="center green-border">4.44</p>
+                </div>
+                <div class="compare-value">
+                  <p class="center green-border">4.39</p>
+                </div>
+                </div>
+                <div class="compare-content-three">
+                  <p class="green center">全國<br/>平均得分</p>
+                <div class="compare-value">
+                  <p class="center green-border">4.42</p>
+                </div>
+                <div class="compare-value">
+                  <p class="center green-border">4.42</p>
+                </div>
+                <div class="compare-value">
+                  <p class="center green-border">4.33</p>
+                </div>
+                </div>
+            </div>
+          </div>
+          <div class="sort">
+            <div class="compare-value">
+              <p class="center">1</p>
+            </div>
+            <div class="compare-value">
+              <p class="center">2</p>
+            </div>
+            <div class="compare-value">
+              <p class="center">3</p>
+            </div>
+          </div>
+          <div class="right-block">
+            <div class="compare-title greenbg">
+              <p class="white bold center">較受重視的三項價值觀</p>
+            </div>
+            <div class="compare-content three">
+              <div class="compare-content-one">
+                <p class="green center">向度</p>
+              <div class="compare-value">
+                <p class="center green-border">引導陪伴學生</p>
+              </div>
+              <div class="compare-value">
+                <p class="center green-border">專業自我成長</p>
+              </div>
+              <div class="compare-value">
+                <p class="center green-border">社會貢獻</p>
+              </div>
+              </div>
+              <div class="compare-content-two">
+                <p class="green center">全校<br/>平均得分</p>
+              <div class="compare-value">
+                <p class="center green-border">3.32</p>
+              </div>
+              <div class="compare-value">
+                <p class="center green-border">3.46</p>
+              </div>
+              <div class="compare-value">
+                <p class="center green-border">3.59</p>
+              </div>
+              </div>
+              <div class="compare-content-three">
+                <p class="green center">全國<br/>平均得分</p>
+              <div class="compare-value">
+                <p class="center green-border">3.47</p>
+              </div>
+              <div class="compare-value">
+                <p class="center green-border">3.51</p>
+              </div>
+              <div class="compare-value">
+                <p class="center green-border">3.58</p>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item-title">
+        <div class="number-mark">
+          <img src="image/svg/one.svg" alt="">
+        </div>
+        <div class="first-text bluebg">
+          <p class="white bold">依有無修習教程之分類</p>
+        </div>
+      </div>
+      <div class="main">
+        <div class="text-area">
+          <div class="text-content">
+            <p>
+              呈現貴校不同分類之學生在各向度平均得分中最高與最低的三個向度。平均得分介於1~5分之間。<br/>
+              較受重視的價值觀，第1~3項代表在該分類下，平均得分最高的前3個向度。<br/>
+              較未重視的價值觀，第1~3項代表在該分類下，平均得分最低的前3個向度。
+            </p>
+          </div>
+        </div>
+        <div class="compare-area">
+          <div class="left-block">
+            <div class="compare-title bluebg">
+              <p class="white bold center">較受重視的三項價值觀</p>
+            </div>
+            <div class="compare-content two">
+              <div class="compare-content-one">
+                <p class="blue center">有修習教程者</p>
+              <div class="compare-value">
+                <p class="center blue-border">社會貢獻</p>
+              </div>
+              <div class="compare-value">
+                <p class="center blue-border">引導陪伴學生</p>
+              </div>
+              <div class="compare-value">
+                <p class="center blue-border">專業自我成長</p>
+              </div>
+              </div>
+              <div class="compare-content-two">
+                <p class="blue center">未修習教程者</p>
+                <div class="compare-value">
+                  <p class="center blue-border">引導陪伴學生</p>
+                </div>
+                <div class="compare-value">
+                  <p class="center blue-border">專業自我成長</p>
+                </div>
+                <div class="compare-value">
+                  <p class="center blue-border">社會貢獻</p>
+                </div>
+                </div>
+            </div>
+          </div>
+          <div class="sort">
+            <div class="compare-value">
+              <p class="center">1</p>
+            </div>
+            <div class="compare-value">
+              <p class="center">2</p>
+            </div>
+            <div class="compare-value">
+              <p class="center">3</p>
+            </div>
+          </div>
+          <div class="right-block">
+            <div class="compare-title bluebg">
+              <p class="white bold center">較未重視的三項價值觀</p>
+            </div>
+            <div class="compare-content two">
+              <div class="compare-content-one">
+                <p class="blue center">有修習教程者</p>
+              <div class="compare-value">
+                <p class="center blue-border">藝術體能活動</p>
+              </div>
+              <div class="compare-value">
+                <p class="center blue-border">社會地位</p>
+              </div>
+              <div class="compare-value">
+                <p class="center blue-border">工作條件與福利</p>
+              </div>
+              </div>
+              <div class="compare-content-two">
+                <p class="blue center">未修習教程者</p>
+                <div class="compare-value">
+                  <p class="center blue-border">藝術體能活動</p>
+                </div>
+                <div class="compare-value">
+                  <p class="center blue-border">社會地位</p>
+                </div>
+                <div class="compare-value">
+                  <p class="center blue-border">工作條件與福利</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-text value">
+      <p>國立臺灣師範大學心測中心 版權所有‧翻印必究</p>
+    </div>
+  </div>
+  <!-- page5 -->
+  <!-- page6 -->
+  <div class="page green-border">
+    <div class="report-title">
+      <div class="title-content">
+        <div class="headline value">
+          <h3>教師工作價值觀測驗 <img src="image/chalk.png" alt=""> </h3>
+        </div>
+        <div class="subtitle">
+          <h4>全校綜合分析報表</h4>
+        </div>
+      </div>
+    </div>
+    <div class="item flex-item">
+      <div class="item-title">
+        <div class="number-mark">
+          <img src="image/svg/two.svg" alt="">
+        </div>
+        <div class="first-text redbg">
+          <p class="white bold">依不同年級之分類</p>
+        </div>
+      </div>
+      <div class="main">
+        <div class="text-area"></div>
+        <div class="compare-classification">
+          <p class="center">大學一二年級</p>
+        </div>
+        <div class="compare-area">
+          <div class="left-block">
+            <div class="compare-title redbg">
+              <p class="white bold center">較受重視的三項價值觀</p>
+            </div>
+            <div class="compare-content">
+              <div class="compare-content-one one-value">
+              <div class="compare-value">
+                <p class="center red-border">引導陪伴學生</p>
+              </div>
+              <div class="compare-value">
+                <p class="center red-border">專業自我成長</p>
+              </div>
+              <div class="compare-value">
+                <p class="center red-border">社會貢獻</p>
+              </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="sort">
+            <div class="compare-value">
+              <p class="center">1</p>
+            </div>
+            <div class="compare-value">
+              <p class="center">2</p>
+            </div>
+            <div class="compare-value">
+              <p class="center">3</p>
+            </div>
+          </div>
+          <div class="right-block">
+            <div class="compare-title redbg">
+              <p class="white bold center">較未重視的三項價值觀</p>
+            </div>
+            <div class="compare-content">
+              <div class="compare-content-one one-value">
+              <div class="compare-value">
+                <p class="center red-border">藝術體能活動</p>
+              </div>
+              <div class="compare-value">
+                <p class="center red-border">社會地位</p>
+              </div>
+              <div class="compare-value">
+                <p class="center red-border">工作條件與福利</p>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="compare-classification">
+          <p class="center">大學三四年級</p>
+        </div>
+        <div class="compare-area">
+          <div class="left-block">
+            <div class="compare-title redbg">
+              <p class="white bold center">較受重視的三項價值觀</p>
+            </div>
+            <div class="compare-content">
+              <div class="compare-content-one one-value">
+              <div class="compare-value">
+                <p class="center red-border">引導陪伴學生</p>
+              </div>
+              <div class="compare-value">
+                <p class="center red-border">專業自我成長</p>
+              </div>
+              <div class="compare-value">
+                <p class="center red-border">社會貢獻</p>
+              </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="sort">
+            <div class="compare-value">
+              <p class="center">1</p>
+            </div>
+            <div class="compare-value">
+              <p class="center">2</p>
+            </div>
+            <div class="compare-value">
+              <p class="center">3</p>
+            </div>
+          </div>
+          <div class="right-block">
+            <div class="compare-title redbg">
+              <p class="white bold center">較未重視的三項價值觀</p>
+            </div>
+            <div class="compare-content">
+              <div class="compare-content-one one-value">
+              <div class="compare-value">
+                <p class="center red-border">藝術體能活動</p>
+              </div>
+              <div class="compare-value">
+                <p class="center red-border">社會地位</p>
+              </div>
+              <div class="compare-value">
+                <p class="center red-border">工作條件與福利</p>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="compare-classification">
+          <p class="center">碩博班</p>
+        </div>
+        <div class="compare-area">
+          <div class="left-block">
+            <div class="compare-title redbg">
+              <p class="white bold center">較受重視的三項價值觀</p>
+            </div>
+            <div class="compare-content">
+              <div class="compare-content-one one-value">
+              <div class="compare-value">
+                <p class="center red-border">引導陪伴學生</p>
+              </div>
+              <div class="compare-value">
+                <p class="center red-border">專業自我成長</p>
+              </div>
+              <div class="compare-value">
+                <p class="center red-border">社會貢獻</p>
+              </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="sort">
+            <div class="compare-value">
+              <p class="center">1</p>
+            </div>
+            <div class="compare-value">
+              <p class="center">2</p>
+            </div>
+            <div class="compare-value">
+              <p class="center">3</p>
+            </div>
+          </div>
+          <div class="right-block">
+            <div class="compare-title redbg">
+              <p class="white bold center">較未重視的三項價值觀</p>
+            </div>
+            <div class="compare-content">
+              <div class="compare-content-one one-value">
+              <div class="compare-value">
+                <p class="center red-border">藝術體能活動</p>
+              </div>
+              <div class="compare-value">
+                <p class="center red-border">社會地位</p>
+              </div>
+              <div class="compare-value">
+                <p class="center red-border">工作條件與福利</p>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-text value">
+      <p>國立臺灣師範大學心測中心 版權所有‧翻印必究</p>
+    </div>
+  </div>
+  <!-- page6 -->
+  <!-- page7 -->
+  <div class="page green-border">
+    <div class="report-title">
+      <div class="title-content">
+        <div class="headline value">
+          <h3>教師工作價值觀測驗 <img src="image/chalk.png" alt=""> </h3>
+        </div>
+        <div class="subtitle">
+          <h4>全校綜合分析報表</h4>
+        </div>
+      </div>
+    </div>
+    <div class="item flex-item">
+      <div class="item-title">
+        <div class="number-mark">
+          <img src="image/svg/three.svg" alt="">
+        </div>
+        <div class="first-text yellowbg">
+          <p class="white bold">依不同教程修習年數之分類</p>
+        </div>
+      </div>
+      <div class="main">
+        <div class="text-area"></div>
+        <div class="compare-classification">
+          <p class="center">修習第一年</p>
+        </div>
+        <div class="compare-area">
+          <div class="left-block">
+            <div class="compare-title yellowbg">
+              <p class="white bold center">較受重視的三項價值觀</p>
+            </div>
+            <div class="compare-content">
+              <div class="compare-content-one one-value">
+              <div class="compare-value">
+                <p class="center yellow-border">引導陪伴學生</p>
+              </div>
+              <div class="compare-value">
+                <p class="center yellow-border">專業自我成長</p>
+              </div>
+              <div class="compare-value">
+                <p class="center yellow-border">社會貢獻</p>
+              </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="sort">
+            <div class="compare-value">
+              <p class="center">1</p>
+            </div>
+            <div class="compare-value">
+              <p class="center">2</p>
+            </div>
+            <div class="compare-value">
+              <p class="center">3</p>
+            </div>
+          </div>
+          <div class="right-block">
+            <div class="compare-title yellowbg">
+              <p class="white bold center">較未重視的三項價值觀</p>
+            </div>
+            <div class="compare-content">
+              <div class="compare-content-one one-value">
+              <div class="compare-value">
+                <p class="center yellow-border">藝術體能活動</p>
+              </div>
+              <div class="compare-value">
+                <p class="center yellow-border">社會地位</p>
+              </div>
+              <div class="compare-value">
+                <p class="center yellow-border">工作條件與福利</p>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="compare-classification">
+          <p class="center">修習第二年</p>
+        </div>
+        <div class="compare-area">
+          <div class="left-block">
+            <div class="compare-title yellowbg">
+              <p class="white bold center">較受重視的三項價值觀</p>
+            </div>
+            <div class="compare-content">
+              <div class="compare-content-one one-value">
+              <div class="compare-value">
+                <p class="center yellow-border">引導陪伴學生</p>
+              </div>
+              <div class="compare-value">
+                <p class="center yellow-border">專業自我成長</p>
+              </div>
+              <div class="compare-value">
+                <p class="center yellow-border">社會貢獻</p>
+              </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="sort">
+            <div class="compare-value">
+              <p class="center">1</p>
+            </div>
+            <div class="compare-value">
+              <p class="center">2</p>
+            </div>
+            <div class="compare-value">
+              <p class="center">3</p>
+            </div>
+          </div>
+          <div class="right-block">
+            <div class="compare-title yellowbg">
+              <p class="white bold center">較未重視的三項價值觀</p>
+            </div>
+            <div class="compare-content">
+              <div class="compare-content-one one-value">
+              <div class="compare-value">
+                <p class="center yellow-border">藝術體能活動</p>
+              </div>
+              <div class="compare-value">
+                <p class="center yellow-border">社會地位</p>
+              </div>
+              <div class="compare-value">
+                <p class="center yellow-border">工作條件與福利</p>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="compare-classification">
+          <p class="center">修習第三年</p>
+        </div>
+        <div class="compare-area">
+          <div class="left-block">
+            <div class="compare-title yellowbg">
+              <p class="white bold center">較受重視的三項價值觀</p>
+            </div>
+            <div class="compare-content">
+              <div class="compare-content-one one-value">
+              <div class="compare-value">
+                <p class="center yellow-border">引導陪伴學生</p>
+              </div>
+              <div class="compare-value">
+                <p class="center yellow-border">專業自我成長</p>
+              </div>
+              <div class="compare-value">
+                <p class="center yellow-border">社會貢獻</p>
+              </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="sort">
+            <div class="compare-value">
+              <p class="center">1</p>
+            </div>
+            <div class="compare-value">
+              <p class="center">2</p>
+            </div>
+            <div class="compare-value">
+              <p class="center">3</p>
+            </div>
+          </div>
+          <div class="right-block">
+            <div class="compare-title yellowbg">
+              <p class="white bold center">較未重視的三項價值觀</p>
+            </div>
+            <div class="compare-content">
+              <div class="compare-content-one one-value">
+              <div class="compare-value">
+                <p class="center yellow-border">藝術體能活動</p>
+              </div>
+              <div class="compare-value">
+                <p class="center yellow-border">社會地位</p>
+              </div>
+              <div class="compare-value">
+                <p class="center yellow-border">工作條件與福利</p>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="compare-classification">
+          <p class="center">修習第四年(含以上)</p>
+        </div>
+        <div class="compare-area">
+          <div class="left-block">
+            <div class="compare-title yellowbg">
+              <p class="white bold center">較受重視的三項價值觀</p>
+            </div>
+            <div class="compare-content">
+              <div class="compare-content-one one-value">
+              <div class="compare-value">
+                <p class="center yellow-border">引導陪伴學生</p>
+              </div>
+              <div class="compare-value">
+                <p class="center yellow-border">專業自我成長</p>
+              </div>
+              <div class="compare-value">
+                <p class="center yellow-border">社會貢獻</p>
+              </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="sort">
+            <div class="compare-value">
+              <p class="center">1</p>
+            </div>
+            <div class="compare-value">
+              <p class="center">2</p>
+            </div>
+            <div class="compare-value">
+              <p class="center">3</p>
+            </div>
+          </div>
+          <div class="right-block">
+            <div class="compare-title yellowbg">
+              <p class="white bold center">較未重視的三項價值觀</p>
+            </div>
+            <div class="compare-content">
+              <div class="compare-content-one one-value">
+              <div class="compare-value">
+                <p class="center yellow-border">藝術體能活動</p>
+              </div>
+              <div class="compare-value">
+                <p class="center yellow-border">社會地位</p>
+              </div>
+              <div class="compare-value">
+                <p class="center yellow-border">工作條件與福利</p>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-text value">
+      <p>國立臺灣師範大學心測中心 版權所有‧翻印必究</p>
+    </div>
+  </div>
+  <!-- page7 -->
+  <script src="js/chart.min.js"></script>
+
+  <script>
+    Chart.Tooltip.positioners.custom = function(elements, position) {
+    return {
+      x: elements[0]._model.x,
+      y: 30
+    }
+  }
+
+  // Chart.Tooltip.positioners.center = function (elements) {
+  //   const { x, y, base } = elements[0]._model;
+  //   const height = base - y;
+  //   return { x, y: y + (height / 2) };
+  // };
+  
+    // 全校與全國配適度比例pg1
+
+
+    var ctx1 = document.getElementById('school-and-national-matching-ratio').getContext('2d');
+
+    var myChart = new Chart(ctx1, {
+      type: "bar",
+      data: {
+        labels: [
+          "全校學生",
+          "全國學生",
+        ],
+        datasets: [{
+          label: '需考量',
+          backgroundColor: "#aad49b",
+          data: [7, 6],
+        }, {
+          label: '中',
+          backgroundColor: "#64c2bf",
+          data: [20, 22],
+        }, {
+          label: '高',
+          backgroundColor: "#6bba54",
+          data: [37, 33],
+        }, {
+          label: '非常高',
+          backgroundColor: "#1f7e79",
+          data: [39, 39],
+        }, ],
+      },
+      
+      options: {
+        responsive: true,
+        animation: {
+          duration: 0,
+        },
+        title: {
+          display: true,
+          text: '全校與全國配適度比例',
+          fontSize: 25,
+          padding: 25,
+          fontStyle: "bold",
+          fontColor: "#3e9979"
+        },
+
+        tooltips: {
+          // Disable the on-canvas tooltip
+          enabled: true,
+          yAlign: 'none',
+            // backgroundColor: '#227799',
+            position: 'custom',
+        },
+        
+        legend: {
+          display: true,
+          reverse: true,
+          position: 'right',
+          labels: {
+            fontColor: "#595757",
+            fontSize: 17,
+            padding: 20,
+            fontStyle: "bold",
+            boxWidth: 17,
+            boxHeight: 17
+          },
+          onClick: null
+        },
+        scales: {
+          xAxes: [{
+            stacked: true,
+            position: 'bottom',
+            ticks: {
+              min: 0,
+              // max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 15,
+              fontStyle: "bold",
+            }
+          }],
+          yAxes: [{
+            stacked: true,
+            position: 'left',
+            ticks: {
+              min: 0,
+              max: 100,
+              stepSize: 10,
+              fontColor: '#595757',
+              fontSize: 17,
+              fontStyle: "bold",
+              callback: function (value, index, values) {
+                return value + '%';
+              }
+            }
+          }]
+        },
+      },
+      plugins: [{
+        afterDraw: function (chartInstance) {
+          ctx = chartInstance.ctx;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillStyle = '#fff';
+          ctx.font = "bold 15px 'Arial'";
+          chartInstance.data.datasets.forEach(function (dataset, i) {
+            var meta = chartInstance.controller.getDatasetMeta(i);
+            meta.data.forEach(function (bar, index) {
+              var data = dataset.data[index];
+              var height = bar.height(); //bar數值垂直置中
+              var y = bar._view.y; //bar數值垂直置中
+              var _y = y + height / 2; //bar數值垂直置中
+              ctx.fillStyle = '#fff';
+              ctx.fillText(data + "%", bar._model.x, _y); //bar數值垂直置中
+            });
+          });
+        }
+      }],
+
+    });
+
+    // 不同性別之適配度比例圖示-pg2
+    var ctx2 = document.getElementById('different-gender').getContext('2d');
+    var myChart = new Chart(ctx2, {
+      
+      type: "bar",
+      data: {
+        labels: [
+          "全校男性",
+          "全校女性",
+          "全國男性",
+          "全國女性",
+        ],
+        datasets: [{
+          label: '需考量',
+          backgroundColor: "#aad49b",
+          data: [7, 7, 7, 7],
+        }, {
+          label: '中',
+          backgroundColor: "#64c2bf",
+          data: [21, 21, 21, 21],
+        }, {
+          label: '高',
+          backgroundColor: "#6bba54",
+          data: [35, 35, 35, 35],
+        }, {
+          label: '非常高',
+          backgroundColor: "#1f7e79",
+          data: [37, 37, 37, 37],
+        }, ],
+      },
+      options: {
+        responsive: true,
+        animation: {
+          duration: 0,
+        },
+        title: {
+          display: true,
+          text: '全校/全國不同性別之適配度比例圖示',
+          fontSize: 25,
+          padding: 15,
+          fontStyle: "bold",
+          fontColor: "#2783be"
+        },
+        tooltips: {
+          // Disable the on-canvas tooltip
+          enabled: true,
+          yAlign: 'none',
+            // backgroundColor: '#227799',
+            position: 'custom',
+        },
+        legend: {
+          display: true,
+          reverse: true,
+          position: 'right',
+          labels: {
+            fontColor: "#595757",
+            fontSize: 15,
+            padding: 20,
+            fontStyle: "bold",
+            boxWidth: 15,
+            boxHeight: 15
+          },
+          onClick: null
+        },
+        scales: {
+          xAxes: [{
+            stacked: true,
+            position: 'bottom',
+            ticks: {
+              min: 0,
+              // max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 15,
+              fontStyle: "bold",
+            }
+          }],
+          yAxes: [{
+            stacked: true,
+            position: 'left',
+            ticks: {
+              min: 0,
+              max: 100,
+              stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 15,
+              fontStyle: "bold",
+              callback: function (value, index, values) {
+                return value + '%';
+              }
+            }
+          }]
+        },
+      },
+      plugins: [{
+        afterDraw: function (chartInstance) {
+          ctx = chartInstance.ctx;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillStyle = '#fff';
+          ctx.font = "bold 15px 'Arial'";
+          chartInstance.data.datasets.forEach(function (dataset, i) {
+            var meta = chartInstance.controller.getDatasetMeta(i);
+            meta.data.forEach(function (bar, index) {
+              var data = dataset.data[index];
+              var height = bar.height(); //bar數值垂直置中
+              var y = bar._view.y; //bar數值垂直置中
+              var _y = y + height / 2; //bar數值垂直置中
+              ctx.fillStyle = '#fff';
+              ctx.fillText(data + "%", bar._model.x, _y); //bar數值垂直置中
+            });
+          });
+        }
+      }],
+
+    });
+
+    
+    // 不同年級之適配度比例圖示-pg2
+    var ctx3 = document.getElementById('different-grade').getContext('2d');
+    var myChart = new Chart(ctx3, {
+      type: "bar",
+      data: {
+        labels: [
+          ["全校大學", "一二年級"],
+          ["全校大學", "三四年級", "(含以上)"],
+          ["全校大學", "碩博士班"],
+          ["全國大學", "一二年級"],
+          ["全國大學", "三四年級", "(含以上)"],
+          ["全國大學", "碩博士班"],
+        ],
+        datasets: [{
+          label: '需考量',
+          backgroundColor: "#aad49b",
+          data: [7, 7, 7, 7, 7, 7],
+        }, {
+          label: '中',
+          backgroundColor: "#64c2bf",
+          data: [21, 21, 21, 21, 21, 21],
+        }, {
+          label: '高',
+          backgroundColor: "#6bba54",
+          data: [35, 35, 35, 35, 35, 35],
+        }, {
+          label: '非常高',
+          backgroundColor: "#1f7e79",
+          data: [37, 37, 37, 37, 37, 37],
+        },
+       ],
+      },
+      options: {
+        responsive: true,
+        animation: {
+          duration: 0,
+        },
+        title: {
+          display: true,
+          text: '全校/全國不同年級之適配度比例圖示',
+          fontSize: 25,
+          padding: 15,
+          fontStyle: "bold",
+          fontColor: "#d4655c"
+        },
+        tooltips: {
+          // Disable the on-canvas tooltip
+          enabled: true,
+          yAlign: 'none',
+            // backgroundColor: '#227799',
+            position: 'custom',
+        },
+        legend: {
+          display: true,
+          reverse: true,
+          position: 'right',
+          labels: {
+            fontColor: "#595757",
+            fontSize: 15,
+            padding: 20,
+            fontStyle: "bold",
+            boxWidth: 15,
+            boxHeight: 15,
+            reverse: true
+          },
+          onClick: null
+        },
+        scales: {
+          xAxes: [{
+            stacked: true,
+            position: 'bottom',
+            ticks: {
+              min: 0,
+              // max: 100,
+              // stepSize: 20,
+              // fontColor: '#595757',
+              fontSize: 15,
+              fontStyle: "bold",
+            }
+          }],
+          yAxes: [{
+            stacked: true,
+            position: 'left',
+            ticks: {
+              min: 0,
+              max: 100,
+              stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 15,
+              fontStyle: "bold",
+              callback: function (value, index, values) {
+                return value + '%';
+              }
+            }
+          }]
+        },
+      },
+      plugins: [{
+        afterDraw: function (chartInstance) {
+          ctx = chartInstance.ctx;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillStyle = '#fff';
+          ctx.font = "bold 15px 'Arial'";
+          chartInstance.data.datasets.forEach(function (dataset, i) {
+            var meta = chartInstance.controller.getDatasetMeta(i);
+            meta.data.forEach(function (bar, index) {
+              var data = dataset.data[index];
+              var height = bar.height(); //bar數值垂直置中
+              var y = bar._view.y; //bar數值垂直置中
+              var _y = y + height / 2; //bar數值垂直置中              
+              ctx.fillText(data + "%", bar._model.x, _y); //bar數值垂直置中
+            });
+          });
+        },
+      }],
+    });
+
+    // 有無修習教程之適配度比例圖示-pg2
+    var ctx4 = document.getElementById('with-or-without-practice').getContext('2d');
+    var myChart = new Chart(ctx4, {
+      type: "bar",
+
+      data: {
+        labels: [
+          "全校男性",
+          "全校女性",
+          "全國男性",
+          "全國女性",
+        ],
+        datasets: [{
+          label: '需考量',
+          backgroundColor: "#aad49b",
+          data: [7, 7, 7, 7],
+        }, {
+          label: '中',
+          backgroundColor: "#64c2bf",
+          data: [21, 21, 21, 21],
+        }, {
+          label: '高',
+          backgroundColor: "#6bba54",
+          data: [35, 35, 35, 35],
+        }, {
+          label: '非常高',
+          backgroundColor: "#1f7e79",
+          data: [37, 37, 37, 37],
+        }, ],
+      },
+      options: {
+        responsive: true,
+        animation: {
+          duration: 0,
+        },
+        title: {
+          display: true,
+          text: '全校/全國有無修習教程之適配度比例圖示',
+          fontSize: 25,
+          padding: 15,
+          fontStyle: "bold",
+          fontColor: "#e1b538"
+        },
+        tooltips: {
+          // Disable the on-canvas tooltip
+          enabled: true,
+          yAlign: 'none',
+            // backgroundColor: '#227799',
+            position: 'custom',
+        },
+        legend: {
+          display: true,
+          reverse: true,
+          position: 'right',
+          labels: {
+            fontColor: "#595757",
+            fontSize: 15,
+            padding: 20,
+            fontStyle: "bold",
+            boxWidth: 15,
+            boxHeight: 15
+          },
+          onClick: null
+        },
+        scales: {
+          xAxes: [{
+            stacked: true,
+            position: 'bottom',
+            ticks: {
+              min: 0,
+              // max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 15,
+              fontStyle: "bold",
+            }
+          }],
+          yAxes: [{
+            stacked: true,
+            position: 'left',
+            ticks: {
+              min: 0,
+              max: 100,
+              stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 15,
+              fontStyle: "bold",
+              callback: function (value, index, values) {
+                return value + '%';
+              }
+            }
+          }]
+        },
+        responsive: true,
+      },
+      plugins: [{
+        afterDraw: function (chartInstance) {
+          ctx = chartInstance.ctx;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillStyle = '#fff';
+          ctx.font = "bold 15px 'Arial'";
+          chartInstance.data.datasets.forEach(function (dataset, i) {
+            var meta = chartInstance.controller.getDatasetMeta(i);
+            meta.data.forEach(function (bar, index) {
+              var data = dataset.data[index];
+              var height = bar.height(); //bar數值垂直置中
+              var y = bar._view.y; //bar數值垂直置中
+              var _y = y + height / 2; //bar數值垂直置中
+              ctx.fillStyle = '#fff';
+              ctx.fillText(data + "%", bar._model.x, _y); //bar數值垂直置中
+            });
+          });
+        }
+      }],
+    });
+
+    // 不同教程修習年數之配適度比例-全校pg3
+    var ctx5 = document.getElementById('year-of-study-school').getContext('2d');
+    var myChart = new Chart(ctx5, {
+      type: "bar",
+      data: {
+        labels: [
+          ["全校", "未修教程"],
+          ["全校", "修習第一年"],
+          ["全校", "修習第二年"],
+          ["全校", "修習第三年"],
+          ["全校", "修習第四年", "含以上"],
+        ],
+        datasets: [{
+          label: '需考量',
+          backgroundColor: "#aad49b",
+          data: [7, 7, 7, 7, 7],
+
+        }, {
+          label: '中',
+          backgroundColor: "#64c2bf",
+          data: [21, 21, 21, 21, 21],
+        }, {
+          label: '高',
+          backgroundColor: "#6bba54",
+          data: [35, 35, 35, 35, 35],
+        }, {
+          label: '非常高',
+          backgroundColor: "#1f7e79",
+          data: [37, 37, 37, 37, 37],
+        }, ],
+      },
+      options: {
+        responsive: true,
+        animation: {
+          duration: 0,
+        },
+        title: {
+          display: true,
+          text: '全校不同教程修習年數之配適度比例',
+          fontSize: 25,
+          padding: 25,
+          fontStyle: "bold",
+          fontColor: "#3f9979"
+        },
+        tooltips: {
+          // Disable the on-canvas tooltip
+          enabled: true,
+          yAlign: 'none',
+            // backgroundColor: '#227799',
+            position: 'custom',
+        },
+        legend: {
+          display: true,
+          reverse: true,
+          position: 'right',
+          labels: {
+            fontColor: "#595757",
+            fontSize: 17,
+            padding: 20,
+            fontStyle: "bold",
+            boxWidth: 17,
+            boxHeight: 17
+          },
+          onClick: null
+        },
+        scales: {
+          xAxes: [{
+            stacked: true,
+            position: 'bottom',
+            ticks: {
+              min: 0,
+              // max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 15,
+              fontStyle: "bold",
+            }
+          }],
+          yAxes: [{
+            stacked: true,
+            position: 'left',
+            ticks: {
+              min: 0,
+              max: 100,
+              stepSize: 10,
+              fontColor: '#595757',
+              fontSize: 17,
+              fontStyle: "bold",
+              callback: function (value, index, values) {
+                return value + '%';
+              }
+            }
+          }]
+        },
+      },
+      plugins: [{
+        afterDraw: function (chartInstance) {
+          ctx = chartInstance.ctx;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillStyle = '#fff';
+          ctx.font = "bold 15px 'Arial'";
+          chartInstance.data.datasets.forEach(function (dataset, i) {
+            var meta = chartInstance.controller.getDatasetMeta(i);
+            meta.data.forEach(function (bar, index) {
+              var data = dataset.data[index];
+              var height = bar.height(); //bar數值垂直置中
+              var y = bar._view.y; //bar數值垂直置中
+              var _y = y + height / 2; //bar數值垂直置中
+              ctx.fillStyle = '#fff';
+              ctx.fillText(data + "%", bar._model.x, _y); //bar數值垂直置中
+            });
+          });
+        }
+      }],
+
+    });
+
+    // 不同教程修習年數之配適度比例-全國pg3
+    var ctx6 = document.getElementById('year-of-study-national').getContext('2d');
+    var myChart = new Chart(ctx6, {
+      type: "bar",
+      data: {
+        labels: [
+          ["全國", "未修教程"],
+          ["全國", "修習第一年"],
+          ["全國", "修習第二年"],
+          ["全國", "修習第三年"],
+          ["全國", "修習第四年", "含以上"],
+        ],
+        datasets: [{
+          label: '需考量',
+          backgroundColor: "#aad49b",
+          data: [7, 7, 7, 7, 7],
+
+        }, {
+          label: '中',
+          backgroundColor: "#64c2bf",
+          data: [21, 21, 21, 21, 21],
+        }, {
+          label: '高',
+          backgroundColor: "#6bba54",
+          data: [35, 35, 35, 35, 35],
+        }, {
+          label: '非常高',
+          backgroundColor: "#1f7e79",
+          data: [37, 37, 37, 37, 37],
+        }, ],
+      },
+      options: {
+        responsive: true,
+        animation: {
+          duration: 0,
+        },
+        title: {
+          display: true,
+          text: '全國不同教程修習年數之配適度比例',
+          fontSize: 25,
+          padding: 25,
+          fontStyle: "bold",
+          fontColor: "#3f9979"
+        },
+        tooltips: {
+          // Disable the on-canvas tooltip
+          enabled: true,
+          yAlign: 'none',
+            // backgroundColor: '#227799',
+            position: 'custom',
+        },
+        legend: {
+          display: true,
+          reverse: true,
+          position: 'right',
+          labels: {
+            fontColor: "#595757",
+            fontSize: 17,
+            padding: 20,
+            fontStyle: "bold",
+            boxWidth: 17,
+            boxHeight: 17
+          },
+          onClick: null
+        },
+        scales: {
+          xAxes: [{
+            stacked: true,
+            position: 'bottom',
+            ticks: {
+              min: 0,
+              // max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 15,
+              fontStyle: "bold",
+            }
+          }],
+          yAxes: [{
+            stacked: true,
+            position: 'left',
+            ticks: {
+              min: 0,
+              max: 100,
+              stepSize: 10,
+              fontColor: '#595757',
+              fontSize: 17,
+              fontStyle: "bold",
+              callback: function (value, index, values) {
+                return value + '%';
+              }
+            }
+          }]
+        },
+      },
+      plugins: [{
+        afterDraw: function (chartInstance) {
+          ctx = chartInstance.ctx;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillStyle = '#fff';
+          ctx.font = "bold 15px 'Arial'";
+          chartInstance.data.datasets.forEach(function (dataset, i) {
+            var meta = chartInstance.controller.getDatasetMeta(i);
+            meta.data.forEach(function (bar, index) {
+              var data = dataset.data[index];
+              var height = bar.height(); //bar數值垂直置中
+              var y = bar._view.y; //bar數值垂直置中
+              var _y = y + height / 2; //bar數值垂直置中
+              ctx.fillStyle = '#fff';
+              ctx.fillText(data + "%", bar._model.x, _y); //bar數值垂直置中
+            });
+          });
+        }
+      }],
+
+    });
+
+    // 全國平均PRpg5
+    var ctx7 = document.getElementById('teacher-work-values-1').getContext('2d');
+    var myChart = new Chart(ctx7, {
+      type: "bar",
+      data: {
+        labels: [
+          "專業自我實現",
+          "專業自我成長",
+          "思考與挑戰性",
+          "引導陪伴學生",
+          "社會貢獻",
+        ],
+        datasets: [{
+          label: '全校男性',
+          backgroundColor: "#5792c8",
+          data: [1.89, 21.1, 12.9, 25.7, 21.1],
+        }, {
+          label: '全校女性',
+          backgroundColor: "#e27933",
+          data: [4.6, 23.4, 11.0, 21.1, 22.0],
+        }, {
+          label: '全國常模',
+          backgroundColor: "#a5a5a5",
+          data: [6.8, 22.5, 11.7, 21.3, 18.3],
+        }, ],
+      },
+      options: {
+        responsive: true,
+        animation: {
+          duration: 0,
+        },
+        title: {
+          display: true,
+          text: '教師工作價值觀重視向度比例',
+          fontSize: 25,
+          padding: 25,
+          fontStyle: "bold",
+          fontColor: "#3e9979"
+        },
+        tooltips: {
+          // Disable the on-canvas tooltip
+          enabled: true,
+          yAlign: 'none',
+            // backgroundColor: '#227799',
+            position: 'custom',
+        },
+        legend: {
+          display: false,
+          reverse: false,
+          position: 'bottom',
+          labels: {
+            fontColor: "#595757",
+            fontSize: 17,
+            padding: 20,
+            fontStyle: "bold",
+            boxWidth: 17,
+            boxHeight: 17
+          },
+          onClick: null
+        },
+        scales: {
+          xAxes: [{
+            position: 'bottom',
+            ticks: {
+              min: 0,
+              // max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 15,
+              fontStyle: "bold",
+              // autoSkip: false,
+              // maxRotation: 90,
+              // minRotation: 90
+            }
+          }],
+          yAxes: [{
+            position: 'left',
+            ticks: {
+              min: 0,
+              max: 100,
+              stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 17,
+              fontStyle: "bold",
+              callback: function (value, index, values) {
+                return value + '%';
+              }
+            }
+          }]
+        },
+      },
+      plugins: [{
+        afterDraw: function (chartInstance) {
+          ctx = chartInstance.ctx;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillStyle = '#fff';
+          ctx.font = "bold 15px 'Arial'";
+          chartInstance.data.datasets.forEach(function (dataset, i) {
+            var meta = chartInstance.controller.getDatasetMeta(i);
+            meta.data.forEach(function (bar, index) {
+              var data = dataset.data[index];
+              // var height = bar.height(); //bar數值垂直置中
+              // var y = bar._view.y; //bar數值垂直置中
+              // var _y = y + height / 2; //bar數值垂直置中
+              ctx.fillStyle = '#000';
+              ctx.fillText(data, bar._model.x, bar._model.y - 20); //bar數值垂直置中
+            });
+          });
+        }
+      }],
+
+    });
+  
+    // 全國平均PRpg5
+  var ctx8 = document.getElementById('teacher-work-values-2').getContext('2d');
+    var myChart = new Chart(ctx8, {
+      type: "bar",
+      data: {
+        labels: [
+          
+          "公平正義",
+          "人際互動與管理",
+          "藝術體能活動",
+          "工作條件與福利",
+          "社會地位"
+        ],
+        datasets: [{
+          label: '全校男性',
+          backgroundColor: "#5792c8",
+          data: [4.1, 3.5, 1.8, 3.5, 4.7],
+        }, {
+          label: '全校女性',
+          backgroundColor: "#e27933",
+          data: [4.6, 4.6, 1.4, 3.7, 3.7],
+        }, {
+          label: '全國常模',
+          backgroundColor: "#a5a5a5",
+          data: [ 3.0, 5.6, 2.6, 4.0, 4.3],
+        }, ],
+      },
+      options: {
+        responsive: true,
+        animation: {
+          duration: 0,
+        },
+        title: {
+          display: true,
+          text: '',
+          fontSize: 25,
+          padding: 25,
+          fontStyle: "bold",
+          fontColor: "#3e9979"
+        },
+        tooltips: {
+          // Disable the on-canvas tooltip
+          enabled: true,
+          yAlign: 'none',
+            // backgroundColor: '#227799',
+            position: 'custom',
+        },
+        legend: {
+          display: true,
+          reverse: false,
+          position: 'bottom',
+          labels: {
+            fontColor: "#595757",
+            fontSize: 17,
+            padding: 20,
+            fontStyle: "bold",
+            boxWidth: 17,
+            boxHeight: 17
+          },
+          onClick: null
+        },
+        scales: {
+          xAxes: [{
+            position: 'bottom',
+            ticks: {
+              min: 0,
+              // max: 100,
+              // stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 15,
+              fontStyle: "bold",
+              // autoSkip: false,
+              // maxRotation: 90,
+              // minRotation: 90
+            }
+          }],
+          yAxes: [{
+            position: 'left',
+            ticks: {
+              min: 0,
+              max: 100,
+              stepSize: 20,
+              fontColor: '#595757',
+              fontSize: 17,
+              fontStyle: "bold",
+              callback: function (value, index, values) {
+                return value + '%';
+              }
+            }
+          }]
+        },
+      },
+      plugins: [{
+        afterDraw: function (chartInstance) {
+          ctx = chartInstance.ctx;
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillStyle = '#fff';
+          ctx.font = "bold 15px 'Arial'";
+          chartInstance.data.datasets.forEach(function (dataset, i) {
+            var meta = chartInstance.controller.getDatasetMeta(i);
+            meta.data.forEach(function (bar, index) {
+              var data = dataset.data[index];
+              // var height = bar.height(); //bar數值垂直置中
+              // var y = bar._view.y; //bar數值垂直置中
+              // var _y = y + height / 2; //bar數值垂直置中
+              ctx.fillStyle = '#000';
+              ctx.fillText(data, bar._model.x, bar._model.y - 20); //bar數值垂直置中
+            });
+          });
+        }
+      }],
+
+    });
+  
+  </script>
+
+</body>
+
+</html>

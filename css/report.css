@@ -218,6 +218,14 @@ rt {
   border: 1px solid #e1b538;
 }
 
+.personality-border {
+  border: 1px solid #fbd9ac;
+}
+
+.green-border {
+  border: 1px solid #3e9979;
+}
+
 .shadow {
   box-shadow: 1px 1px 5px rgba(89, 87, 87, 0.4196078431);
 }
@@ -255,6 +263,8 @@ rt {
   width: 150px;
   margin-left: 30px;
   z-index: 1;
+  /*情境測驗 幼教 小教 中教 特教*/
+  /*教師人格測驗*/
 }
 .report-title .logo::before {
   position: absolute;
@@ -280,6 +290,24 @@ rt {
   z-index: -2;
   border-radius: 50%;
 }
+.report-title .logo.small-logo::before {
+  background-color: #628332;
+}
+.report-title .logo.young-logo::before {
+  background-color: #0f9b66;
+}
+.report-title .logo.medium-logo::before {
+  background-color: #d26512;
+}
+.report-title .logo.special-logo::before {
+  background-color: #3d5ba3;
+}
+.report-title .logo.value-logo::before {
+  background: #3e9979;
+}
+.report-title .logo.personality-logo::before {
+  background-color: #df7b5a;
+}
 .report-title .title-content {
   width: 100%;
 }
@@ -287,12 +315,36 @@ rt {
   padding: 15px 0px;
   text-align: center;
   background-color: #d26512;
+  /*情境測驗 幼教 小教 中教 特教*/
+  /*教師人格測驗*/
+  /*教師人格測驗*/
 }
 .report-title .title-content .headline h3 {
   margin-left: 35px;
 }
 .report-title .title-content .headline h3 img {
   width: 35px;
+}
+.report-title .title-content .headline.smallbg {
+  background-color: #628332;
+}
+.report-title .title-content .headline.youngbg {
+  background-color: #0f9b66;
+}
+.report-title .title-content .headline.mediumbg {
+  background-color: #d26512;
+}
+.report-title .title-content .headline.specialbg {
+  background-color: #3d5ba3;
+}
+.report-title .title-content .headline.valuebg {
+  background-color: #d0e8d7;
+}
+.report-title .title-content .headline.personalitybg {
+  background-color: #fbd9ac;
+}
+.report-title .title-content .headline.value h3 {
+  color: #595757;
 }
 .report-title .title-content .subtitle {
   padding: 10px 0px;
@@ -369,6 +421,12 @@ rt {
 .material .threepeople p {
   color: #004795;
 }
+.material.value {
+  justify-content: flex-start;
+}
+.material.value .material-text {
+  width: 100%;
+}
 
 .test-content {
   width: 60%;
@@ -411,6 +469,10 @@ rt {
 .item .main .data-page-scroll .chart-control {
   min-width: 768px;
 }
+.item .main.three-chart .data-page-scroll {
+  margin: 28px auto;
+  padding: 5px 20px;
+}
 .item .main .text-area {
   margin: 40px auto;
 }
@@ -437,6 +499,45 @@ rt {
   /*　IE需再加上此行　*/
   text-justify: inter-word;
 }
+.item .main .compare-classification {
+  margin: 20px auto;
+}
+.item .main .compare-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin: 0px auto 20px;
+}
+.item .main .compare-area .left-block,
+.item .main .compare-area .right-block {
+  width: 47.5%;
+}
+.item .main .compare-area .left-block .compare-title,
+.item .main .compare-area .right-block .compare-title {
+  border-radius: 15px;
+  padding: 5px 10px;
+}
+.item .main .compare-area .left-block .compare-content,
+.item .main .compare-area .right-block .compare-content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  margin: 15px auto;
+}
+.item .main .compare-area .sort {
+  display: flex;
+  flex-direction: column;
+  margin: 15px auto;
+}
+.item .main .compare-area .compare-value p {
+  border-radius: 15px;
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+.item .main .compare-area .one-value {
+  width: 100%;
+}
 
 .bottom-text {
   position: relative;
@@ -445,19 +546,35 @@ rt {
   background-color: #d26512;
   padding: 10px;
   width: 100%;
+  /*情境測驗 幼教 小教 中教 特教*/
+  /*教師人格測驗*/
 }
 .bottom-text p {
   color: white;
   text-align: center;
 }
+.bottom-text.smallbg {
+  background-color: #628332;
+}
+.bottom-text.youngbg {
+  background-color: #0f9b66;
+}
+.bottom-text.mediumbg {
+  background-color: #d26512;
+}
+.bottom-text.specialbg {
+  background-color: #3d5ba3;
+}
+.bottom-text.valuebg {
+  background-color: #3e9979;
+}
+.bottom-text.personalitybg {
+  background-color: #df7b5a;
+}
 
 /* values開始 */
 .green {
   color: #3e9979;
-}
-
-.green-border {
-  border: 1px solid #3e9979;
 }
 
 .school-text {
@@ -468,128 +585,21 @@ rt {
   color: #043789;
 }
 
-.value-logo::before {
-  background: #3e9979;
-}
-
-.valuebg {
-  background: #d0e8d7;
-}
-
-.value .headline h3 {
-  color: #595757;
-}
-
-.values-title-bg {
-  width: 40%;
-  margin: 0 auto;
-}
-
-.value .material {
-  justify-content: flex-start;
-}
-
-.three-chart .data-page-scroll {
-  margin: 28px auto;
-  padding: 5px 20px;
-}
-
-.compare-area {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  margin: 0px auto 20px;
-}
-
-.compare-title {
-  border-radius: 15px;
-  padding: 5px 10px;
-}
-
-.compare-content {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-around;
-  margin: 15px auto;
-}
-
-.compare-value p {
-  border-radius: 15px;
-  padding: 5px 10px;
-  margin-top: 10px;
-}
-
-.left-block,
-.right-block {
-  width: 47.5%;
-}
-
-.sort {
-  display: flex;
-  flex-direction: column;
-  margin: 15px auto;
-}
-
-.one-value {
-  width: 100%;
-}
-
-.compare-classification {
-  margin: 20px auto;
-}
-
-.valuebg .bottom-text {
-  background-color: #3e9979;
-}
-
 /*情境測驗 幼教 小教 中教 特教*/
-.smallbg {
-  background-color: #628332;
-}
-
 .small-border {
   border: 1px solid #628332;
-}
-
-.small-logo::before {
-  background-color: #628332;
-}
-
-.youngbg {
-  background-color: #0f9b66;
 }
 
 .young-border {
   border: 1px solid #0f9b66;
 }
 
-.young-logo::before {
-  background-color: #0f9b66;
-}
-
-.mediumbg {
-  background-color: #d26512;
-}
-
 .medium-border {
   border: 1px solid #d26512;
 }
 
-.medium-logo::before {
-  background-color: #d26512;
-}
-
-.specialbg {
-  background-color: #3d5ba3;
-}
-
 .special-border {
   border: 1px solid #3d5ba3;
-}
-
-.special-logo::before {
-  background-color: #3d5ba3;
 }
 
 .stay-left {
@@ -597,22 +607,6 @@ rt {
 }
 
 /*教師人格測驗*/
-.personality-logo::before {
-  background-color: #df7b5a;
-}
-
-.personalitybg {
-  background-color: #fbd9ac;
-}
-
-.personality-border {
-  border: 1px solid #fbd9ac;
-}
-
-.personalitybg .bottom-text {
-  background-color: #df7b5a;
-}
-
 .pinkorange {
   color: #df7b5a;
 }
@@ -712,22 +706,25 @@ rt {
     overflow-x: scroll;
   }
   /* values開始 */
-  .sort {
-    display: none;
-  }
-  .left-block,
-  .right-block {
+  .compare-area .left-block,
+  .compare-area .right-block {
     width: 100%;
     margin: 10px auto;
   }
-  .compare-content div {
+  .compare-area .left-block .compare-content div,
+  .compare-area .right-block .compare-content div {
     width: 100%;
   }
-  .compare-content .two div {
+  .compare-area .left-block .compare-content .two div,
+  .compare-area .right-block .compare-content .two div {
     width: 45%;
   }
-  .compare-content .three div {
+  .compare-area .left-block .compare-content .three div,
+  .compare-area .right-block .compare-content .three div {
     width: 30%;
+  }
+  .compare-area .sort {
+    display: none;
   }
 }
 @media screen and (max-width: 500px) {
@@ -893,6 +890,12 @@ rt {
   .yellow-border {
     border: 1px solid #e1b538;
   }
+  .personality-border {
+    border: 1px solid #fbd9ac;
+  }
+  .green-border {
+    border: 1px solid #3e9979;
+  }
   .shadow {
     box-shadow: 1px 1px 5px rgba(89, 87, 87, 0.4196078431);
   }
@@ -933,6 +936,8 @@ rt {
     width: 150px;
     margin-left: 30px;
     z-index: 1;
+    /*情境測驗 幼教 小教 中教 特教*/
+    /*教師人格測驗*/
   }
   .report-title .logo::before {
     position: absolute;
@@ -942,7 +947,7 @@ rt {
     top: 0%;
     left: 0%;
     transform: translate(-30%, -30%);
-    background: #d26512;
+    background-color: #d26512;
     z-index: -1;
     border-radius: 50%;
   }
@@ -958,19 +963,61 @@ rt {
     z-index: -2;
     border-radius: 50%;
   }
+  .report-title .logo.small-logo::before {
+    background-color: #628332;
+  }
+  .report-title .logo.young-logo::before {
+    background-color: #0f9b66;
+  }
+  .report-title .logo.medium-logo::before {
+    background-color: #d26512;
+  }
+  .report-title .logo.special-logo::before {
+    background-color: #3d5ba3;
+  }
+  .report-title .logo.value-logo::before {
+    background: #3e9979;
+  }
+  .report-title .logo.personality-logo::before {
+    background-color: #df7b5a;
+  }
   .report-title .title-content {
     width: 100%;
   }
   .report-title .title-content .headline {
     padding: 15px 0px;
     text-align: center;
-    background: #d26512;
+    background-color: #d26512;
+    /*情境測驗 幼教 小教 中教 特教*/
+    /*教師人格測驗*/
+    /*教師人格測驗*/
   }
   .report-title .title-content .headline h3 {
     margin-left: 35px;
   }
   .report-title .title-content .headline h3 img {
     width: 35px;
+  }
+  .report-title .title-content .headline.smallbg {
+    background-color: #628332;
+  }
+  .report-title .title-content .headline.youngbg {
+    background-color: #0f9b66;
+  }
+  .report-title .title-content .headline.mediumbg {
+    background-color: #d26512;
+  }
+  .report-title .title-content .headline.specialbg {
+    background-color: #3d5ba3;
+  }
+  .report-title .title-content .headline.valuebg {
+    background-color: #d0e8d7;
+  }
+  .report-title .title-content .headline.personalitybg {
+    background-color: #fbd9ac;
+  }
+  .report-title .title-content .headline.value h3 {
+    color: #595757;
   }
   .report-title .title-content .subtitle {
     padding: 10px 0px;
@@ -1025,6 +1072,11 @@ rt {
   .material .material-text .people p span:nth-child(2),
   .material .material-text .filter p span:nth-child(2) {
     width: calc(100% - 115px);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .material .threepeople {
     background-color: #fff;
@@ -1040,6 +1092,12 @@ rt {
   }
   .material .threepeople p {
     color: #004795;
+  }
+  .material.value {
+    justify-content: flex-start;
+  }
+  .material.value .material-text {
+    width: 100%;
   }
   .test-content {
     width: 60%;
@@ -1081,12 +1139,17 @@ rt {
   .item .main .data-page-scroll .chart-control {
     min-width: 768px;
   }
+  .item .main.three-chart .data-page-scroll {
+    margin: 28px auto;
+    padding: 5px 20px;
+  }
   .item .main .text-area {
     margin: 40px auto;
   }
   .item .main .text-area .title {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
   .item .main .text-area .title img {
     width: 7%;
@@ -1106,24 +1169,80 @@ rt {
     /*　IE需再加上此行　*/
     text-justify: inter-word;
   }
+  .item .main .compare-classification {
+    margin: 20px auto;
+  }
+  .item .main .compare-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    margin: 0px auto 20px;
+  }
+  .item .main .compare-area .left-block,
+  .item .main .compare-area .right-block {
+    width: 47.5%;
+  }
+  .item .main .compare-area .left-block .compare-title,
+  .item .main .compare-area .right-block .compare-title {
+    border-radius: 15px;
+    padding: 5px 10px;
+  }
+  .item .main .compare-area .left-block .compare-content,
+  .item .main .compare-area .right-block .compare-content {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    margin: 15px auto;
+  }
+  .item .main .compare-area .sort {
+    display: flex;
+    flex-direction: column;
+    margin: 15px auto;
+  }
+  .item .main .compare-area .compare-value p {
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin-top: 10px;
+  }
+  .item .main .compare-area .one-value {
+    width: 100%;
+  }
   .bottom-text {
-    position: absolute;
+    position: relative;
     bottom: 0px;
     left: 0px;
     background-color: #d26512;
     padding: 10px;
     width: 100%;
+    /*情境測驗 幼教 小教 中教 特教*/
+    /*教師人格測驗*/
   }
   .bottom-text p {
     color: white;
     text-align: center;
   }
+  .bottom-text.smallbg {
+    background-color: #628332;
+  }
+  .bottom-text.youngbg {
+    background-color: #0f9b66;
+  }
+  .bottom-text.mediumbg {
+    background-color: #d26512;
+  }
+  .bottom-text.specialbg {
+    background-color: #3d5ba3;
+  }
+  .bottom-text.valuebg {
+    background-color: #3e9979;
+  }
+  .bottom-text.personalitybg {
+    background-color: #df7b5a;
+  }
   /* values開始 */
   .green {
     color: #3e9979;
-  }
-  .green-border {
-    border: 1px solid #3e9979;
   }
   .school-text {
     color: #c73a3a;
@@ -1131,119 +1250,23 @@ rt {
   .national-text {
     color: #043789;
   }
-  .value-logo::before {
-    background: #3e9979;
-  }
-  .valuebg {
-    background: #d0e8d7;
-  }
-  .value .headline h3 {
-    color: #595757;
-  }
-  .values-title-bg {
-    width: 40%;
-    margin: 0 auto;
-  }
-  .value .material {
-    justify-content: flex-start;
-  }
-  .three-chart .data-page-scroll {
-    margin: 28px auto;
-    padding: 5px 20px;
-  }
-  .compare-area {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    margin: 0px auto 10px;
-  }
-  .compare-title {
-    border-radius: 15px;
-    padding: 5px 10px;
-  }
-  .compare-content {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
-    margin: 12px auto;
-  }
-  .compare-value p {
-    border-radius: 15px;
-    padding: 5px 10px;
-    margin-top: 10px;
-  }
-  .left-block,
-  .right-block {
-    width: 47.5%;
-  }
-  .sort {
-    display: flex;
-    flex-direction: column;
-    margin: 12px auto;
-  }
-  .one-value {
-    width: 100%;
-  }
-  .compare-classification {
-    margin: 12px auto;
-  }
-  .valuebg .bottom-text {
-    background-color: #3e9979;
-  }
   /*情境測驗 幼教 小教 中教 特教*/
-  .smallbg {
-    background-color: #628332;
-  }
   .small-border {
     border: 1px solid #628332;
-  }
-  .small-logo::before {
-    background-color: #628332;
-  }
-  .youngbg {
-    background-color: #0f9b66;
   }
   .young-border {
     border: 1px solid #0f9b66;
   }
-  .young-logo::before {
-    background-color: #0f9b66;
-  }
-  .mediumbg {
-    background-color: #d26512;
-  }
   .medium-border {
     border: 1px solid #d26512;
   }
-  .medium-logo::before {
-    background-color: #d26512;
-  }
-  .specialbg {
-    background-color: #3d5ba3;
-  }
   .special-border {
     border: 1px solid #3d5ba3;
-  }
-  .special-logo::before {
-    background-color: #3d5ba3;
   }
   .stay-left {
     justify-content: flex-start;
   }
   /*教師人格測驗*/
-  .personality-logo::before {
-    background-color: #df7b5a;
-  }
-  .personalitybg {
-    background-color: #fbd9ac;
-  }
-  .personality-border {
-    border: 1px solid #fbd9ac;
-  }
-  .personalitybg.bottom-text {
-    background-color: #df7b5a;
-  }
   .pinkorange {
     color: #df7b5a;
   }
