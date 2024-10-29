@@ -836,10 +836,8 @@ rt {
             .data-page-scroll {
                 overflow-x: scroll;
             }
-        }
-    }
 
-    /* values開始 */
+            /* values開始 */
 
     .compare-area {
 
@@ -871,7 +869,8 @@ rt {
             display: none;
         }
     }
-
+        }
+    }
 }
 
 @media screen and (max-width: 500px) {

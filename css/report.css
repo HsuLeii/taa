@@ -702,28 +702,30 @@ rt {
   .item .item-title .number-mark {
     width: 15%;
   }
+  .item .main {
+    /* values開始 */
+  }
   .item .main .data-page-scroll {
     overflow-x: scroll;
   }
-  /* values開始 */
-  .compare-area .left-block,
-  .compare-area .right-block {
+  .item .main .compare-area .left-block,
+  .item .main .compare-area .right-block {
     width: 100%;
     margin: 10px auto;
   }
-  .compare-area .left-block .compare-content div,
-  .compare-area .right-block .compare-content div {
+  .item .main .compare-area .left-block .compare-content div,
+  .item .main .compare-area .right-block .compare-content div {
     width: 100%;
   }
-  .compare-area .left-block .compare-content .two div,
-  .compare-area .right-block .compare-content .two div {
+  .item .main .compare-area .left-block .compare-content .two div,
+  .item .main .compare-area .right-block .compare-content .two div {
     width: 45%;
   }
-  .compare-area .left-block .compare-content .three div,
-  .compare-area .right-block .compare-content .three div {
+  .item .main .compare-area .left-block .compare-content .three div,
+  .item .main .compare-area .right-block .compare-content .three div {
     width: 30%;
   }
-  .compare-area .sort {
+  .item .main .compare-area .sort {
     display: none;
   }
 }
