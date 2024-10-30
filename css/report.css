@@ -474,7 +474,7 @@ rt {
   padding: 5px 20px;
 }
 .item .main .text-area {
-  margin: 40px auto;
+  margin: 20px auto;
 }
 .item .main .text-area .title {
   display: flex;
@@ -500,14 +500,14 @@ rt {
   text-justify: inter-word;
 }
 .item .main .compare-classification {
-  margin: 20px auto;
+  margin: 12px auto;
 }
 .item .main .compare-area {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   flex-wrap: wrap;
-  margin: 0px auto 20px;
+  margin: 0px auto 12px;
 }
 .item .main .compare-area .left-block,
 .item .main .compare-area .right-block {
@@ -1150,7 +1150,7 @@ rt {
     padding: 5px 20px;
   }
   .item .main .text-area {
-    margin: 40px auto;
+    margin: 20px auto;
   }
   .item .main .text-area .title {
     display: flex;
@@ -1176,14 +1176,14 @@ rt {
     text-justify: inter-word;
   }
   .item .main .compare-classification {
-    margin: 20px auto;
+    margin: 12px auto;
   }
   .item .main .compare-area {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     flex-wrap: wrap;
-    margin: 0px auto 20px;
+    margin: 0px auto 12px;
   }
   .item .main .compare-area .left-block,
   .item .main .compare-area .right-block {
@@ -1215,7 +1215,7 @@ rt {
     width: 100%;
   }
   .bottom-text {
-    position: relative;
+    position: absolute;
     bottom: 0px;
     left: 0px;
     background-color: #d26512;
