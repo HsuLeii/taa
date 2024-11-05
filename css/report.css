@@ -428,7 +428,10 @@ rt {
 .material.value {
   justify-content: flex-start;
 }
-.material.value .material-text {
+.material.value .material-text .school,
+.material.value .material-text .date,
+.material.value .material-text .people,
+.material.value .material-text .filter {
   width: 100%;
 }
 
@@ -1118,7 +1121,10 @@ rt {
   .material.value {
     justify-content: flex-start;
   }
-  .material.value .material-text {
+  .material.value .material-text .school,
+  .material.value .material-text .date,
+  .material.value .material-text .people,
+  .material.value .material-text .filter {
     width: 100%;
   }
   .test-content {

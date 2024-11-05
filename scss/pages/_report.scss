@@ -481,7 +481,13 @@ rt {
         justify-content: flex-start;
 
         .material-text {
-            width: 100%;
+
+            .school,
+            .date,
+            .people,
+            .filter {
+                width: 100%;
+            }
         }
     }
 }
@@ -725,6 +731,7 @@ rt {
             .people,
             .filter {
                 width: 100%;
+
                 p {
                     span {
                         &:nth-child(1) {
@@ -850,40 +857,40 @@ rt {
 
             /* values開始 */
 
-    .compare-area {
+            .compare-area {
 
-        .left-block,
-        .right-block {
-            width: 100%;
-            margin: 10px auto;
+                .left-block,
+                .right-block {
+                    width: 100%;
+                    margin: 10px auto;
 
-            .compare-content {
-                &.two {
-                    div {
-                        width: 45%;
+                    .compare-content {
+                        &.two {
+                            div {
+                                width: 45%;
 
-                        div{
-                            width: 100%;
+                                div {
+                                    width: 100%;
+                                }
+                            }
+                        }
+
+                        &.three {
+                            div {
+                                width: 30%;
+
+                                div {
+                                    width: 100%;
+                                }
+                            }
                         }
                     }
                 }
 
-                &.three {
-                    div {
-                        width: 30%;
-
-                        div{
-                            width: 100%;
-                        }
-                    }
+                .sort {
+                    display: none;
                 }
             }
-        }
-
-        .sort {
-            display: none;
-        }
-    }
         }
     }
 }
@@ -1341,8 +1348,8 @@ rt {
             padding: 10px;
             border-radius: 10px;
             position: absolute;
-        top: 0;
-        right: 5%;
+            top: 0;
+            right: 5%;
 
             img {
                 width: 40%;
@@ -1359,7 +1366,13 @@ rt {
             justify-content: flex-start;
 
             .material-text {
-                width: 100%;
+
+                .school,
+                .date,
+                .people,
+                .filter {
+                    width: 100%;
+                }
             }
         }
     }
