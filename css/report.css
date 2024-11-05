@@ -688,6 +688,7 @@ rt {
   }
   .report-title .title-content .headline h3 {
     margin-left: 25px;
+    font-size: 24px;
   }
   .report-title .title-content .headline h3 img {
     display: none;
