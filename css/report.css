@@ -690,7 +690,7 @@ rt {
     margin-left: 25px;
   }
   .report-title .title-content .headline h3 img {
-    width: 25px;
+    display: none;
   }
   .report-title .title-content .subtitle {
     padding: 5px 0px;
@@ -778,9 +778,6 @@ rt {
   }
   .report-title .title-content .headline h3 {
     margin-left: 15px;
-  }
-  .report-title .title-content .headline h3 img {
-    display: none;
   }
   .material {
     margin: 0 auto;
