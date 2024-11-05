@@ -673,15 +673,15 @@ rt {
     color: #595757;
   }
   .report-title .logo {
-    width: 120px;
+    width: 110px;
   }
   .report-title .logo::before {
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
   }
   .report-title .logo::after {
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
   }
   .report-title .title-content .headline {
     padding: 10px 0px;
