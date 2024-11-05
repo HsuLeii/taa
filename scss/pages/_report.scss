@@ -417,19 +417,18 @@ rt {
 
 .material {
     width: calc(100% - 200px);
-    margin-left: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    margin-top: 20px;
+    display: inline-block;
+    margin: 0 0 0 200px;
+    position: relative;
 
     .material-text {
-        width: 50%;
+        width: 95%;
 
         .school,
         .date,
         .people,
         .filter {
+            width: 50%;
             padding: 8px 0px;
             border-bottom: 1px dotted #595757;
 
@@ -452,14 +451,20 @@ rt {
                 }
             }
         }
+
+        .filter {
+            width: 100%;
+        }
     }
 
     .threepeople {
         background-color: #fff;
         width: 40%;
-        position: relative;
         padding: 10px;
         border-radius: 10px;
+        position: absolute;
+        top: 0;
+        right: 5%;
 
         img {
             width: 40%;
@@ -705,19 +710,21 @@ rt {
     }
 
     .material {
+        display: flex;
         flex-direction: column;
         align-items: end;
         width: 88%;
+        margin: 0 0 0 auto;
 
         .material-text {
             order: 2;
-            width: 100%;
             margin: 15px 25px 0px auto;
 
             .school,
             .date,
             .people,
             .filter {
+                width: 100%;
                 p {
                     span {
                         &:nth-child(1) {
@@ -733,6 +740,9 @@ rt {
         }
 
         .threepeople {
+            position: relative;
+            top: auto;
+            right: auto;
             margin: 30px 25px 0px 0px;
         }
     }
@@ -1288,19 +1298,18 @@ rt {
 
     .material {
         width: calc(100% - 200px);
-        margin-left: auto;
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-start;
-        margin-top: 20px;
+        display: inline-block;
+        margin: 0 0 0 200px;
+        position: relative;
 
         .material-text {
-            width: 50%;
+            width: 95%;
 
             .school,
             .date,
             .people,
             .filter {
+                width: 50%;
                 padding: 8px 0px;
                 border-bottom: 1px dotted #595757;
 
@@ -1323,14 +1332,20 @@ rt {
                     }
                 }
             }
+
+            .filter {
+                width: 100%;
+            }
         }
 
         .threepeople {
             background-color: #fff;
             width: 40%;
-            position: relative;
             padding: 10px;
             border-radius: 10px;
+            position: absolute;
+        top: 0;
+        right: 5%;
 
             img {
                 width: 40%;

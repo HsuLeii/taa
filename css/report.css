@@ -367,19 +367,18 @@ rt {
 
 .material {
   width: calc(100% - 200px);
-  margin-left: auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  margin-top: 20px;
+  display: inline-block;
+  margin: 0 0 0 200px;
+  position: relative;
 }
 .material .material-text {
-  width: 50%;
+  width: 95%;
 }
 .material .material-text .school,
 .material .material-text .date,
 .material .material-text .people,
 .material .material-text .filter {
+  width: 50%;
   padding: 8px 0px;
   border-bottom: 1px dotted #595757;
 }
@@ -406,12 +405,17 @@ rt {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.material .material-text .filter {
+  width: 100%;
+}
 .material .threepeople {
   background-color: #fff;
   width: 40%;
-  position: relative;
   padding: 10px;
   border-radius: 10px;
+  position: absolute;
+  top: 0;
+  right: 5%;
 }
 .material .threepeople img {
   width: 40%;
@@ -616,14 +620,21 @@ rt {
     font-size: 18px;
   }
   .material {
+    display: flex;
     flex-direction: column;
     align-items: end;
     width: 88%;
+    margin: 0 0 0 auto;
   }
   .material .material-text {
     order: 2;
-    width: 100%;
     margin: 15px 25px 0px auto;
+  }
+  .material .material-text .school,
+  .material .material-text .date,
+  .material .material-text .people,
+  .material .material-text .filter {
+    width: 100%;
   }
   .material .material-text .school p span:nth-child(1),
   .material .material-text .date p span:nth-child(1),
@@ -638,6 +649,9 @@ rt {
     width: calc(100% - 105px);
   }
   .material .threepeople {
+    position: relative;
+    top: auto;
+    right: auto;
     margin: 30px 25px 0px 0px;
   }
   .item .main .data-page-scroll {
@@ -1045,19 +1059,18 @@ rt {
   }
   .material {
     width: calc(100% - 200px);
-    margin-left: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    margin-top: 20px;
+    display: inline-block;
+    margin: 0 0 0 200px;
+    position: relative;
   }
   .material .material-text {
-    width: 50%;
+    width: 95%;
   }
   .material .material-text .school,
   .material .material-text .date,
   .material .material-text .people,
   .material .material-text .filter {
+    width: 50%;
     padding: 8px 0px;
     border-bottom: 1px dotted #595757;
   }
@@ -1084,12 +1097,17 @@ rt {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  .material .material-text .filter {
+    width: 100%;
+  }
   .material .threepeople {
     background-color: #fff;
     width: 40%;
-    position: relative;
     padding: 10px;
     border-radius: 10px;
+    position: absolute;
+    top: 0;
+    right: 5%;
   }
   .material .threepeople img {
     width: 40%;
