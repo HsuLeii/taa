@@ -1,0 +1,347 @@
+@use "../base/color" as c;
+
+%boxShadow {
+    box-shadow: 5px 5px 10px 3px c.$main_color_light;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+figure {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1 {
+    font-size: 25px;
+    line-height: 1.7;
+    letter-spacing: 2.5px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 21px;
+    line-height: 1.7;
+    letter-spacing: 2.5px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 19px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 15px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+p,
+i {
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+span,
+th,
+td,
+.form-control {
+    font-size: 13px;
+    text-decoration: none;
+    line-height: 1.7;
+}
+
+a {
+    font-size: 13px;
+    text-decoration: none;
+    line-height: 1.7;
+}
+
+ruby {
+    letter-spacing: 1.8px;
+    line-height: 3;
+}
+
+rt {
+    transform: translateY(-35%);
+}
+
+input,
+label {
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+input[type=file]::file-selector-button {
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+
+button,
+.btn {
+    font-size: 13px;
+    line-height: 1.7;
+    padding: 0;
+    border-width: 0px;
+    border-style: none;
+    background-color: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:disabled {
+    color: c.$black !important;
+    background-color: c.$grey !important;
+    border: 1px solid c.$grey !important;
+    opacity: 0.5;
+    cursor: auto !important;
+
+    a {
+        color: c.$white !important;
+        cursor: auto;
+    }
+}
+
+*,
+body {
+    letter-spacing: 1.5px;
+    box-sizing: border-box;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+::selection {
+    // background: darken(c.$main_color, 15%);
+    color: c.$white;
+}
+
+.table{
+    border-collapse: collapse;
+    
+    th,
+    td{
+        border-top: 0px;
+        border-bottom: 0px;
+    }
+
+    thead{
+        th{
+            border-bottom: 0px;
+            font-size: 16px;
+        }
+    }
+
+    tbody{
+        td{
+            font-size: 13px;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 35px;
+    }
+
+    h3 {
+        font-size: 23px;
+    }
+
+    h4 {
+        font-size: 21px;
+    }
+
+    h5 {
+        font-size: 17px;
+    }
+
+    p,
+    i {
+        font-size: 15px;
+    }
+
+    span,
+    th,
+    td,
+    .form-control {
+        font-size: 15px;
+    }
+
+    a {
+        font-size: 15px;
+    }
+
+    input,
+    label {
+        font-size: 15px;
+    }
+
+    button,
+    .btn {
+        font-size: 15px;
+    }
+
+    .table{
+    
+        thead{
+            th{
+                font-size: 19px;
+            }
+        }
+    
+        tbody{
+            td{
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    h4 {
+        font-size: 26px;
+    }
+
+    h5 {
+        font-size: 22px;
+    }
+
+    p,
+    i {
+        font-size: 17px;
+    }
+
+    span,
+    th,
+    td,
+    .form-control {
+        font-size: 17px;
+    }
+
+    a {
+        font-size: 17px;
+    }
+
+    input,
+    label {
+        font-size: 17px;
+    }
+
+    button,
+    .btn {
+        font-size: 17px;
+    }
+
+    .table{
+    
+        thead{
+            th{
+                font-size: 21px;
+            }
+        }
+    
+        tbody{
+            td{
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+@media print {
+    h1 {
+        font-size: 40px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    h4 {
+        font-size: 26px;
+    }
+
+    h5 {
+        font-size: 22px;
+    }
+
+    p,
+    i {
+        font-size: 17px;
+    }
+
+    span,
+    th,
+    td,
+    .form-control {
+        font-size: 17px;
+    }
+
+    a {
+        font-size: 17px;
+    }
+
+    input,
+    label {
+        font-size: 17px;
+    }
+
+    button,
+    .btn {
+        font-size: 17px;
+    }
+
+    .table{
+    
+        thead{
+            th{
+                font-size: 21px;
+            }
+        }
+    
+        tbody{
+            td{
+                font-size: 16px;
+            }
+        }
+    }
+
+}

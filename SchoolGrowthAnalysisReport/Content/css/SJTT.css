@@ -1,0 +1,490 @@
+@charset "UTF-8";
+body {
+  font-family: "Noto Sans TC", "PingFang TC", "PingFang SC", "Heiti TC", "Heiti SC", "微軟正黑體", "蘋果儷中黑", "LiHei Pro", "STXihei", "sans-serif", Arial;
+}
+
+/*main*/
+/*table*/
+/*other*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+figure {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1 {
+  font-size: 25px;
+  line-height: 1.7;
+  letter-spacing: 2.5px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 21px;
+  line-height: 1.7;
+  letter-spacing: 2.5px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 19px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+p,
+i {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+span,
+th,
+td,
+.form-control {
+  font-size: 13px;
+  text-decoration: none;
+  line-height: 1.7;
+}
+
+a {
+  font-size: 13px;
+  text-decoration: none;
+  line-height: 1.7;
+}
+
+ruby {
+  letter-spacing: 1.8px;
+  line-height: 3;
+}
+
+rt {
+  transform: translateY(-35%);
+}
+
+input,
+label {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+input[type=file]::file-selector-button {
+  display: none;
+}
+
+img {
+  width: 100%;
+}
+
+button,
+.btn {
+  font-size: 13px;
+  line-height: 1.7;
+  padding: 0;
+  border-width: 0px;
+  border-style: none;
+  background-color: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:disabled {
+  color: #000 !important;
+  background-color: grey !important;
+  border: 1px solid grey !important;
+  opacity: 0.5;
+  cursor: auto !important;
+}
+button:disabled a {
+  color: #fff !important;
+  cursor: auto;
+}
+
+*,
+body {
+  letter-spacing: 1.5px;
+  box-sizing: border-box;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+::selection {
+  color: #fff;
+}
+
+.table {
+  border-collapse: collapse;
+}
+.table th,
+.table td {
+  border-top: 0px;
+  border-bottom: 0px;
+}
+.table thead th {
+  border-bottom: 0px;
+  font-size: 16px;
+}
+.table tbody td {
+  font-size: 13px;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 35px;
+  }
+  h3 {
+    font-size: 23px;
+  }
+  h4 {
+    font-size: 21px;
+  }
+  h5 {
+    font-size: 17px;
+  }
+  p,
+  i {
+    font-size: 15px;
+  }
+  span,
+  th,
+  td,
+  .form-control {
+    font-size: 15px;
+  }
+  a {
+    font-size: 15px;
+  }
+  input,
+  label {
+    font-size: 15px;
+  }
+  button,
+  .btn {
+    font-size: 15px;
+  }
+  .table thead th {
+    font-size: 19px;
+  }
+  .table tbody td {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  h4 {
+    font-size: 26px;
+  }
+  h5 {
+    font-size: 22px;
+  }
+  p,
+  i {
+    font-size: 17px;
+  }
+  span,
+  th,
+  td,
+  .form-control {
+    font-size: 17px;
+  }
+  a {
+    font-size: 17px;
+  }
+  input,
+  label {
+    font-size: 17px;
+  }
+  button,
+  .btn {
+    font-size: 17px;
+  }
+  .table thead th {
+    font-size: 21px;
+  }
+  .table tbody td {
+    font-size: 17px;
+  }
+}
+@media print {
+  h1 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+  h4 {
+    font-size: 26px;
+  }
+  h5 {
+    font-size: 22px;
+  }
+  p,
+  i {
+    font-size: 17px;
+  }
+  span,
+  th,
+  td,
+  .form-control {
+    font-size: 17px;
+  }
+  a {
+    font-size: 17px;
+  }
+  input,
+  label {
+    font-size: 17px;
+  }
+  button,
+  .btn {
+    font-size: 17px;
+  }
+  .table thead th {
+    font-size: 21px;
+  }
+  .table tbody td {
+    font-size: 16px;
+  }
+}
+.table {
+  margin-bottom: 0;
+  --bs-table-bg: white;
+}
+
+.page {
+  /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
+  /* page-break-after: always;  碰到此元素會直接換頁 */
+  page-break-inside: avoid;
+  position: relative;
+  max-width: 1024px;
+  height: 1448px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #fef9f3;
+}
+.page .bold {
+  font-weight: bold;
+}
+.page .page_header {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.page .page_header .header_logo {
+  width: 55px;
+  margin: 10px 0 0 10px;
+}
+.page .page_header .header_information {
+  margin: 10px 10px 0 0;
+  text-align: right;
+}
+.page .report-title {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 15px;
+}
+.page .report-title h1 {
+  color: #957256;
+  font-weight: 900;
+}
+.page .page_content {
+  padding: 0 5%;
+}
+.page .page_content .page_caption {
+  width: 80%;
+  margin: 0 auto;
+}
+.page .page_content .page_caption .page_caption_text p {
+  color: #20221f;
+  line-height: 2.5;
+  text-align: justify;
+}
+.page .page_content .page_caption .page_caption_text p span {
+  font-size: 11px;
+}
+.page .page_content .page_caption .page_caption_text p span.bold {
+  font-size: 14px;
+}
+.page .page_content .pagination_tittle {
+  position: relative;
+  margin: 0 0 15px;
+}
+.page .page_content .pagination_tittle h4 {
+  color: #e7591a;
+}
+.page .page_content .caption_table {
+  overflow-x: scroll;
+  margin: 0 auto 0px;
+}
+.page .page_content .caption_table::-webkit-scrollbar {
+  background: transparent;
+  height: 8px;
+  width: 12px;
+}
+.page .page_content .caption_table::-webkit-scrollbar-thumb {
+  border: none;
+  box-shadow: none;
+  background: #e7591a;
+  min-height: 40px;
+}
+.page .page_content .caption_table .table {
+  min-width: 845px;
+  border: 1.5px solid #e7591a;
+  margin: 0 auto 40px;
+}
+.page .page_content .caption_table .table thead tr th {
+  color: #fff;
+  background-color: #e7591a;
+  padding: 5px 10px;
+  text-align: center;
+}
+.page .page_content .caption_table .table.table_one tbody tr:nth-child(even) {
+  background-color: #fff2e1;
+}
+.page .page_content .caption_table .table.table_one tbody tr:nth-child(2) {
+  background-color: #fcb34d;
+}
+.page .page_content .caption_table .table.table_one tbody tr td {
+  border-bottom: 1.5px solid #e7591a;
+  border-right: 1.5px solid #e7591a;
+  padding: 5px 15px;
+  color: #20221f;
+  text-align: justify;
+  text-align: center;
+  vertical-align: middle;
+}
+.page .page_content .caption_table .table.table_one tbody tr td.group_item {
+  width: 16%;
+}
+.page .page_content .caption_table .table.table_one tbody tr td.group_item.group_one {
+  width: 33%;
+}
+.page .page_content .caption_table .table.table_one tbody tr td.group_one {
+  background-color: #fcb34d;
+}
+.page .page_content .caption_table .table.table_one tbody tr td.group_two {
+  background-color: #68ccdc;
+}
+.page .page_content .caption_table .table.table_one tbody tr td.group_three {
+  background-color: #7bbcf4;
+}
+.page .page_content .caption_table .table.table_one tbody tr td.group_four {
+  background-color: #c0d796;
+}
+.page .page_content .caption_table .table.table_two tbody tr:nth-child(even) {
+  background-color: #fff2e1;
+}
+.page .page_content .caption_table .table.table_two tbody tr:nth-child(2) {
+  background-color: #fcb34d;
+}
+.page .page_content .caption_table .table.table_two tbody tr:nth-child(2) td:nth-child(1) {
+  background-color: #fff;
+}
+.page .page_content .caption_table .table.table_two tbody tr:nth-child(4) {
+  background-color: #ffdb9c;
+}
+.page .page_content .caption_table .table.table_two tbody tr:nth-child(5) {
+  background-color: #e78f6c;
+}
+.page .page_content .caption_table .table.table_two tbody tr:nth-child(6) {
+  background-color: #e07461;
+}
+.page .page_content .caption_table .table.table_two tbody tr:nth-child(7) {
+  background-color: #da7383;
+}
+.page .page_content .caption_table .table.table_two tbody tr:nth-child(8) td:nth-child(2) {
+  background-color: #68ccdc;
+}
+.page .page_content .caption_table .table.table_two tbody tr:nth-child(8) td:nth-child(3) {
+  background-color: #7bbcf4;
+}
+.page .page_content .caption_table .table.table_two tbody tr:nth-child(9) td:nth-child(2), .page .page_content .caption_table .table.table_two tbody tr:nth-child(9) td:nth-child(3) {
+  background-color: #68ccdc;
+}
+.page .page_content .caption_table .table.table_two tbody tr:nth-child(9) td:nth-child(4), .page .page_content .caption_table .table.table_two tbody tr:nth-child(9) td:nth-child(5) {
+  background-color: #7bbcf4;
+}
+.page .page_content .caption_table .table.table_two tbody tr td {
+  border-bottom: 1.5px solid #e7591a;
+  border-right: 1.5px solid #e7591a;
+  padding: 5px 15px;
+  color: #20221f;
+  text-align: justify;
+  text-align: center;
+  vertical-align: middle;
+}
+.page .page_content .caption_table .table.table_two tbody tr td.group_item {
+  width: 14%;
+}
+.page .page_content .caption_table .table.table_two tbody tr td.group_item.group_one {
+  width: 86%;
+}
+.page .page_content .caption_table .table.table_two tbody tr td.group_one {
+  background-color: #fcb34d;
+}
+
+@page {
+  /*size: portrait;  直向 */
+  /*size: landscape;  橫向 */
+  /*size: A4;  紙張大小 */
+  size: A4 portrait;
+  /* 混合使用 */
+  min-height: 100vh;
+  margin: 0;
+  /* 邊界與內容的距離 */
+}
+@media print {
+  .page {
+    /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
+    /* page-break-after: always;  碰到此元素會直接換頁 */
+    page-break-inside: avoid;
+    position: relative;
+    max-width: 1024px;
+    height: 1448px;
+    width: 100%;
+    /* height: 1448px; */
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #fef9f3;
+  }
+}
