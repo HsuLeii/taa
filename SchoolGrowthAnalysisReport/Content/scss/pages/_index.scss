@@ -11,6 +11,9 @@
     margin: 0 auto;
     overflow: hidden;
     background-color: c.$body_bg;
+    background-image: linear-gradient(90deg, #e8e8e8, 1px, transparent 0), linear-gradient(#e8e8e8, 1px, transparent 0);
+    background-position: 50% 50%;
+    background-size: 20px 20px;
 
     .bold {
         font-weight: bold;
@@ -21,14 +24,16 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
 
         .header_logo {
             width: 55px;
-            margin: 10px 0 0 10px;
+            margin: 20px 0 0 10px;
         }
 
         .header_information {
-            margin: 10px 10px 0 0;
+            margin: 20px 10px 0 0;
             text-align: right;
         }
     }
@@ -36,7 +41,7 @@
     .report-title {
         display: flex;
         justify-content: center;
-        margin: 0 auto 15px;
+        margin: 20px auto 0;
 
         h1 {
             color: #957256;
@@ -68,9 +73,6 @@
             }
         }
 
-        // page1
-
-        // page2
         .pagination_tittle {
             position: relative;
             margin: 0 0 15px;
@@ -99,8 +101,9 @@
 
             .table {
                 min-width: 845px;
+                width: 100%;
                 border: 1.5px solid c.$main_color;
-                margin: 0 auto 40px;
+                margin: 40px auto 0;
 
                 thead {
                     tr {
@@ -113,13 +116,21 @@
                     }
                 }
 
-                &.table_one{
-                    tbody {
-                    tr {
+                tbody{
+                    tr{
+                        &:nth-child(odd){
+                            background-color: #fff;
+                        }
 
                         &:nth-child(even){
                             background-color: #fff2e1;
                         }
+                    }
+                }
+
+                &.table_one{
+                    tbody {
+                    tr {
 
                         &:nth-child(2){
                             background-color: #fcb34d;
@@ -132,7 +143,6 @@
                             padding: 5px 15px;
                             color: c.$main_color_grey;
                             text-align: justify;
-
                             text-align: center;
                             vertical-align: middle;
 
@@ -172,10 +182,6 @@
                 &.table_two{
                     tbody {
                     tr {
-
-                        &:nth-child(even){
-                            background-color: #fff2e1;
-                        }
 
                         &:nth-child(2){
                             background-color: #fcb34d;
@@ -230,13 +236,11 @@
                         }
 
                         td {
-                            
                             border-bottom: 1.5px solid c.$main_color;
                             border-right: 1.5px solid c.$main_color;
                             padding: 5px 15px;
                             color: c.$main_color_grey;
                             text-align: justify;
-
                             text-align: center;
                             vertical-align: middle;
 
@@ -260,77 +264,82 @@
                     }
                 }
                 }
+
+                &.table_three{
+                    tbody {
+                    tr {
+
+                        &:nth-child(3){
+                            background-color: #cfeaff;
+                        }
+
+                        &:nth-child(4){
+                            background-color: #ffecb1;
+                        }
+
+                        &:nth-child(5){
+                            background-color: #bcf5d9;
+                        }
+
+                        &:nth-child(6){
+                            background-color: #efc2c1;
+                        }
+
+                        td {
+                            border-bottom: 1.5px solid c.$main_color;
+                            border-right: 1.5px solid c.$main_color;
+                            padding: 5px 15px;
+                            color: c.$main_color_grey;
+                            text-align: justify;
+                            text-align: center;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+                }
             }
         }
 
-        // page2
     }
 
-    // .page_footer {
-    //     position: absolute;
-    //     bottom: 0;
-    //     width: 100%;
+    .page_footer {
+        .pagination {
+            position: absolute;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            width: 90%;
+            margin: 0 auto;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
 
-    //     .pagination {
-    //         position: absolute;
-    //         display: flex;
-    //         justify-content: flex-start;
-    //         width: 90%;
-    //         margin: 0 auto;
-    //         bottom: 30px;
-    //         left: 50%;
-    //         transform: translate(-50%, 0);
+            .footer_logo {
+                width: 120px;
+                background-color: c.$body_bg;
+                padding: 10px;
 
-    //         .footer_logo {
-    //             width: 120px;
-    //             background-color: $body_bg;
-    //             padding: 10px;
+                .moe_logo,
+                .ntnu_logo {
+                    display: inline-block;
+                    width: 45%;
+                    margin: 0 calc(2.5% - 2px);
+                }
+            }
 
-    //             .moe_logo,
-    //             .ntnu_logo {
-    //                 display: inline-block;
-    //                 width: 45%;
-    //                 margin: 0 calc(2.5% - 2px);
-    //             }
-    //         }
-
-    //         .page_number {
-    //             position: absolute;
-    //             right: 5px;
-    //             top: 50%;
-    //             transform: translate(0, -50%);
-    //             z-index: 1;
-    //             background-color: $body_bg;
-    //             padding: 0 0 0 10px;
-    //             display: flex;
-    //             align-items: center;
-
-    //             .page_name {
-    //                 margin: 0 10px 0 0;
-    //             }
-
-    //             .page_number_text {
-    //                 font-size: 13px;
-    //                 color: $main_color_grey;
-    //                 border: 1px solid $main_color_grey;
-    //                 border-radius: 50px;
-    //                 padding: 5px 10px;
-    //             }
-    //         }
-
-    //         &::after {
-    //             content: "";
-    //             position: absolute;
-    //             width: calc(100% - 100px);
-    //             height: 1px;
-    //             background-color: $main_color_grey;
-    //             top: 50%;
-    //             left: 0;
-    //             transform: translate(0, -50%);
-    //             z-index: -1;
-    //         }
-    //     }
-    // }
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background-color: #957256;
+                top: 50%;
+                left: 0;
+                transform: translate(0, -50%);
+                z-index: -1;
+            }
+        }
+    }
 
 }
 
@@ -338,9 +347,366 @@
 
 @media screen and (min-width: 576px) {}
 
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+    .page {
+        .report-title {
+            margin: 0px auto 0;
+        }
 
-@media screen and (min-width: 1024px) {}
+        .page_content{
+            .caption_table{
+                .table{
+                    margin: 30px auto 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .page {
+    /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
+    /* page-break-after: always;  碰到此元素會直接換頁 */
+    page-break-inside: avoid;
+    position: relative;
+    max-width: 1024px;
+    height: 1448px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: c.$body_bg;
+
+    .bold {
+        font-weight: bold;
+    }
+
+    .page_header {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50% , 0);
+        
+        .header_logo {
+            width: 55px;
+            margin: 20px 0 0 10px;
+        }
+
+        .header_information {
+            margin: 20px 10px 0 0;
+            text-align: right;
+        }
+    }
+
+    .report-title {
+        display: flex;
+        justify-content: center;
+        margin: 40px auto 0;
+
+        h1 {
+            color: #957256;
+            font-weight: 900;
+        }
+    }
+
+    .page_content {
+        padding: 0 5%;
+
+        .page_caption {
+            width: 80%;
+            margin: 0 auto;
+
+            .page_caption_text {
+                p {
+                    color: c.$main_color_grey;
+                    line-height: 2.5;
+                    text-align: justify;
+
+                    span {
+                        font-size: 11px;
+
+                        &.bold {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .pagination_tittle {
+            position: relative;
+            margin: 0 0 15px;
+
+            h4 {
+                color: c.$main_color;
+            }
+        }
+
+        .caption_table {
+            overflow-x: scroll;
+            margin: 0 auto 0px;
+
+            &::-webkit-scrollbar {
+                background: transparent;
+                height: 8px;
+                width: 12px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border: none;
+                box-shadow: none;
+                background: c.$main_color;
+                min-height: 40px;
+            }
+
+            .table {
+                min-width: 845px;
+                width: 100%;
+                border: 1.5px solid c.$main_color;
+                margin: 20px auto 0;
+
+                thead {
+                    tr {
+                        th {
+                            color: c.$white;
+                            background-color: c.$main_color;
+                            padding: 5px 10px;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                tbody{
+                    tr{
+                        &:nth-child(odd){
+                            background-color: #fff;
+                        }
+
+                        &:nth-child(even){
+                            background-color: #fff2e1;
+                        }
+                    }
+                }
+
+                &.table_one{
+                    tbody {
+                    tr {
+
+                        &:nth-child(2){
+                            background-color: #fcb34d;
+                        }
+
+                        td {
+                            
+                            border-bottom: 1.5px solid c.$main_color;
+                            border-right: 1.5px solid c.$main_color;
+                            padding: 5px 15px;
+                            color: c.$main_color_grey;
+                            text-align: justify;
+                            text-align: center;
+                            vertical-align: middle;
+
+                            // &:nth-child(1) {
+                            //     text-align: center;
+                            //     vertical-align: middle;
+                            // }
+
+                            &.group_item{
+                                width: 16%;
+
+                                &.group_one{
+                                    width: 33%;
+                                }
+                            }
+
+                            &.group_one {
+                                background-color: #fcb34d;
+                            }
+
+                            &.group_two {
+                                background-color: #68ccdc;
+                            }
+
+                            &.group_three {
+                                background-color: #7bbcf4;
+                            }
+
+                            &.group_four {
+                                background-color: #c0d796;
+                            }
+                        }
+                    }
+                }
+                }
+
+                &.table_two{
+                    tbody {
+                    tr {
+
+                        &:nth-child(2){
+                            background-color: #fcb34d;
+
+                            td{
+                                &:nth-child(1){
+                                    background-color: c.$white;
+                                }
+                            }
+                        }
+
+                        &:nth-child(4){
+                            background-color: #ffdb9c;
+                        }
+
+                        &:nth-child(5){
+                            background-color: #e78f6c;
+                        }
+
+                        &:nth-child(6){
+                            background-color: #e07461;
+                        }
+
+                        &:nth-child(7){
+                            background-color: #da7383;
+                        }
+
+                        &:nth-child(8){
+                            td{
+                                &:nth-child(2){
+                                    background-color: #68ccdc;
+                                }
+
+                                &:nth-child(3){
+                                    background-color: #7bbcf4;
+                                }
+                            }
+                        }
+
+                        &:nth-child(9){
+                            td{
+                                &:nth-child(2),
+                                &:nth-child(3){
+                                    background-color: #68ccdc;
+                                }
+
+                                &:nth-child(4),
+                                &:nth-child(5){
+                                    background-color: #7bbcf4;
+                                }
+                            }
+                        }
+
+                        td {
+                            border-bottom: 1.5px solid c.$main_color;
+                            border-right: 1.5px solid c.$main_color;
+                            padding: 5px 15px;
+                            color: c.$main_color_grey;
+                            text-align: justify;
+                            text-align: center;
+                            vertical-align: middle;
+
+                            // &:nth-child(1) {
+                            //     text-align: center;
+                            //     vertical-align: middle;
+                            // }
+
+                            &.group_item{
+                                width: 14%;
+
+                                &.group_one{
+                                    width: 86%;
+                                }
+                            }
+
+                            &.group_one {
+                                background-color: #fcb34d;
+                            }
+                        }
+                    }
+                }
+                }
+
+                &.table_three{
+                    tbody {
+                    tr {
+
+                        &:nth-child(3){
+                            background-color: #cfeaff;
+                        }
+
+                        &:nth-child(4){
+                            background-color: #ffecb1;
+                        }
+
+                        &:nth-child(5){
+                            background-color: #bcf5d9;
+                        }
+
+                        &:nth-child(6){
+                            background-color: #efc2c1;
+                        }
+
+                        td {
+                            border-bottom: 1.5px solid c.$main_color;
+                            border-right: 1.5px solid c.$main_color;
+                            padding: 5px 15px;
+                            color: c.$main_color_grey;
+                            text-align: justify;
+                            text-align: center;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+                }
+            }
+        }
+
+    }
+
+    .page_footer {
+        .pagination {
+            position: absolute;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            width: 90%;
+            margin: 0 auto;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+
+            .footer_logo {
+                width: 120px;
+                background-color: c.$body_bg;
+                padding: 10px;
+
+                .moe_logo,
+                .ntnu_logo {
+                    display: inline-block;
+                    width: 45%;
+                    margin: 0 calc(2.5% - 2px);
+                }
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background-color: #957256;
+                top: 50%;
+                left: 0;
+                transform: translate(0, -50%);
+                z-index: -1;
+            }
+        }
+    }
+
+}
+}
 
 @page {
     /*size: portrait;  直向 */
