@@ -340,28 +340,6 @@ body {
 .page .page_content {
   padding: 0 5%;
 }
-.page .page_content .page_caption {
-  width: 80%;
-  margin: 0 auto;
-}
-.page .page_content .page_caption .page_caption_text p {
-  color: #20221f;
-  line-height: 2.5;
-  text-align: justify;
-}
-.page .page_content .page_caption .page_caption_text p span {
-  font-size: 11px;
-}
-.page .page_content .page_caption .page_caption_text p span.bold {
-  font-size: 14px;
-}
-.page .page_content .pagination_tittle {
-  position: relative;
-  margin: 0 0 15px;
-}
-.page .page_content .pagination_tittle h4 {
-  color: #e7591a;
-}
 .page .page_content .caption_table {
   overflow-x: scroll;
   margin: 0 auto 0px;
@@ -582,28 +560,6 @@ body {
   }
   .page .page_content {
     padding: 0 5%;
-  }
-  .page .page_content .page_caption {
-    width: 80%;
-    margin: 0 auto;
-  }
-  .page .page_content .page_caption .page_caption_text p {
-    color: #20221f;
-    line-height: 2.5;
-    text-align: justify;
-  }
-  .page .page_content .page_caption .page_caption_text p span {
-    font-size: 11px;
-  }
-  .page .page_content .page_caption .page_caption_text p span.bold {
-    font-size: 14px;
-  }
-  .page .page_content .pagination_tittle {
-    position: relative;
-    margin: 0 0 15px;
-  }
-  .page .page_content .pagination_tittle h4 {
-    color: #e7591a;
   }
   .page .page_content .caption_table {
     overflow-x: scroll;

@@ -52,36 +52,6 @@
     .page_content {
         padding: 0 5%;
 
-        .page_caption {
-            width: 80%;
-            margin: 0 auto;
-
-            .page_caption_text {
-                p {
-                    color: c.$main_color_grey;
-                    line-height: 2.5;
-                    text-align: justify;
-
-                    span {
-                        font-size: 11px;
-
-                        &.bold {
-                            font-size: 14px;
-                        }
-                    }
-                }
-            }
-        }
-
-        .pagination_tittle {
-            position: relative;
-            margin: 0 0 15px;
-
-            h4 {
-                color: c.$main_color;
-            }
-        }
-
         .caption_table {
             overflow-x: scroll;
             margin: 0 auto 0px;
@@ -415,36 +385,6 @@
 
     .page_content {
         padding: 0 5%;
-
-        .page_caption {
-            width: 80%;
-            margin: 0 auto;
-
-            .page_caption_text {
-                p {
-                    color: c.$main_color_grey;
-                    line-height: 2.5;
-                    text-align: justify;
-
-                    span {
-                        font-size: 11px;
-
-                        &.bold {
-                            font-size: 14px;
-                        }
-                    }
-                }
-            }
-        }
-
-        .pagination_tittle {
-            position: relative;
-            margin: 0 0 15px;
-
-            h4 {
-                color: c.$main_color;
-            }
-        }
 
         .caption_table {
             overflow-x: scroll;
