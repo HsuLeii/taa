@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "../base/color" as c;
 
 %boxShadow {
@@ -141,7 +142,7 @@ body {
 }
 
 ::selection {
-    // background: darken(c.$main_color, 15%);
+    background: color.adjust(c.$main_color, $lightness: -15%);
     color: c.$white;
 }
 

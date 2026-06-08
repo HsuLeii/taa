@@ -95,6 +95,14 @@
                         &:nth-child(even){
                             background-color: #fff2e1;
                         }
+
+                        td{
+                            border-bottom: 1.5px solid c.$main_color;
+                            border-right: 1.5px solid c.$main_color;
+                            padding: 5px 15px;
+                            color: c.$main_color_grey;
+                            vertical-align: middle;
+                        }
                     }
                 }
 
@@ -107,19 +115,7 @@
                         }
 
                         td {
-                            
-                            border-bottom: 1.5px solid c.$main_color;
-                            border-right: 1.5px solid c.$main_color;
-                            padding: 5px 15px;
-                            color: c.$main_color_grey;
-                            text-align: justify;
                             text-align: center;
-                            vertical-align: middle;
-
-                            // &:nth-child(1) {
-                            //     text-align: center;
-                            //     vertical-align: middle;
-                            // }
 
                             &.group_item{
                                 width: 16%;
@@ -206,18 +202,7 @@
                         }
 
                         td {
-                            border-bottom: 1.5px solid c.$main_color;
-                            border-right: 1.5px solid c.$main_color;
-                            padding: 5px 15px;
-                            color: c.$main_color_grey;
-                            text-align: justify;
                             text-align: center;
-                            vertical-align: middle;
-
-                            // &:nth-child(1) {
-                            //     text-align: center;
-                            //     vertical-align: middle;
-                            // }
 
                             &.group_item{
                                 width: 14%;
@@ -256,13 +241,72 @@
                         }
 
                         td {
-                            border-bottom: 1.5px solid c.$main_color;
-                            border-right: 1.5px solid c.$main_color;
-                            padding: 5px 15px;
-                            color: c.$main_color_grey;
-                            text-align: justify;
                             text-align: center;
-                            vertical-align: middle;
+                        }
+                    }
+                }
+                }
+
+                &.table_four{
+                    tbody {
+                    tr {
+                        td {
+                            text-align: left;
+
+                            p{
+                                color: c.$main_color;
+                            }
+
+                            &.group_item{
+                                width: 36%;
+
+                                &.group_one{
+                                    width: 14%;
+                                    text-align: center;
+                                    background-color: #fcb34d;
+                                }
+
+                                &.group_two{
+                                    width: 14%;
+                                    text-align: center;
+                                    background: linear-gradient(-82deg, #68ccdc 50%, #7bbcf4 50% );
+                                }
+                            }
+                        }
+                    }
+                }
+                }
+
+                &.table_five{
+                    tbody {
+                    tr {
+                        td {
+                            text-align: left;
+
+                            &.group_item{
+                                width: 84%;
+
+                                &.group_one{
+                                    width: 16%;
+                                    text-align: center;
+                                }
+                            }
+                        }
+
+                        &:nth-child(1) {
+                            background-color: #cfeaff;
+                        }
+
+                        &:nth-child(2) {
+                            background-color: #ffecb1;
+                        }
+
+                        &:nth-child(3) {
+                            background-color: #bcf5d9;
+                        }
+
+                        &:nth-child(4) {
+                            background-color: #efc2c1;
                         }
                     }
                 }
@@ -357,9 +401,6 @@
         justify-content: space-between;
         width: 90%;
         margin: 0 auto;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50% , 0);
         
         .header_logo {
             width: 55px;
@@ -375,7 +416,7 @@
     .report-title {
         display: flex;
         justify-content: center;
-        margin: 40px auto 0;
+        margin: -70px auto 0;
 
         h1 {
             color: #957256;

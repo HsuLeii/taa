@@ -142,6 +142,7 @@ body {
 }
 
 ::selection {
+  background: rgb(163.3774703557, 62.0691699605, 17.1225296443);
   color: #fff;
 }
 
@@ -373,17 +374,18 @@ body {
 .page .page_content .caption_table .table tbody tr:nth-child(even) {
   background-color: #fff2e1;
 }
-.page .page_content .caption_table .table.table_one tbody tr:nth-child(2) {
-  background-color: #fcb34d;
-}
-.page .page_content .caption_table .table.table_one tbody tr td {
+.page .page_content .caption_table .table tbody tr td {
   border-bottom: 1.5px solid #e7591a;
   border-right: 1.5px solid #e7591a;
   padding: 5px 15px;
   color: #20221f;
-  text-align: justify;
-  text-align: center;
   vertical-align: middle;
+}
+.page .page_content .caption_table .table.table_one tbody tr:nth-child(2) {
+  background-color: #fcb34d;
+}
+.page .page_content .caption_table .table.table_one tbody tr td {
+  text-align: center;
 }
 .page .page_content .caption_table .table.table_one tbody tr td.group_item {
   width: 16%;
@@ -434,13 +436,7 @@ body {
   background-color: #7bbcf4;
 }
 .page .page_content .caption_table .table.table_two tbody tr td {
-  border-bottom: 1.5px solid #e7591a;
-  border-right: 1.5px solid #e7591a;
-  padding: 5px 15px;
-  color: #20221f;
-  text-align: justify;
   text-align: center;
-  vertical-align: middle;
 }
 .page .page_content .caption_table .table.table_two tbody tr td.group_item {
   width: 14%;
@@ -464,13 +460,48 @@ body {
   background-color: #efc2c1;
 }
 .page .page_content .caption_table .table.table_three tbody tr td {
-  border-bottom: 1.5px solid #e7591a;
-  border-right: 1.5px solid #e7591a;
-  padding: 5px 15px;
-  color: #20221f;
-  text-align: justify;
   text-align: center;
-  vertical-align: middle;
+}
+.page .page_content .caption_table .table.table_four tbody tr td {
+  text-align: left;
+}
+.page .page_content .caption_table .table.table_four tbody tr td p {
+  color: #e7591a;
+}
+.page .page_content .caption_table .table.table_four tbody tr td.group_item {
+  width: 36%;
+}
+.page .page_content .caption_table .table.table_four tbody tr td.group_item.group_one {
+  width: 14%;
+  text-align: center;
+  background-color: #fcb34d;
+}
+.page .page_content .caption_table .table.table_four tbody tr td.group_item.group_two {
+  width: 14%;
+  text-align: center;
+  background: linear-gradient(-82deg, #68ccdc 50%, #7bbcf4 50%);
+}
+.page .page_content .caption_table .table.table_five tbody tr td {
+  text-align: left;
+}
+.page .page_content .caption_table .table.table_five tbody tr td.group_item {
+  width: 84%;
+}
+.page .page_content .caption_table .table.table_five tbody tr td.group_item.group_one {
+  width: 16%;
+  text-align: center;
+}
+.page .page_content .caption_table .table.table_five tbody tr:nth-child(1) {
+  background-color: #cfeaff;
+}
+.page .page_content .caption_table .table.table_five tbody tr:nth-child(2) {
+  background-color: #ffecb1;
+}
+.page .page_content .caption_table .table.table_five tbody tr:nth-child(3) {
+  background-color: #bcf5d9;
+}
+.page .page_content .caption_table .table.table_five tbody tr:nth-child(4) {
+  background-color: #efc2c1;
 }
 .page .page_footer .pagination {
   position: absolute;
@@ -537,9 +568,6 @@ body {
     justify-content: space-between;
     width: 90%;
     margin: 0 auto;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
   }
   .page .page_header .header_logo {
     width: 55px;
@@ -552,7 +580,7 @@ body {
   .page .report-title {
     display: flex;
     justify-content: center;
-    margin: 40px auto 0;
+    margin: -70px auto 0;
   }
   .page .report-title h1 {
     color: #957256;
