@@ -290,11 +290,6 @@ body {
     font-size: 16px;
   }
 }
-.table {
-  margin-bottom: 0;
-  --bs-table-bg: white;
-}
-
 .page {
   /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
   /* page-break-after: always;  碰到此元素會直接換頁 */
@@ -503,6 +498,38 @@ body {
 .page .page_content .caption_table .table.table_five tbody tr:nth-child(4) {
   background-color: #efc2c1;
 }
+.page .page_content .caption_table .table.table_seven {
+  margin: 0 auto;
+}
+.page .page_content .caption_table .table.table_seven thead tr th {
+  border-right: 1.5px solid #fff;
+}
+.page .page_content .caption_table .table.table_seven tbody tr td {
+  text-align: left;
+}
+.page .page_content .caption_table .table.table_seven tbody tr td.group_item {
+  width: 72%;
+}
+.page .page_content .caption_table .table.table_seven tbody tr td.group_item.group_one {
+  width: 20%;
+  text-align: center;
+  background-color: #fcb34d;
+}
+.page .page_content .caption_table .table.table_seven tbody tr td.group_item.group_one_item {
+  width: 8%;
+  text-align: center;
+  background-color: #fcb34d;
+}
+.page .page_content .caption_table .table.table_seven tbody tr td.group_item.group_two {
+  width: 20%;
+  text-align: center;
+  background-color: #68ccdc;
+}
+.page .page_content .caption_table .table.table_seven tbody tr td.group_item.group_three {
+  width: 20%;
+  text-align: center;
+  background-color: #7bbcf4;
+}
 .page .page_footer .pagination {
   position: absolute;
   z-index: 1;
@@ -516,7 +543,6 @@ body {
 }
 .page .page_footer .pagination .footer_logo {
   width: 120px;
-  background-color: #fef9f3;
   padding: 10px;
 }
 .page .page_footer .pagination .footer_logo .moe_logo,
@@ -734,7 +760,6 @@ body {
   }
   .page .page_footer .pagination .footer_logo {
     width: 120px;
-    background-color: #fef9f3;
     padding: 10px;
   }
   .page .page_footer .pagination .footer_logo .moe_logo,

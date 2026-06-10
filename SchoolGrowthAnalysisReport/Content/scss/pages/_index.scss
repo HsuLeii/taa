@@ -311,6 +311,52 @@
                     }
                 }
                 }
+
+                &.table_seven{
+                    margin: 0 auto;
+                    thead{
+                        tr{
+                            th{
+                                border-right: 1.5px solid c.$white;
+                            }
+                        }
+                    }
+                    tbody {
+                    tr {
+                        td {
+                            text-align: left;
+
+                            &.group_item{
+                                width: 72%;
+
+                                &.group_one{
+                                    width: 20%;
+                                    text-align: center;
+                                    background-color: #fcb34d;
+                                }
+
+                                &.group_one_item{
+                                    width: 8%;
+                                    text-align: center;
+                                    background-color: #fcb34d;
+                                }
+
+                                &.group_two{
+                                    width: 20%;
+                                    text-align: center;
+                                    background-color: #68ccdc;
+                                }
+
+                                &.group_three{
+                                    width: 20%;
+                                    text-align: center;
+                                    background-color: #7bbcf4;
+                                }
+                            }
+                        }
+                    }
+                }
+                }
             }
         }
 
@@ -330,7 +376,6 @@
 
             .footer_logo {
                 width: 120px;
-                background-color: c.$body_bg;
                 padding: 10px;
 
                 .moe_logo,
@@ -661,7 +706,6 @@
 
             .footer_logo {
                 width: 120px;
-                background-color: c.$body_bg;
                 padding: 10px;
 
                 .moe_logo,
