@@ -1,4 +1,4 @@
-@use "../base/color" as c;
+@use "../base/color"as c;
 
 .page {
     /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
@@ -25,7 +25,7 @@
         align-items: flex-start;
         justify-content: space-between;
         width: 90%;
-        margin: 0 auto;
+        margin: 0 auto 20px;
 
         .header_logo {
             width: 55px;
@@ -41,7 +41,7 @@
     .report-title {
         display: flex;
         justify-content: center;
-        margin: 20px auto 0;
+        margin: 0px auto 20px;
 
         h1 {
             color: #957256;
@@ -54,7 +54,7 @@
 
         .caption_table {
             overflow-x: scroll;
-            margin: 0 auto 0px;
+            margin: 0px auto 40px;
 
             &::-webkit-scrollbar {
                 background: transparent;
@@ -73,7 +73,6 @@
                 min-width: 845px;
                 width: 100%;
                 border: 1.5px solid c.$main_color;
-                margin: 40px auto 0;
 
                 thead {
                     tr {
@@ -86,17 +85,18 @@
                     }
                 }
 
-                tbody{
-                    tr{
-                        &:nth-child(odd){
+                tbody {
+                    tr {
+                        &:nth-child(odd) {
                             background-color: #fff;
                         }
 
-                        &:nth-child(even){
+                        &:nth-child(even) {
                             background-color: #fff2e1;
                         }
 
-                        td{
+                        td {
+                            text-align: center;
                             border-bottom: 1.5px solid c.$main_color;
                             border-right: 1.5px solid c.$main_color;
                             padding: 5px 15px;
@@ -106,256 +106,250 @@
                     }
                 }
 
-                &.table_one{
+                &.table_one {
                     tbody {
-                    tr {
+                        tr {
 
-                        &:nth-child(2){
-                            background-color: #fcb34d;
-                        }
-
-                        td {
-                            text-align: center;
-
-                            &.group_item{
-                                width: 16%;
-
-                                &.group_one{
-                                    width: 33%;
-                                }
-                            }
-
-                            &.group_one {
+                            &:nth-child(2) {
                                 background-color: #fcb34d;
                             }
 
-                            &.group_two {
-                                background-color: #68ccdc;
-                            }
+                            td {
+                                &.group_item {
+                                    width: 16%;
 
-                            &.group_three {
-                                background-color: #7bbcf4;
-                            }
-
-                            &.group_four {
-                                background-color: #c0d796;
-                            }
-                        }
-                    }
-                }
-                }
-
-                &.table_two{
-                    tbody {
-                    tr {
-
-                        &:nth-child(2){
-                            background-color: #fcb34d;
-
-                            td{
-                                &:nth-child(1){
-                                    background-color: c.$white;
-                                }
-                            }
-                        }
-
-                        &:nth-child(4){
-                            background-color: #ffdb9c;
-                        }
-
-                        &:nth-child(5){
-                            background-color: #e78f6c;
-                        }
-
-                        &:nth-child(6){
-                            background-color: #e07461;
-                        }
-
-                        &:nth-child(7){
-                            background-color: #da7383;
-                        }
-
-                        &:nth-child(8){
-                            td{
-                                &:nth-child(2){
-                                    background-color: #68ccdc;
+                                    &.group_one {
+                                        width: 33%;
+                                    }
                                 }
 
-                                &:nth-child(3){
-                                    background-color: #7bbcf4;
-                                }
-                            }
-                        }
-
-                        &:nth-child(9){
-                            td{
-                                &:nth-child(2),
-                                &:nth-child(3){
-                                    background-color: #68ccdc;
-                                }
-
-                                &:nth-child(4),
-                                &:nth-child(5){
-                                    background-color: #7bbcf4;
-                                }
-                            }
-                        }
-
-                        td {
-                            text-align: center;
-
-                            &.group_item{
-                                width: 14%;
-
-                                &.group_one{
-                                    width: 86%;
-                                }
-                            }
-
-                            &.group_one {
-                                background-color: #fcb34d;
-                            }
-                        }
-                    }
-                }
-                }
-
-                &.table_three{
-                    tbody {
-                    tr {
-
-                        &:nth-child(3){
-                            background-color: #cfeaff;
-                        }
-
-                        &:nth-child(4){
-                            background-color: #ffecb1;
-                        }
-
-                        &:nth-child(5){
-                            background-color: #bcf5d9;
-                        }
-
-                        &:nth-child(6){
-                            background-color: #efc2c1;
-                        }
-
-                        td {
-                            text-align: center;
-                        }
-                    }
-                }
-                }
-
-                &.table_four{
-                    tbody {
-                    tr {
-                        td {
-                            text-align: left;
-
-                            p{
-                                color: c.$main_color;
-                            }
-
-                            &.group_item{
-                                width: 36%;
-
-                                &.group_one{
-                                    width: 14%;
-                                    text-align: center;
+                                &.group_one {
                                     background-color: #fcb34d;
                                 }
 
-                                &.group_two{
-                                    width: 14%;
-                                    text-align: center;
-                                    background: linear-gradient(-82deg, #68ccdc 50%, #7bbcf4 50% );
+                                &.group_two {
+                                    background-color: #68ccdc;
+                                }
+
+                                &.group_three {
+                                    background-color: #7bbcf4;
+                                }
+
+                                &.group_four {
+                                    background-color: #c0d796;
                                 }
                             }
                         }
                     }
                 }
-                }
 
-                &.table_five{
+                &.table_two {
                     tbody {
-                    tr {
-                        td {
-                            text-align: left;
+                        tr {
 
-                            &.group_item{
-                                width: 84%;
+                            &:nth-child(2) {
+                                background-color: #fcb34d;
 
-                                &.group_one{
-                                    width: 16%;
-                                    text-align: center;
+                                td {
+                                    &:nth-child(1) {
+                                        background-color: c.$white;
+                                    }
+                                }
+                            }
+
+                            &:nth-child(4) {
+                                background-color: #ffdb9c;
+                            }
+
+                            &:nth-child(5) {
+                                background-color: #e78f6c;
+                            }
+
+                            &:nth-child(6) {
+                                background-color: #e07461;
+                            }
+
+                            &:nth-child(7) {
+                                background-color: #da7383;
+                            }
+
+                            &:nth-child(8) {
+                                td {
+                                    &:nth-child(2) {
+                                        background-color: #68ccdc;
+                                    }
+
+                                    &:nth-child(3) {
+                                        background-color: #7bbcf4;
+                                    }
+                                }
+                            }
+
+                            &:nth-child(9) {
+                                td {
+
+                                    &:nth-child(2),
+                                    &:nth-child(3) {
+                                        background-color: #68ccdc;
+                                    }
+
+                                    &:nth-child(4),
+                                    &:nth-child(5) {
+                                        background-color: #7bbcf4;
+                                    }
+                                }
+                            }
+
+                            td {
+
+                                &.group_item {
+                                    width: 14%;
+
+                                    &.group_one {
+                                        width: 86%;
+                                    }
+                                }
+
+                                &.group_one {
+                                    background-color: #fcb34d;
                                 }
                             }
                         }
+                    }
+                }
 
-                        &:nth-child(1) {
-                            background-color: #cfeaff;
-                        }
+                &.table_three {
+                    tbody {
+                        tr {
 
-                        &:nth-child(2) {
-                            background-color: #ffecb1;
-                        }
+                            &:nth-child(3) {
+                                background-color: #cfeaff;
+                            }
 
-                        &:nth-child(3) {
-                            background-color: #bcf5d9;
-                        }
+                            &:nth-child(4) {
+                                background-color: #ffecb1;
+                            }
 
-                        &:nth-child(4) {
-                            background-color: #efc2c1;
+                            &:nth-child(5) {
+                                background-color: #bcf5d9;
+                            }
+
+                            &:nth-child(6) {
+                                background-color: #efc2c1;
+                            }
                         }
                     }
                 }
+
+                &.table_four {
+                    tbody {
+                        tr {
+                            td {
+                                text-align: left;
+
+                                p {
+                                    color: c.$main_color;
+                                }
+
+                                &.group_item {
+                                    width: 36%;
+
+                                    &.group_one {
+                                        width: 14%;
+                                        text-align: center;
+                                        background-color: #fcb34d;
+                                    }
+
+                                    &.group_two {
+                                        width: 14%;
+                                        text-align: center;
+                                        background: linear-gradient(-82deg, #68ccdc 50%, #7bbcf4 50%);
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
 
-                &.table_seven{
-                    margin: 0 auto;
-                    thead{
-                        tr{
-                            th{
+                &.table_five {
+                    tbody {
+                        tr {
+                            td {
+                                text-align: left;
+
+                                &.group_item {
+                                    width: 84%;
+
+                                    &.group_one {
+                                        width: 16%;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+
+                            &:nth-child(1) {
+                                background-color: #cfeaff;
+                            }
+
+                            &:nth-child(2) {
+                                background-color: #ffecb1;
+                            }
+
+                            &:nth-child(3) {
+                                background-color: #bcf5d9;
+                            }
+
+                            &:nth-child(4) {
+                                background-color: #efc2c1;
+                            }
+                        }
+                    }
+                }
+
+                &.table_seven {
+                    thead {
+                        tr {
+                            th {
                                 border-right: 1.5px solid c.$white;
                             }
                         }
                     }
+
                     tbody {
-                    tr {
-                        td {
-                            text-align: left;
+                        tr {
+                            td {
+                                text-align: left;
 
-                            &.group_item{
-                                width: 72%;
+                                &.group_item {
+                                    width: 72%;
 
-                                &.group_one{
-                                    width: 20%;
-                                    text-align: center;
-                                    background-color: #fcb34d;
-                                }
+                                    &.group_one {
+                                        width: 20%;
+                                        text-align: center;
+                                        background-color: #fcb34d;
+                                    }
 
-                                &.group_one_item{
-                                    width: 8%;
-                                    text-align: center;
-                                    background-color: #fcb34d;
-                                }
+                                    &.group_one_item {
+                                        width: 8%;
+                                        text-align: center;
+                                        background-color: #fcb34d;
+                                    }
 
-                                &.group_two{
-                                    width: 20%;
-                                    text-align: center;
-                                    background-color: #68ccdc;
-                                }
+                                    &.group_two {
+                                        width: 20%;
+                                        text-align: center;
+                                        background-color: #68ccdc;
+                                    }
 
-                                &.group_three{
-                                    width: 20%;
-                                    text-align: center;
-                                    background-color: #7bbcf4;
+                                    &.group_three {
+                                        width: 20%;
+                                        text-align: center;
+                                        background-color: #7bbcf4;
+                                    }
                                 }
                             }
                         }
                     }
-                }
                 }
             }
         }
@@ -408,15 +402,10 @@
 
 @media screen and (min-width: 768px) {
     .page {
-        .report-title {
-            margin: 0px auto 0;
-        }
 
-        .page_content{
-            .caption_table{
-                .table{
-                    margin: 30px auto 0;
-                }
+        .page_content {
+            .caption_table {
+                margin: 0px auto 30px;
             }
         }
     }
@@ -424,313 +413,392 @@
 
 @media screen and (min-width: 1024px) {
     .page {
-    /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
-    /* page-break-after: always;  碰到此元素會直接換頁 */
-    page-break-inside: avoid;
-    position: relative;
-    max-width: 1024px;
-    height: 1448px;
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-    background-color: c.$body_bg;
-
-    .bold {
-        font-weight: bold;
-    }
-
-    .page_header {
+        /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
+        /* page-break-after: always;  碰到此元素會直接換頁 */
+        page-break-inside: avoid;
         position: relative;
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        width: 90%;
+        max-width: 1024px;
+        height: 1448px;
+        width: 100%;
         margin: 0 auto;
-        
-        .header_logo {
-            width: 55px;
-            margin: 20px 0 0 10px;
+        overflow: hidden;
+        background-color: c.$body_bg;
+
+        .bold {
+            font-weight: bold;
         }
 
-        .header_information {
-            margin: 20px 10px 0 0;
-            text-align: right;
-        }
-    }
+        .page_header {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 90%;
+            margin: 0 auto 20px;
 
-    .report-title {
-        display: flex;
-        justify-content: center;
-        margin: -70px auto 0;
-
-        h1 {
-            color: #957256;
-            font-weight: 900;
-        }
-    }
-
-    .page_content {
-        padding: 0 5%;
-
-        .caption_table {
-            overflow-x: scroll;
-            margin: 0 auto 0px;
-
-            &::-webkit-scrollbar {
-                background: transparent;
-                height: 8px;
-                width: 12px;
+            .header_logo {
+                width: 55px;
+                margin: 20px 0 0 10px;
             }
 
-            &::-webkit-scrollbar-thumb {
-                border: none;
-                box-shadow: none;
-                background: c.$main_color;
-                min-height: 40px;
-            }
-
-            .table {
-                min-width: 845px;
-                width: 100%;
-                border: 1.5px solid c.$main_color;
-                margin: 20px auto 0;
-
-                thead {
-                    tr {
-                        th {
-                            color: c.$white;
-                            background-color: c.$main_color;
-                            padding: 5px 10px;
-                            text-align: center;
-                        }
-                    }
-                }
-
-                tbody{
-                    tr{
-                        &:nth-child(odd){
-                            background-color: #fff;
-                        }
-
-                        &:nth-child(even){
-                            background-color: #fff2e1;
-                        }
-                    }
-                }
-
-                &.table_one{
-                    tbody {
-                    tr {
-
-                        &:nth-child(2){
-                            background-color: #fcb34d;
-                        }
-
-                        td {
-                            
-                            border-bottom: 1.5px solid c.$main_color;
-                            border-right: 1.5px solid c.$main_color;
-                            padding: 5px 15px;
-                            color: c.$main_color_grey;
-                            text-align: justify;
-                            text-align: center;
-                            vertical-align: middle;
-
-                            // &:nth-child(1) {
-                            //     text-align: center;
-                            //     vertical-align: middle;
-                            // }
-
-                            &.group_item{
-                                width: 16%;
-
-                                &.group_one{
-                                    width: 33%;
-                                }
-                            }
-
-                            &.group_one {
-                                background-color: #fcb34d;
-                            }
-
-                            &.group_two {
-                                background-color: #68ccdc;
-                            }
-
-                            &.group_three {
-                                background-color: #7bbcf4;
-                            }
-
-                            &.group_four {
-                                background-color: #c0d796;
-                            }
-                        }
-                    }
-                }
-                }
-
-                &.table_two{
-                    tbody {
-                    tr {
-
-                        &:nth-child(2){
-                            background-color: #fcb34d;
-
-                            td{
-                                &:nth-child(1){
-                                    background-color: c.$white;
-                                }
-                            }
-                        }
-
-                        &:nth-child(4){
-                            background-color: #ffdb9c;
-                        }
-
-                        &:nth-child(5){
-                            background-color: #e78f6c;
-                        }
-
-                        &:nth-child(6){
-                            background-color: #e07461;
-                        }
-
-                        &:nth-child(7){
-                            background-color: #da7383;
-                        }
-
-                        &:nth-child(8){
-                            td{
-                                &:nth-child(2){
-                                    background-color: #68ccdc;
-                                }
-
-                                &:nth-child(3){
-                                    background-color: #7bbcf4;
-                                }
-                            }
-                        }
-
-                        &:nth-child(9){
-                            td{
-                                &:nth-child(2),
-                                &:nth-child(3){
-                                    background-color: #68ccdc;
-                                }
-
-                                &:nth-child(4),
-                                &:nth-child(5){
-                                    background-color: #7bbcf4;
-                                }
-                            }
-                        }
-
-                        td {
-                            border-bottom: 1.5px solid c.$main_color;
-                            border-right: 1.5px solid c.$main_color;
-                            padding: 5px 15px;
-                            color: c.$main_color_grey;
-                            text-align: justify;
-                            text-align: center;
-                            vertical-align: middle;
-
-                            // &:nth-child(1) {
-                            //     text-align: center;
-                            //     vertical-align: middle;
-                            // }
-
-                            &.group_item{
-                                width: 14%;
-
-                                &.group_one{
-                                    width: 86%;
-                                }
-                            }
-
-                            &.group_one {
-                                background-color: #fcb34d;
-                            }
-                        }
-                    }
-                }
-                }
-
-                &.table_three{
-                    tbody {
-                    tr {
-
-                        &:nth-child(3){
-                            background-color: #cfeaff;
-                        }
-
-                        &:nth-child(4){
-                            background-color: #ffecb1;
-                        }
-
-                        &:nth-child(5){
-                            background-color: #bcf5d9;
-                        }
-
-                        &:nth-child(6){
-                            background-color: #efc2c1;
-                        }
-
-                        td {
-                            border-bottom: 1.5px solid c.$main_color;
-                            border-right: 1.5px solid c.$main_color;
-                            padding: 5px 15px;
-                            color: c.$main_color_grey;
-                            text-align: justify;
-                            text-align: center;
-                            vertical-align: middle;
-                        }
-                    }
-                }
-                }
+            .header_information {
+                margin: 20px 10px 0 0;
+                text-align: right;
             }
         }
 
-    }
-
-    .page_footer {
-        .pagination {
-            position: absolute;
-            z-index: 1;
+        .report-title {
             display: flex;
             justify-content: center;
-            width: 90%;
-            margin: 0 auto;
-            bottom: 0;
-            left: 50%;
-            transform: translate(-50%, 0);
+            margin: -60px auto 20px;
 
-            .footer_logo {
-                width: 120px;
-                padding: 10px;
+            h1 {
+                color: #957256;
+                font-weight: 900;
+            }
+        }
 
-                .moe_logo,
-                .ntnu_logo {
-                    display: inline-block;
-                    width: 45%;
-                    margin: 0 calc(2.5% - 2px);
+        .page_content {
+            padding: 0 5%;
+
+            .caption_table {
+                overflow-x: scroll;
+                margin: 0 auto 20px;
+
+                &::-webkit-scrollbar {
+                    background: transparent;
+                    height: 8px;
+                    width: 12px;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    border: none;
+                    box-shadow: none;
+                    background: c.$main_color;
+                    min-height: 40px;
+                }
+
+                .table {
+                    min-width: 845px;
+                    width: 100%;
+                    border: 1.5px solid c.$main_color;
+
+                    thead {
+                        tr {
+                            th {
+                                color: c.$white;
+                                background-color: c.$main_color;
+                                padding: 5px 10px;
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            &:nth-child(odd) {
+                                background-color: #fff;
+                            }
+
+                            &:nth-child(even) {
+                                background-color: #fff2e1;
+                            }
+
+                            td {
+                                border-bottom: 1.5px solid c.$main_color;
+                                border-right: 1.5px solid c.$main_color;
+                                padding: 5px 15px;
+                                color: c.$main_color_grey;
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+
+                    &.table_one {
+                        tbody {
+                            tr {
+
+                                &:nth-child(2) {
+                                    background-color: #fcb34d;
+                                }
+
+                                td {
+                                    &.group_item {
+                                        width: 16%;
+
+                                        &.group_one {
+                                            width: 33%;
+                                        }
+                                    }
+
+                                    &.group_one {
+                                        background-color: #fcb34d;
+                                    }
+
+                                    &.group_two {
+                                        background-color: #68ccdc;
+                                    }
+
+                                    &.group_three {
+                                        background-color: #7bbcf4;
+                                    }
+
+                                    &.group_four {
+                                        background-color: #c0d796;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.table_two {
+                        tbody {
+                            tr {
+                                &:nth-child(2) {
+                                    background-color: #fcb34d;
+
+                                    td {
+                                        &:nth-child(1) {
+                                            background-color: c.$white;
+                                        }
+                                    }
+                                }
+
+                                &:nth-child(4) {
+                                    background-color: #ffdb9c;
+                                }
+
+                                &:nth-child(5) {
+                                    background-color: #e78f6c;
+                                }
+
+                                &:nth-child(6) {
+                                    background-color: #e07461;
+                                }
+
+                                &:nth-child(7) {
+                                    background-color: #da7383;
+                                }
+
+                                &:nth-child(8) {
+                                    td {
+                                        &:nth-child(2) {
+                                            background-color: #68ccdc;
+                                        }
+
+                                        &:nth-child(3) {
+                                            background-color: #7bbcf4;
+                                        }
+                                    }
+                                }
+
+                                &:nth-child(9) {
+                                    td {
+
+                                        &:nth-child(2),
+                                        &:nth-child(3) {
+                                            background-color: #68ccdc;
+                                        }
+
+                                        &:nth-child(4),
+                                        &:nth-child(5) {
+                                            background-color: #7bbcf4;
+                                        }
+                                    }
+                                }
+
+                                td {
+                                    &.group_item {
+                                        width: 14%;
+
+                                        &.group_one {
+                                            width: 86%;
+                                        }
+                                    }
+
+                                    &.group_one {
+                                        background-color: #fcb34d;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.table_three {
+                        tbody {
+                            tr {
+                                &:nth-child(3) {
+                                    background-color: #cfeaff;
+                                }
+
+                                &:nth-child(4) {
+                                    background-color: #ffecb1;
+                                }
+
+                                &:nth-child(5) {
+                                    background-color: #bcf5d9;
+                                }
+
+                                &:nth-child(6) {
+                                    background-color: #efc2c1;
+                                }
+                            }
+                        }
+                    }
+
+                    &.table_four {
+                        tbody {
+                            tr {
+                                td {
+                                    text-align: left;
+
+                                    p {
+                                        color: c.$main_color;
+                                    }
+
+                                    &.group_item {
+                                        width: 36%;
+
+                                        &.group_one {
+                                            width: 14%;
+                                            text-align: center;
+                                            background-color: #fcb34d;
+                                        }
+
+                                        &.group_two {
+                                            width: 14%;
+                                            text-align: center;
+                                            background: linear-gradient(-82deg, #68ccdc 50%, #7bbcf4 50%);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.table_five {
+                        tbody {
+                            tr {
+                                td {
+                                    text-align: left;
+
+                                    &.group_item {
+                                        width: 84%;
+
+                                        &.group_one {
+                                            width: 16%;
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+
+                                &:nth-child(1) {
+                                    background-color: #cfeaff;
+                                }
+
+                                &:nth-child(2) {
+                                    background-color: #ffecb1;
+                                }
+
+                                &:nth-child(3) {
+                                    background-color: #bcf5d9;
+                                }
+
+                                &:nth-child(4) {
+                                    background-color: #efc2c1;
+                                }
+                            }
+                        }
+                    }
+
+                    &.table_seven {
+                        thead {
+                            tr {
+                                th {
+                                    border-right: 1.5px solid c.$white;
+                                }
+                            }
+                        }
+
+                        tbody {
+                            tr {
+                                td {
+                                    text-align: left;
+
+                                    &.group_item {
+                                        width: 72%;
+
+                                        &.group_one {
+                                            width: 20%;
+                                            text-align: center;
+                                            background-color: #fcb34d;
+                                        }
+
+                                        &.group_one_item {
+                                            width: 8%;
+                                            text-align: center;
+                                            background-color: #fcb34d;
+                                        }
+
+                                        &.group_two {
+                                            width: 20%;
+                                            text-align: center;
+                                            background-color: #68ccdc;
+                                        }
+
+                                        &.group_three {
+                                            width: 20%;
+                                            text-align: center;
+                                            background-color: #7bbcf4;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
 
-            &::after {
-                content: "";
+        }
+
+        .page_footer {
+            .pagination {
                 position: absolute;
-                width: 100%;
-                height: 1px;
-                background-color: #957256;
-                top: 50%;
-                left: 0;
-                transform: translate(0, -50%);
-                z-index: -1;
+                z-index: 1;
+                display: flex;
+                justify-content: center;
+                width: 90%;
+                margin: 0 auto;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%, 0);
+
+                .footer_logo {
+                    width: 120px;
+                    padding: 10px;
+
+                    .moe_logo,
+                    .ntnu_logo {
+                        display: inline-block;
+                        width: 45%;
+                        margin: 0 calc(2.5% - 2px);
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #957256;
+                    top: 50%;
+                    left: 0;
+                    transform: translate(0, -50%);
+                    z-index: -1;
+                }
             }
         }
     }
-
-}
 }
 
 @page {
@@ -757,6 +825,381 @@
         margin: 0 auto;
         overflow: hidden;
         background-color: c.$body_bg;
+
+        .bold {
+            font-weight: bold;
+        }
+
+        .page_header {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 90%;
+            margin: 0 auto 20px;
+
+            .header_logo {
+                width: 55px;
+                margin: 20px 0 0 10px;
+            }
+
+            .header_information {
+                margin: 20px 10px 0 0;
+                text-align: right;
+            }
+        }
+
+        .report-title {
+            display: flex;
+            justify-content: center;
+            margin: -60px auto 20px;
+
+            h1 {
+                color: #957256;
+                font-weight: 900;
+            }
+        }
+
+        .page_content {
+            padding: 0 5%;
+
+            .caption_table {
+                overflow-x: scroll;
+                margin: 0 auto 20px;
+
+                &::-webkit-scrollbar {
+                    background: transparent;
+                    height: 8px;
+                    width: 12px;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    border: none;
+                    box-shadow: none;
+                    background: c.$main_color;
+                    min-height: 40px;
+                }
+
+                .table {
+                    min-width: 845px;
+                    width: 100%;
+                    border: 1.5px solid c.$main_color;
+
+                    thead {
+                        tr {
+                            th {
+                                color: c.$white;
+                                background-color: c.$main_color;
+                                padding: 5px 10px;
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            &:nth-child(odd) {
+                                background-color: #fff;
+                            }
+
+                            &:nth-child(even) {
+                                background-color: #fff2e1;
+                            }
+
+                            td {
+                                border-bottom: 1.5px solid c.$main_color;
+                                border-right: 1.5px solid c.$main_color;
+                                padding: 5px 15px;
+                                color: c.$main_color_grey;
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+
+                    &.table_one {
+                        tbody {
+                            tr {
+
+                                &:nth-child(2) {
+                                    background-color: #fcb34d;
+                                }
+
+                                td {
+                                    &.group_item {
+                                        width: 16%;
+
+                                        &.group_one {
+                                            width: 33%;
+                                        }
+                                    }
+
+                                    &.group_one {
+                                        background-color: #fcb34d;
+                                    }
+
+                                    &.group_two {
+                                        background-color: #68ccdc;
+                                    }
+
+                                    &.group_three {
+                                        background-color: #7bbcf4;
+                                    }
+
+                                    &.group_four {
+                                        background-color: #c0d796;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.table_two {
+                        tbody {
+                            tr {
+                                &:nth-child(2) {
+                                    background-color: #fcb34d;
+
+                                    td {
+                                        &:nth-child(1) {
+                                            background-color: c.$white;
+                                        }
+                                    }
+                                }
+
+                                &:nth-child(4) {
+                                    background-color: #ffdb9c;
+                                }
+
+                                &:nth-child(5) {
+                                    background-color: #e78f6c;
+                                }
+
+                                &:nth-child(6) {
+                                    background-color: #e07461;
+                                }
+
+                                &:nth-child(7) {
+                                    background-color: #da7383;
+                                }
+
+                                &:nth-child(8) {
+                                    td {
+                                        &:nth-child(2) {
+                                            background-color: #68ccdc;
+                                        }
+
+                                        &:nth-child(3) {
+                                            background-color: #7bbcf4;
+                                        }
+                                    }
+                                }
+
+                                &:nth-child(9) {
+                                    td {
+
+                                        &:nth-child(2),
+                                        &:nth-child(3) {
+                                            background-color: #68ccdc;
+                                        }
+
+                                        &:nth-child(4),
+                                        &:nth-child(5) {
+                                            background-color: #7bbcf4;
+                                        }
+                                    }
+                                }
+
+                                td {
+                                    &.group_item {
+                                        width: 14%;
+
+                                        &.group_one {
+                                            width: 86%;
+                                        }
+                                    }
+
+                                    &.group_one {
+                                        background-color: #fcb34d;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.table_three {
+                        tbody {
+                            tr {
+                                &:nth-child(3) {
+                                    background-color: #cfeaff;
+                                }
+
+                                &:nth-child(4) {
+                                    background-color: #ffecb1;
+                                }
+
+                                &:nth-child(5) {
+                                    background-color: #bcf5d9;
+                                }
+
+                                &:nth-child(6) {
+                                    background-color: #efc2c1;
+                                }
+                            }
+                        }
+                    }
+
+                    &.table_four {
+                        tbody {
+                            tr {
+                                td {
+                                    text-align: left;
+
+                                    p {
+                                        color: c.$main_color;
+                                    }
+
+                                    &.group_item {
+                                        width: 36%;
+
+                                        &.group_one {
+                                            width: 14%;
+                                            text-align: center;
+                                            background-color: #fcb34d;
+                                        }
+
+                                        &.group_two {
+                                            width: 14%;
+                                            text-align: center;
+                                            background: linear-gradient(-82deg, #68ccdc 50%, #7bbcf4 50%);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.table_five {
+                        tbody {
+                            tr {
+                                td {
+                                    text-align: left;
+
+                                    &.group_item {
+                                        width: 84%;
+
+                                        &.group_one {
+                                            width: 16%;
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+
+                                &:nth-child(1) {
+                                    background-color: #cfeaff;
+                                }
+
+                                &:nth-child(2) {
+                                    background-color: #ffecb1;
+                                }
+
+                                &:nth-child(3) {
+                                    background-color: #bcf5d9;
+                                }
+
+                                &:nth-child(4) {
+                                    background-color: #efc2c1;
+                                }
+                            }
+                        }
+                    }
+
+                    &.table_seven {
+                        thead {
+                            tr {
+                                th {
+                                    border-right: 1.5px solid c.$white;
+                                }
+                            }
+                        }
+
+                        tbody {
+                            tr {
+                                td {
+                                    text-align: left;
+
+                                    &.group_item {
+                                        width: 72%;
+
+                                        &.group_one {
+                                            width: 20%;
+                                            text-align: center;
+                                            background-color: #fcb34d;
+                                        }
+
+                                        &.group_one_item {
+                                            width: 8%;
+                                            text-align: center;
+                                            background-color: #fcb34d;
+                                        }
+
+                                        &.group_two {
+                                            width: 20%;
+                                            text-align: center;
+                                            background-color: #68ccdc;
+                                        }
+
+                                        &.group_three {
+                                            width: 20%;
+                                            text-align: center;
+                                            background-color: #7bbcf4;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .page_footer {
+            .pagination {
+                position: absolute;
+                z-index: 1;
+                display: flex;
+                justify-content: center;
+                width: 90%;
+                margin: 0 auto;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%, 0);
+
+                .footer_logo {
+                    width: 120px;
+                    padding: 10px;
+
+                    .moe_logo,
+                    .ntnu_logo {
+                        display: inline-block;
+                        width: 45%;
+                        margin: 0 calc(2.5% - 2px);
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #957256;
+                    top: 50%;
+                    left: 0;
+                    transform: translate(0, -50%);
+                    z-index: -1;
+                }
+            }
+        }
 
     }
 }
