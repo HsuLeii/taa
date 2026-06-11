@@ -453,22 +453,25 @@ body {
 }
 .page .page_content .caption_table .table.table_four tbody tr td p {
   color: #e7591a;
+  font-weight: bold;
 }
 .page .page_content .caption_table .table.table_four tbody tr td.group_item {
-  width: 36%;
+  width: 34%;
 }
 .page .page_content .caption_table .table.table_four tbody tr td.group_item.group_one {
-  width: 14%;
-  text-align: center;
+  width: 16%;
   background-color: #fcb34d;
 }
 .page .page_content .caption_table .table.table_four tbody tr td.group_item.group_two {
-  width: 14%;
-  text-align: center;
+  width: 16%;
   background: linear-gradient(-82deg, #68ccdc 50%, #7bbcf4 50%);
 }
 .page .page_content .caption_table .table.table_five tbody tr td {
   text-align: left;
+}
+.page .page_content .caption_table .table.table_five tbody tr td p {
+  color: #e7591a;
+  font-weight: bold;
 }
 .page .page_content .caption_table .table.table_five tbody tr td.group_item {
   width: 84%;
@@ -526,15 +529,17 @@ body {
   z-index: 1;
   display: flex;
   justify-content: center;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 0);
+  background-color: #e7591a;
 }
 .page .page_footer .pagination .footer_logo {
   width: 120px;
-  padding: 10px;
+  padding: 5px;
+  line-height: 1;
 }
 .page .page_footer .pagination .footer_logo .moe_logo,
 .page .page_footer .pagination .footer_logo .ntnu_logo {
@@ -542,16 +547,20 @@ body {
   width: 45%;
   margin: 0 calc(2.5% - 2px);
 }
-.page .page_footer .pagination::after {
-  content: "";
-  position: absolute;
+.page .page_footer .pagination .footer_dot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 40px;
+  z-index: 1;
+}
+.page .page_footer .pagination .footer_dot .dot_item {
   width: 100%;
-  height: 1px;
-  background-color: #957256;
-  top: 50%;
-  left: 0;
-  transform: translate(0, -50%);
-  z-index: -1;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 5px 0 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -721,17 +730,15 @@ body {
     color: #e7591a;
   }
   .page .page_content .caption_table .table.table_four tbody tr td.group_item {
-    width: 36%;
+    width: 34%;
   }
   .page .page_content .caption_table .table.table_four tbody tr td.group_item.group_one {
-    width: 14%;
-    text-align: center;
+    width: 16%;
     background-color: #fcb34d;
   }
   .page .page_content .caption_table .table.table_four tbody tr td.group_item.group_two {
-    width: 14%;
-    text-align: center;
-    background: linear-gradient(-82deg, #68ccdc 50%, #7bbcf4 50%);
+    width: 16%;
+    background: linear-gradient(-82deg, #68ccdc 50%, #7bbcf4 100%);
   }
   .page .page_content .caption_table .table.table_five tbody tr td {
     text-align: left;
@@ -792,7 +799,7 @@ body {
     z-index: 1;
     display: flex;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     bottom: 0;
     left: 50%;
@@ -800,24 +807,14 @@ body {
   }
   .page .page_footer .pagination .footer_logo {
     width: 120px;
-    padding: 10px;
+    padding: 5px;
+    line-height: 1;
   }
   .page .page_footer .pagination .footer_logo .moe_logo,
   .page .page_footer .pagination .footer_logo .ntnu_logo {
     display: inline-block;
     width: 45%;
     margin: 0 calc(2.5% - 2px);
-  }
-  .page .page_footer .pagination::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    background-color: #957256;
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%);
-    z-index: -1;
   }
 }
 @page {
