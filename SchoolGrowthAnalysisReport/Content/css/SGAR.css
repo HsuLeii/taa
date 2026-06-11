@@ -489,6 +489,9 @@ body {
 .page .page_content .caption_table .table.table_five tbody tr:nth-child(4) {
   background-color: #efc2c1;
 }
+.page .page_content .caption_table .table.table_six tbody tr td {
+  text-align: left;
+}
 .page .page_content .caption_table .table.table_seven thead tr th {
   border-right: 1.5px solid #fff;
 }
@@ -751,6 +754,9 @@ body {
   }
   .page .page_content .caption_table .table.table_five tbody tr:nth-child(4) {
     background-color: #efc2c1;
+  }
+  .page .page_content .caption_table .table.table_six tbody tr td {
+    text-align: left;
   }
   .page .page_content .caption_table .table.table_seven thead tr th {
     border-right: 1.5px solid #fff;
@@ -1020,6 +1026,9 @@ body {
   }
   .page .page_content .caption_table .table.table_five tbody tr:nth-child(4) {
     background-color: #efc2c1;
+  }
+  .page .page_content .caption_table .table.table_six tbody tr td {
+    text-align: left;
   }
   .page .page_content .caption_table .table.table_seven thead tr th {
     border-right: 1.5px solid #fff;

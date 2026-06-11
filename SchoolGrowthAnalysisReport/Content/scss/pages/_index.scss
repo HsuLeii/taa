@@ -306,6 +306,16 @@
                     }
                 }
 
+                &.table_six {
+                    tbody {
+                        tr {
+                            td {
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+
                 &.table_seven {
                     thead {
                         tr {
@@ -711,6 +721,16 @@
                         }
                     }
 
+                    &.table_six {
+                        tbody {
+                            tr {
+                                td {
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+
                     &.table_seven {
                         thead {
                             tr {
@@ -1108,6 +1128,16 @@
 
                                 &:nth-child(4) {
                                     background-color: #efc2c1;
+                                }
+                            }
+                        }
+                    }
+
+                    &.table_six {
+                        tbody {
+                            tr {
+                                td {
+                                    text-align: left;
                                 }
                             }
                         }
