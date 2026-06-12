@@ -640,6 +640,7 @@ body {
   }
   .page .page_content {
     padding: 0 5%;
+    position: relative;
   }
   .page .page_content .caption_table {
     overflow-x: scroll;
@@ -827,8 +828,8 @@ body {
     display: block;
     position: absolute;
     right: -5%;
-    top: 50%;
-    transform: translate(0, -50%);
+    top: 0;
+    transform: translate(0, 0%);
     z-index: 0;
     width: 13%;
   }
@@ -929,6 +930,7 @@ body {
   }
   .page .page_content {
     padding: 0 5%;
+    position: relative;
   }
   .page .page_content .caption_table {
     overflow-x: scroll;
@@ -1118,8 +1120,8 @@ body {
     display: block;
     position: absolute;
     right: -5%;
-    top: 50%;
-    transform: translate(0, -50%);
+    top: 0;
+    transform: translate(0, 0%);
     z-index: 0;
     width: 13%;
   }
@@ -1128,7 +1130,7 @@ body {
     z-index: 1;
     display: flex;
     justify-content: center;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     bottom: 0;
     left: 50%;
