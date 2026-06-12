@@ -561,8 +561,8 @@ body {
   background-color: #e7591a;
 }
 .page .page_footer .pagination .footer_logo {
-  width: 150px;
-  padding: 15px;
+  width: 140px;
+  padding: 10px;
   line-height: 1;
 }
 .page .page_footer .pagination .footer_logo .moe_logo,
@@ -840,13 +840,13 @@ body {
     justify-content: center;
     width: 100%;
     margin: 0 auto;
-    bottom: 0;
+    bottom: 5px;
     left: 50%;
     transform: translate(-50%, 0);
   }
   .page .page_footer .pagination .footer_logo {
-    width: 150px;
-    padding: 15px;
+    width: 140px;
+    padding: 10px;
     line-height: 1;
   }
   .page .page_footer .pagination .footer_logo .moe_logo,
@@ -1132,13 +1132,13 @@ body {
     justify-content: center;
     width: 100%;
     margin: 0 auto;
-    bottom: 0;
+    bottom: 5px;
     left: 50%;
     transform: translate(-50%, 0);
   }
   .page .page_footer .pagination .footer_logo {
-    width: 150px;
-    padding: 15px;
+    width: 140px;
+    padding: 10px;
     line-height: 1;
   }
   .page .page_footer .pagination .footer_logo .moe_logo,
