@@ -392,7 +392,7 @@ body {
   background-color: #68ccdc;
 }
 .page .page_content .caption_table .table.table_one tbody tr td.group_three {
-  background-color: #7bbcf4;
+  background-color: #ffec4a;
 }
 .page .page_content .caption_table .table.table_one tbody tr td.group_four {
   background-color: #c0d796;
@@ -419,13 +419,13 @@ body {
   background-color: #68ccdc;
 }
 .page .page_content .caption_table .table.table_two tbody tr:nth-child(8) td:nth-child(3) {
-  background-color: #7bbcf4;
+  background-color: #ffec4a;
 }
 .page .page_content .caption_table .table.table_two tbody tr:nth-child(9) td:nth-child(2), .page .page_content .caption_table .table.table_two tbody tr:nth-child(9) td:nth-child(3) {
   background-color: #68ccdc;
 }
 .page .page_content .caption_table .table.table_two tbody tr:nth-child(9) td:nth-child(4), .page .page_content .caption_table .table.table_two tbody tr:nth-child(9) td:nth-child(5) {
-  background-color: #7bbcf4;
+  background-color: #ffec4a;
 }
 .page .page_content .caption_table .table.table_two tbody tr td.group_item {
   width: 14%;
@@ -463,8 +463,22 @@ body {
   background-color: #fcb34d;
 }
 .page .page_content .caption_table .table.table_four tbody tr td.group_item.group_two {
+  position: relative;
   width: 16%;
-  background: linear-gradient(-82deg, #68ccdc 50%, #7bbcf4 50%);
+  background: linear-gradient(135deg, #68ccdc 50%, #ffec4a 50%);
+}
+.page .page_content .caption_table .table.table_four tbody tr td.group_item.group_two p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+.page .page_content .caption_table .table.table_four tbody tr td.group_item.group_two p span {
+  color: #20221f;
+  font-weight: normal;
 }
 .page .page_content .caption_table .table.table_five tbody tr td {
   text-align: left;
@@ -522,7 +536,7 @@ body {
 .page .page_content .caption_table .table.table_seven tbody tr td.group_item.group_three {
   width: 20%;
   text-align: center;
-  background-color: #7bbcf4;
+  background-color: #ffec4a;
 }
 .page .page_footer .pagination {
   position: absolute;
@@ -667,7 +681,7 @@ body {
     background-color: #68ccdc;
   }
   .page .page_content .caption_table .table.table_one tbody tr td.group_three {
-    background-color: #7bbcf4;
+    background-color: #ffec4a;
   }
   .page .page_content .caption_table .table.table_one tbody tr td.group_four {
     background-color: #c0d796;
@@ -694,13 +708,13 @@ body {
     background-color: #68ccdc;
   }
   .page .page_content .caption_table .table.table_two tbody tr:nth-child(8) td:nth-child(3) {
-    background-color: #7bbcf4;
+    background-color: #ffec4a;
   }
   .page .page_content .caption_table .table.table_two tbody tr:nth-child(9) td:nth-child(2), .page .page_content .caption_table .table.table_two tbody tr:nth-child(9) td:nth-child(3) {
     background-color: #68ccdc;
   }
   .page .page_content .caption_table .table.table_two tbody tr:nth-child(9) td:nth-child(4), .page .page_content .caption_table .table.table_two tbody tr:nth-child(9) td:nth-child(5) {
-    background-color: #7bbcf4;
+    background-color: #ffec4a;
   }
   .page .page_content .caption_table .table.table_two tbody tr td.group_item {
     width: 14%;
@@ -738,7 +752,7 @@ body {
   }
   .page .page_content .caption_table .table.table_four tbody tr td.group_item.group_two {
     width: 16%;
-    background: linear-gradient(-82deg, #68ccdc 50%, #7bbcf4 100%);
+    background: linear-gradient(135deg, #68ccdc 50%, #ffec4a 50%);
   }
   .page .page_content .caption_table .table.table_five tbody tr td {
     text-align: left;
@@ -792,7 +806,7 @@ body {
   .page .page_content .caption_table .table.table_seven tbody tr td.group_item.group_three {
     width: 20%;
     text-align: center;
-    background-color: #7bbcf4;
+    background-color: #ffec4a;
   }
   .page .page_footer .pagination {
     position: absolute;
@@ -927,7 +941,7 @@ body {
     background-color: #68ccdc;
   }
   .page .page_content .caption_table .table.table_one tbody tr td.group_three {
-    background-color: #7bbcf4;
+    background-color: #ffec4a;
   }
   .page .page_content .caption_table .table.table_one tbody tr td.group_four {
     background-color: #c0d796;
@@ -954,13 +968,13 @@ body {
     background-color: #68ccdc;
   }
   .page .page_content .caption_table .table.table_two tbody tr:nth-child(8) td:nth-child(3) {
-    background-color: #7bbcf4;
+    background-color: #ffec4a;
   }
   .page .page_content .caption_table .table.table_two tbody tr:nth-child(9) td:nth-child(2), .page .page_content .caption_table .table.table_two tbody tr:nth-child(9) td:nth-child(3) {
     background-color: #68ccdc;
   }
   .page .page_content .caption_table .table.table_two tbody tr:nth-child(9) td:nth-child(4), .page .page_content .caption_table .table.table_two tbody tr:nth-child(9) td:nth-child(5) {
-    background-color: #7bbcf4;
+    background-color: #ffec4a;
   }
   .page .page_content .caption_table .table.table_two tbody tr td.group_item {
     width: 14%;
@@ -1000,7 +1014,7 @@ body {
   .page .page_content .caption_table .table.table_four tbody tr td.group_item.group_two {
     width: 14%;
     text-align: center;
-    background: linear-gradient(-82deg, #68ccdc 50%, #7bbcf4 50%);
+    background: linear-gradient(135deg, #68ccdc 50%, #ffec4a 50%);
   }
   .page .page_content .caption_table .table.table_five tbody tr td {
     text-align: left;
@@ -1054,7 +1068,7 @@ body {
   .page .page_content .caption_table .table.table_seven tbody tr td.group_item.group_three {
     width: 20%;
     text-align: center;
-    background-color: #7bbcf4;
+    background-color: #ffec4a;
   }
   .page .page_footer .pagination {
     position: absolute;

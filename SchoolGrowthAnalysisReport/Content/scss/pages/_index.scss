@@ -132,7 +132,7 @@
                                 }
 
                                 &.group_three {
-                                    background-color: #7bbcf4;
+                                    background-color: #ffec4a;
                                 }
 
                                 &.group_four {
@@ -180,7 +180,7 @@
                                     }
 
                                     &:nth-child(3) {
-                                        background-color: #7bbcf4;
+                                        background-color: #ffec4a;
                                     }
                                 }
                             }
@@ -195,7 +195,7 @@
 
                                     &:nth-child(4),
                                     &:nth-child(5) {
-                                        background-color: #7bbcf4;
+                                        background-color: #ffec4a;
                                     }
                                 }
                             }
@@ -261,8 +261,24 @@
                                     }
 
                                     &.group_two {
+                                        position: relative;
                                         width: 16%;
-                                        background: linear-gradient(-82deg, #68ccdc 50%, #7bbcf4 50%);
+                                        background: linear-gradient(135deg, #68ccdc 50%, #ffec4a 50%);
+
+                                        p{
+                                                display: flex;
+                                                flex-direction: column;
+                                                align-items: center;
+                                                justify-content: space-around;
+                                                position: absolute;
+                                                top: 0;
+                                                height: 100%;
+
+                                            span{
+                                                color: #20221f;
+                                                font-weight: normal;
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -358,7 +374,7 @@
                                     &.group_three {
                                         width: 20%;
                                         text-align: center;
-                                        background-color: #7bbcf4;
+                                        background-color: #ffec4a;
                                     }
                                 }
                             }
@@ -572,7 +588,7 @@
                                     }
 
                                     &.group_three {
-                                        background-color: #7bbcf4;
+                                        background-color: #ffec4a;
                                     }
 
                                     &.group_four {
@@ -619,7 +635,7 @@
                                         }
 
                                         &:nth-child(3) {
-                                            background-color: #7bbcf4;
+                                            background-color: #ffec4a;
                                         }
                                     }
                                 }
@@ -634,7 +650,7 @@
 
                                         &:nth-child(4),
                                         &:nth-child(5) {
-                                            background-color: #7bbcf4;
+                                            background-color: #ffec4a;
                                         }
                                     }
                                 }
@@ -698,7 +714,7 @@
 
                                         &.group_two {
                                             width: 16%;
-                                            background: linear-gradient(-82deg, #68ccdc 50%, #7bbcf4 100%);
+                                            background: linear-gradient(135deg, #68ccdc 50%, #ffec4a 50%);
                                         }
                                     }
                                 }
@@ -789,7 +805,7 @@
                                         &.group_three {
                                             width: 20%;
                                             text-align: center;
-                                            background-color: #7bbcf4;
+                                            background-color: #ffec4a;
                                         }
                                     }
                                 }
@@ -983,7 +999,7 @@
                                     }
 
                                     &.group_three {
-                                        background-color: #7bbcf4;
+                                        background-color: #ffec4a;
                                     }
 
                                     &.group_four {
@@ -1030,7 +1046,7 @@
                                         }
 
                                         &:nth-child(3) {
-                                            background-color: #7bbcf4;
+                                            background-color: #ffec4a;
                                         }
                                     }
                                 }
@@ -1045,7 +1061,7 @@
 
                                         &:nth-child(4),
                                         &:nth-child(5) {
-                                            background-color: #7bbcf4;
+                                            background-color: #ffec4a;
                                         }
                                     }
                                 }
@@ -1111,7 +1127,7 @@
                                         &.group_two {
                                             width: 14%;
                                             text-align: center;
-                                            background: linear-gradient(-82deg, #68ccdc 50%, #7bbcf4 50%);
+                                            background: linear-gradient(135deg, #68ccdc 50%, #ffec4a 50%);
                                         }
                                     }
                                 }
@@ -1202,7 +1218,7 @@
                                         &.group_three {
                                             width: 20%;
                                             text-align: center;
-                                            background-color: #7bbcf4;
+                                            background-color: #ffec4a;
                                         }
                                     }
                                 }
