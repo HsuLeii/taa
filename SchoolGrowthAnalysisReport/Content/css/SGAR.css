@@ -632,7 +632,7 @@ body {
   .page .report-title {
     display: flex;
     justify-content: center;
-    margin: -60px auto 20px;
+    margin: -65px auto 20px;
   }
   .page .report-title h1 {
     color: #957256;
@@ -831,7 +831,7 @@ body {
     top: 0;
     transform: translate(0, 0%);
     z-index: 0;
-    width: 13%;
+    width: 13.5%;
   }
   .page .page_footer .pagination {
     position: absolute;
@@ -922,7 +922,7 @@ body {
   .page .report-title {
     display: flex;
     justify-content: center;
-    margin: -60px auto 20px;
+    margin: -65px auto 20px;
   }
   .page .report-title h1 {
     color: #957256;
@@ -1123,7 +1123,7 @@ body {
     top: 0;
     transform: translate(0, 0%);
     z-index: 0;
-    width: 13%;
+    width: 13.5%;
   }
   .page .page_footer .pagination {
     position: absolute;
