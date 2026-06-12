@@ -6,7 +6,6 @@
     page-break-inside: avoid;
     position: relative;
     max-width: 1024px;
-    height: 1448px;
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
@@ -53,6 +52,8 @@
         padding: 0 5%;
 
         .caption_table {
+            position: relative;
+            z-index: 1;
             overflow-x: scroll;
             margin: 0px auto 40px;
 
@@ -265,16 +266,16 @@
                                         width: 16%;
                                         background: linear-gradient(135deg, #68ccdc 50%, #ffec4a 50%);
 
-                                        p{
-                                                display: flex;
-                                                flex-direction: column;
-                                                align-items: center;
-                                                justify-content: space-around;
-                                                position: absolute;
-                                                top: 0;
-                                                height: 100%;
+                                        p {
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-items: center;
+                                            justify-content: space-around;
+                                            position: absolute;
+                                            top: 0;
+                                            height: 100%;
 
-                                            span{
+                                            span {
                                                 color: #20221f;
                                                 font-weight: normal;
                                             }
@@ -384,11 +385,21 @@
             }
         }
 
+        .page_decorate {
+            display: none;
+            position: absolute;
+            right: -5%;
+            top: 50%;
+            transform: translate(0, -50%);
+            z-index: 0;
+            width: 13%;
+        }
+
     }
 
     .page_footer {
         .pagination {
-            position: absolute;
+            position: relative;
             z-index: 1;
             display: flex;
             justify-content: center;
@@ -412,13 +423,19 @@
                 }
             }
 
-            .footer_dot{
+            .footer_dot {
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
                 width: 40px;
                 z-index: 1;
-                .dot_item{
+                height: 20px;
+                position: absolute;
+                left: 5%;
+                top: 50%;
+                transform: translate(0, -50%);
+
+                .dot_item {
                     width: 100%;
                     width: 5px;
                     height: 5px;
@@ -427,18 +444,6 @@
                     margin: 0 5px 0 0;
                 }
             }
-
-            // &::after {
-            //     content: "";
-            //     position: absolute;
-            //     width: 100%;
-            //     height: 1px;
-            //     background-color: #957256;
-            //     top: 50%;
-            //     left: 0;
-            //     transform: translate(0, -50%);
-            //     z-index: -1;
-            // }
         }
     }
 
@@ -815,6 +820,16 @@
                 }
             }
 
+            .page_decorate {
+                display: block;
+                position: absolute;
+                right: -5%;
+                top: 50%;
+                transform: translate(0, -50%);
+                z-index: 0;
+                width: 13%;
+            }
+
         }
 
         .page_footer {
@@ -842,17 +857,27 @@
                     }
                 }
 
-                // &::after {
-                //     content: "";
-                //     position: absolute;
-                //     width: 100%;
-                //     height: 1px;
-                //     background-color: #957256;
-                //     top: 50%;
-                //     left: 0;
-                //     transform: translate(0, -50%);
-                //     z-index: -1;
-                // }
+                .footer_dot {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    width: 40px;
+                    z-index: 1;
+                    height: 20px;
+                    position: absolute;
+                    left: 5%;
+                    top: 50%;
+                    transform: translate(0, -50%);
+
+                    .dot_item {
+                        width: 100%;
+                        width: 5px;
+                        height: 5px;
+                        background-color: c.$white;
+                        border-radius: 50%;
+                        margin: 0 5px 0 0;
+                    }
+                }
             }
         }
     }
@@ -1228,6 +1253,16 @@
                 }
             }
 
+            .page_decorate {
+                display: block;
+                position: absolute;
+                right: -5%;
+                top: 50%;
+                transform: translate(0, -50%);
+                z-index: 0;
+                width: 13%;
+            }
+
         }
 
         .page_footer {
@@ -1254,16 +1289,26 @@
                     }
                 }
 
-                &::after {
-                    content: "";
+                .footer_dot {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    width: 40px;
+                    z-index: 1;
+                    height: 20px;
                     position: absolute;
-                    width: 100%;
-                    height: 1px;
-                    background-color: #957256;
+                    left: 5%;
                     top: 50%;
-                    left: 0;
                     transform: translate(0, -50%);
-                    z-index: -1;
+
+                    .dot_item {
+                        width: 100%;
+                        width: 5px;
+                        height: 5px;
+                        background-color: c.$white;
+                        border-radius: 50%;
+                        margin: 0 5px 0 0;
+                    }
                 }
             }
         }
