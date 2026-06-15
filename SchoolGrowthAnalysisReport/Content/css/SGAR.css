@@ -156,6 +156,12 @@ body {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
+.table th {
+  font-size: 16px;
+}
+.table td {
+  font-size: 13px;
+}
 .table thead th {
   border-bottom: 0px;
   font-size: 16px;
@@ -201,6 +207,12 @@ body {
   .btn {
     font-size: 15px;
   }
+  .table th {
+    font-size: 19px;
+  }
+  .table td {
+    font-size: 15px;
+  }
   .table thead th {
     font-size: 19px;
   }
@@ -238,6 +250,12 @@ body {
   }
   button,
   .btn {
+    font-size: 16px;
+  }
+  .table th {
+    font-size: 21px;
+  }
+  .table td {
     font-size: 16px;
   }
   .table thead th {
