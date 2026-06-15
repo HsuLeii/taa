@@ -146,11 +146,15 @@ body {
 
 .table {
   border-collapse: collapse;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 .table th,
 .table td {
   border-top: 0px;
   border-bottom: 0px;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 .table thead th {
   border-bottom: 0px;
