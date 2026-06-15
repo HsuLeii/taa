@@ -300,6 +300,7 @@
 
                                 &.group_item {
                                     width: 84%;
+                                    font-size: 13px;
 
                                     &.group_one {
                                         width: 16%;
@@ -459,6 +460,20 @@
         .page_content {
             .caption_table {
                 margin: 0px auto 30px;
+
+                .table{
+                    &.table_five{
+                        tbody {
+                        tr {
+                            td {
+                                &.group_item {
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+                    }
+                }
             }
         }
     }
@@ -736,6 +751,7 @@
 
                                     &.group_item {
                                         width: 84%;
+                                        font-size: 16px;
 
                                         &.group_one {
                                             width: 16%;
@@ -1170,6 +1186,7 @@
 
                                     &.group_item {
                                         width: 84%;
+                                        font-size: 16px;
 
                                         &.group_one {
                                             width: 16%;
