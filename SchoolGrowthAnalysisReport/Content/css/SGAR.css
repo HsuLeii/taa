@@ -300,9 +300,6 @@ body {
   margin: 0 auto;
   overflow: hidden;
   background-color: #fef9f3;
-  background-image: linear-gradient(90deg, #e8e8e8, 1px, transparent 0), linear-gradient(#e8e8e8, 1px, transparent 0);
-  background-position: 50% 50%;
-  background-size: 20px 20px;
 }
 .page .bold {
   font-weight: bold;
