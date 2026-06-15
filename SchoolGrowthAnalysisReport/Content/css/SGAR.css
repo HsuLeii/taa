@@ -70,8 +70,6 @@ i {
 }
 
 span,
-th,
-td,
 .form-control {
   font-size: 13px;
   text-decoration: none;
@@ -185,8 +183,6 @@ body {
     font-size: 15px;
   }
   span,
-  th,
-  td,
   .form-control {
     font-size: 15px;
   }
@@ -223,30 +219,28 @@ body {
   }
   p,
   i {
-    font-size: 17px;
+    font-size: 16px;
   }
   span,
-  th,
-  td,
   .form-control {
-    font-size: 17px;
+    font-size: 16px;
   }
   a {
-    font-size: 17px;
+    font-size: 16px;
   }
   input,
   label {
-    font-size: 17px;
+    font-size: 16px;
   }
   button,
   .btn {
-    font-size: 17px;
+    font-size: 16px;
   }
   .table thead th {
     font-size: 21px;
   }
   .table tbody td {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 @media print {
@@ -264,24 +258,22 @@ body {
   }
   p,
   i {
-    font-size: 17px;
+    font-size: 16px;
   }
   span,
-  th,
-  td,
   .form-control {
-    font-size: 17px;
+    font-size: 16px;
   }
   a {
-    font-size: 17px;
+    font-size: 16px;
   }
   input,
   label {
-    font-size: 17px;
+    font-size: 16px;
   }
   button,
   .btn {
-    font-size: 17px;
+    font-size: 16px;
   }
   .table thead th {
     font-size: 21px;
