@@ -153,8 +153,10 @@ body {
     td{
         border-top: 0px;
         border-bottom: 0px;
+        // 禁止 Safari 瀏覽器自動放大文字
         -webkit-text-size-adjust: 100%;
         text-size-adjust: 100%;
+        // 禁止 Safari 瀏覽器自動放大文字
     }
 
     th{
