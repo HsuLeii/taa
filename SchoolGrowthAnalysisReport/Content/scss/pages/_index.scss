@@ -453,18 +453,27 @@
         .caption_form {
 
             .caption_form_tittle {
-                    margin: 0 auto 10px;
-
-                    p {
-                        font-size: 16px;
-                        color: c.$white;
-                        background-color: c.$main_color;
-                        padding: 5px 10px;
-                        text-align: left;
-                        border-radius: 5px;
-                        font-weight: normal;
+                margin: 0 auto 10px;
+                p {
+                    font-size: 16px;
+                    color: c.$white;
+                    background-color: c.$main_color;
+                    padding: 5px 10px;
+                    text-align: left;
+                    border-radius: 5px;
+                    font-weight: normal;
+                    
+                    span {
+                        vertical-align: top;
                     }
                 }
+            }
+
+            .caption_form_text{
+                p{
+                    color: c.$main_color;
+                }
+            }
 
             &.caption_form_one {
                 .caption_form_content {
@@ -537,6 +546,7 @@
                         .caption_form_content_item_type{
                             .type_item {
                                 margin: 10px auto 0;
+                                padding: 8px;
 
                                 p{
                                     color: c.$grey;
@@ -652,17 +662,103 @@
                 }
             }
 
+            &.caption_form_three{
+                .caption_form_content{
+                    margin: 10px auto;
+                    padding: 8px;
+
+                    .caption_form_content_tittle{
+                        background-color: c.$main_color;
+                        padding: 5px 8px;
+                        border-radius: 5px;
+
+                        p{
+                            color: c.$white;
+                        }
+                    }
+
+                    .caption_form_content_year{
+
+                        .caption_form_content_year_item{
+                            background-color: c.$main_color_light;
+                            margin: 5px 0 15px;
+                            padding: 8px 15px 30px 15px;
+                            border-radius: 0 30px 0 30px;
+
+                            .caption_form_content_year_name{
+                                margin: 0 0 5px 0;
+
+                                p{
+                                    color: c.$main_color;
+                                    text-decoration: underline;
+                                }
+                            }
+
+                            .caption_form_content_year_project{
+                                display: flex;
+                                flex-wrap: wrap;
+                                
+                                p{
+                                    font-size: 11px;
+                                    color: c.$white;
+                                    background-color: c.$table_border_color_blue;
+                                    padding: 5px;
+                                    border-radius: 5px;
+                                    margin: 0 5px 5px 0;
+                                }
+                            }
+                        }
+                    }
+
+                    &.test_one{
+                        .caption_form_content_tittle{
+                            background-color: c.$test_one_tittle;
+                        }
+
+                        .caption_form_content_year{
+                            .caption_form_content_year_item{
+                                background-color: c.$test_one_project;
+                            }
+                        }
+                    }
+
+                    &.test_two{
+                        .caption_form_content_tittle{
+                            background-color: c.$test_two_tittle;
+                        }
+
+                        .caption_form_content_year{
+                            .caption_form_content_year_item{
+                                background-color: c.$test_two_project;
+                            }
+                        }
+                    }
+
+                    &.test_three{
+                        .caption_form_content_tittle{
+                            background-color: c.$test_three_tittle;
+                        }
+
+                        .caption_form_content_year{
+                            .caption_form_content_year_item{
+                                background-color: c.$test_three_project;
+                            }
+                        }
+                    }
+                }
+            }
 
         }
 
-        .page_decorate {
-            display: none;
-            position: absolute;
-            right: -5%;
-            top: 50%;
-            transform: translate(0, -50%);
-            z-index: 0;
-            width: 13%;
+        .report_note{
+            margin: 0 auto 20px;
+            padding: 8px;
+            border: 1px solid c.$table_border;
+            border-left: 5px solid c.$main_color;
+
+            p{
+                color: c.$main_color;
+            }
         }
 
     }
@@ -690,28 +786,6 @@
                     display: inline-block;
                     width: 45%;
                     margin: 0 calc(2.5% - 2px);
-                }
-            }
-
-            .footer_dot {
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                width: 40px;
-                z-index: 1;
-                height: 20px;
-                position: absolute;
-                left: 5%;
-                top: 50%;
-                transform: translate(0, -50%);
-
-                .dot_item {
-                    width: 100%;
-                    width: 5px;
-                    height: 5px;
-                    background-color: c.$white;
-                    border-radius: 50%;
-                    margin: 0 5px 0 0;
                 }
             }
         }

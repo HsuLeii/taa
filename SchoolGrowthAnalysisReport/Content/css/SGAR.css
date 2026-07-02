@@ -644,6 +644,12 @@ body {
   border-radius: 5px;
   font-weight: normal;
 }
+.page .page_content .caption_form .caption_form_tittle p span {
+  vertical-align: top;
+}
+.page .page_content .caption_form .caption_form_text p {
+  color: #1b3a6b;
+}
 .page .page_content .caption_form.caption_form_one .caption_form_content {
   margin: 0 auto 10px;
 }
@@ -691,6 +697,7 @@ body {
 }
 .page .page_content .caption_form.caption_form_two .caption_form_content .caption_form_content_item .caption_form_content_item_type .type_item {
   margin: 10px auto 0;
+  padding: 8px;
 }
 .page .page_content .caption_form.caption_form_two .caption_form_content .caption_form_content_item .caption_form_content_item_type .type_item p {
   color: #4A5568;
@@ -764,14 +771,69 @@ body {
 .page .page_content .caption_form.caption_form_two .caption_form_content.group_four .caption_form_content_tittle .caption_form_content_tittle_type p {
   color: #fff;
 }
-.page .page_content .page_decorate {
-  display: none;
-  position: absolute;
-  right: -5%;
-  top: 50%;
-  transform: translate(0, -50%);
-  z-index: 0;
-  width: 13%;
+.page .page_content .caption_form.caption_form_three .caption_form_content {
+  margin: 10px auto;
+  padding: 8px;
+}
+.page .page_content .caption_form.caption_form_three .caption_form_content .caption_form_content_tittle {
+  background-color: #1b3a6b;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+.page .page_content .caption_form.caption_form_three .caption_form_content .caption_form_content_tittle p {
+  color: #fff;
+}
+.page .page_content .caption_form.caption_form_three .caption_form_content .caption_form_content_year .caption_form_content_year_item {
+  background-color: #dae5f4;
+  margin: 5px 0 15px;
+  padding: 8px 15px 30px 15px;
+  border-radius: 0 30px 0 30px;
+}
+.page .page_content .caption_form.caption_form_three .caption_form_content .caption_form_content_year .caption_form_content_year_item .caption_form_content_year_name {
+  margin: 0 0 5px 0;
+}
+.page .page_content .caption_form.caption_form_three .caption_form_content .caption_form_content_year .caption_form_content_year_item .caption_form_content_year_name p {
+  color: #1b3a6b;
+  text-decoration: underline;
+}
+.page .page_content .caption_form.caption_form_three .caption_form_content .caption_form_content_year .caption_form_content_year_item .caption_form_content_year_project {
+  display: flex;
+  flex-wrap: wrap;
+}
+.page .page_content .caption_form.caption_form_three .caption_form_content .caption_form_content_year .caption_form_content_year_item .caption_form_content_year_project p {
+  font-size: 11px;
+  color: #fff;
+  background-color: #2b7dc0;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 0 5px 5px 0;
+}
+.page .page_content .caption_form.caption_form_three .caption_form_content.test_one .caption_form_content_tittle {
+  background-color: #e78829;
+}
+.page .page_content .caption_form.caption_form_three .caption_form_content.test_one .caption_form_content_year .caption_form_content_year_item {
+  background-color: #f8dbbe;
+}
+.page .page_content .caption_form.caption_form_three .caption_form_content.test_two .caption_form_content_tittle {
+  background-color: #9fa23b;
+}
+.page .page_content .caption_form.caption_form_three .caption_form_content.test_two .caption_form_content_year .caption_form_content_year_item {
+  background-color: #e2e3c3;
+}
+.page .page_content .caption_form.caption_form_three .caption_form_content.test_three .caption_form_content_tittle {
+  background-color: #00a468;
+}
+.page .page_content .caption_form.caption_form_three .caption_form_content.test_three .caption_form_content_year .caption_form_content_year_item {
+  background-color: #b2e3d1;
+}
+.page .page_content .report_note {
+  margin: 0 auto 20px;
+  padding: 8px;
+  border: 1px solid #c1d2ed;
+  border-left: 5px solid #1b3a6b;
+}
+.page .page_content .report_note p {
+  color: #1b3a6b;
 }
 .page .page_footer .pagination {
   position: relative;
@@ -795,26 +857,6 @@ body {
   display: inline-block;
   width: 45%;
   margin: 0 calc(2.5% - 2px);
-}
-.page .page_footer .pagination .footer_dot {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 40px;
-  z-index: 1;
-  height: 20px;
-  position: absolute;
-  left: 5%;
-  top: 50%;
-  transform: translate(0, -50%);
-}
-.page .page_footer .pagination .footer_dot .dot_item {
-  width: 100%;
-  width: 5px;
-  height: 5px;
-  background-color: #fff;
-  border-radius: 50%;
-  margin: 0 5px 0 0;
 }
 
 @media screen and (min-width: 768px) {
