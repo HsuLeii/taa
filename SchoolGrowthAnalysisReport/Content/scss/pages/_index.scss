@@ -29,6 +29,7 @@
         .header_tittle {
             width: 100%;
             order: 2;
+
             h1 {
                 color: c.$main_color;
             }
@@ -36,12 +37,12 @@
 
         .header_logo {
             display: flex;
-            margin: 0 0 10px ;
+            margin: 0 0 10px;
             order: 1;
 
             .header_logo_img {
-                width: 55px;
-                margin: 0 0 0 10px;
+                width: 30px;
+                margin: 0 0 0 5px;
             }
         }
     }
@@ -391,6 +392,7 @@
                                 &:nth-child(1) {
                                     width: 30%;
                                     border-radius: 5px 0 0 5px;
+
                                     span {
                                         vertical-align: top;
                                     }
@@ -442,7 +444,7 @@
                             }
                         }
 
-                        &:nth-child(1){
+                        &:nth-child(1) {
                             margin: 0 0 5px 0;
                         }
                     }
@@ -454,6 +456,8 @@
 
             .caption_form_tittle {
                 margin: 0 auto 10px;
+                width: 100%;
+
                 p {
                     font-size: 16px;
                     color: c.$white;
@@ -462,22 +466,22 @@
                     text-align: left;
                     border-radius: 5px;
                     font-weight: normal;
-                    
+
                     span {
                         vertical-align: top;
                     }
                 }
             }
 
-            .caption_form_text{
-                p{
+            .caption_form_text {
+                p {
                     color: c.$main_color;
                 }
             }
 
             &.caption_form_one {
                 .caption_form_content {
-                    margin: 0 auto 10px;
+                    margin: 0 0 10px;
 
                     .caption_form_content_tittle {
                         display: flex;
@@ -516,26 +520,26 @@
                 }
             }
 
-            &.caption_form_two{
-                .caption_form_content{
-                    margin: 10px auto;
+            &.caption_form_two {
+                .caption_form_content {
                     padding: 8px;
                     border: 1px solid c.$table_border;
+                    margin: 10px 0;
 
-                    .caption_form_content_tittle{
+                    .caption_form_content_tittle {
                         display: flex;
                         justify-content: space-between;
 
-                        .caption_form_content_tittle_type{
+                        .caption_form_content_tittle_type {
                             padding: 5px;
                             border-radius: 5px;
                         }
                     }
 
-                    .caption_form_content_item{
-                        .caption_form_content_item_text{
-                            p{
-                                svg{
+                    .caption_form_content_item {
+                        .caption_form_content_item_text {
+                            p {
+                                svg {
                                     color: c.$red;
                                 }
 
@@ -543,43 +547,43 @@
                             }
                         }
 
-                        .caption_form_content_item_type{
+                        .caption_form_content_item_type {
                             .type_item {
                                 margin: 10px auto 0;
                                 padding: 8px;
 
-                                p{
+                                p {
                                     color: c.$grey;
                                 }
 
-                                &.type_item_one{
+                                &.type_item_one {
                                     border-top: 2px solid c.$table_border_color_blue;
                                     background-color: lighten(c.$table_border_color_blue, 50%);
 
-                                    .type_item_tittle{
-                                        p{
+                                    .type_item_tittle {
+                                        p {
                                             color: c.$table_border_color_blue;
                                         }
                                     }
                                 }
 
-                                &.type_item_two{
+                                &.type_item_two {
                                     border-top: 2px solid c.$table_border_color_orange;
                                     background-color: lighten(c.$table_border_color_orange, 40%);
 
-                                    .type_item_tittle{
-                                        p{
+                                    .type_item_tittle {
+                                        p {
                                             color: c.$table_border_color_orange;
                                         }
                                     }
                                 }
 
-                                &.type_item_three{
+                                &.type_item_three {
                                     border-top: 2px solid c.$table_border_color_green;
                                     background-color: lighten(c.$table_border_color_green, 65%);
 
-                                    .type_item_tittle{
-                                        p{
+                                    .type_item_tittle {
+                                        p {
                                             color: c.$table_border_color_green;
                                         }
                                     }
@@ -588,72 +592,76 @@
                         }
                     }
 
-                    &.group_one{
+                    &.group_one {
                         border-left: 5px solid c.$group_one;
-                        .caption_form_content_tittle{
-                            
-                            p{
+
+                        .caption_form_content_tittle {
+
+                            p {
                                 color: c.$group_one;
                             }
 
-                            .caption_form_content_tittle_type{
+                            .caption_form_content_tittle_type {
                                 background-color: c.$group_one;
 
-                                p{
+                                p {
                                     color: c.$white;
                                 }
                             }
                         }
                     }
 
-                    &.group_two{
+                    &.group_two {
                         border-left: 5px solid c.$group_two;
-                        .caption_form_content_tittle{
 
-                            p{
+                        .caption_form_content_tittle {
+
+                            p {
                                 color: c.$group_two;
                             }
 
-                            .caption_form_content_tittle_type{
+                            .caption_form_content_tittle_type {
                                 background-color: c.$group_two;
 
-                                p{
+                                p {
                                     color: c.$white;
                                 }
                             }
                         }
                     }
 
-                    &.group_three{
+                    &.group_three {
                         border-left: 5px solid c.$group_three;
-                        .caption_form_content_tittle{
 
-                            p{
+                        .caption_form_content_tittle {
+
+                            p {
                                 color: c.$group_three;
                             }
 
-                            .caption_form_content_tittle_type{
+                            .caption_form_content_tittle_type {
                                 background-color: c.$group_three;
 
-                                p{
+                                p {
                                     color: c.$white;
                                 }
                             }
                         }
                     }
 
-                    &.group_four{
+                    &.group_four {
                         border-left: 5px solid c.$group_four;
-                        .caption_form_content_tittle{
 
-                            p{
+                        .caption_form_content_tittle {
+
+                            p {
                                 color: c.$group_four;
                             }
 
-                            .caption_form_content_tittle_type{
+                            .caption_form_content_tittle_type {
                                 background-color: c.$group_four;
 
-                                p{
+                                p {
                                     color: c.$white;
                                 }
                             }
@@ -662,101 +670,160 @@
                 }
             }
 
-            &.caption_form_three{
-                .caption_form_content{
-                    margin: 10px auto;
+            &.caption_form_test {
+                margin: 0 auto 10px;
+
+                .caption_form_test_content {
+                    border: 1px solid c.$table_border;
                     padding: 8px;
 
-                    .caption_form_content_tittle{
-                        background-color: c.$main_color;
-                        padding: 5px 8px;
-                        border-radius: 5px;
+                    .caption_form_content {
+                        margin: 0 auto 15px;
+                        padding: 8px;
 
-                        p{
-                            color: c.$white;
+                        .caption_form_content_tittle {
+                            background-color: c.$main_color;
+                            padding: 5px 8px;
+                            border-radius: 5px;
+
+                            p {
+                                color: c.$white;
+                            }
                         }
-                    }
 
-                    .caption_form_content_year{
+                        .caption_form_content_year {
 
-                        .caption_form_content_year_item{
-                            background-color: c.$main_color_light;
-                            margin: 5px 0 15px;
-                            padding: 8px 15px 30px 15px;
-                            border-radius: 0 30px 0 30px;
+                            .caption_form_content_year_item {
+                                background-color: c.$main_color_light;
+                                padding: 8px 15px 30px 15px;
+                                border-radius: 0 30px 0 30px;
+                                margin: 5px 0 15px;
 
-                            .caption_form_content_year_name{
-                                margin: 0 0 5px 0;
+                                .caption_form_content_year_name {
+                                    margin: 0 0 5px 0;
 
-                                p{
-                                    color: c.$main_color;
-                                    text-decoration: underline;
+                                    p {
+                                        color: c.$main_color;
+                                        text-decoration: underline;
+                                    }
+                                }
+
+                                .caption_form_content_year_project {
+                                    display: flex;
+                                    flex-wrap: wrap;
+
+                                    p {
+                                        font-size: 11px;
+                                        color: c.$white;
+                                        background-color: c.$table_border_color_blue;
+                                        padding: 5px;
+                                        border-radius: 5px;
+                                        margin: 0 5px 5px 0;
+                                    }
                                 }
                             }
+                        }
 
-                            .caption_form_content_year_project{
-                                display: flex;
-                                flex-wrap: wrap;
-                                
-                                p{
-                                    font-size: 11px;
-                                    color: c.$white;
-                                    background-color: c.$table_border_color_blue;
-                                    padding: 5px;
-                                    border-radius: 5px;
-                                    margin: 0 5px 5px 0;
+                        &.test_one {
+                            .caption_form_content_tittle {
+                                background-color: c.$test_one_tittle;
+                            }
+
+                            .caption_form_content_year {
+                                .caption_form_content_year_item {
+                                    background-color: c.$test_one_project;
+                                }
+                            }
+                        }
+
+                        &.test_two {
+                            .caption_form_content_tittle {
+                                background-color: c.$test_two_tittle;
+                            }
+
+                            .caption_form_content_year {
+                                .caption_form_content_year_item {
+                                    background-color: c.$test_two_project;
+                                }
+                            }
+                        }
+
+                        &.test_three {
+                            .caption_form_content_tittle {
+                                background-color: c.$test_three_tittle;
+                            }
+
+                            .caption_form_content_year {
+                                .caption_form_content_year_item {
+                                    background-color: c.$test_three_project;
+                                }
+                            }
+                        }
+
+                        &.test_four {
+                            .caption_form_content_tittle {
+                                background-color: c.$test_four_tittle;
+                            }
+
+                            .caption_form_content_year {
+                                .caption_form_content_year_item {
+                                    background-color: c.$test_four_project;
+                                }
+                            }
+                        }
+
+                        &.test_five {
+                            .caption_form_content_year {
+                                .caption_form_content_year_item {
+                                    background-color: c.$test_five_project;
+                                }
+                            }
+                        }
+
+                        &.test_six {
+                            .caption_form_content_year {
+                                .caption_form_content_year_item {
+                                    background-color: c.$test_six_project;
                                 }
                             }
                         }
                     }
+                }
 
-                    &.test_one{
-                        .caption_form_content_tittle{
-                            background-color: c.$test_one_tittle;
-                        }
-
-                        .caption_form_content_year{
-                            .caption_form_content_year_item{
-                                background-color: c.$test_one_project;
-                            }
-                        }
+                &.caption_form_three {
+                    .caption_form_test_content {
+                        border-left: 5px solid c.$table_border_color_blue;
                     }
+                }
 
-                    &.test_two{
-                        .caption_form_content_tittle{
-                            background-color: c.$test_two_tittle;
-                        }
-
-                        .caption_form_content_year{
-                            .caption_form_content_year_item{
-                                background-color: c.$test_two_project;
-                            }
-                        }
+                &.caption_form_four {
+                    .caption_form_test_content {
+                        border-left: 5px solid c.$table_border_color_blue;
                     }
+                }
 
-                    &.test_three{
-                        .caption_form_content_tittle{
-                            background-color: c.$test_three_tittle;
-                        }
+                &.caption_form_five {
+                    .caption_form_test_content {
+                        border-left: 5px solid c.$table_border_color_orange;
+                    }
+                }
 
-                        .caption_form_content_year{
-                            .caption_form_content_year_item{
-                                background-color: c.$test_three_project;
-                            }
-                        }
+                &.caption_form_six {
+                    .caption_form_test_content {
+                        border-left: 5px solid c.$table_border_color_green;
                     }
                 }
             }
 
         }
 
-        .report_note{
+        .report_note {
             margin: 0 auto 20px;
             padding: 8px;
             border: 1px solid c.$table_border;
             border-left: 5px solid c.$main_color;
 
-            p{
+            p {
                 color: c.$main_color;
             }
         }
@@ -764,469 +831,963 @@
     }
 
     .page_footer {
-        .pagination {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            margin: 0 auto;
-            bottom: 0;
-            left: 50%;
-            transform: translate(-50%, 0);
-            background-color: c.$main_color;
+    }
 
-            .footer_logo {
-                width: 140px;
-                padding: 10px;
-                line-height: 1;
+}
 
-                .moe_logo,
-                .ntnu_logo {
-                    display: inline-block;
-                    width: 45%;
-                    margin: 0 calc(2.5% - 2px);
+@media screen and (min-width: 576px) {
+    .page {
+        .page_header {
+            justify-content: space-between;
+
+        .header_tittle {
+            width: auto;
+            order: 1;
+        }
+
+        .header_logo {
+            margin: 0;
+            order: 2;
+        }
+    }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .page {
+        .page_header {
+
+        .header_logo {
+            .header_logo_img {
+                width: 55px;
+                margin: 0 0 0 10px;
+            }
+        }
+    }
+
+    .page_content{
+        .caption_form{
+            &.caption_form_two{
+                .caption_form_content{
+                    .caption_form_content_item{
+                        .caption_form_content_item_type{
+                            display: flex;
+                        }
+                    }
                 }
             }
         }
     }
-
-}
-
-@media screen and (min-width: 499px) {}
-
-@media screen and (min-width: 576px) {}
-
-@media screen and (min-width: 768px) {
-    .page {
-
-        .page_content {
-            .caption_table {
-                margin: 0px auto 30px;
-            }
-        }
     }
 }
 
-// @media screen and (min-width: 1024px) {
-//     .page {
-//         /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
-//         /* page-break-after: always;  碰到此元素會直接換頁 */
-//         page-break-inside: avoid;
-//         position: relative;
-//         max-width: 1024px;
-//         height: 1448px;
-//         width: 100%;
-//         margin: 0 auto;
-//         overflow: hidden;
-//         background-color: c.$body_bg;
-
-//         .bold {
-//             font-weight: bold;
-//         }
-
-//         .page_header {
-//             position: relative;
-//             display: flex;
-//             align-items: flex-start;
-//             justify-content: space-between;
-//             width: 90%;
-//             margin: 0 auto 20px;
-
-//             .header_logo {
-//                 width: 55px;
-//                 margin: 20px 0 0 10px;
-//             }
-
-//             .header_information {
-//                 margin: 20px 10px 0 0;
-//                 text-align: right;
-//             }
-//         }
-
-//         .report-title {
-//             display: flex;
-//             justify-content: center;
-//             margin: -90px auto 20px;
-
-//             h1 {
-//                 color: #957256;
-//                 font-weight: 900;
-//             }
-//         }
-
-//         .page_content {
-//             padding: 0 5%;
-//             position: relative;
-
-//             .caption_table {
-//                 overflow-x: scroll;
-//                 margin: 0 auto 15px;
-
-//                 &::-webkit-scrollbar {
-//                     background: transparent;
-//                     height: 8px;
-//                     width: 12px;
-//                 }
-
-//                 &::-webkit-scrollbar-thumb {
-//                     border: none;
-//                     box-shadow: none;
-//                     background: c.$main_color;
-//                     min-height: 40px;
-//                 }
-
-//                 .table {
-//                     min-width: 845px;
-//                     width: 100%;
-//                     border: 1.5px solid c.$main_color;
-
-//                     thead {
-//                         tr {
-//                             th {
-//                                 color: c.$white;
-//                                 background-color: c.$main_color;
-//                                 padding: 5px 10px;
-//                                 text-align: center;
-//                             }
-//                         }
-//                     }
-
-//                     tbody {
-//                         tr {
-//                             &:nth-child(odd) {
-//                                 background-color: #fff;
-//                             }
-
-//                             &:nth-child(even) {
-//                                 background-color: #fff2e1;
-//                             }
-
-//                             td {
-//                                 border-bottom: 1.5px solid c.$main_color;
-//                                 border-right: 1.5px solid c.$main_color;
-//                                 padding: 5px 15px;
-//                                 color: c.$main_color_grey;
-//                                 vertical-align: middle;
-//                             }
-//                         }
-//                     }
-
-//                     &.table_one {
-//                         tbody {
-//                             tr {
-
-//                                 &:nth-child(2) {
-//                                     background-color: #fcb34d;
-//                                 }
-
-//                                 td {
-//                                     &.group_item {
-//                                         width: 16%;
-
-//                                         &.group_one {
-//                                             width: 33%;
-//                                         }
-//                                     }
-
-//                                     &.group_one {
-//                                         background-color: #fcb34d;
-//                                     }
-
-//                                     &.group_two {
-//                                         background-color: #68ccdc;
-//                                     }
-
-//                                     &.group_three {
-//                                         background-color: #ffec4a;
-//                                     }
-
-//                                     &.group_four {
-//                                         background-color: #c0d796;
-//                                     }
-//                                 }
-//                             }
-//                         }
-//                     }
-
-//                     &.table_two {
-//                         tbody {
-//                             tr {
-//                                 &:nth-child(2) {
-//                                     background-color: #fcb34d;
-
-//                                     td {
-//                                         &:nth-child(1) {
-//                                             background-color: c.$white;
-//                                         }
-//                                     }
-//                                 }
-
-//                                 &:nth-child(4) {
-//                                     background-color: #ffdb9c;
-//                                 }
-
-//                                 &:nth-child(5) {
-//                                     background-color: #e78f6c;
-//                                 }
-
-//                                 &:nth-child(6) {
-//                                     background-color: #e07461;
-//                                 }
-
-//                                 &:nth-child(7) {
-//                                     background-color: #da7383;
-//                                 }
-
-//                                 &:nth-child(8) {
-//                                     td {
-//                                         &:nth-child(2) {
-//                                             background-color: #68ccdc;
-//                                         }
-
-//                                         &:nth-child(3) {
-//                                             background-color: #ffec4a;
-//                                         }
-//                                     }
-//                                 }
-
-//                                 &:nth-child(9) {
-//                                     td {
-
-//                                         &:nth-child(2),
-//                                         &:nth-child(3) {
-//                                             background-color: #68ccdc;
-//                                         }
-
-//                                         &:nth-child(4),
-//                                         &:nth-child(5) {
-//                                             background-color: #ffec4a;
-//                                         }
-//                                     }
-//                                 }
-
-//                                 td {
-//                                     &.group_item {
-//                                         width: 14%;
-
-//                                         &.group_one {
-//                                             width: 86%;
-//                                         }
-//                                     }
-
-//                                     &.group_one {
-//                                         background-color: #fcb34d;
-//                                     }
-//                                 }
-//                             }
-//                         }
-//                     }
-
-//                     &.table_three {
-//                         tbody {
-//                             tr {
-//                                 &:nth-child(3) {
-//                                     background-color: #cfeaff;
-//                                 }
-
-//                                 &:nth-child(4) {
-//                                     background-color: #ffecb1;
-//                                 }
-
-//                                 &:nth-child(5) {
-//                                     background-color: #bcf5d9;
-//                                 }
-
-//                                 &:nth-child(6) {
-//                                     background-color: #efc2c1;
-//                                 }
-//                             }
-//                         }
-//                     }
-
-//                     &.table_four {
-//                         tbody {
-//                             tr {
-//                                 td {
-//                                     text-align: left;
-
-//                                     p {
-//                                         color: c.$main_color;
-//                                     }
-
-//                                     &.group_item {
-//                                         width: 34%;
-
-//                                         &.group_one {
-//                                             width: 16%;
-//                                             background-color: #fcb34d;
-//                                         }
-
-//                                         &.group_two {
-//                                             width: 16%;
-//                                             background: linear-gradient(135deg, #68ccdc 50%, #ffec4a 50%);
-//                                         }
-//                                     }
-//                                 }
-//                             }
-//                         }
-//                     }
-
-//                     &.table_five {
-//                         tbody {
-//                             tr {
-//                                 td {
-//                                     text-align: left;
-
-//                                     &.group_item {
-//                                         width: 84%;
-
-//                                         &.group_one {
-//                                             width: 16%;
-//                                             text-align: center;
-//                                         }
-//                                     }
-//                                 }
-
-//                                 &:nth-child(1) {
-//                                     background-color: #cfeaff;
-//                                 }
-
-//                                 &:nth-child(2) {
-//                                     background-color: #ffecb1;
-//                                 }
-
-//                                 &:nth-child(3) {
-//                                     background-color: #bcf5d9;
-//                                 }
-
-//                                 &:nth-child(4) {
-//                                     background-color: #efc2c1;
-//                                 }
-//                             }
-//                         }
-//                     }
-
-//                     &.table_six {
-//                         tbody {
-//                             tr {
-//                                 td {
-//                                     text-align: left;
-//                                 }
-//                             }
-//                         }
-//                     }
-
-//                     &.table_seven {
-//                         thead {
-//                             tr {
-//                                 th {
-//                                     border-right: 1.5px solid c.$white;
-//                                 }
-//                             }
-//                         }
-
-//                         tbody {
-//                             tr {
-//                                 td {
-//                                     text-align: left;
-
-//                                     &.group_item {
-//                                         width: 72%;
-
-//                                         &.group_one {
-//                                             width: 20%;
-//                                             text-align: center;
-//                                             background-color: #fcb34d;
-//                                         }
-
-//                                         &.group_one_item {
-//                                             width: 8%;
-//                                             text-align: center;
-//                                             background-color: #fcb34d;
-//                                         }
-
-//                                         &.group_two {
-//                                             width: 20%;
-//                                             text-align: center;
-//                                             background-color: #68ccdc;
-//                                         }
-
-//                                         &.group_three {
-//                                             width: 20%;
-//                                             text-align: center;
-//                                             background-color: #ffec4a;
-//                                         }
-//                                     }
-//                                 }
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-
-//             .page_decorate {
-//                 display: block;
-//                 position: absolute;
-//                 right: -5%;
-//                 top: 0;
-//                 transform: translate(0, 0%);
-//                 z-index: 0;
-//                 width: 13.5%;
-//             }
-
-//         }
-
-//         .page_footer {
-//             .pagination {
-//                 position: absolute;
-//                 z-index: 1;
-//                 display: flex;
-//                 justify-content: center;
-//                 width: 100%;
-//                 margin: 0 auto;
-//                 bottom: 20px;
-//                 left: 50%;
-//                 transform: translate(-50%, 0);
-
-//                 .footer_logo {
-//                     width: 140px;
-//                     padding: 10px;
-//                     line-height: 1;
-
-//                     .moe_logo,
-//                     .ntnu_logo {
-//                         display: inline-block;
-//                         width: 45%;
-//                         margin: 0 calc(2.5% - 2px);
-//                     }
-//                 }
-
-//                 .footer_dot {
-//                     display: flex;
-//                     flex-wrap: wrap;
-//                     align-items: center;
-//                     width: 40px;
-//                     z-index: 1;
-//                     height: 20px;
-//                     position: absolute;
-//                     left: 5%;
-//                     top: 50%;
-//                     transform: translate(0, -50%);
-
-//                     .dot_item {
-//                         width: 100%;
-//                         width: 5px;
-//                         height: 5px;
-//                         background-color: c.$white;
-//                         border-radius: 50%;
-//                         margin: 0 5px 0 0;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
+@media screen and (min-width: 992px) {
+    .page {
+    .page_content{
+        .page_content_information{
+            .page_content_information_text{
+                flex-direction: row;
+            }
+        }
+
+        .number_of_people_area{
+            .number_of_people_item{
+                width: 24%;
+            }
+        }
+
+        .caption_form{
+            &.caption_form_one{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .caption_form_content{
+                    width: 49%;
+                }
+            }
+
+            &.caption_form_two{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .caption_form_content{
+                    width: 49%;
+                }
+            }
+
+            &.caption_form_test{
+                .caption_form_test_content{
+                    .caption_form_content{
+                        .caption_form_content_year {
+                            display: flex;
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+
+                            .caption_form_content_year_item{
+                                width: 49%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .page {
+    /* page-break-inside: avoid; 若順著向下排列時會切開此元素，則直接換頁 */
+    /* page-break-after: always;  碰到此元素會直接換頁 */
+    page-break-inside: avoid;
+    position: relative;
+    max-width: 1024px;
+    height: 1448px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    // background-image: linear-gradient(90deg, #e8e8e8, 1px, transparent 0), linear-gradient(#e8e8e8, 1px, transparent 0);
+    // background-position: 50% 50%;
+    // background-size: 20px 20px;
+
+    .bold {
+        font-weight: bold;
+    }
+
+    .page_header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 95%;
+        margin: 20px auto 20px;
+
+        .header_tittle {
+            width: auto;
+            order: 1;
+
+            h1 {
+                color: c.$main_color;
+            }
+        }
+
+        .header_logo {
+            display: flex;
+            margin: 0 0 10px;
+            order: 2;
+
+            .header_logo_img {
+                width: 55px;
+                margin: 0 0 0 10px;
+            }
+        }
+    }
+
+    .page_content {
+        padding: 0 2.5%;
+
+        .page_content_information {
+            margin: 0 auto 20px;
+
+            .page_content_information_text {
+                display: flex;
+                justify-content: space-between;
+                padding: 5px 15px;
+                background-color: c.$main_color_light;
+                flex-direction: row;
+
+                p {
+                    color: c.$main_color;
+
+                    span {
+                        color: c.$grey;
+                    }
+                }
+            }
+
+            .caption_text {
+                display: flex;
+                justify-content: center;
+
+                span {
+                    color: c.$grey;
+                    text-align: center;
+                }
+            }
+        }
+
+        .number_of_people_area {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 0 auto 20px;
+
+            .number_of_people_item {
+                position: relative;
+                display: flex;
+                align-items: flex-end;
+                flex-wrap: wrap;
+                border: 1.5px solid c.$main_color_light;
+                margin: 5px auto;
+                padding: 5px 10px;
+                width: 24%;
+
+                .number_of_people_item_text {
+                    width: 100%;
+
+                    p {
+                        color: c.$main_color;
+                    }
+                }
+
+                .number_of_people_item_num {
+                    p {
+                        font-size: 26px;
+                        font-weight: bold;
+                        color: c.$main_color;
+                    }
+                }
+
+                .number_of_people_item_data {
+                    margin: 0 0 0 5px;
+
+                    p {
+                        font-size: 15px;
+                        font-weight: bold;
+                        color: c.$up_color;
+                    }
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 3px;
+                    height: 100%;
+                }
+
+                &:nth-child(1) {
+                    &::before {
+                        background-color: c.$main_color;
+                    }
+                }
+
+                &:nth-child(2) {
+                    &::before {
+                        background-color: c.$table_border_color_blue;
+                    }
+                }
+
+                &:nth-child(3) {
+                    &::before {
+                        background-color: c.$table_border_color_orange;
+                    }
+                }
+
+                &:nth-child(4) {
+                    &::before {
+                        background-color: c.$table_border_color_green;
+                    }
+                }
+            }
+
+            .caption_text {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                span {
+                    color: c.$grey;
+                    text-align: center;
+                }
+            }
+        }
+
+        .caption_table {
+            position: relative;
+            z-index: 1;
+            overflow-x: scroll;
+            margin: 0px auto 40px;
+
+            &::-webkit-scrollbar {
+                background: transparent;
+                height: 8px;
+                width: 12px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border: none;
+                box-shadow: none;
+                background: c.$main_color;
+                min-height: 40px;
+            }
+
+            /* .caption_table_half的前一層元素，選取 .caption_table */
+            &:has(+ .caption_table_half) {
+                margin: 0px auto;
+            }
+
+            &.caption_table_half {
+                display: flex;
+
+                .table {
+                    min-width: calc(845px / 2);
+                    width: 50%;
+                }
+            }
+
+            .table {
+                min-width: 845px;
+                width: 100%;
+
+                thead {
+
+                    tr {
+                        th {
+                            color: c.$white;
+                            background-color: c.$main_color;
+                            padding: 5px 10px;
+                            text-align: left;
+                            border-radius: 5px;
+                            font-weight: normal;
+                        }
+                    }
+                }
+
+                tbody {
+                    display: table;
+                    width: 100%;
+                    margin: 5px 0 0;
+                    border: 1px solid c.$table_border;
+
+                    .bg_main_color_light {
+                        background-color: c.$main_color_light;
+                    }
+
+                    tr {
+                        background-color: c.$white;
+
+                        th {
+                            color: c.$white;
+                            background-color: c.$main_color;
+                            padding: 5px 10px;
+                            text-align: left;
+                            border-radius: 5px;
+                            font-weight: normal;
+                        }
+
+                        td {
+                            text-align: center;
+                            border: 1px solid c.$table_border;
+                            padding: 5px 15px;
+                            color: c.$main_color;
+                            vertical-align: middle;
+
+                            &.td_up {
+                                color: c.$up_color;
+                            }
+
+                            &.td_down {
+                                color: c.$down_color;
+                            }
+
+                            &.slash-td {
+                                position: relative;
+                                overflow: hidden;
+
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    left: 0;
+                                    top: 0;
+                                    width: 108%;
+                                    height: 100%;
+                                    border-top: 1px solid c.$table_border;
+                                    transform-origin: top left;
+                                    transform: rotate(19.5deg);
+                                }
+
+                                .top-text {
+                                    position: absolute;
+                                    top: 5px;
+                                    right: 5px;
+                                }
+
+                                .bottom-text {
+                                    position: absolute;
+                                    bottom: 5px;
+                                    left: 5px;
+                                }
+
+                            }
+                        }
+                    }
+                }
+
+                &.table_half {
+                    width: 50%;
+                }
+
+                &.table_one {
+                    tbody {
+                        tr {
+                            td {
+                                &.group_item {
+                                    width: auto;
+
+                                    &.group_one {
+                                        width: 21%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.table_two {
+                    tbody {
+                        border-top: 0px;
+                        border-right: 0px;
+
+                        tr {
+
+                            &:nth-child(1) {
+                                border-left: 5px solid c.$table_border_color_blue;
+
+                                td {
+                                    border-top: 0px;
+                                    border-right: 0px;
+                                    padding: 8px 0 8px 8px;
+                                    text-align: left;
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                td {
+                                    width: 22%;
+
+                                    &:nth-child(1) {
+                                        width: 12%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.table_three {
+                    tbody {
+                        border-top: 0px;
+                        border-right: 0px;
+
+                        tr {
+
+                            &:nth-child(1) {
+                                border-left: 5px solid c.$table_border_color_orange;
+
+                                td {
+                                    border-top: 0px;
+                                    border-right: 0px;
+                                    padding: 8px 0 8px 8px;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.table_four {
+                    tbody {
+                        border-top: 0px;
+                        border-right: 0px;
+
+                        tr {
+
+                            &:nth-child(1) {
+                                border-left: 5px solid c.$table_border_color_green;
+
+                                td {
+                                    border-top: 0px;
+                                    border-right: 0px;
+                                    padding: 8px 0 8px 8px;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.table_five {
+                    tbody {
+                        border: 0px;
+                        margin: 0;
+
+                        tr {
+                            th {
+                                &:nth-child(1) {
+                                    width: 30%;
+                                    border-radius: 5px 0 0 5px;
+
+                                    span {
+                                        vertical-align: top;
+                                    }
+                                }
+
+                                &:nth-child(2) {
+                                    width: 70%;
+                                    border-radius: 0 5px 5px 0;
+                                    text-align: right;
+                                }
+                            }
+
+                            td {
+                                .progress_line {
+                                    display: inline-block;
+                                    width: 60%;
+                                    height: 13px;
+                                    background: c.$white;
+                                    border: 0.5px solid c.$main_color;
+                                    border-radius: 5px;
+                                    margin: 0 0 0 5px;
+                                    overflow: hidden;
+
+                                    .line {
+                                        background-color: c.$main_color;
+                                        height: 100%;
+                                    }
+                                }
+                            }
+
+                            &:nth-child(2) {
+                                td {
+                                    &:nth-child(1) {
+                                        width: 16%;
+                                    }
+
+                                    &:nth-child(2) {
+                                        width: 17%;
+                                    }
+
+                                    &:nth-child(3) {
+                                        width: 50%;
+                                    }
+
+                                    &:nth-child(4) {
+                                        width: 17%;
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-child(1) {
+                            margin: 0 0 5px 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .caption_form {
+
+            .caption_form_tittle {
+                margin: 0 auto 10px;
+                width: 100%;
+
+                p {
+                    font-size: 16px;
+                    color: c.$white;
+                    background-color: c.$main_color;
+                    padding: 5px 10px;
+                    text-align: left;
+                    border-radius: 5px;
+                    font-weight: normal;
+
+                    span {
+                        vertical-align: top;
+                    }
+                }
+            }
+
+            .caption_form_text {
+                p {
+                    color: c.$main_color;
+                }
+            }
+
+            &.caption_form_one {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .caption_form_content {
+                    margin: 0 0 10px;
+                    width: 49%;
+
+                    .caption_form_content_tittle {
+                        display: flex;
+                        justify-content: center;
+                        padding: 5px;
+
+                        p {
+                            font-size: 15px;
+                            color: c.$white;
+                        }
+                    }
+
+                    .caption_form_content_item {
+                        border: 1px solid c.$table_border;
+                        border-top: 0px;
+                        padding: 8px;
+
+                        .caption_form_content_item_text {
+                            p {
+                                color: c.$grey;
+                            }
+                        }
+                    }
+
+                    &.form_content_one {
+                        .caption_form_content_tittle {
+                            background-color: c.$table_border_color_blue;
+                        }
+                    }
+
+                    &.form_content_two {
+                        .caption_form_content_tittle {
+                            background: linear-gradient(175deg, c.$table_border_color_orange 0%, c.$table_border_color_green 100%);
+                        }
+                    }
+                }
+            }
+
+            &.caption_form_two {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .caption_form_content {
+                    padding: 8px;
+                    border: 1px solid c.$table_border;
+                    margin: 10px 0;
+                    width: 49%;
+                    
+                    .caption_form_content_tittle {
+                        display: flex;
+                        justify-content: space-between;
+
+                        .caption_form_content_tittle_type {
+                            padding: 5px;
+                            border-radius: 5px;
+                        }
+                    }
+
+                    .caption_form_content_item {
+                        .caption_form_content_item_text {
+                            p {
+                                svg {
+                                    color: c.$red;
+                                }
+
+                                color: c.$grey;
+                            }
+                        }
+
+                        .caption_form_content_item_type {
+                            display: flex;
+                            .type_item {
+                                margin: 10px auto 0;
+                                padding: 8px;
+
+                                p {
+                                    color: c.$grey;
+                                }
+
+                                &.type_item_one {
+                                    border-top: 2px solid c.$table_border_color_blue;
+                                    background-color: lighten(c.$table_border_color_blue, 50%);
+
+                                    .type_item_tittle {
+                                        p {
+                                            color: c.$table_border_color_blue;
+                                        }
+                                    }
+                                }
+
+                                &.type_item_two {
+                                    border-top: 2px solid c.$table_border_color_orange;
+                                    background-color: lighten(c.$table_border_color_orange, 40%);
+
+                                    .type_item_tittle {
+                                        p {
+                                            color: c.$table_border_color_orange;
+                                        }
+                                    }
+                                }
+
+                                &.type_item_three {
+                                    border-top: 2px solid c.$table_border_color_green;
+                                    background-color: lighten(c.$table_border_color_green, 65%);
+
+                                    .type_item_tittle {
+                                        p {
+                                            color: c.$table_border_color_green;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.group_one {
+                        border-left: 5px solid c.$group_one;
+
+                        .caption_form_content_tittle {
+
+                            p {
+                                color: c.$group_one;
+                            }
+
+                            .caption_form_content_tittle_type {
+                                background-color: c.$group_one;
+
+                                p {
+                                    color: c.$white;
+                                }
+                            }
+                        }
+                    }
+
+                    &.group_two {
+                        border-left: 5px solid c.$group_two;
+
+                        .caption_form_content_tittle {
+
+                            p {
+                                color: c.$group_two;
+                            }
+
+                            .caption_form_content_tittle_type {
+                                background-color: c.$group_two;
+
+                                p {
+                                    color: c.$white;
+                                }
+                            }
+                        }
+                    }
+
+                    &.group_three {
+                        border-left: 5px solid c.$group_three;
+
+                        .caption_form_content_tittle {
+
+                            p {
+                                color: c.$group_three;
+                            }
+
+                            .caption_form_content_tittle_type {
+                                background-color: c.$group_three;
+
+                                p {
+                                    color: c.$white;
+                                }
+                            }
+                        }
+                    }
+
+                    &.group_four {
+                        border-left: 5px solid c.$group_four;
+
+                        .caption_form_content_tittle {
+
+                            p {
+                                color: c.$group_four;
+                            }
+
+                            .caption_form_content_tittle_type {
+                                background-color: c.$group_four;
+
+                                p {
+                                    color: c.$white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.caption_form_test {
+                margin: 0 auto 10px;
+
+                .caption_form_test_content {
+                    border: 1px solid c.$table_border;
+                    padding: 8px;
+
+                    .caption_form_content {
+                        margin: 0 auto 15px;
+                        padding: 8px;
+
+                        .caption_form_content_tittle {
+                            background-color: c.$main_color;
+                            padding: 5px 8px;
+                            border-radius: 5px;
+
+                            p {
+                                color: c.$white;
+                            }
+                        }
+
+                        .caption_form_content_year {
+                            display: flex;
+                            justify-content: space-between;
+                            flex-wrap: wrap;
+                            
+                            .caption_form_content_year_item {
+                                background-color: c.$main_color_light;
+                                padding: 8px 15px 30px 15px;
+                                border-radius: 0 30px 0 30px;
+                                margin: 5px 0 15px;
+                                width: 49%;
+
+                                .caption_form_content_year_name {
+                                    margin: 0 0 5px 0;
+
+                                    p {
+                                        color: c.$main_color;
+                                        text-decoration: underline;
+                                    }
+                                }
+
+                                .caption_form_content_year_project {
+                                    display: flex;
+                                    flex-wrap: wrap;
+
+                                    p {
+                                        font-size: 11px;
+                                        color: c.$white;
+                                        background-color: c.$table_border_color_blue;
+                                        padding: 5px;
+                                        border-radius: 5px;
+                                        margin: 0 5px 5px 0;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.test_one {
+                            .caption_form_content_tittle {
+                                background-color: c.$test_one_tittle;
+                            }
+
+                            .caption_form_content_year {
+                                .caption_form_content_year_item {
+                                    background-color: c.$test_one_project;
+                                }
+                            }
+                        }
+
+                        &.test_two {
+                            .caption_form_content_tittle {
+                                background-color: c.$test_two_tittle;
+                            }
+
+                            .caption_form_content_year {
+                                .caption_form_content_year_item {
+                                    background-color: c.$test_two_project;
+                                }
+                            }
+                        }
+
+                        &.test_three {
+                            .caption_form_content_tittle {
+                                background-color: c.$test_three_tittle;
+                            }
+
+                            .caption_form_content_year {
+                                .caption_form_content_year_item {
+                                    background-color: c.$test_three_project;
+                                }
+                            }
+                        }
+
+                        &.test_four {
+                            .caption_form_content_tittle {
+                                background-color: c.$test_four_tittle;
+                            }
+
+                            .caption_form_content_year {
+                                .caption_form_content_year_item {
+                                    background-color: c.$test_four_project;
+                                }
+                            }
+                        }
+
+                        &.test_five {
+                            .caption_form_content_year {
+                                .caption_form_content_year_item {
+                                    background-color: c.$test_five_project;
+                                }
+                            }
+                        }
+
+                        &.test_six {
+                            .caption_form_content_year {
+                                .caption_form_content_year_item {
+                                    background-color: c.$test_six_project;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.caption_form_three {
+                    .caption_form_test_content {
+                        border-left: 5px solid c.$table_border_color_blue;
+                    }
+                }
+
+                &.caption_form_four {
+                    .caption_form_test_content {
+                        border-left: 5px solid c.$table_border_color_blue;
+                    }
+                }
+
+                &.caption_form_five {
+                    .caption_form_test_content {
+                        border-left: 5px solid c.$table_border_color_orange;
+                    }
+                }
+
+                &.caption_form_six {
+                    .caption_form_test_content {
+                        border-left: 5px solid c.$table_border_color_green;
+                    }
+                }
+            }
+
+        }
+
+        .report_note {
+            margin: 0 auto 20px;
+            padding: 8px;
+            border: 1px solid c.$table_border;
+            border-left: 5px solid c.$main_color;
+
+            p {
+                color: c.$main_color;
+            }
+        }
+
+    }
+
+    .page_footer {
+    }
+
+}
+}
 
 @page {
     /*size: portrait;  直向 */
