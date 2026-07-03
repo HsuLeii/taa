@@ -685,18 +685,18 @@ body {
   border: 1px solid #c1d2ed;
   margin: 10px 0;
 }
-.page .page_content .caption_form.caption_form_two .caption_form_content .caption_form_content_tittle {
+.page .page_content .caption_form.caption_form_two .caption_form_content .caption_form_content_item_text .caption_form_content_tittle {
   display: flex;
   justify-content: space-between;
 }
-.page .page_content .caption_form.caption_form_two .caption_form_content .caption_form_content_tittle .caption_form_content_tittle_type {
+.page .page_content .caption_form.caption_form_two .caption_form_content .caption_form_content_item_text .caption_form_content_tittle .caption_form_content_tittle_type {
   padding: 5px;
   border-radius: 5px;
 }
-.page .page_content .caption_form.caption_form_two .caption_form_content .caption_form_content_item .caption_form_content_item_text p svg {
+.page .page_content .caption_form.caption_form_two .caption_form_content .caption_form_content_item_text p svg {
   color: #c41010;
 }
-.page .page_content .caption_form.caption_form_two .caption_form_content .caption_form_content_item .caption_form_content_item_text p {
+.page .page_content .caption_form.caption_form_two .caption_form_content .caption_form_content_item_text p {
   color: #4A5568;
 }
 .page .page_content .caption_form.caption_form_two .caption_form_content .caption_form_content_item .caption_form_content_item_type .type_item {
@@ -928,7 +928,24 @@ body {
     justify-content: space-between;
   }
   .page .page_content .caption_form.caption_form_two .caption_form_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 49%;
+  }
+  .page .page_content .caption_form.caption_form_two .caption_form_content .caption_form_content_item_text .caption_form_content_tittle {
+    display: flex;
+    justify-content: space-between;
+  }
+  .page .page_content .caption_form.caption_form_two .caption_form_content .caption_form_content_item_text .caption_form_content_tittle .caption_form_content_tittle_type {
+    padding: 5px;
+    border-radius: 5px;
+  }
+  .page .page_content .caption_form.caption_form_two .caption_form_content .caption_form_content_item_text p svg {
+    color: #c41010;
+  }
+  .page .page_content .caption_form.caption_form_two .caption_form_content .caption_form_content_item_text p {
+    color: #4A5568;
   }
   .page .page_content .caption_form.caption_form_test .caption_form_test_content .caption_form_content .caption_form_content_year {
     display: flex;
@@ -1332,20 +1349,23 @@ body {
     padding: 8px;
     border: 1px solid #c1d2ed;
     margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 49%;
   }
-  .page .page_content .caption_form.caption_form_two .caption_form_content .caption_form_content_tittle {
+  .page .page_content .caption_form.caption_form_two .caption_form_content .caption_form_content_item_text .caption_form_content_tittle {
     display: flex;
     justify-content: space-between;
   }
-  .page .page_content .caption_form.caption_form_two .caption_form_content .caption_form_content_tittle .caption_form_content_tittle_type {
+  .page .page_content .caption_form.caption_form_two .caption_form_content .caption_form_content_item_text .caption_form_content_tittle .caption_form_content_tittle_type {
     padding: 5px;
     border-radius: 5px;
   }
-  .page .page_content .caption_form.caption_form_two .caption_form_content .caption_form_content_item .caption_form_content_item_text p svg {
+  .page .page_content .caption_form.caption_form_two .caption_form_content .caption_form_content_item_text p svg {
     color: #c41010;
   }
-  .page .page_content .caption_form.caption_form_two .caption_form_content .caption_form_content_item .caption_form_content_item_text p {
+  .page .page_content .caption_form.caption_form_two .caption_form_content .caption_form_content_item_text p {
     color: #4A5568;
   }
   .page .page_content .caption_form.caption_form_two .caption_form_content .caption_form_content_item .caption_form_content_item_type {
