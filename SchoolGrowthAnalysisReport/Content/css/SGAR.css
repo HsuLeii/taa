@@ -972,7 +972,7 @@ body {
   }
   .page .page_header .header_logo {
     display: flex;
-    margin: 0 0 10px;
+    margin: 0;
     order: 2;
   }
   .page .page_header .header_logo .header_logo_img {
@@ -1586,7 +1586,7 @@ body {
   }
   .page .page_header .header_logo {
     display: flex;
-    margin: 0 0 10px;
+    margin: 0;
     order: 2;
   }
   .page .page_header .header_logo .header_logo_img {
