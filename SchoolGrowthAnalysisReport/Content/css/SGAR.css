@@ -521,17 +521,17 @@ body {
   height: 100%;
   border-top: 1px solid #c1d2ed;
   transform-origin: top left;
-  transform: rotate(19.5deg);
+  transform: rotate(16.5deg);
 }
 .page .page_content .caption_table .table tbody tr td.slash-td .top-text {
   position: absolute;
   top: 5px;
-  right: 5px;
+  right: 15px;
 }
 .page .page_content .caption_table .table tbody tr td.slash-td .bottom-text {
   position: absolute;
   bottom: 5px;
-  left: 5px;
+  left: 15px;
 }
 .page .page_content .caption_table .table.table_half {
   width: 50%;
@@ -541,6 +541,9 @@ body {
 }
 .page .page_content .caption_table .table.table_one tbody tr td.group_item.group_one {
   width: 21%;
+}
+.page .page_content .caption_table .table.table_one tbody tr:nth-child(3) td:nth-child(1), .page .page_content .caption_table .table.table_one tbody tr:nth-child(4) td:nth-child(1), .page .page_content .caption_table .table.table_one tbody tr:nth-child(5) td:nth-child(1) {
+  text-align: left;
 }
 .page .page_content .caption_table .table.table_two tbody {
   border-top: 0px;
@@ -897,6 +900,9 @@ body {
     width: 55px;
     margin: 0 0 0 10px;
   }
+  .page .page_content .caption_table .table tbody tr td.slash-td::before {
+    transform: rotate(17.5deg);
+  }
   .page .page_content .caption_form.caption_form_two .caption_form_content .caption_form_content_item .caption_form_content_item_type {
     display: flex;
   }
@@ -1152,17 +1158,17 @@ body {
     height: 100%;
     border-top: 1px solid #c1d2ed;
     transform-origin: top left;
-    transform: rotate(19.5deg);
+    transform: rotate(16.5deg);
   }
   .page .page_content .caption_table .table tbody tr td.slash-td .top-text {
     position: absolute;
     top: 5px;
-    right: 5px;
+    right: 15px;
   }
   .page .page_content .caption_table .table tbody tr td.slash-td .bottom-text {
     position: absolute;
     bottom: 5px;
-    left: 5px;
+    left: 15px;
   }
   .page .page_content .caption_table .table.table_half {
     width: 50%;
@@ -1172,6 +1178,9 @@ body {
   }
   .page .page_content .caption_table .table.table_one tbody tr td.group_item.group_one {
     width: 21%;
+  }
+  .page .page_content .caption_table .table.table_one tbody tr:nth-child(3) td:nth-child(1), .page .page_content .caption_table .table.table_one tbody tr:nth-child(4) td:nth-child(1), .page .page_content .caption_table .table.table_one tbody tr:nth-child(5) td:nth-child(1) {
+    text-align: left;
   }
   .page .page_content .caption_table .table.table_two tbody {
     border-top: 0px;
@@ -1763,7 +1772,7 @@ body {
     height: 100%;
     border-top: 1px solid #c1d2ed;
     transform-origin: top left;
-    transform: rotate(19.5deg);
+    transform: rotate(16.5deg);
   }
   .page .page_content .caption_table .table tbody tr td.slash-td .top-text {
     position: absolute;
@@ -1783,6 +1792,9 @@ body {
   }
   .page .page_content .caption_table .table.table_one tbody tr td.group_item.group_one {
     width: 21%;
+  }
+  .page .page_content .caption_table .table.table_one tbody tr:nth-child(3) td:nth-child(1), .page .page_content .caption_table .table.table_one tbody tr:nth-child(4) td:nth-child(1), .page .page_content .caption_table .table.table_one tbody tr:nth-child(5) td:nth-child(1) {
+    text-align: left;
   }
   .page .page_content .caption_table .table.table_two tbody {
     border-top: 0px;

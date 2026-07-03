@@ -269,19 +269,19 @@
                                     height: 100%;
                                     border-top: 1px solid c.$table_border;
                                     transform-origin: top left;
-                                    transform: rotate(19.5deg);
+                                    transform: rotate(16.5deg);
                                 }
 
                                 .top-text {
                                     position: absolute;
                                     top: 5px;
-                                    right: 5px;
+                                    right: 15px;
                                 }
 
                                 .bottom-text {
                                     position: absolute;
                                     bottom: 5px;
-                                    left: 5px;
+                                    left: 15px;
                                 }
 
                             }
@@ -302,6 +302,16 @@
 
                                     &.group_one {
                                         width: 21%;
+                                    }
+                                }
+                            }
+
+                            &:nth-child(3),
+                            &:nth-child(4),
+                            &:nth-child(5){
+                                td{
+                                    &:nth-child(1){
+                                        text-align: left;
                                     }
                                 }
                             }
@@ -878,6 +888,22 @@
         }
 
         .page_content {
+            .caption_table{
+                .table{
+                    tbody{
+                        tr{
+                            td{
+                                &.slash-td{
+                                    &::before{
+                                        transform: rotate(17.5deg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
             .caption_form {
                 &.caption_form_two {
                     .caption_form_content {
@@ -1220,19 +1246,19 @@
                                         height: 100%;
                                         border-top: 1px solid c.$table_border;
                                         transform-origin: top left;
-                                        transform: rotate(19.5deg);
+                                        transform: rotate(16.5deg);
                                     }
 
                                     .top-text {
                                         position: absolute;
                                         top: 5px;
-                                        right: 5px;
+                                        right: 15px;
                                     }
 
                                     .bottom-text {
                                         position: absolute;
                                         bottom: 5px;
-                                        left: 5px;
+                                        left: 15px;
                                     }
 
                                 }
@@ -1253,6 +1279,16 @@
 
                                         &.group_one {
                                             width: 21%;
+                                        }
+                                    }
+                                }
+
+                                &:nth-child(3),
+                                &:nth-child(4),
+                                &:nth-child(5){
+                                    td{
+                                        &:nth-child(1){
+                                            text-align: left;
                                         }
                                     }
                                 }
@@ -2100,7 +2136,7 @@
                                         height: 100%;
                                         border-top: 1px solid c.$table_border;
                                         transform-origin: top left;
-                                        transform: rotate(19.5deg);
+                                        transform: rotate(16.5deg);
                                     }
 
                                     .top-text {
@@ -2133,6 +2169,16 @@
 
                                         &.group_one {
                                             width: 21%;
+                                        }
+                                    }
+                                }
+
+                                &:nth-child(3),
+                                &:nth-child(4),
+                                &:nth-child(5){
+                                    td{
+                                        &:nth-child(1){
+                                            text-align: left;
                                         }
                                     }
                                 }
