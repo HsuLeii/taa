@@ -521,6 +521,19 @@
                         .caption_form_content_tittle {
                             background-color: c.$table_border_color_blue;
                         }
+
+                        .caption_form_content_item{
+                            display: flex;
+                            justify-content: space-between;
+
+                            .caption_form_content_item_text{
+                                width: 75%;
+                            }
+
+                            .caption_form_content_item_img{
+                                width: 20%;
+                            }
+                        }
                     }
 
                     &.form_content_two {

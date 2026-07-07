@@ -677,6 +677,16 @@ body {
 .page .page_content .caption_form.caption_form_one .caption_form_content.form_content_one .caption_form_content_tittle {
   background-color: #2b7dc0;
 }
+.page .page_content .caption_form.caption_form_one .caption_form_content.form_content_one .caption_form_content_item {
+  display: flex;
+  justify-content: space-between;
+}
+.page .page_content .caption_form.caption_form_one .caption_form_content.form_content_one .caption_form_content_item .caption_form_content_item_text {
+  width: 75%;
+}
+.page .page_content .caption_form.caption_form_one .caption_form_content.form_content_one .caption_form_content_item .caption_form_content_item_img {
+  width: 20%;
+}
 .page .page_content .caption_form.caption_form_one .caption_form_content.form_content_two .caption_form_content_tittle {
   background: linear-gradient(175deg, #e07b39 0%, #1e6b3c 100%);
 }
