@@ -1020,7 +1020,7 @@ body {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 97%;
+    width: 96%;
     margin: 20px auto 20px;
   }
   .page .page_header .header_tittle {
@@ -1040,7 +1040,7 @@ body {
     margin: 0 0 0 10px;
   }
   .page .page_content {
-    padding: 0 1.5%;
+    padding: 0 2%;
   }
   .page .page_content .page_content_information {
     margin: 0 auto 20px;
@@ -1651,7 +1651,7 @@ body {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 97%;
+    width: 96%;
     margin: 20px auto 20px;
   }
   .page .page_header .header_tittle {
@@ -1671,7 +1671,7 @@ body {
     margin: 0 0 0 10px;
   }
   .page .page_content {
-    padding: 0 1.5%;
+    padding: 0 2%;
   }
   .page .page_content .page_content_information {
     margin: 0 auto 20px;
