@@ -358,6 +358,7 @@ body {
 }
 .page .page_content .page_content_information .page_content_information_text p {
   color: #1b3a6b;
+  font-weight: 700;
   font-size: 15px;
 }
 .page .page_content .page_content_information .page_content_information_text p span {
@@ -1125,6 +1126,7 @@ body {
   }
   .page .page_content .page_content_information .page_content_information_text p {
     color: #1b3a6b;
+    font-weight: 700;
     font-size: 17px;
   }
   .page .page_content .page_content_information .page_content_information_text p span {
@@ -1318,16 +1320,16 @@ body {
   }
   .page .page_content .caption_table .table.table_one tbody tr:nth-child(1) td, .page .page_content .caption_table .table.table_one tbody tr:nth-child(2) td {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 15px;
   }
   .page .page_content .caption_table .table.table_one tbody tr:nth-child(1) td p, .page .page_content .caption_table .table.table_one tbody tr:nth-child(2) td p {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
   }
   .page .page_content .caption_table .table.table_one tbody tr:nth-child(3) td:nth-child(1), .page .page_content .caption_table .table.table_one tbody tr:nth-child(4) td:nth-child(1), .page .page_content .caption_table .table.table_one tbody tr:nth-child(5) td:nth-child(1) {
     text-align: left;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
   }
   .page .page_content .caption_table .table.table_two tbody {
     border-top: 0px;
@@ -1342,15 +1344,12 @@ body {
     padding: 8px 0 8px 8px;
     text-align: left;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 17px;
   }
   .page .page_content .caption_table .table.table_two tbody tr:nth-child(2) td {
-    width: 22%;
+    width: 17%;
     font-weight: 700;
-    font-size: 14px;
-  }
-  .page .page_content .caption_table .table.table_two tbody tr:nth-child(2) td:nth-child(1) {
-    width: 12%;
+    font-size: 16px;
   }
   .page .page_content .caption_table .table.table_two tbody tr:nth-child(3) td {
     font-weight: 700;
@@ -1358,7 +1357,7 @@ body {
   }
   .page .page_content .caption_table .table.table_two tbody tr:nth-child(4) td:nth-child(1), .page .page_content .caption_table .table.table_two tbody tr:nth-child(5) td:nth-child(1), .page .page_content .caption_table .table.table_two tbody tr:nth-child(6) td:nth-child(1), .page .page_content .caption_table .table.table_two tbody tr:nth-child(7) td:nth-child(1) {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
   }
   .page .page_content .caption_table .table.table_three tbody {
     border-top: 0px;
@@ -1373,11 +1372,11 @@ body {
     padding: 8px 0 8px 8px;
     text-align: left;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 17px;
   }
   .page .page_content .caption_table .table.table_three tbody tr:nth-child(2) td:nth-child(1), .page .page_content .caption_table .table.table_three tbody tr:nth-child(3) td:nth-child(1), .page .page_content .caption_table .table.table_three tbody tr:nth-child(4) td:nth-child(1), .page .page_content .caption_table .table.table_three tbody tr:nth-child(5) td:nth-child(1), .page .page_content .caption_table .table.table_three tbody tr:nth-child(6) td:nth-child(1) {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
   }
   .page .page_content .caption_table .table.table_four tbody {
     border-top: 0px;
@@ -1392,11 +1391,11 @@ body {
     padding: 8px 0 8px 8px;
     text-align: left;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 17px;
   }
   .page .page_content .caption_table .table.table_four tbody tr:nth-child(2) td:nth-child(1), .page .page_content .caption_table .table.table_four tbody tr:nth-child(3) td:nth-child(1), .page .page_content .caption_table .table.table_four tbody tr:nth-child(4) td:nth-child(1), .page .page_content .caption_table .table.table_four tbody tr:nth-child(5) td:nth-child(1), .page .page_content .caption_table .table.table_four tbody tr:nth-child(6) td:nth-child(1) {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
   }
   .page .page_content .caption_table .table.table_five tbody {
     border: 0px;
@@ -1442,7 +1441,7 @@ body {
   }
   .page .page_content .caption_table .table.table_five tbody tr:nth-child(2) td:nth-child(1), .page .page_content .caption_table .table.table_five tbody tr:nth-child(3) td:nth-child(1), .page .page_content .caption_table .table.table_five tbody tr:nth-child(4) td:nth-child(1), .page .page_content .caption_table .table.table_five tbody tr:nth-child(5) td:nth-child(1) {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
   }
   .page .page_content .caption_table .table.table_five tbody tr:nth-child(2) td:nth-child(2), .page .page_content .caption_table .table.table_five tbody tr:nth-child(2) td:nth-child(3), .page .page_content .caption_table .table.table_five tbody tr:nth-child(2) td:nth-child(4), .page .page_content .caption_table .table.table_five tbody tr:nth-child(3) td:nth-child(2), .page .page_content .caption_table .table.table_five tbody tr:nth-child(3) td:nth-child(3), .page .page_content .caption_table .table.table_five tbody tr:nth-child(3) td:nth-child(4), .page .page_content .caption_table .table.table_five tbody tr:nth-child(4) td:nth-child(2), .page .page_content .caption_table .table.table_five tbody tr:nth-child(4) td:nth-child(3), .page .page_content .caption_table .table.table_five tbody tr:nth-child(4) td:nth-child(4), .page .page_content .caption_table .table.table_five tbody tr:nth-child(5) td:nth-child(2), .page .page_content .caption_table .table.table_five tbody tr:nth-child(5) td:nth-child(3), .page .page_content .caption_table .table.table_five tbody tr:nth-child(5) td:nth-child(4) {
     font-weight: normal;
@@ -1452,7 +1451,7 @@ body {
   }
   .page .page_content .caption_table .table.table_five tbody tr:nth-child(1) td:nth-child(1), .page .page_content .caption_table .table.table_five tbody tr:nth-child(1) td:nth-child(2), .page .page_content .caption_table .table.table_five tbody tr:nth-child(1) td:nth-child(3), .page .page_content .caption_table .table.table_five tbody tr:nth-child(1) td:nth-child(4) {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
   }
   .page .page_content .caption_form .caption_form_tittle {
     margin: 0 auto 10px;
@@ -1836,6 +1835,7 @@ body {
   }
   .page .page_content .page_content_information .page_content_information_text p {
     color: #1b3a6b;
+    font-weight: 700;
     font-size: 17px;
   }
   .page .page_content .page_content_information .page_content_information_text p span {
@@ -2011,12 +2011,12 @@ body {
   .page .page_content .caption_table .table tbody tr td.slash-td .top-text {
     position: absolute;
     top: 5px;
-    right: 5px;
+    right: 15px;
   }
   .page .page_content .caption_table .table tbody tr td.slash-td .bottom-text {
     position: absolute;
     bottom: 5px;
-    left: 5px;
+    left: 15px;
   }
   .page .page_content .caption_table .table.table_half {
     width: 50%;
@@ -2029,16 +2029,16 @@ body {
   }
   .page .page_content .caption_table .table.table_one tbody tr:nth-child(1) td, .page .page_content .caption_table .table.table_one tbody tr:nth-child(2) td {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 15px;
   }
   .page .page_content .caption_table .table.table_one tbody tr:nth-child(1) td p, .page .page_content .caption_table .table.table_one tbody tr:nth-child(2) td p {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
   }
   .page .page_content .caption_table .table.table_one tbody tr:nth-child(3) td:nth-child(1), .page .page_content .caption_table .table.table_one tbody tr:nth-child(4) td:nth-child(1), .page .page_content .caption_table .table.table_one tbody tr:nth-child(5) td:nth-child(1) {
     text-align: left;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
   }
   .page .page_content .caption_table .table.table_two tbody {
     border-top: 0px;
@@ -2053,15 +2053,12 @@ body {
     padding: 8px 0 8px 8px;
     text-align: left;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 17px;
   }
   .page .page_content .caption_table .table.table_two tbody tr:nth-child(2) td {
-    width: 22%;
+    width: 17%;
     font-weight: 700;
-    font-size: 14px;
-  }
-  .page .page_content .caption_table .table.table_two tbody tr:nth-child(2) td:nth-child(1) {
-    width: 12%;
+    font-size: 16px;
   }
   .page .page_content .caption_table .table.table_two tbody tr:nth-child(3) td {
     font-weight: 700;
@@ -2069,7 +2066,7 @@ body {
   }
   .page .page_content .caption_table .table.table_two tbody tr:nth-child(4) td:nth-child(1), .page .page_content .caption_table .table.table_two tbody tr:nth-child(5) td:nth-child(1), .page .page_content .caption_table .table.table_two tbody tr:nth-child(6) td:nth-child(1), .page .page_content .caption_table .table.table_two tbody tr:nth-child(7) td:nth-child(1) {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
   }
   .page .page_content .caption_table .table.table_three tbody {
     border-top: 0px;
@@ -2084,11 +2081,11 @@ body {
     padding: 8px 0 8px 8px;
     text-align: left;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 17px;
   }
   .page .page_content .caption_table .table.table_three tbody tr:nth-child(2) td:nth-child(1), .page .page_content .caption_table .table.table_three tbody tr:nth-child(3) td:nth-child(1), .page .page_content .caption_table .table.table_three tbody tr:nth-child(4) td:nth-child(1), .page .page_content .caption_table .table.table_three tbody tr:nth-child(5) td:nth-child(1), .page .page_content .caption_table .table.table_three tbody tr:nth-child(6) td:nth-child(1) {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
   }
   .page .page_content .caption_table .table.table_four tbody {
     border-top: 0px;
@@ -2103,11 +2100,11 @@ body {
     padding: 8px 0 8px 8px;
     text-align: left;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 17px;
   }
   .page .page_content .caption_table .table.table_four tbody tr:nth-child(2) td:nth-child(1), .page .page_content .caption_table .table.table_four tbody tr:nth-child(3) td:nth-child(1), .page .page_content .caption_table .table.table_four tbody tr:nth-child(4) td:nth-child(1), .page .page_content .caption_table .table.table_four tbody tr:nth-child(5) td:nth-child(1), .page .page_content .caption_table .table.table_four tbody tr:nth-child(6) td:nth-child(1) {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
   }
   .page .page_content .caption_table .table.table_five tbody {
     border: 0px;
@@ -2153,7 +2150,7 @@ body {
   }
   .page .page_content .caption_table .table.table_five tbody tr:nth-child(2) td:nth-child(1), .page .page_content .caption_table .table.table_five tbody tr:nth-child(3) td:nth-child(1), .page .page_content .caption_table .table.table_five tbody tr:nth-child(4) td:nth-child(1), .page .page_content .caption_table .table.table_five tbody tr:nth-child(5) td:nth-child(1) {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
   }
   .page .page_content .caption_table .table.table_five tbody tr:nth-child(2) td:nth-child(2), .page .page_content .caption_table .table.table_five tbody tr:nth-child(2) td:nth-child(3), .page .page_content .caption_table .table.table_five tbody tr:nth-child(2) td:nth-child(4), .page .page_content .caption_table .table.table_five tbody tr:nth-child(3) td:nth-child(2), .page .page_content .caption_table .table.table_five tbody tr:nth-child(3) td:nth-child(3), .page .page_content .caption_table .table.table_five tbody tr:nth-child(3) td:nth-child(4), .page .page_content .caption_table .table.table_five tbody tr:nth-child(4) td:nth-child(2), .page .page_content .caption_table .table.table_five tbody tr:nth-child(4) td:nth-child(3), .page .page_content .caption_table .table.table_five tbody tr:nth-child(4) td:nth-child(4), .page .page_content .caption_table .table.table_five tbody tr:nth-child(5) td:nth-child(2), .page .page_content .caption_table .table.table_five tbody tr:nth-child(5) td:nth-child(3), .page .page_content .caption_table .table.table_five tbody tr:nth-child(5) td:nth-child(4) {
     font-weight: normal;
@@ -2163,7 +2160,7 @@ body {
   }
   .page .page_content .caption_table .table.table_five tbody tr:nth-child(1) td:nth-child(1), .page .page_content .caption_table .table.table_five tbody tr:nth-child(1) td:nth-child(2), .page .page_content .caption_table .table.table_five tbody tr:nth-child(1) td:nth-child(3), .page .page_content .caption_table .table.table_five tbody tr:nth-child(1) td:nth-child(4) {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
   }
   .page .page_content .caption_form .caption_form_tittle {
     margin: 0 auto 10px;

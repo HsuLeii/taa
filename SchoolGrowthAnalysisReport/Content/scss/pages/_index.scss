@@ -63,6 +63,7 @@
 
                 p {
                     color: c.$main_color;
+                    font-weight: 700;
                     font-size: 15px;
 
                     span {
@@ -1264,6 +1265,7 @@
 
                     p {
                         color: c.$main_color;
+                        font-weight: 700;
                         font-size: 17px;
 
                         span {
@@ -1519,11 +1521,11 @@
                                 &:nth-child(2){
                                     td{
                                         font-weight: 700;
-                                        font-size: 14px;
+                                        font-size: 15px;
 
                                         p{
                                             font-weight: 700;
-                                            font-size: 14px;
+                                            font-size: 16px;
                                         }
                                     }
                                 }
@@ -1535,7 +1537,7 @@
                                         &:nth-child(1) {
                                             text-align: left;
                                             font-weight: 700;
-                                            font-size: 14px;
+                                            font-size: 16px;
                                         }
                                     }
                                 }
@@ -1559,19 +1561,15 @@
                                         padding: 8px 0 8px 8px;
                                         text-align: left;
                                         font-weight: 700;
-                                        font-size: 14px;
+                                        font-size: 17px;
                                     }
                                 }
 
                                 &:nth-child(2) {
                                     td {
-                                        width: 22%;
+                                        width: 17%;
                                         font-weight: 700;
-                                        font-size: 14px;
-
-                                        &:nth-child(1) {
-                                            width: 12%;
-                                        }
+                                        font-size: 16px;
                                     }
                                 }
 
@@ -1589,7 +1587,7 @@
                                     td {
                                         &:nth-child(1) {
                                             font-weight: 700;
-                                            font-size: 14px;
+                                            font-size: 16px;
                                         }
                                     }
                                 }
@@ -1613,7 +1611,7 @@
                                         padding: 8px 0 8px 8px;
                                         text-align: left;
                                         font-weight: 700;
-                                        font-size: 14px;
+                                        font-size: 17px;
                                     }
                                 }
 
@@ -1625,7 +1623,7 @@
                                     td {
                                         &:nth-child(1) {
                                             font-weight: 700;
-                                            font-size: 14px;
+                                            font-size: 16px;
                                         }
                                     }
                                 }
@@ -1649,7 +1647,7 @@
                                         padding: 8px 0 8px 8px;
                                         text-align: left;
                                         font-weight: 700;
-                                        font-size: 14px;
+                                        font-size: 17px;
                                     }
                                 }
 
@@ -1661,7 +1659,7 @@
                                     td {
                                         &:nth-child(1) {
                                             font-weight: 700;
-                                            font-size: 14px;
+                                            font-size: 16px;
                                         }
                                     }
                                 }
@@ -1737,7 +1735,7 @@
                                     td {
                                         &:nth-child(1) {
                                             font-weight: 700;
-                                            font-size: 14px;
+                                            font-size: 16px;
                                         }
 
                                         &:nth-child(2),
@@ -1756,7 +1754,7 @@
                                         &:nth-child(3),
                                         &:nth-child(4) {
                                             font-weight: 700;
-                                            font-size: 14px;
+                                            font-size: 16px;
                                         }
                                     }
                                 }
@@ -2318,6 +2316,7 @@
 
                     p {
                         color: c.$main_color;
+                        font-weight: 700;
                         font-size: 17px;
 
                         span {
@@ -2538,13 +2537,13 @@
                                     .top-text {
                                         position: absolute;
                                         top: 5px;
-                                        right: 5px;
+                                        right: 15px;
                                     }
 
                                     .bottom-text {
                                         position: absolute;
                                         bottom: 5px;
-                                        left: 5px;
+                                        left: 15px;
                                     }
 
                                 }
@@ -2573,11 +2572,11 @@
                                 &:nth-child(2){
                                     td{
                                         font-weight: 700;
-                                        font-size: 14px;
+                                        font-size: 15px;
 
                                         p{
                                             font-weight: 700;
-                                            font-size: 14px;
+                                            font-size: 16px;
                                         }
                                     }
                                 }
@@ -2589,7 +2588,7 @@
                                         &:nth-child(1) {
                                             text-align: left;
                                             font-weight: 700;
-                                            font-size: 14px;
+                                            font-size: 16px;
                                         }
                                     }
                                 }
@@ -2613,19 +2612,15 @@
                                         padding: 8px 0 8px 8px;
                                         text-align: left;
                                         font-weight: 700;
-                                        font-size: 14px;
+                                        font-size: 17px;
                                     }
                                 }
 
                                 &:nth-child(2) {
                                     td {
-                                        width: 22%;
+                                        width: 17%;
                                         font-weight: 700;
-                                        font-size: 14px;
-
-                                        &:nth-child(1) {
-                                            width: 12%;
-                                        }
+                                        font-size: 16px;
                                     }
                                 }
 
@@ -2643,7 +2638,7 @@
                                     td {
                                         &:nth-child(1) {
                                             font-weight: 700;
-                                            font-size: 14px;
+                                            font-size: 16px;
                                         }
                                     }
                                 }
@@ -2667,7 +2662,7 @@
                                         padding: 8px 0 8px 8px;
                                         text-align: left;
                                         font-weight: 700;
-                                        font-size: 14px;
+                                        font-size: 17px;
                                     }
                                 }
 
@@ -2679,7 +2674,7 @@
                                     td {
                                         &:nth-child(1) {
                                             font-weight: 700;
-                                            font-size: 14px;
+                                            font-size: 16px;
                                         }
                                     }
                                 }
@@ -2703,7 +2698,7 @@
                                         padding: 8px 0 8px 8px;
                                         text-align: left;
                                         font-weight: 700;
-                                        font-size: 14px;
+                                        font-size: 17px;
                                     }
                                 }
 
@@ -2715,7 +2710,7 @@
                                     td {
                                         &:nth-child(1) {
                                             font-weight: 700;
-                                            font-size: 14px;
+                                            font-size: 16px;
                                         }
                                     }
                                 }
@@ -2791,7 +2786,7 @@
                                     td {
                                         &:nth-child(1) {
                                             font-weight: 700;
-                                            font-size: 14px;
+                                            font-size: 16px;
                                         }
 
                                         &:nth-child(2),
@@ -2810,7 +2805,7 @@
                                         &:nth-child(3),
                                         &:nth-child(4) {
                                             font-weight: 700;
-                                            font-size: 14px;
+                                            font-size: 16px;
                                         }
                                     }
                                 }
