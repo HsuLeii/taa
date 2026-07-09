@@ -1379,12 +1379,24 @@
                                     }
                                 }
 
+                                &:nth-child(1),
+                                &:nth-child(2){
+                                    td{
+                                        font-size: 15px;
+
+                                        p{
+                                            font-size: 15px;
+                                        }
+                                    }
+                                }
+
                                 &:nth-child(3),
                                 &:nth-child(4),
                                 &:nth-child(5) {
                                     td {
                                         &:nth-child(1) {
                                             text-align: left;
+                                            font-size: 15px;
                                         }
                                     }
                                 }

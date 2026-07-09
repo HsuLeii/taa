@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body {
-  font-family: "微軟正黑體", "Noto Sans TC", "PingFang TC", "PingFang SC", "Heiti TC", "Heiti SC", "微軟正黑體", "蘋果儷中黑", "LiHei Pro", "STXihei", "sans-serif", Arial;
+  font-family: "Noto Sans TC", "PingFang TC", "PingFang SC", "Heiti TC", "Heiti SC", "微軟正黑體", "蘋果儷中黑", "LiHei Pro", "STXihei", "sans-serif", Arial;
 }
 
 /*main*/
@@ -1243,8 +1243,15 @@ body {
   .page .page_content .caption_table .table.table_one tbody tr td.group_item.group_one {
     width: 21%;
   }
+  .page .page_content .caption_table .table.table_one tbody tr:nth-child(1) td, .page .page_content .caption_table .table.table_one tbody tr:nth-child(2) td {
+    font-size: 15px;
+  }
+  .page .page_content .caption_table .table.table_one tbody tr:nth-child(1) td p, .page .page_content .caption_table .table.table_one tbody tr:nth-child(2) td p {
+    font-size: 15px;
+  }
   .page .page_content .caption_table .table.table_one tbody tr:nth-child(3) td:nth-child(1), .page .page_content .caption_table .table.table_one tbody tr:nth-child(4) td:nth-child(1), .page .page_content .caption_table .table.table_one tbody tr:nth-child(5) td:nth-child(1) {
     text-align: left;
+    font-size: 15px;
   }
   .page .page_content .caption_table .table.table_two tbody {
     border-top: 0px;
