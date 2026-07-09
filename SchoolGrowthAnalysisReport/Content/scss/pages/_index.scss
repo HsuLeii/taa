@@ -63,9 +63,11 @@
 
                 p {
                     color: c.$main_color;
+                    font-size: 15px;
 
                     span {
                         color: c.$grey;
+                        font-size: 15px;
                     }
                 }
             }
@@ -102,6 +104,7 @@
 
                     p {
                         color: c.$main_color;
+                        font-size: 15px;
                     }
                 }
 
@@ -215,7 +218,7 @@
                             padding: 5px 10px;
                             text-align: left;
                             border-radius: 5px;
-                            font-weight: normal;
+                            font-weight: 700;
                         }
                     }
                 }
@@ -239,7 +242,11 @@
                             padding: 5px 10px;
                             text-align: left;
                             border-radius: 5px;
-                            font-weight: normal;
+                            font-weight: 700;
+
+                            span{
+                                font-weight: normal;
+                            }
                         }
 
                         td {
@@ -307,12 +314,27 @@
                                 }
                             }
 
+                            &:nth-child(1),
+                            &:nth-child(2){
+                                td{
+                                    font-weight: 700;
+                                    font-size: 14px;
+
+                                    p{
+                                        font-weight: 700;
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+
                             &:nth-child(3),
                             &:nth-child(4),
                             &:nth-child(5) {
                                 td {
                                     &:nth-child(1) {
                                         text-align: left;
+                                        font-weight: 700;
+                                        font-size: 14px;
                                     }
                                 }
                             }
@@ -335,15 +357,38 @@
                                     border-right: 0px;
                                     padding: 8px 0 8px 8px;
                                     text-align: left;
+                                    font-weight: 700;
+                                    font-size: 14px;
                                 }
                             }
 
                             &:nth-child(2) {
                                 td {
                                     width: 22%;
+                                    font-weight: 700;
+                                    font-size: 14px;
 
                                     &:nth-child(1) {
                                         width: 12%;
+                                    }
+                                }
+                            }
+
+                            &:nth-child(3) {
+                                td {
+                                    font-weight: 700;
+                                    font-size: 14px;
+                                }
+                            }
+
+                            &:nth-child(4),
+                            &:nth-child(5),
+                            &:nth-child(6),
+                            &:nth-child(7) {
+                                td {
+                                    &:nth-child(1) {
+                                        font-weight: 700;
+                                        font-size: 14px;
                                     }
                                 }
                             }
@@ -366,6 +411,21 @@
                                     border-right: 0px;
                                     padding: 8px 0 8px 8px;
                                     text-align: left;
+                                    font-weight: 700;
+                                    font-size: 14px;
+                                }
+                            }
+
+                            &:nth-child(2),
+                            &:nth-child(3),
+                            &:nth-child(4),
+                            &:nth-child(5),
+                            &:nth-child(6) {
+                                td {
+                                    &:nth-child(1) {
+                                        font-weight: 700;
+                                        font-size: 14px;
+                                    }
                                 }
                             }
                         }
@@ -387,6 +447,21 @@
                                     border-right: 0px;
                                     padding: 8px 0 8px 8px;
                                     text-align: left;
+                                    font-weight: 700;
+                                    font-size: 14px;
+                                }
+                            }
+
+                            &:nth-child(2),
+                            &:nth-child(3),
+                            &:nth-child(4),
+                            &:nth-child(5),
+                            &:nth-child(6) {
+                                td {
+                                    &:nth-child(1) {
+                                        font-weight: 700;
+                                        font-size: 14px;
+                                    }
                                 }
                             }
                         }
@@ -453,10 +528,37 @@
                                     }
                                 }
                             }
+
+                            &:nth-child(2),
+                            &:nth-child(3),
+                            &:nth-child(4),
+                            &:nth-child(5) {
+                                td {
+                                    &:nth-child(1) {
+                                        font-weight: 700;
+                                        font-size: 14px;
+                                    }
+
+                                    &:nth-child(2),
+                                    &:nth-child(3),
+                                    &:nth-child(4) {
+                                        font-weight: normal;
+                                    }
+                                }
+                            }
                         }
 
                         &:nth-child(1) {
                             margin: 0 0 5px 0;
+                            td{
+                                    &:nth-child(1),
+                                    &:nth-child(2),
+                                    &:nth-child(3),
+                                    &:nth-child(4) {
+                                    font-weight: 700;
+                                    font-size: 14px;
+                                }
+                            }
                         }
                     }
                 }
@@ -476,10 +578,12 @@
                     padding: 5px 10px;
                     text-align: left;
                     border-radius: 5px;
-                    font-weight: normal;
+                    font-weight: 700;
+                    font-size: 19px;
 
                     span {
                         vertical-align: top;
+                        font-weight: normal;
                     }
                 }
             }
@@ -510,8 +614,9 @@
                         padding: 5px;
 
                         p {
-                            font-size: 15px;
                             color: c.$white;
+                            font-weight: 700;
+                            font-size: 15px;
                         }
                     }
 
@@ -556,12 +661,17 @@
                 .caption_form_content {
                     padding: 5px;
                     border: 1px solid c.$table_border;
-                    margin: 0 0 20px;
+                    margin: 0 0 10px;
 
                     .caption_form_content_item_text {
                         .caption_form_content_tittle {
                             display: flex;
                             justify-content: space-between;
+
+                            p{
+                                font-weight: 700;
+                                font-size: 15px;
+                            }
 
                             .caption_form_content_tittle_type {
                                 padding: 5px;
@@ -583,6 +693,12 @@
                             .type_item {
                                 margin: 10px auto 0;
                                 padding: 8px;
+
+                                .type_item_tittle{
+                                    p{
+                                        font-weight: 700;
+                                    }
+                                }
 
                                 p {
                                     color: c.$grey;
@@ -710,7 +826,7 @@
                     padding: 8px;
 
                     .caption_form_content {
-                        margin: 0 auto 15px;
+                        margin: 0 auto;
                         padding: 8px;
 
                         .caption_form_content_tittle {
@@ -720,6 +836,8 @@
 
                             p {
                                 color: c.$white;
+                                font-weight: 700;
+                                font-size: 15px;
                             }
                         }
 
@@ -729,7 +847,7 @@
                                 background-color: c.$main_color_light;
                                 padding: 8px 15px 30px 15px;
                                 border-radius: 0 30px 0 30px;
-                                margin: 5px 0 15px;
+                                margin: 5px 0 0;
 
                                 .caption_form_content_year_name {
                                     margin: 0 0 5px 0;
@@ -745,7 +863,6 @@
                                     flex-wrap: wrap;
 
                                     p {
-                                        font-size: 11px;
                                         color: c.$white;
                                         background-color: c.$table_border_color_blue;
                                         padding: 5px;
@@ -972,6 +1089,10 @@
                         .caption_form_content_item {
                             .caption_form_content_item_type {
                                 display: flex;
+
+                                .type_item{
+                                    width: 33.3333%;
+                                }
                             }
                         }
                     }
@@ -1287,7 +1408,7 @@
                                 padding: 5px 10px;
                                 text-align: left;
                                 border-radius: 5px;
-                                font-weight: normal;
+                                font-weight: 700;
                             }
                         }
                     }
@@ -1311,7 +1432,11 @@
                                 padding: 5px 10px;
                                 text-align: left;
                                 border-radius: 5px;
-                                font-weight: normal;
+                                font-weight: 700;
+
+                                span{
+                                    font-weight: normal;
+                                }
                             }
 
                             td {
@@ -1382,12 +1507,12 @@
                                 &:nth-child(1),
                                 &:nth-child(2){
                                     td{
-                                        font-size: 14px;
                                         font-weight: 700;
+                                        font-size: 14px;
 
                                         p{
-                                            font-size: 14px;
                                             font-weight: 700;
+                                            font-size: 14px;
                                         }
                                     }
                                 }
@@ -1398,8 +1523,8 @@
                                     td {
                                         &:nth-child(1) {
                                             text-align: left;
-                                            font-size: 14px;
                                             font-weight: 700;
+                                            font-size: 14px;
                                         }
                                     }
                                 }
@@ -1422,16 +1547,16 @@
                                         border-right: 0px;
                                         padding: 8px 0 8px 8px;
                                         text-align: left;
-                                        font-size: 14px;
                                         font-weight: 700;
+                                        font-size: 14px;
                                     }
                                 }
 
                                 &:nth-child(2) {
                                     td {
                                         width: 22%;
-                                        font-size: 14px;
                                         font-weight: 700;
+                                        font-size: 14px;
 
                                         &:nth-child(1) {
                                             width: 12%;
@@ -1441,8 +1566,8 @@
 
                                 &:nth-child(3) {
                                     td {
-                                        font-size: 14px;
                                         font-weight: 700;
+                                        font-size: 14px;
                                     }
                                 }
 
@@ -1452,8 +1577,8 @@
                                 &:nth-child(7) {
                                     td {
                                         &:nth-child(1) {
-                                            font-size: 14px;
                                             font-weight: 700;
+                                            font-size: 14px;
                                         }
                                     }
                                 }
@@ -1476,7 +1601,21 @@
                                         border-right: 0px;
                                         padding: 8px 0 8px 8px;
                                         text-align: left;
-                                        font-size: 15px;
+                                        font-weight: 700;
+                                        font-size: 14px;
+                                    }
+                                }
+
+                                &:nth-child(2),
+                                &:nth-child(3),
+                                &:nth-child(4),
+                                &:nth-child(5),
+                                &:nth-child(6) {
+                                    td {
+                                        &:nth-child(1) {
+                                            font-weight: 700;
+                                            font-size: 14px;
+                                        }
                                     }
                                 }
                             }
@@ -1498,7 +1637,21 @@
                                         border-right: 0px;
                                         padding: 8px 0 8px 8px;
                                         text-align: left;
-                                        font-size: 15px;
+                                        font-weight: 700;
+                                        font-size: 14px;
+                                    }
+                                }
+
+                                &:nth-child(2),
+                                &:nth-child(3),
+                                &:nth-child(4),
+                                &:nth-child(5),
+                                &:nth-child(6) {
+                                    td {
+                                        &:nth-child(1) {
+                                            font-weight: 700;
+                                            font-size: 14px;
+                                        }
                                     }
                                 }
                             }
@@ -1565,10 +1718,37 @@
                                         }
                                     }
                                 }
-                            }
 
-                            &:nth-child(1) {
-                                margin: 0 0 5px 0;
+                                &:nth-child(2),
+                                &:nth-child(3),
+                                &:nth-child(4),
+                                &:nth-child(5) {
+                                    td {
+                                        &:nth-child(1) {
+                                            font-weight: 700;
+                                            font-size: 14px;
+                                        }
+
+                                        &:nth-child(2),
+                                        &:nth-child(3),
+                                        &:nth-child(4) {
+                                            font-weight: normal;
+                                        }
+                                    }
+                                }
+
+                                &:nth-child(1) {
+                                    margin: 0 0 5px 0;
+                                    td{
+                                        &:nth-child(1),
+                                        &:nth-child(2),
+                                        &:nth-child(3),
+                                        &:nth-child(4) {
+                                            font-weight: 700;
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -1588,10 +1768,12 @@
                         padding: 5px 10px;
                         text-align: left;
                         border-radius: 5px;
-                        font-weight: normal;
+                        font-weight: 700;
+                        font-size: 21px;
 
                         span {
                             vertical-align: top;
+                            font-weight: normal;
                         }
                     }
                 }
@@ -1625,8 +1807,9 @@
                             padding: 5px;
 
                             p {
-                                font-size: 15px;
                                 color: c.$white;
+                                font-weight: 700;
+                                font-size: 17px;
                             }
                         }
 
@@ -1673,8 +1856,8 @@
                     justify-content: space-between;
 
                     .caption_form_content {
-                        padding: 5px;
-                        margin: 0 0 20px;
+                        padding: 8px;
+                        margin: 0 0 10px;
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
@@ -1684,6 +1867,11 @@
                             .caption_form_content_tittle {
                                 display: flex;
                                 justify-content: space-between;
+
+                                p{
+                                    font-weight: 700;
+                                    font-size: 17px;
+                                }
 
                                 .caption_form_content_tittle_type {
                                     padding: 5px;
@@ -1707,7 +1895,14 @@
 
                                 .type_item {
                                     margin: 10px auto 0;
-                                    padding: 5px;
+                                    padding: 8px;
+                                    width: 33.33333%;
+
+                                    .type_item_tittle{
+                                        p{
+                                            font-weight: 700;
+                                        }
+                                    }
 
                                     p {
                                         color: c.$grey;
@@ -1835,7 +2030,7 @@
                         padding: 8px;
 
                         .caption_form_content {
-                            margin: 0 auto 15px;
+                            margin: 0 auto;
                             padding: 8px;
 
                             .caption_form_content_tittle {
@@ -1845,6 +2040,8 @@
 
                                 p {
                                     color: c.$white;
+                                    font-weight: 700;
+                                    font-size: 14px;
                                 }
                             }
 
@@ -1857,7 +2054,7 @@
                                     background-color: c.$main_color_light;
                                     padding: 8px 15px 30px 15px;
                                     border-radius: 0 30px 0 30px;
-                                    margin: 5px 0 15px;
+                                    margin: 5px 0 0;
                                     width: 49%;
 
                                     .caption_form_content_year_name {
@@ -1874,7 +2071,7 @@
                                         flex-wrap: wrap;
 
                                         p {
-                                            font-size: 11px;
+                                            font-size: 13px;
                                             color: c.$white;
                                             background-color: c.$table_border_color_blue;
                                             padding: 5px;
@@ -2242,7 +2439,7 @@
                                 padding: 5px 10px;
                                 text-align: left;
                                 border-radius: 5px;
-                                font-weight: normal;
+                                font-weight: 700;
                             }
                         }
                     }
@@ -2266,7 +2463,11 @@
                                 padding: 5px 10px;
                                 text-align: left;
                                 border-radius: 5px;
-                                font-weight: normal;
+                                font-weight: 700;
+
+                                span{
+                                    font-weight: normal;
+                                }
                             }
 
                             td {
@@ -2337,12 +2538,12 @@
                                 &:nth-child(1),
                                 &:nth-child(2){
                                     td{
-                                        font-size: 14px;
                                         font-weight: 700;
+                                        font-size: 14px;
 
                                         p{
-                                            font-size: 14px;
                                             font-weight: 700;
+                                            font-size: 14px;
                                         }
                                     }
                                 }
@@ -2353,8 +2554,8 @@
                                     td {
                                         &:nth-child(1) {
                                             text-align: left;
-                                            font-size: 14px;
                                             font-weight: 700;
+                                            font-size: 14px;
                                         }
                                     }
                                 }
@@ -2377,16 +2578,16 @@
                                         border-right: 0px;
                                         padding: 8px 0 8px 8px;
                                         text-align: left;
-                                        font-size: 14px;
                                         font-weight: 700;
+                                        font-size: 14px;
                                     }
                                 }
 
                                 &:nth-child(2) {
                                     td {
                                         width: 22%;
-                                        font-size: 14px;
                                         font-weight: 700;
+                                        font-size: 14px;
 
                                         &:nth-child(1) {
                                             width: 12%;
@@ -2396,8 +2597,8 @@
 
                                 &:nth-child(3) {
                                     td {
-                                        font-size: 14px;
                                         font-weight: 700;
+                                        font-size: 14px;
                                     }
                                 }
 
@@ -2407,8 +2608,8 @@
                                 &:nth-child(7) {
                                     td {
                                         &:nth-child(1) {
-                                            font-size: 14px;
                                             font-weight: 700;
+                                            font-size: 14px;
                                         }
                                     }
                                 }
@@ -2431,7 +2632,21 @@
                                         border-right: 0px;
                                         padding: 8px 0 8px 8px;
                                         text-align: left;
-                                        font-size: 15px;
+                                        font-weight: 700;
+                                        font-size: 14px;
+                                    }
+                                }
+
+                                &:nth-child(2),
+                                &:nth-child(3),
+                                &:nth-child(4),
+                                &:nth-child(5),
+                                &:nth-child(6) {
+                                    td {
+                                        &:nth-child(1) {
+                                            font-weight: 700;
+                                            font-size: 14px;
+                                        }
                                     }
                                 }
                             }
@@ -2453,7 +2668,21 @@
                                         border-right: 0px;
                                         padding: 8px 0 8px 8px;
                                         text-align: left;
-                                        font-size: 15px;
+                                        font-weight: 700;
+                                        font-size: 14px;
+                                    }
+                                }
+
+                                &:nth-child(2),
+                                &:nth-child(3),
+                                &:nth-child(4),
+                                &:nth-child(5),
+                                &:nth-child(6) {
+                                    td {
+                                        &:nth-child(1) {
+                                            font-weight: 700;
+                                            font-size: 14px;
+                                        }
                                     }
                                 }
                             }
@@ -2520,10 +2749,37 @@
                                         }
                                     }
                                 }
-                            }
 
-                            &:nth-child(1) {
-                                margin: 0 0 5px 0;
+                                &:nth-child(2),
+                                &:nth-child(3),
+                                &:nth-child(4),
+                                &:nth-child(5) {
+                                    td {
+                                        &:nth-child(1) {
+                                            font-weight: 700;
+                                            font-size: 14px;
+                                        }
+
+                                        &:nth-child(2),
+                                        &:nth-child(3),
+                                        &:nth-child(4) {
+                                            font-weight: normal;
+                                        }
+                                    }
+                                }
+
+                                &:nth-child(1) {
+                                    margin: 0 0 5px 0;
+                                    td{
+                                        &:nth-child(1),
+                                        &:nth-child(2),
+                                        &:nth-child(3),
+                                        &:nth-child(4) {
+                                            font-weight: 700;
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -2543,10 +2799,12 @@
                         padding: 5px 10px;
                         text-align: left;
                         border-radius: 5px;
-                        font-weight: normal;
+                        font-weight: 700;
+                        font-size: 21px;
 
                         span {
                             vertical-align: top;
+                            font-weight: normal;
                         }
                     }
                 }
@@ -2580,8 +2838,9 @@
                             padding: 5px;
 
                             p {
-                                font-size: 15px;
                                 color: c.$white;
+                                font-weight: 700;
+                                font-size: 17px;
                             }
                         }
 
@@ -2636,8 +2895,8 @@
                     justify-content: space-between;
 
                     .caption_form_content {
-                        padding: 5px;
-                        margin: 0 0 20px;
+                        padding: 8px;
+                        margin: 0 0 10px;
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
@@ -2646,6 +2905,11 @@
                         .caption_form_content_tittle {
                             display: flex;
                             justify-content: space-between;
+
+                            p{
+                                font-weight: 700;
+                                font-size: 17px;
+                            }
 
                             .caption_form_content_tittle_type {
                                 padding: 5px;
@@ -2669,7 +2933,14 @@
 
                                 .type_item {
                                     margin: 10px auto 0;
-                                    padding: 5px;
+                                    padding: 8px;
+                                    width: 33.33333%;
+
+                                    .type_item_tittle{
+                                        p{
+                                            font-weight: 700;
+                                        }
+                                    }
 
                                     p {
                                         color: c.$grey;
@@ -2797,7 +3068,7 @@
                         padding: 8px;
 
                         .caption_form_content {
-                            margin: 0 auto 15px;
+                            margin: 0 auto;
                             padding: 8px;
 
                             .caption_form_content_tittle {
@@ -2807,6 +3078,8 @@
 
                                 p {
                                     color: c.$white;
+                                    font-weight: 700;
+                                    font-size: 14px;
                                 }
                             }
 
@@ -2819,7 +3092,7 @@
                                     background-color: c.$main_color_light;
                                     padding: 8px 15px 30px 15px;
                                     border-radius: 0 30px 0 30px;
-                                    margin: 5px 0 15px;
+                                    margin: 5px 0 0;
                                     width: 49%;
 
                                     .caption_form_content_year_name {
@@ -2836,7 +3109,7 @@
                                         flex-wrap: wrap;
 
                                         p {
-                                            font-size: 11px;
+                                            font-size: 13px;
                                             color: c.$white;
                                             background-color: c.$table_border_color_blue;
                                             padding: 5px;
