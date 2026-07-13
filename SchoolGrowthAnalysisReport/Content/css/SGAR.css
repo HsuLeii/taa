@@ -861,6 +861,10 @@ body {
   border: 1px solid #c1d2ed;
   padding: 8px;
 }
+.page .page_content .caption_form.caption_form_test .caption_form_test_content .caption_form_text p {
+  font-weight: 700;
+  font-size: 16px;
+}
 .page .page_content .caption_form.caption_form_test .caption_form_test_content .caption_form_content {
   margin: 0 auto;
   padding: 8px;
@@ -873,7 +877,7 @@ body {
 .page .page_content .caption_form.caption_form_test .caption_form_test_content .caption_form_content .caption_form_content_tittle p {
   color: #fff;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 16px;
 }
 .page .page_content .caption_form.caption_form_test .caption_form_test_content .caption_form_content .caption_form_content_year .caption_form_content_year_item {
   background-color: #dae5f4;
@@ -1374,6 +1378,10 @@ body {
     font-weight: 700;
     font-size: 17px;
   }
+  .page .page_content .caption_table .table.table_three tbody tr:nth-child(2) td:nth-child(2), .page .page_content .caption_table .table.table_three tbody tr:nth-child(2) td:nth-child(3) {
+    font-weight: 700;
+    font-size: 16px;
+  }
   .page .page_content .caption_table .table.table_three tbody tr:nth-child(2) td:nth-child(1), .page .page_content .caption_table .table.table_three tbody tr:nth-child(3) td:nth-child(1), .page .page_content .caption_table .table.table_three tbody tr:nth-child(4) td:nth-child(1), .page .page_content .caption_table .table.table_three tbody tr:nth-child(5) td:nth-child(1), .page .page_content .caption_table .table.table_three tbody tr:nth-child(6) td:nth-child(1) {
     font-weight: 700;
     font-size: 16px;
@@ -1392,6 +1400,10 @@ body {
     text-align: left;
     font-weight: 700;
     font-size: 17px;
+  }
+  .page .page_content .caption_table .table.table_four tbody tr:nth-child(2) td:nth-child(2), .page .page_content .caption_table .table.table_four tbody tr:nth-child(2) td:nth-child(3) {
+    font-weight: 700;
+    font-size: 16px;
   }
   .page .page_content .caption_table .table.table_four tbody tr:nth-child(2) td:nth-child(1), .page .page_content .caption_table .table.table_four tbody tr:nth-child(3) td:nth-child(1), .page .page_content .caption_table .table.table_four tbody tr:nth-child(4) td:nth-child(1), .page .page_content .caption_table .table.table_four tbody tr:nth-child(5) td:nth-child(1), .page .page_content .caption_table .table.table_four tbody tr:nth-child(6) td:nth-child(1) {
     font-weight: 700;
@@ -1659,6 +1671,10 @@ body {
     border: 1px solid #c1d2ed;
     padding: 8px;
   }
+  .page .page_content .caption_form.caption_form_test .caption_form_test_content .caption_form_text p {
+    font-weight: 700;
+    font-size: 16px;
+  }
   .page .page_content .caption_form.caption_form_test .caption_form_test_content .caption_form_content {
     margin: 0 auto;
     padding: 8px;
@@ -1671,7 +1687,7 @@ body {
   .page .page_content .caption_form.caption_form_test .caption_form_test_content .caption_form_content .caption_form_content_tittle p {
     color: #fff;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
   }
   .page .page_content .caption_form.caption_form_test .caption_form_test_content .caption_form_content .caption_form_content_year {
     display: flex;
@@ -2083,6 +2099,10 @@ body {
     font-weight: 700;
     font-size: 17px;
   }
+  .page .page_content .caption_table .table.table_three tbody tr:nth-child(2) td:nth-child(2), .page .page_content .caption_table .table.table_three tbody tr:nth-child(2) td:nth-child(3) {
+    font-weight: 700;
+    font-size: 16px;
+  }
   .page .page_content .caption_table .table.table_three tbody tr:nth-child(2) td:nth-child(1), .page .page_content .caption_table .table.table_three tbody tr:nth-child(3) td:nth-child(1), .page .page_content .caption_table .table.table_three tbody tr:nth-child(4) td:nth-child(1), .page .page_content .caption_table .table.table_three tbody tr:nth-child(5) td:nth-child(1), .page .page_content .caption_table .table.table_three tbody tr:nth-child(6) td:nth-child(1) {
     font-weight: 700;
     font-size: 16px;
@@ -2101,6 +2121,10 @@ body {
     text-align: left;
     font-weight: 700;
     font-size: 17px;
+  }
+  .page .page_content .caption_table .table.table_four tbody tr:nth-child(2) td:nth-child(2), .page .page_content .caption_table .table.table_four tbody tr:nth-child(2) td:nth-child(3) {
+    font-weight: 700;
+    font-size: 16px;
   }
   .page .page_content .caption_table .table.table_four tbody tr:nth-child(2) td:nth-child(1), .page .page_content .caption_table .table.table_four tbody tr:nth-child(3) td:nth-child(1), .page .page_content .caption_table .table.table_four tbody tr:nth-child(4) td:nth-child(1), .page .page_content .caption_table .table.table_four tbody tr:nth-child(5) td:nth-child(1), .page .page_content .caption_table .table.table_four tbody tr:nth-child(6) td:nth-child(1) {
     font-weight: 700;
@@ -2373,6 +2397,10 @@ body {
     border: 1px solid #c1d2ed;
     padding: 8px;
   }
+  .page .page_content .caption_form.caption_form_test .caption_form_test_content .caption_form_text p {
+    font-weight: 700;
+    font-size: 16px;
+  }
   .page .page_content .caption_form.caption_form_test .caption_form_test_content .caption_form_content {
     margin: 0 auto;
     padding: 8px;
@@ -2385,7 +2413,7 @@ body {
   .page .page_content .caption_form.caption_form_test .caption_form_test_content .caption_form_content .caption_form_content_tittle p {
     color: #fff;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
   }
   .page .page_content .caption_form.caption_form_test .caption_form_test_content .caption_form_content .caption_form_content_year {
     display: flex;

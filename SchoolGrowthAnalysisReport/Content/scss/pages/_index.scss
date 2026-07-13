@@ -826,6 +826,13 @@
                     border: 1px solid c.$table_border;
                     padding: 8px;
 
+                    .caption_form_text{
+                        p{
+                            font-weight: 700;
+                            font-size: 16px;
+                        }
+                    }
+
                     .caption_form_content {
                         margin: 0 auto;
                         padding: 8px;
@@ -838,7 +845,7 @@
                             p {
                                 color: c.$white;
                                 font-weight: 700;
-                                font-size: 15px;
+                                font-size: 16px;
                             }
                         }
 
@@ -1615,6 +1622,16 @@
                                     }
                                 }
 
+                                &:nth-child(2) {
+                                    td {
+                                        &:nth-child(2),
+                                        &:nth-child(3) {
+                                            font-weight: 700;
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+
                                 &:nth-child(2),
                                 &:nth-child(3),
                                 &:nth-child(4),
@@ -1648,6 +1665,16 @@
                                         text-align: left;
                                         font-weight: 700;
                                         font-size: 17px;
+                                    }
+                                }
+
+                                &:nth-child(2) {
+                                    td {
+                                        &:nth-child(2),
+                                        &:nth-child(3) {
+                                            font-weight: 700;
+                                            font-size: 16px;
+                                        }
                                     }
                                 }
 
@@ -1861,8 +1888,8 @@
                             }
 
                             .caption_form_content_item{
-                            display: flex;
-                            justify-content: space-between;
+                                display: flex;
+                                justify-content: space-between;
 
                             .caption_form_content_item_text{
                                 width: 80%;
@@ -2061,6 +2088,13 @@
                         border: 1px solid c.$table_border;
                         padding: 8px;
 
+                        .caption_form_text{
+                            p{
+                                font-weight: 700;
+                                font-size: 16px;
+                            }
+                        }
+
                         .caption_form_content {
                             margin: 0 auto;
                             padding: 8px;
@@ -2073,7 +2107,7 @@
                                 p {
                                     color: c.$white;
                                     font-weight: 700;
-                                    font-size: 14px;
+                                    font-size: 16px;
                                 }
                             }
 
@@ -2666,6 +2700,16 @@
                                     }
                                 }
 
+                                &:nth-child(2) {
+                                    td {
+                                        &:nth-child(2),
+                                        &:nth-child(3) {
+                                            font-weight: 700;
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+
                                 &:nth-child(2),
                                 &:nth-child(3),
                                 &:nth-child(4),
@@ -2699,6 +2743,16 @@
                                         text-align: left;
                                         font-weight: 700;
                                         font-size: 17px;
+                                    }
+                                }
+
+                                &:nth-child(2) {
+                                    td {
+                                        &:nth-child(2),
+                                        &:nth-child(3) {
+                                            font-weight: 700;
+                                            font-size: 16px;
+                                        }
                                     }
                                 }
 
@@ -3119,6 +3173,13 @@
                         border: 1px solid c.$table_border;
                         padding: 8px;
 
+                        .caption_form_text{
+                            p{
+                                font-weight: 700;
+                                font-size: 16px;
+                            }
+                        }
+
                         .caption_form_content {
                             margin: 0 auto;
                             padding: 8px;
@@ -3131,7 +3192,7 @@
                                 p {
                                     color: c.$white;
                                     font-weight: 700;
-                                    font-size: 14px;
+                                    font-size: 16px;
                                 }
                             }
 
