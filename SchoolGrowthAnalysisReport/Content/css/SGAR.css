@@ -4,21 +4,21 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/noto-sans-tc-v39-latin-regular.woff2") format("woff2");
+  src: url("../fonts/noto-sans-tc-v39-chinese-traditional_latin-regular.woff2") format("woff2");
 }
 @font-face {
   font-family: "Noto Sans TC";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../fonts/noto-sans-tc-v39-latin-700.woff2") format("woff2");
+  src: url("../fonts/noto-sans-tc-v39-chinese-traditional_latin-700.woff2") format("woff2");
 }
 @font-face {
   font-family: "Noto Sans TC";
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: url("../fonts/noto-sans-tc-v39-latin-900.woff2") format("woff2");
+  src: url("../fonts/noto-sans-tc-v39-chinese-traditional_latin-900.woff2") format("woff2");
 }
 body {
   font-family: "Noto Sans TC", "PingFang TC", "PingFang SC", "Heiti TC", "Heiti SC", "微軟正黑體", "蘋果儷中黑", "LiHei Pro", "STXihei", "sans-serif", Arial;
